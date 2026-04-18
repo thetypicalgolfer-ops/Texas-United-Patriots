@@ -66,15 +66,15 @@
         #mobileMenuBtn[aria-expanded="true"] { color: #fff; background-color: rgba(255, 255, 255, 0.12); }
 
         /* Mobile menu — editorial fade-in */
-        #mobileMenu { transform: translateX(100%); visibility: hidden; transition: transform 0.42s cubic-bezier(0.32, 0.72, 0, 1), visibility 0s linear 0.42s; padding-top: env(safe-area-inset-top); padding-bottom: env(safe-area-inset-bottom); overscroll-behavior: contain; -webkit-overflow-scrolling: touch; will-change: transform; }
-        #mobileMenu.open { transform: translateX(0); visibility: visible; transition: transform 0.48s cubic-bezier(0.16, 1, 0.3, 1), visibility 0s linear 0s; }
-        #mobileMenu .menu-item { opacity: 0; transform: translateY(14px); transition: opacity 0.45s ease, transform 0.45s ease; }
+        #mobileMenu { transform: translateX(100%); visibility: hidden; transition: transform 0.58s cubic-bezier(0.22, 0.61, 0.36, 1), visibility 0s linear 0.58s; padding-top: env(safe-area-inset-top); padding-bottom: env(safe-area-inset-bottom); overscroll-behavior: contain; -webkit-overflow-scrolling: touch; will-change: transform; }
+        #mobileMenu.open { transform: translateX(0); visibility: visible; transition: transform 0.62s cubic-bezier(0.22, 0.61, 0.36, 1), visibility 0s linear 0s; }
+        #mobileMenu .menu-item { opacity: 0; transform: translateY(18px); transition: opacity 0.6s cubic-bezier(0.22, 0.61, 0.36, 1), transform 0.6s cubic-bezier(0.22, 0.61, 0.36, 1); }
         #mobileMenu.open .menu-item { opacity: 1; transform: translateY(0); }
-        #mobileMenu.open .menu-item:nth-child(1) { transition-delay: 0.12s; }
-        #mobileMenu.open .menu-item:nth-child(2) { transition-delay: 0.18s; }
-        #mobileMenu.open .menu-item:nth-child(3) { transition-delay: 0.24s; }
-        #mobileMenu.open .menu-item:nth-child(4) { transition-delay: 0.30s; }
-        #mobileMenu.open .menu-item:nth-child(5) { transition-delay: 0.40s; }
+        #mobileMenu.open .menu-item:nth-child(1) { transition-delay: 0.22s; }
+        #mobileMenu.open .menu-item:nth-child(2) { transition-delay: 0.30s; }
+        #mobileMenu.open .menu-item:nth-child(3) { transition-delay: 0.38s; }
+        #mobileMenu.open .menu-item:nth-child(4) { transition-delay: 0.46s; }
+        #mobileMenu.open .menu-item:nth-child(5) { transition-delay: 0.56s; }
         #mobileMenu .menu-index { font-variant-numeric: tabular-nums; }
 
 .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }

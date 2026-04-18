@@ -186,11 +186,11 @@
             background-color: rgba(255, 255, 255, 0.12);
         }
 
-        /* Mobile menu — iOS-style slide-in from right */
+        /* Mobile menu — gentle slide-in from right */
         #mobileMenu {
             transform: translateX(100%);
             visibility: hidden;
-            transition: transform 0.42s cubic-bezier(0.32, 0.72, 0, 1), visibility 0s linear 0.42s;
+            transition: transform 0.58s cubic-bezier(0.22, 0.61, 0.36, 1), visibility 0s linear 0.58s;
             padding-top: env(safe-area-inset-top);
             padding-bottom: env(safe-area-inset-bottom);
             overscroll-behavior: contain;
@@ -201,13 +201,13 @@
         #mobileMenu.open {
             transform: translateX(0);
             visibility: visible;
-            transition: transform 0.48s cubic-bezier(0.16, 1, 0.3, 1), visibility 0s linear 0s;
+            transition: transform 0.62s cubic-bezier(0.22, 0.61, 0.36, 1), visibility 0s linear 0s;
         }
 
         #mobileMenu .menu-item {
             opacity: 0;
-            transform: translateY(14px);
-            transition: opacity 0.45s ease, transform 0.45s ease;
+            transform: translateY(18px);
+            transition: opacity 0.6s cubic-bezier(0.22, 0.61, 0.36, 1), transform 0.6s cubic-bezier(0.22, 0.61, 0.36, 1);
         }
 
         #mobileMenu.open .menu-item {
@@ -216,23 +216,23 @@
         }
 
         #mobileMenu.open .menu-item:nth-child(1) {
-            transition-delay: 0.12s;
+            transition-delay: 0.22s;
         }
 
         #mobileMenu.open .menu-item:nth-child(2) {
-            transition-delay: 0.18s;
-        }
-
-        #mobileMenu.open .menu-item:nth-child(3) {
-            transition-delay: 0.24s;
-        }
-
-        #mobileMenu.open .menu-item:nth-child(4) {
             transition-delay: 0.30s;
         }
 
+        #mobileMenu.open .menu-item:nth-child(3) {
+            transition-delay: 0.38s;
+        }
+
+        #mobileMenu.open .menu-item:nth-child(4) {
+            transition-delay: 0.46s;
+        }
+
         #mobileMenu.open .menu-item:nth-child(5) {
-            transition-delay: 0.40s;
+            transition-delay: 0.56s;
         }
 
         #mobileMenu .menu-index {
@@ -330,7 +330,7 @@
         /* Scroll reveal animations */
         .reveal {
             opacity: 0;
-            transition: opacity 0.8s ease, transform 0.8s ease;
+            transition: opacity 1.05s cubic-bezier(0.22, 0.61, 0.36, 1), transform 1.15s cubic-bezier(0.22, 0.61, 0.36, 1);
         }
 
         .reveal.visible {
@@ -745,7 +745,7 @@
                         <div class="flex flex-col lg:flex-row">
                             <div class="lg:w-1/2">
                                 <img alt="Texas Tech University"
-                                    class="w-full h-full min-h-[300px] object-cover group-hover:scale-105 transition-transform duration-500"
+                                    class="w-full h-full min-h-[300px] object-cover group-hover:scale-[1.03] transition-transform duration-[900ms] ease-out"
                                     src="https://images.unsplash.com/photo-1562774053-701939374585?w=800&q=80" />
                             </div>
                             <div class="lg:w-1/2 p-7 md:p-14 flex flex-col justify-center">
@@ -793,7 +793,7 @@
                         style="transition-delay: 0s;">
                         <div class="overflow-hidden">
                             <img alt="Texas classroom"
-                                class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500"
+                                class="w-full h-56 object-cover group-hover:scale-[1.03] transition-transform duration-[900ms] ease-out"
                                 src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&q=80" />
                         </div>
                         <div class="p-7 md:p-8">
@@ -833,7 +833,7 @@
                         style="transition-delay: 0.15s;">
                         <div class="overflow-hidden">
                             <img alt="Parents at school board"
-                                class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500"
+                                class="w-full h-56 object-cover group-hover:scale-[1.03] transition-transform duration-[900ms] ease-out"
                                 src="https://images.unsplash.com/photo-1591123120675-6f7f1aae0e5b?w=600&q=80" />
                         </div>
                         <div class="p-7 md:p-8">
@@ -872,7 +872,7 @@
                         style="transition-delay: 0.3s;">
                         <div class="overflow-hidden">
                             <img alt="University building"
-                                class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500"
+                                class="w-full h-56 object-cover group-hover:scale-[1.03] transition-transform duration-[900ms] ease-out"
                                 src="https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?w=600&q=80" />
                         </div>
                         <div class="p-7 md:p-8">
@@ -912,7 +912,7 @@
                         style="transition-delay: 0s;">
                         <div class="overflow-hidden">
                             <img alt="Oil pump in Texas"
-                                class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500"
+                                class="w-full h-56 object-cover group-hover:scale-[1.03] transition-transform duration-[900ms] ease-out"
                                 src="https://images.unsplash.com/photo-1513828583688-c52646db42da?w=600&q=80" />
                         </div>
                         <div class="p-7 md:p-8">
@@ -953,7 +953,7 @@
                         style="transition-delay: 0.15s;">
                         <div class="overflow-hidden">
                             <img alt="Texas State Capitol"
-                                class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500"
+                                class="w-full h-56 object-cover group-hover:scale-[1.03] transition-transform duration-[900ms] ease-out"
                                 src="https://images.unsplash.com/photo-1588416936097-41850ab3d86d?w=600&q=80" />
                         </div>
                         <div class="p-7 md:p-8">
@@ -993,7 +993,7 @@
                         style="transition-delay: 0.3s;">
                         <div class="overflow-hidden">
                             <img alt="University lecture hall"
-                                class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500"
+                                class="w-full h-56 object-cover group-hover:scale-[1.03] transition-transform duration-[900ms] ease-out"
                                 src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=600&q=80" />
                         </div>
                         <div class="p-7 md:p-8">
