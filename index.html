@@ -239,11 +239,9 @@
             font-variant-numeric: tabular-nums;
         }
 
-        /* Smooth in-page anchor scroll + offset for fixed nav */
-        html { scroll-behavior: smooth; }
+        /* In-page anchor offset for fixed nav (no smooth scroll — immediate jump) */
         section[id] { scroll-margin-top: 88px; }
         @media (min-width: 768px) { section[id] { scroll-margin-top: 104px; } }
-        @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
         /* Mobile hero: show the whole video, no cropping, below the nav */
         @media (max-width: 767px) {
@@ -1380,28 +1378,6 @@
                     setupCrossfade(vidA, vidB);
                 });
             })();
-
-        // Smooth-scroll to hash target on initial page load (for cross-page nav like issues.html → index.html#candidate)
-        (function () {
-            if (!location.hash) return;
-            const targetHash = location.hash;
-            if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
-            const run = function () {
-                const target = document.querySelector(targetHash);
-                if (!target) return;
-                window.scrollTo(0, 0);
-                requestAnimationFrame(function () {
-                    setTimeout(function () {
-                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    }, 80);
-                });
-            };
-            if (document.readyState === 'loading') {
-                document.addEventListener('DOMContentLoaded', run);
-            } else {
-                run();
-            }
-        })();
 
         // Scroll reveal animations via IntersectionObserver
         (function () {
