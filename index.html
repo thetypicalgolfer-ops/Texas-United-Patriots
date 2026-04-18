@@ -82,7 +82,10 @@
     </script>
     <style>
         /* Kill horizontal scroll everywhere */
-        html, body { overflow-x: hidden; }
+        html,
+        body {
+            overflow-x: hidden;
+        }
 
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
@@ -113,6 +116,20 @@
                     rgba(0, 0, 0, 0.18) 100%);
         }
 
+        /* Mobile menu button — fixed above everything else */
+        @media (max-width: 767px) {
+            #mobileMenuBtn {
+                position: fixed !important;
+                top: 14px !important;
+                right: 16px !important;
+                z-index: 9999 !important;
+                display: inline-flex !important;
+                align-items: center;
+                justify-content: center;
+                padding: 8px;
+            }
+        }
+
         /* Hamburger button with animated bars */
         .hamburger {
             width: 28px;
@@ -120,6 +137,7 @@
             position: relative;
             display: inline-block;
         }
+
         .hamburger span {
             position: absolute;
             left: 0;
@@ -129,65 +147,123 @@
             border-radius: 2px;
             transition: transform 0.35s ease, top 0.35s ease, opacity 0.2s ease, background-color 0.3s ease;
         }
-        .hamburger span:nth-child(1) { top: 2px; }
-        .hamburger span:nth-child(2) { top: 10px; width: 75%; }
-        .hamburger span:nth-child(3) { top: 18px; }
-        #mobileMenuBtn[aria-expanded="true"] .hamburger span:nth-child(1) {
-            top: 10px; transform: rotate(45deg);
-        }
-        #mobileMenuBtn[aria-expanded="true"] .hamburger span:nth-child(2) {
-            opacity: 0; transform: translateX(-10px);
-        }
-        #mobileMenuBtn[aria-expanded="true"] .hamburger span:nth-child(3) {
-            top: 10px; transform: rotate(-45deg);
+
+        .hamburger span:nth-child(1) {
+            top: 2px;
         }
 
-        /* Mobile menu — editorial fade-in */
-        #mobileMenu {
+        .hamburger span:nth-child(2) {
+            top: 10px;
+            width: 75%;
+        }
+
+        .hamburger span:nth-child(3) {
+            top: 18px;
+        }
+
+        #mobileMenuBtn[aria-expanded="true"] .hamburger span:nth-child(1) {
+            top: 10px;
+            transform: rotate(45deg);
+        }
+
+        #mobileMenuBtn[aria-expanded="true"] .hamburger span:nth-child(2) {
             opacity: 0;
+            transform: translateX(-10px);
+        }
+
+        #mobileMenuBtn[aria-expanded="true"] .hamburger span:nth-child(3) {
+            top: 10px;
+            transform: rotate(-45deg);
+        }
+
+        /* Hamburger active state — stay visible against the dark menu backdrop */
+        #mobileMenuBtn {
+            transition: color 0.25s ease, background-color 0.25s ease;
+            border-radius: 999px;
+        }
+        #mobileMenuBtn[aria-expanded="true"] {
+            color: #fff;
+            background-color: rgba(255, 255, 255, 0.12);
+        }
+
+        /* Mobile menu — iOS-style slide-in from right */
+        #mobileMenu {
+            transform: translateX(100%);
             visibility: hidden;
-            transition: opacity 0.35s ease, visibility 0s linear 0.35s;
+            transition: transform 0.42s cubic-bezier(0.32, 0.72, 0, 1), visibility 0s linear 0.42s;
+            padding-top: env(safe-area-inset-top);
+            padding-bottom: env(safe-area-inset-bottom);
+            overscroll-behavior: contain;
+            -webkit-overflow-scrolling: touch;
+            will-change: transform;
         }
+
         #mobileMenu.open {
-            opacity: 1;
+            transform: translateX(0);
             visibility: visible;
-            transition: opacity 0.35s ease, visibility 0s linear 0s;
+            transition: transform 0.48s cubic-bezier(0.16, 1, 0.3, 1), visibility 0s linear 0s;
         }
+
         #mobileMenu .menu-item {
             opacity: 0;
             transform: translateY(14px);
             transition: opacity 0.45s ease, transform 0.45s ease;
         }
+
         #mobileMenu.open .menu-item {
             opacity: 1;
             transform: translateY(0);
         }
-        #mobileMenu.open .menu-item:nth-child(1) { transition-delay: 0.12s; }
-        #mobileMenu.open .menu-item:nth-child(2) { transition-delay: 0.18s; }
-        #mobileMenu.open .menu-item:nth-child(3) { transition-delay: 0.24s; }
-        #mobileMenu.open .menu-item:nth-child(4) { transition-delay: 0.30s; }
-        #mobileMenu.open .menu-item:nth-child(5) { transition-delay: 0.40s; }
+
+        #mobileMenu.open .menu-item:nth-child(1) {
+            transition-delay: 0.12s;
+        }
+
+        #mobileMenu.open .menu-item:nth-child(2) {
+            transition-delay: 0.18s;
+        }
+
+        #mobileMenu.open .menu-item:nth-child(3) {
+            transition-delay: 0.24s;
+        }
+
+        #mobileMenu.open .menu-item:nth-child(4) {
+            transition-delay: 0.30s;
+        }
+
+        #mobileMenu.open .menu-item:nth-child(5) {
+            transition-delay: 0.40s;
+        }
+
         #mobileMenu .menu-index {
             font-variant-numeric: tabular-nums;
         }
+
+        /* Smooth in-page anchor scroll + offset for fixed nav */
+        html { scroll-behavior: smooth; }
+        section[id] { scroll-margin-top: 88px; }
+        @media (min-width: 768px) { section[id] { scroll-margin-top: 104px; } }
+        @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
         /* Mobile hero: show the whole video, no cropping, below the nav */
         @media (max-width: 767px) {
             .hero-section {
                 min-height: 100svh;
             }
+
             .hero-video {
                 object-fit: contain !important;
                 object-position: center 80px !important;
             }
+
             .hero-overlay {
                 background: linear-gradient(180deg,
-                    rgba(0, 0, 0, 0.45) 0%,
-                    rgba(0, 0, 0, 0.15) 12%,
-                    rgba(0, 0, 0, 0.0) 30%,
-                    rgba(0, 0, 0, 0.0) 40%,
-                    rgba(0, 0, 0, 0.55) 65%,
-                    rgba(0, 0, 0, 0.88) 100%) !important;
+                        rgba(0, 0, 0, 0.45) 0%,
+                        rgba(0, 0, 0, 0.15) 12%,
+                        rgba(0, 0, 0, 0.0) 30%,
+                        rgba(0, 0, 0, 0.0) 40%,
+                        rgba(0, 0, 0, 0.55) 65%,
+                        rgba(0, 0, 0, 0.88) 100%) !important;
             }
         }
 
@@ -308,28 +384,113 @@
         .border-grow.visible {
             border-left-color: #5d0011;
         }
-    
-        /* Social share bar */
-        .share-bar { display: flex; flex-direction: column; align-items: stretch; gap: 0.75rem; }
-        @media (min-width: 640px) { .share-bar { flex-direction: row; align-items: center; } }
-        .share-bar .share-label { font-family: 'Public Sans', sans-serif; font-weight: 700; font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: #5d0011; }
-        .share-bar .share-icons { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-        .share-btn { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border: 1px solid #e5e7eb; background: #fff; color: #1a1c1c; transition: all 0.2s ease; cursor: pointer; }
-        .share-btn:hover { color: #fff; border-color: transparent; transform: translateY(-2px); }
-        .share-btn svg { width: 18px; height: 18px; fill: currentColor; }
-        .share-btn[data-share="facebook"]:hover { background: #1877f2; }
-        .share-btn[data-share="x"]:hover { background: #000; }
-        .share-btn[data-share="truth"]:hover { background: #5d0011; }
-        .share-btn[data-share="telegram"]:hover { background: #229ED9; }
-        .share-btn[data-share="whatsapp"]:hover { background: #25D366; }
-        .share-btn[data-share="email"]:hover { background: #5d0011; }
-        .share-btn[data-share="copy"]:hover { background: #1a1c1c; }
-        .share-btn .copied-msg { display: none; }
-        .share-btn.copied { background: #16a34a; color: #fff; border-color: transparent; }
-        .share-bar.on-dark .share-label { color: rgba(255,255,255,0.6); }
-        .share-bar.on-dark .share-btn { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.15); color: #fff; }
-        .share-bar.on-dark .share-btn:hover { border-color: transparent; }
 
+        /* Social share bar */
+        .share-bar {
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            gap: 0.75rem;
+        }
+
+        @media (min-width: 640px) {
+            .share-bar {
+                flex-direction: row;
+                align-items: center;
+            }
+        }
+
+        .share-bar .share-label {
+            font-family: 'Public Sans', sans-serif;
+            font-weight: 700;
+            font-size: 10px;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: #5d0011;
+        }
+
+        .share-bar .share-icons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .share-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            border: 1px solid #e5e7eb;
+            background: #fff;
+            color: #1a1c1c;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+
+        .share-btn:hover {
+            color: #fff;
+            border-color: transparent;
+            transform: translateY(-2px);
+        }
+
+        .share-btn svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }
+
+        .share-btn[data-share="facebook"]:hover {
+            background: #1877f2;
+        }
+
+        .share-btn[data-share="x"]:hover {
+            background: #000;
+        }
+
+        .share-btn[data-share="truth"]:hover {
+            background: #5d0011;
+        }
+
+        .share-btn[data-share="telegram"]:hover {
+            background: #229ED9;
+        }
+
+        .share-btn[data-share="whatsapp"]:hover {
+            background: #25D366;
+        }
+
+        .share-btn[data-share="email"]:hover {
+            background: #5d0011;
+        }
+
+        .share-btn[data-share="copy"]:hover {
+            background: #1a1c1c;
+        }
+
+        .share-btn .copied-msg {
+            display: none;
+        }
+
+        .share-btn.copied {
+            background: #16a34a;
+            color: #fff;
+            border-color: transparent;
+        }
+
+        .share-bar.on-dark .share-label {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .share-bar.on-dark .share-btn {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.15);
+            color: #fff;
+        }
+
+        .share-bar.on-dark .share-btn:hover {
+            border-color: transparent;
+        }
     </style>
 </head>
 
@@ -337,7 +498,7 @@
 
     <!-- TopNavBar -->
     <nav id="mainNav"
-        class="fixed top-0 w-full z-50 flex justify-between items-center px-6 md:px-12 py-4 md:py-6 max-w-full transition-all duration-300 bg-transparent">
+        class="fixed top-0 w-full z-50 flex justify-between items-center px-6 md:px-12 py-4 md:py-5 max-w-full transition-all duration-300 bg-transparent">
         <a id="navLogo" href="./index.html"
             class="text-lg md:text-2xl font-black text-white tracking-tighter font-headline transition-colors duration-300 hover:opacity-80">
             TEXAS UNITED PATRIOTS
@@ -356,45 +517,58 @@
                 Donate Now
             </button>
         </div>
-        <button id="mobileMenuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu" class="md:hidden text-white p-2 -mr-2 z-[70] relative">
-            <span class="hamburger"><span></span><span></span><span></span></span>
-        </button>
     </nav>
+    <button id="mobileMenuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"
+        class="md:hidden fixed top-3 right-4 text-white p-2 z-[80]">
+        <span class="hamburger"><span></span><span></span><span></span></span>
+    </button>
 
     <!-- Mobile Menu -->
     <div id="mobileMenu" class="fixed inset-0 z-[65] bg-[#0a0c10] flex flex-col overflow-y-auto">
         <div class="absolute inset-x-0 top-0 h-1 bg-primary"></div>
         <div class="flex justify-between items-center px-6 pt-5 pb-5 border-b border-white/10">
-            <a href="./index.html" class="text-lg font-black text-white tracking-tighter font-headline">TEXAS UNITED PATRIOTS</a>
+            <a href="./index.html" class="text-lg font-black text-white tracking-tighter font-headline">TEXAS UNITED
+                PATRIOTS</a>
         </div>
         <nav class="flex-1 flex flex-col px-6 pt-6">
-            <a class="menu-item group flex items-baseline gap-5 py-5 border-b border-white/10 text-white hover:text-primary-fixed transition-colors" href="./issues.html">
+            <a class="menu-item group flex items-baseline gap-5 py-5 border-b border-white/10 text-white hover:text-primary-fixed transition-colors"
+                href="./issues.html">
                 <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">01</span>
                 <span class="font-headline font-black text-3xl uppercase tracking-tight flex-1">Issues</span>
-                <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
+                <span
+                    class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
             </a>
-            <a class="menu-item group flex items-baseline gap-5 py-5 border-b border-white/10 text-white hover:text-primary-fixed transition-colors" href="./about.html">
+            <a class="menu-item group flex items-baseline gap-5 py-5 border-b border-white/10 text-white hover:text-primary-fixed transition-colors"
+                href="./about.html">
                 <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">02</span>
                 <span class="font-headline font-black text-3xl uppercase tracking-tight flex-1">About</span>
-                <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
+                <span
+                    class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
             </a>
-            <a class="menu-item group flex items-baseline gap-5 py-5 border-b border-white/10 text-white hover:text-primary-fixed transition-colors" href="./index.html#candidate">
+            <a class="menu-item group flex items-baseline gap-5 py-5 border-b border-white/10 text-white hover:text-primary-fixed transition-colors"
+                href="./index.html#candidate">
                 <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">03</span>
                 <span class="font-headline font-black text-3xl uppercase tracking-tight flex-1">Candidate</span>
-                <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
+                <span
+                    class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
             </a>
-            <a class="menu-item group flex items-baseline gap-5 py-5 border-b border-white/10 text-white hover:text-primary-fixed transition-colors" href="./index.html#news">
+            <a class="menu-item group flex items-baseline gap-5 py-5 border-b border-white/10 text-white hover:text-primary-fixed transition-colors"
+                href="./index.html#news">
                 <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">04</span>
                 <span class="font-headline font-black text-3xl uppercase tracking-tight flex-1">News</span>
-                <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
+                <span
+                    class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
             </a>
         </nav>
         <div class="menu-item px-6 pt-8 pb-10 border-t border-white/10 mt-6">
-            <button class="w-full bg-primary text-on-primary font-headline font-black uppercase tracking-[0.2em] py-5 text-sm shadow-xl hover:bg-primary-container transition-colors flex items-center justify-center gap-2">
-                <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+            <button
+                class="w-full bg-primary text-on-primary font-headline font-black uppercase tracking-[0.2em] py-5 text-sm shadow-xl hover:bg-primary-container transition-colors flex items-center justify-center gap-2">
+                <span class="material-symbols-outlined text-[18px]"
+                    style="font-variation-settings: 'FILL' 1;">favorite</span>
                 Donate Now
             </button>
-            <p class="mt-6 font-headline font-bold text-[10px] text-white/40 uppercase tracking-[0.3em] text-center">Faith · Family · Freedom</p>
+            <p class="mt-6 font-headline font-bold text-[10px] text-white/40 uppercase tracking-[0.3em] text-center">
+                Faith · Family · Freedom</p>
         </div>
     </div>
 
@@ -433,11 +607,13 @@
                         <button
                             class="group inline-flex items-center justify-center gap-2 w-full sm:w-auto bg-primary text-on-primary font-headline font-black px-8 sm:px-12 h-14 text-sm uppercase tracking-widest hover:bg-primary-container transition-all shadow-xl">
                             Join the Movement
-                            <span class="material-symbols-outlined text-[18px] transition-transform group-hover:translate-x-1">arrow_forward</span>
+                            <span
+                                class="material-symbols-outlined text-[18px] transition-transform group-hover:translate-x-1">arrow_forward</span>
                         </button>
                         <button
                             class="group inline-flex items-center justify-center gap-2 w-full sm:w-auto bg-white/10 border-2 border-white text-white font-headline font-black px-8 sm:px-12 h-14 text-sm uppercase tracking-widest hover:bg-white hover:text-black transition-all shadow-xl backdrop-blur-sm">
-                            <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+                            <span class="material-symbols-outlined text-[18px]"
+                                style="font-variation-settings: 'FILL' 1;">favorite</span>
                             Donate Now
                         </button>
                     </div>
@@ -557,7 +733,8 @@
                     <h2
                         class="font-headline font-black text-4xl md:text-6xl text-on-surface leading-tight md:leading-none uppercase tracking-tighter">
                         Latest News</h2>
-                    <p class="font-body italic text-lg md:text-xl text-on-surface-variant mt-4 max-w-2xl mx-auto">The stories the
+                    <p class="font-body italic text-lg md:text-xl text-on-surface-variant mt-4 max-w-2xl mx-auto">The
+                        stories the
                         mainstream media won't tell you. Real reporting, real facts, real accountability.</p>
                 </div>
 
@@ -578,7 +755,8 @@
                                     class="font-headline font-black text-2xl md:text-4xl text-on-surface leading-tight mb-4 uppercase tracking-tight group-hover:text-primary transition-colors">
                                     Texas Tech System Eliminates All Gender Identity Programs Across Five Universities
                                 </h3>
-                                <p class="font-body text-on-surface-variant text-base md:text-lg leading-relaxed mb-6">In a landmark
+                                <p class="font-body text-on-surface-variant text-base md:text-lg leading-relaxed mb-6">
+                                    In a landmark
                                     decision on April 10, 2026, Texas Tech Chancellor Brandon Creighton ordered the full
                                     phase-out of all academic programs "centered on" Sexual Orientation and Gender
                                     Identity (SOGI) across all five system universities — including Texas Tech, Angelo
@@ -867,60 +1045,96 @@
             <div class="absolute top-0 left-0 w-full h-2 bg-primary"></div>
             <div class="container mx-auto px-6 md:px-12">
                 <div class="reveal reveal-up text-center mb-12 md:mb-20">
-                    <span class="block font-headline font-bold text-[10px] text-primary uppercase tracking-[0.3em] mb-4">Endorsed Candidate</span>
-                    <h2 class="font-headline font-black text-4xl md:text-6xl text-on-surface leading-tight md:leading-none uppercase tracking-tighter">Our Fighter for Texas</h2>
+                    <span
+                        class="block font-headline font-bold text-[10px] text-primary uppercase tracking-[0.3em] mb-4">Endorsed
+                        Candidate</span>
+                    <h2
+                        class="font-headline font-black text-4xl md:text-6xl text-on-surface leading-tight md:leading-none uppercase tracking-tighter">
+                        Our Fighter for Texas</h2>
                     <p class="font-body italic text-lg md:text-xl text-on-surface-variant mt-4 max-w-2xl mx-auto">
-                        Meet the leader carrying the torch of faith, family, and freedom into the fight for Texas House District 125.
+                        Meet the leader carrying the torch of faith, family, and freedom into the fight for Texas House
+                        District 125.
                     </p>
                 </div>
 
                 <div class="flex flex-col lg:flex-row gap-10 lg:gap-16 items-center max-w-6xl mx-auto">
                     <div class="lg:w-1/2 w-full">
                         <div class="reveal reveal-left relative group max-w-md mx-auto lg:max-w-none">
-                            <div class="absolute -inset-3 md:-inset-4 bg-primary/10 -z-10 translate-x-3 md:translate-x-4 translate-y-3 md:translate-y-4"></div>
+                            <div
+                                class="absolute -inset-3 md:-inset-4 bg-primary/10 -z-10 translate-x-3 md:translate-x-4 translate-y-3 md:translate-y-4">
+                            </div>
                             <img alt="Rick Martinez, candidate for Texas House District 125"
-                                class="w-full aspect-[4/5] object-cover shadow-2xl"
-                                style="object-position: 72% 35%;"
+                                class="w-full aspect-[4/5] object-cover shadow-2xl" style="object-position: 72% 35%;"
                                 src="./rick_martinez.jpg" />
-                            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/85 via-black/50 to-transparent p-6 md:p-8 pt-12 md:pt-16">
-                                <span class="inline-block bg-primary text-on-primary font-headline font-bold text-[9px] tracking-[0.2em] uppercase px-3 py-1 mb-2 md:mb-3">Texas House · District 125</span>
-                                <h3 class="font-headline font-black text-3xl md:text-4xl text-white leading-none uppercase tracking-tight">Rick Martinez</h3>
+                            <div
+                                class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/85 via-black/50 to-transparent p-6 md:p-8 pt-12 md:pt-16">
+                                <span
+                                    class="inline-block bg-primary text-on-primary font-headline font-bold text-[9px] tracking-[0.2em] uppercase px-3 py-1 mb-2 md:mb-3">Texas
+                                    House · District 125</span>
+                                <h3
+                                    class="font-headline font-black text-3xl md:text-4xl text-white leading-none uppercase tracking-tight">
+                                    Rick Martinez</h3>
                             </div>
                         </div>
                     </div>
                     <div class="lg:w-1/2 w-full">
-                        <span class="reveal reveal-up block font-headline font-bold text-[10px] text-primary uppercase tracking-[0.3em] mb-5">A Servant's Heart. A Fighter's Will.</span>
-                        <h3 class="reveal reveal-up font-headline font-black text-3xl md:text-5xl text-on-surface leading-tight uppercase tracking-tight mb-7" style="transition-delay: 0.1s;">
+                        <span
+                            class="reveal reveal-up block font-headline font-bold text-[10px] text-primary uppercase tracking-[0.3em] mb-5">A
+                            Servant's Heart. A Fighter's Will.</span>
+                        <h3 class="reveal reveal-up font-headline font-black text-3xl md:text-5xl text-on-surface leading-tight uppercase tracking-tight mb-7"
+                            style="transition-delay: 0.1s;">
                             "San Antonio families deserve a voice that answers to God and to them — nobody else."
                         </h3>
-                        <div class="reveal reveal-left border-grow border-l-4 border-primary pl-6 md:pl-8 py-3 md:py-4 mb-8 md:mb-10" style="transition-delay: 0.25s;">
+                        <div class="reveal reveal-left border-grow border-l-4 border-primary pl-6 md:pl-8 py-3 md:py-4 mb-8 md:mb-10"
+                            style="transition-delay: 0.25s;">
                             <p class="font-body italic text-lg md:text-xl text-on-surface-variant leading-relaxed">
-                                Raised on discipline and service. Built a business with his own two hands. Fed the hungry, stood with first responders, and carried meals to veterans when the cameras weren't rolling. Rick Martinez isn't running to be a politician — he's running to protect the people he loves.
+                                Raised on discipline and service. Built a business with his own two hands. Fed the
+                                hungry, stood with first responders, and carried meals to veterans when the cameras
+                                weren't rolling. Rick Martinez isn't running to be a politician — he's running to
+                                protect the people he loves.
                             </p>
                         </div>
                         <ul class="stagger space-y-4 mb-8 md:mb-10">
                             <li class="reveal reveal-up flex items-start gap-4">
-                                <span class="material-symbols-outlined text-primary mt-1 flex-shrink-0" style="font-variation-settings: 'FILL' 1;">shield</span>
-                                <span class="font-body text-base md:text-lg text-on-surface leading-snug"><strong class="font-headline uppercase tracking-wide text-sm mr-2">Back the Blue.</strong>Hold criminals accountable and give police the support they have earned.</span>
+                                <span class="material-symbols-outlined text-primary mt-1 flex-shrink-0"
+                                    style="font-variation-settings: 'FILL' 1;">shield</span>
+                                <span class="font-body text-base md:text-lg text-on-surface leading-snug"><strong
+                                        class="font-headline uppercase tracking-wide text-sm mr-2">Back the
+                                        Blue.</strong>Hold criminals accountable and give police the support they have
+                                    earned.</span>
                             </li>
                             <li class="reveal reveal-up flex items-start gap-4">
-                                <span class="material-symbols-outlined text-primary mt-1 flex-shrink-0" style="font-variation-settings: 'FILL' 1;">home</span>
-                                <span class="font-body text-base md:text-lg text-on-surface leading-snug"><strong class="font-headline uppercase tracking-wide text-sm mr-2">Abolish the Homestead Property Tax.</strong>No family should ever lose their home to the government.</span>
+                                <span class="material-symbols-outlined text-primary mt-1 flex-shrink-0"
+                                    style="font-variation-settings: 'FILL' 1;">home</span>
+                                <span class="font-body text-base md:text-lg text-on-surface leading-snug"><strong
+                                        class="font-headline uppercase tracking-wide text-sm mr-2">Abolish the Homestead
+                                        Property Tax.</strong>No family should ever lose their home to the
+                                    government.</span>
                             </li>
                             <li class="reveal reveal-up flex items-start gap-4">
-                                <span class="material-symbols-outlined text-primary mt-1 flex-shrink-0" style="font-variation-settings: 'FILL' 1;">volunteer_activism</span>
-                                <span class="font-body text-base md:text-lg text-on-surface leading-snug"><strong class="font-headline uppercase tracking-wide text-sm mr-2">Healthcare That Heals.</strong>Affordable, accessible care — not a bureaucratic maze.</span>
+                                <span class="material-symbols-outlined text-primary mt-1 flex-shrink-0"
+                                    style="font-variation-settings: 'FILL' 1;">volunteer_activism</span>
+                                <span class="font-body text-base md:text-lg text-on-surface leading-snug"><strong
+                                        class="font-headline uppercase tracking-wide text-sm mr-2">Healthcare That
+                                        Heals.</strong>Affordable, accessible care — not a bureaucratic maze.</span>
                             </li>
                             <li class="reveal reveal-up flex items-start gap-4">
-                                <span class="material-symbols-outlined text-primary mt-1 flex-shrink-0" style="font-variation-settings: 'FILL' 1;">bolt</span>
-                                <span class="font-body text-base md:text-lg text-on-surface leading-snug"><strong class="font-headline uppercase tracking-wide text-sm mr-2">Energy & Jobs.</strong>A dependable grid, modern infrastructure, and real opportunity.</span>
+                                <span class="material-symbols-outlined text-primary mt-1 flex-shrink-0"
+                                    style="font-variation-settings: 'FILL' 1;">bolt</span>
+                                <span class="font-body text-base md:text-lg text-on-surface leading-snug"><strong
+                                        class="font-headline uppercase tracking-wide text-sm mr-2">Energy &
+                                        Jobs.</strong>A dependable grid, modern infrastructure, and real
+                                    opportunity.</span>
                             </li>
                         </ul>
-                        <div class="reveal reveal-up flex flex-col sm:flex-row gap-3 sm:gap-4" style="transition-delay: 0.4s;">
-                            <a href="./articles/rick-martinez-fighter-for-district-125.html" class="bg-primary text-on-primary font-headline font-bold px-8 sm:px-10 py-5 text-sm uppercase tracking-widest hover:bg-primary-container transition-all shadow-xl inline-block text-center">
+                        <div class="reveal reveal-up flex flex-col sm:flex-row gap-3 sm:gap-4"
+                            style="transition-delay: 0.4s;">
+                            <a href="./articles/rick-martinez-fighter-for-district-125.html"
+                                class="bg-primary text-on-primary font-headline font-bold px-8 sm:px-10 py-5 text-sm uppercase tracking-widest hover:bg-primary-container transition-all shadow-xl inline-block text-center">
                                 Read His Story
                             </a>
-                            <a href="https://www.voterickfortexas.com/" target="_blank" rel="noopener" class="bg-transparent border-2 border-primary text-primary font-headline font-bold px-8 sm:px-10 py-5 text-sm uppercase tracking-widest hover:bg-primary hover:text-white transition-all inline-block text-center">
+                            <a href="https://www.voterickfortexas.com/" target="_blank" rel="noopener"
+                                class="bg-transparent border-2 border-primary text-primary font-headline font-bold px-8 sm:px-10 py-5 text-sm uppercase tracking-widest hover:bg-primary hover:text-white transition-all inline-block text-center">
                                 Official Campaign Site
                             </a>
                         </div>
@@ -1030,8 +1244,10 @@
             <div class="container mx-auto px-6 md:px-12">
                 <div class="flex flex-col md:flex-row justify-between items-center gap-8 md:gap-12">
                     <div class="reveal reveal-left text-center md:text-left">
-                        <h4 class="font-headline font-black text-2xl md:text-3xl uppercase tracking-tighter">Stay In The Fight</h4>
-                        <p class="font-body italic text-base md:text-lg text-on-surface-variant">Get the alerts the mainstream media
+                        <h4 class="font-headline font-black text-2xl md:text-3xl uppercase tracking-tighter">Stay In The
+                            Fight</h4>
+                        <p class="font-body italic text-base md:text-lg text-on-surface-variant">Get the alerts the
+                            mainstream media
                             refuses to broadcast.</p>
                     </div>
                     <div class="reveal reveal-right flex flex-col sm:flex-row w-full md:w-auto gap-3 sm:gap-4">
@@ -1052,24 +1268,42 @@
         <div class="container mx-auto px-6 md:px-12">
             <div class="max-w-4xl mx-auto text-center sm:text-left">
                 <div class="share-bar" data-share-bar>
-    <span class="share-label">Spread the Word</span>
-    <div class="share-icons">
-        <button class="share-btn" data-share="facebook" aria-label="Share on Facebook" title="Share on Facebook"><svg viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg></button>
-        <button class="share-btn" data-share="x" aria-label="Share on X" title="Share on X"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></button>
-        <button class="share-btn" data-share="truth" aria-label="Share on Truth Social" title="Share on Truth Social"><svg viewBox="0 0 24 24"><path d="M3 3h18v4h-7v14h-4V7H3V3z"/></svg></button>
-        <button class="share-btn" data-share="telegram" aria-label="Share on Telegram" title="Share on Telegram"><svg viewBox="0 0 24 24"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg></button>
-        <button class="share-btn" data-share="whatsapp" aria-label="Share on WhatsApp" title="Share on WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.304-1.654a11.882 11.882 0 005.684 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></button>
-        <button class="share-btn" data-share="email" aria-label="Share via Email" title="Share via Email"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></button>
-        <button class="share-btn" data-share="copy" aria-label="Copy link" title="Copy link"><svg viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg></button>
-    </div>
-</div>
+                    <span class="share-label">Spread the Word</span>
+                    <div class="share-icons">
+                        <button class="share-btn" data-share="facebook" aria-label="Share on Facebook"
+                            title="Share on Facebook"><svg viewBox="0 0 24 24">
+                                <path
+                                    d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z" />
+                            </svg></button>
+                        <button class="share-btn" data-share="x" aria-label="Share on X" title="Share on X"><svg
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                            </svg></button>
+                        <button class="share-btn" data-share="truth" aria-label="Share on Truth Social"
+                            title="Share on Truth Social"><svg viewBox="0 0 24 24">
+                                <path d="M3 3h18v4h-7v14h-4V7H3V3z" />
+                            </svg></button>
+                        <button class="share-btn" data-share="email" aria-label="Share via Email"
+                            title="Share via Email"><svg viewBox="0 0 24 24">
+                                <path
+                                    d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                            </svg></button>
+                        <button class="share-btn" data-share="copy" aria-label="Copy link" title="Copy link"><svg
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z" />
+                            </svg></button>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <footer class="bg-white border-t border-slate-200 pt-16 md:pt-20 pb-10 px-6 md:px-12">
         <div class="container mx-auto">
-            <div class="reveal reveal-up flex flex-col md:flex-row justify-between items-start gap-8 md:gap-12 mb-12 md:mb-20">
+            <div
+                class="reveal reveal-up flex flex-col md:flex-row justify-between items-start gap-8 md:gap-12 mb-12 md:mb-20">
                 <div class="w-full md:w-auto">
                     <div class="text-xl font-black text-on-surface tracking-tighter font-headline mb-4 uppercase">TEXAS
                         UNITED PATRIOTS</div>
@@ -1147,6 +1381,28 @@
                 });
             })();
 
+        // Smooth-scroll to hash target on initial page load (for cross-page nav like issues.html → index.html#candidate)
+        (function () {
+            if (!location.hash) return;
+            const targetHash = location.hash;
+            if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+            const run = function () {
+                const target = document.querySelector(targetHash);
+                if (!target) return;
+                window.scrollTo(0, 0);
+                requestAnimationFrame(function () {
+                    setTimeout(function () {
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }, 80);
+                });
+            };
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', run);
+            } else {
+                run();
+            }
+        })();
+
         // Scroll reveal animations via IntersectionObserver
         (function () {
             const reveals = document.querySelectorAll('.reveal');
@@ -1223,7 +1479,11 @@
                 }, 400);
             }
 
+            let lastToggle = 0;
             btn.addEventListener('click', function () {
+                const now = Date.now();
+                if (now - lastToggle < 400) return;
+                lastToggle = now;
                 if (btn.getAttribute('aria-expanded') === 'true') close(); else open();
             });
 
@@ -1245,10 +1505,10 @@
             const links = document.querySelectorAll('.nav-link');
             const menuBtn = document.getElementById('mobileMenuBtn');
 
-            window.addEventListener('scroll', function () {
+            function updateNav() {
                 if (window.scrollY > 80) {
                     nav.classList.remove('bg-transparent');
-                    nav.classList.add('bg-white', 'shadow-lg', 'py-4');
+                    nav.classList.add('bg-white', 'shadow-lg');
                     logo.classList.remove('text-white');
                     logo.classList.add('text-primary');
                     links.forEach(function (link) {
@@ -1261,7 +1521,7 @@
                     }
                 } else {
                     nav.classList.add('bg-transparent');
-                    nav.classList.remove('bg-white', 'shadow-lg', 'py-4');
+                    nav.classList.remove('bg-white', 'shadow-lg');
                     logo.classList.add('text-white');
                     logo.classList.remove('text-primary');
                     links.forEach(function (link) {
@@ -1273,10 +1533,13 @@
                         menuBtn.classList.remove('text-primary');
                     }
                 }
-            });
+            }
+            window.addEventListener('scroll', updateNav, { passive: true });
+            // Apply initial state immediately so landing at #hash (already scrolled) shows the correct nav without flash
+            updateNav();
         })();
     </script>
-<script>
+    <script>
         // Social share bar
         (function () {
             const bars = document.querySelectorAll('[data-share-bar]');
@@ -1315,7 +1578,7 @@
             });
         })();
 
-</script>
+    </script>
 </body>
 
 </html>
