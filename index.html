@@ -243,15 +243,15 @@
         section[id] { scroll-margin-top: 88px; }
         @media (min-width: 768px) { section[id] { scroll-margin-top: 104px; } }
 
-        /* Mobile hero: show the whole video, no cropping, below the nav */
+        /* Mobile hero: flag centered-upper so it sits in the middle of the viewport, not pushed down */
         @media (max-width: 767px) {
             .hero-section {
                 min-height: 100svh;
             }
 
             .hero-video {
-                object-fit: contain !important;
-                object-position: center 80px !important;
+                object-fit: cover !important;
+                object-position: center 38% !important;
             }
 
             .hero-overlay {
