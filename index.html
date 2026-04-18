@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Texas United Patriots</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;700;800;900&family=Newsreader:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-tertiary-container": "#cca75f",
+                        "inverse-surface": "#2f3131",
+                        "primary": "#5d0011",
+                        "surface-dim": "#dadada",
+                        "secondary-fixed": "#e2dfff",
+                        "on-background": "#1a1c1c",
+                        "inverse-primary": "#ffb3b3",
+                        "on-tertiary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "on-secondary-container": "#4e4d81",
+                        "surface-variant": "#e2e2e2",
+                        "outline-variant": "#c8c5d0",
+                        "on-surface": "#1a1c1c",
+                        "primary-fixed": "#ffdad9",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-fixed": "#261900",
+                        "secondary-fixed-dim": "#c3c1fd",
+                        "on-error": "#ffffff",
+                        "surface-container-high": "#e8e8e8",
+                        "secondary-container": "#c3c1fd",
+                        "tertiary": "#392700",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "primary-container": "#87001d",
+                        "surface-container": "#eeeeee",
+                        "outline": "#787680",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed-variant": "#5d4201",
+                        "on-surface-variant": "#47464f",
+                        "primary-fixed-dim": "#ffb3b3",
+                        "on-secondary-fixed": "#161447",
+                        "tertiary-fixed-dim": "#e9c176",
+                        "secondary": "#5a598e",
+                        "on-primary-fixed-variant": "#920121",
+                        "on-secondary-fixed-variant": "#424175",
+                        "tertiary-container": "#553c00",
+                        "surface-tint": "#b42435",
+                        "inverse-on-surface": "#f1f1f1",
+                        "tertiary-fixed": "#ffdea5",
+                        "background": "#f9f9f9",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-primary-fixed": "#400009",
+                        "error": "#ba1a1a",
+                        "on-primary-container": "#ff8b8d",
+                        "surface-bright": "#f9f9f9",
+                        "surface-container-low": "#f3f3f3",
+                        "surface": "#f9f9f9"
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        full: "9999px"
+                    },
+                    fontFamily: {
+                        headline: ["Public Sans"],
+                        body: ["Newsreader"],
+                        label: ["Public Sans"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .text-shadow-hero {
+            text-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-overlay {
+            background:
+                linear-gradient(270deg,
+                    rgba(0, 0, 0, 0.95) 0%,
+                    rgba(0, 0, 0, 0.55) 8%,
+                    rgba(0, 0, 0, 0.18) 20%,
+                    rgba(0, 0, 0, 0) 35%),
+                linear-gradient(90deg,
+                    rgba(0, 0, 0, 0.85) 0%,
+                    rgba(0, 0, 0, 0.78) 10%,
+                    rgba(0, 0, 0, 0.70) 20%,
+                    rgba(0, 0, 0, 0.62) 30%,
+                    rgba(0, 0, 0, 0.55) 40%,
+                    rgba(0, 0, 0, 0.48) 50%,
+                    rgba(0, 0, 0, 0.40) 60%,
+                    rgba(0, 0, 0, 0.33) 70%,
+                    rgba(0, 0, 0, 0.27) 80%,
+                    rgba(0, 0, 0, 0.22) 90%,
+                    rgba(0, 0, 0, 0.18) 100%);
+        }
+
+        /* Noise dither to eliminate gradient banding */
+        .hero-overlay::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.08'/%3E%3C/svg%3E");
+            pointer-events: none;
+            mix-blend-mode: overlay;
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .marquee-track {
+            display: flex;
+            width: max-content;
+        }
+
+        .marquee-track>* {
+            flex-shrink: 0;
+        }
+
+        @keyframes flagWave {
+            0% {
+                transform: scale(1.08) translate(0, 0) skewX(0deg);
+            }
+
+            20% {
+                transform: scale(1.09) translate(0.3%, 0.1%) skewX(0.3deg);
+            }
+
+            40% {
+                transform: scale(1.07) translate(-0.2%, -0.1%) skewX(-0.2deg);
+            }
+
+            60% {
+                transform: scale(1.09) translate(0.1%, 0.2%) skewX(0.2deg);
+            }
+
+            80% {
+                transform: scale(1.08) translate(-0.3%, -0.1%) skewX(-0.3deg);
+            }
+
+            100% {
+                transform: scale(1.08) translate(0, 0) skewX(0deg);
+            }
+        }
+
+        .flag-wave {
+            animation: flagWave 8s ease-in-out infinite;
+            will-change: transform;
+        }
+
+        /* Scroll reveal animations */
+        .reveal {
+            opacity: 0;
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translate(0, 0) !important;
+        }
+
+        .reveal-up {
+            transform: translateY(60px);
+        }
+
+        .reveal-left {
+            transform: translateX(-60px);
+        }
+
+        .reveal-right {
+            transform: translateX(60px);
+        }
+
+        .reveal-scale {
+            transform: scale(0.9);
+        }
+
+        /* Staggered children */
+        .stagger>.reveal:nth-child(1) {
+            transition-delay: 0s;
+        }
+
+        .stagger>.reveal:nth-child(2) {
+            transition-delay: 0.15s;
+        }
+
+        .stagger>.reveal:nth-child(3) {
+            transition-delay: 0.3s;
+        }
+
+        .stagger>.reveal:nth-child(4) {
+            transition-delay: 0.45s;
+        }
+
+        .stagger>.reveal:nth-child(5) {
+            transition-delay: 0.6s;
+        }
+
+        /* Border grow animation for the quote */
+        .border-grow {
+            border-left-color: transparent;
+            transition: border-left-color 0.6s ease 0.3s;
+        }
+
+        .border-grow.visible {
+            border-left-color: #5d0011;
+        }
+    </style>
+</head>
+
+<body class="bg-surface text-on-surface font-body selection:bg-tertiary-fixed-dim selection:text-tertiary">
+
+    <!-- TopNavBar -->
+    <nav id="mainNav"
+        class="fixed top-0 w-full z-50 flex justify-between items-center px-12 py-6 max-w-full transition-all duration-300 bg-transparent">
+        <a id="navLogo" href="./index.html"
+            class="text-2xl font-black text-white tracking-tighter font-headline transition-colors duration-300 hover:opacity-80">
+            TEXAS UNITED PATRIOTS
+        </a>
+        <div class="hidden md:flex items-center gap-x-12">
+            <a class="nav-link font-headline font-bold text-xs uppercase tracking-widest text-white hover:text-primary-fixed transition-colors duration-300"
+                href="./issues.html">Issues</a>
+            <a class="nav-link font-headline font-bold text-xs uppercase tracking-widest text-white hover:text-primary-fixed transition-colors duration-300"
+                href="./about.html">About</a>
+            <a class="nav-link font-headline font-bold text-xs uppercase tracking-widest text-white hover:text-primary-fixed transition-colors duration-300"
+                href="#candidate">Candidate</a>
+            <a class="nav-link font-headline font-bold text-xs uppercase tracking-widest text-white hover:text-primary-fixed transition-colors duration-300"
+                href="#news">News</a>
+            <button
+                class="bg-primary text-on-primary font-headline font-bold text-xs uppercase tracking-widest px-8 py-3 rounded-none active:scale-95 duration-150 border border-primary">
+                Donate Now
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <!-- High-Impact Hero Section -->
+        <section class="relative min-h-screen flex items-center overflow-hidden bg-black">
+            <div class="absolute inset-0 z-0">
+                <video id="heroVidA" autoplay muted playsinline
+                    class="absolute inset-0 w-full h-full object-cover object-center opacity-80 transition-opacity duration-1000">
+                    <source src="./texas_wave.mp4" type="video/mp4" />
+                </video>
+                <video id="heroVidB" muted playsinline
+                    class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-1000">
+                    <source src="./texas_wave.mp4" type="video/mp4" />
+                </video>
+                <div class="absolute inset-0 hero-overlay"></div>
+            </div>
+            <div class="container mx-auto px-12 relative z-10 pt-20">
+                <div class="max-w-4xl">
+                    <span
+                        class="inline-flex items-center gap-2 bg-primary text-on-primary px-3 py-1 mb-8 font-headline font-bold text-[10px] tracking-[0.2em] uppercase">
+                        <span class="material-symbols-outlined text-[12px]"
+                            style="font-variation-settings: 'FILL' 1;">star</span>
+                        America First Leadership
+                    </span>
+                    <h1
+                        class="font-headline font-black text-6xl md:text-8xl lg:text-9xl text-white leading-[0.85] tracking-tighter mb-8 text-shadow-hero uppercase">
+                        Defending the<br />Lone Star State.
+                    </h1>
+                    <p
+                        class="font-body italic text-2xl md:text-3xl text-white/90 max-w-2xl mb-12 leading-tight drop-shadow-lg">
+                        Texas United Patriots is dedicated to defeating left-wing propaganda and electing principled
+                        leaders who fight for national sovereignty.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <button
+                            class="bg-primary text-on-primary font-headline font-bold px-12 py-5 text-sm uppercase tracking-widest hover:bg-primary-container transition-all shadow-xl">
+                            Join the Movement
+                        </button>
+                        <button
+                            class="bg-transparent border-2 border-white text-white font-headline font-bold px-12 py-5 text-sm uppercase tracking-widest hover:bg-white hover:text-black transition-all shadow-xl backdrop-blur-sm">
+                            Donate Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Breaking News Style Bar -->
+        <div class="bg-primary py-3 border-y border-white/10 relative z-20">
+            <div class="flex items-center whitespace-nowrap">
+                <span
+                    class="bg-white text-primary font-headline font-black text-[10px] px-3 py-1 uppercase tracking-widest shrink-0 ml-12 mr-6 relative z-10">Latest
+                    Updates</span>
+                <div class="flex-1 overflow-hidden">
+                    <div class="marquee-track animate-[marquee_102.8s_linear_infinite]">
+                        <p class="text-white font-headline font-bold text-xs uppercase tracking-widest">Defeating Woke
+                            Ideology in Texas Schools &nbsp;★&nbsp; New Report: CRT Still Being Taught Under Different
+                            Names &nbsp;★&nbsp; Parents Fight Back Against Gender Ideology in Classrooms &nbsp;★&nbsp;
+                            Texas AG Launches Investigation Into DEI Spending at State Universities &nbsp;★&nbsp; School
+                            Board Recall Elections Sweep Across North Texas &nbsp;★&nbsp; Exposing ESG: How Woke
+                            Corporations Undermine Texas Energy &nbsp;★&nbsp; Citizens Demand Accountability From
+                            Radical School Boards &nbsp;★&nbsp; Join the Patriot Movement Today &nbsp;★&nbsp; Stop the
+                            Indoctrination — Protect Our Children &nbsp;★&nbsp; Texas Leads the Fight Against Federal
+                            Overreach &nbsp;★&nbsp;</p>
+                        <p class="text-white font-headline font-bold text-xs uppercase tracking-widest">Defeating Woke
+                            Ideology in Texas Schools &nbsp;★&nbsp; New Report: CRT Still Being Taught Under Different
+                            Names &nbsp;★&nbsp; Parents Fight Back Against Gender Ideology in Classrooms &nbsp;★&nbsp;
+                            Texas AG Launches Investigation Into DEI Spending at State Universities &nbsp;★&nbsp; School
+                            Board Recall Elections Sweep Across North Texas &nbsp;★&nbsp; Exposing ESG: How Woke
+                            Corporations Undermine Texas Energy &nbsp;★&nbsp; Citizens Demand Accountability From
+                            Radical School Boards &nbsp;★&nbsp; Join the Patriot Movement Today &nbsp;★&nbsp; Stop the
+                            Indoctrination — Protect Our Children &nbsp;★&nbsp; Texas Leads the Fight Against Federal
+                            Overreach &nbsp;★&nbsp;</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Editorial Mission Section -->
+        <section class="py-32 bg-white">
+            <div class="container mx-auto px-12">
+                <div class="flex flex-col lg:flex-row gap-20 items-center">
+                    <div class="lg:w-1/2 order-2 lg:order-1">
+                        <span
+                            class="reveal reveal-up block font-headline font-bold text-[10px] text-primary uppercase tracking-[0.3em] mb-6">Mission
+                            &amp; Values</span>
+                        <h2 class="reveal reveal-up font-headline font-black text-5xl md:text-6xl text-on-surface leading-none mb-8"
+                            style="transition-delay: 0.1s;">
+                            "The people of Texas deserve leaders who will stand up for their values."
+                        </h2>
+                        <div class="reveal reveal-left border-grow border-l-4 border-primary pl-8 py-4 mb-10"
+                            style="transition-delay: 0.25s;">
+                            <p class="font-body italic text-xl text-on-surface-variant leading-relaxed">
+                                "We are drawing a line in the sand. Texas institutions must remain focused on
+                                excellence, family, and freedom—not social engineering or biased mainstream narratives."
+                            </p>
+                            <p class="mt-4 font-headline font-bold text-xs uppercase tracking-widest text-primary">—
+                                Texas United Leadership</p>
+                        </div>
+                        <p class="reveal reveal-up text-on-surface-variant text-lg leading-relaxed max-w-xl mb-8"
+                            style="transition-delay: 0.4s;">
+                            Texas United Patriots is a grassroots-driven movement dedicated to protecting the bedrock
+                            principles that made our state the greatest economic engine in the nation. We provide raw
+                            truth and investigative clarity.
+                        </p>
+                    </div>
+                    <div class="lg:w-1/2 order-1 lg:order-2">
+                        <div class="reveal reveal-right relative group">
+                            <div class="absolute -inset-4 bg-slate-100 -z-10 translate-x-4 translate-y-4"></div>
+                            <img alt="Texas State Capitol" class="w-full aspect-[4/5] object-cover shadow-2xl"
+                                src="./statecapital.png" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Counter Bar -->
+        <section class="py-16 bg-primary text-white">
+            <div class="container mx-auto px-12">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                    <div class="reveal reveal-up" style="transition-delay: 0s;">
+                        <div class="font-headline font-black text-5xl md:text-6xl tracking-tighter"><span
+                                class="counter" data-target="50000">0</span>+</div>
+                        <p class="font-headline font-bold text-[10px] uppercase tracking-[0.2em] text-white/70 mt-2">
+                            Patriots Strong</p>
+                    </div>
+                    <div class="reveal reveal-up" style="transition-delay: 0.15s;">
+                        <div class="font-headline font-black text-5xl md:text-6xl tracking-tighter"><span
+                                class="counter" data-target="254">0</span></div>
+                        <p class="font-headline font-bold text-[10px] uppercase tracking-[0.2em] text-white/70 mt-2">
+                            Counties Reached</p>
+                    </div>
+                    <div class="reveal reveal-up" style="transition-delay: 0.3s;">
+                        <div class="font-headline font-black text-5xl md:text-6xl tracking-tighter">$<span
+                                class="counter" data-target="2" data-suffix="M">0</span>M</div>
+                        <p class="font-headline font-bold text-[10px] uppercase tracking-[0.2em] text-white/70 mt-2">
+                            Raised for Candidates</p>
+                    </div>
+                    <div class="reveal reveal-up" style="transition-delay: 0.45s;">
+                        <div class="font-headline font-black text-5xl md:text-6xl tracking-tighter"><span
+                                class="counter" data-target="12">0</span></div>
+                        <p class="font-headline font-bold text-[10px] uppercase tracking-[0.2em] text-white/70 mt-2">
+                            Races Won in 2024</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- News Section -->
+        <section class="py-32 bg-surface" id="news">
+            <div class="container mx-auto px-12">
+                <div class="reveal reveal-up text-center mb-16">
+                    <span
+                        class="block font-headline font-bold text-[10px] text-primary uppercase tracking-[0.3em] mb-4">Investigative
+                        Reports</span>
+                    <h2
+                        class="font-headline font-black text-5xl md:text-6xl text-on-surface leading-none uppercase tracking-tighter">
+                        Latest News</h2>
+                    <p class="font-body italic text-xl text-on-surface-variant mt-4 max-w-2xl mx-auto">The stories the
+                        mainstream media won't tell you. Real reporting, real facts, real accountability.</p>
+                </div>
+
+                <!-- Featured Article -->
+                <div class="reveal reveal-up mb-16">
+                    <a href="./articles/texas-tech-eliminates-gender-programs.html"
+                        class="group block bg-white shadow-lg hover:shadow-2xl transition-shadow overflow-hidden">
+                        <div class="flex flex-col lg:flex-row">
+                            <div class="lg:w-1/2">
+                                <img alt="Texas Tech University"
+                                    class="w-full h-full min-h-[300px] object-cover group-hover:scale-105 transition-transform duration-500"
+                                    src="https://images.unsplash.com/photo-1562774053-701939374585?w=800&q=80" />
+                            </div>
+                            <div class="lg:w-1/2 p-10 md:p-14 flex flex-col justify-center">
+                                <span
+                                    class="inline-block bg-primary text-on-primary font-headline font-bold text-[9px] tracking-[0.2em] uppercase px-3 py-1 mb-4 w-fit">Breaking</span>
+                                <h3
+                                    class="font-headline font-black text-3xl md:text-4xl text-on-surface leading-tight mb-4 uppercase tracking-tight group-hover:text-primary transition-colors">
+                                    Texas Tech System Eliminates All Gender Identity Programs Across Five Universities
+                                </h3>
+                                <p class="font-body text-on-surface-variant text-lg leading-relaxed mb-6">In a landmark
+                                    decision on April 10, 2026, Texas Tech Chancellor Brandon Creighton ordered the full
+                                    phase-out of all academic programs "centered on" Sexual Orientation and Gender
+                                    Identity (SOGI) across all five system universities — including Texas Tech, Angelo
+                                    State, and Midwestern State. The memo mandates that provosts identify targeted
+                                    majors, minors, certificates, and graduate degrees by June 15 and immediately freeze
+                                    new admissions. The directive also establishes a new course framework requiring "the
+                                    legal recognition of only two human sexes" and "strictly prohibits the endorsement
+                                    of a gender spectrum or fluid gender identities as empirical biological science."
+                                </p>
+                                <div class="flex items-center gap-4 mt-auto">
+                                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&h=150&q=80"
+                                        alt="James McAllister"
+                                        class="w-10 h-10 rounded-full object-cover shadow-md border-2 border-white" />
+                                    <div>
+                                        <span
+                                            class="block font-headline font-bold text-sm text-on-surface capitalize tracking-tight">James
+                                            McAllister</span>
+                                        <span
+                                            class="block font-headline font-bold text-[10px] uppercase tracking-widest text-primary mt-1">April
+                                            10, 2026 &nbsp;·&nbsp; 8 min read</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Article Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <!-- Article 1: CRT -->
+                    <a href="./articles/crt-taught-under-different-names.html"
+                        class="reveal reveal-up group bg-white shadow-md hover:shadow-xl transition-all overflow-hidden"
+                        style="transition-delay: 0s;">
+                        <div class="overflow-hidden">
+                            <img alt="Texas classroom"
+                                class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500"
+                                src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&q=80" />
+                        </div>
+                        <div class="p-8">
+                            <span
+                                class="font-headline font-bold text-[9px] tracking-[0.2em] uppercase text-primary mb-3 block">Education</span>
+                            <h4
+                                class="font-headline font-black text-xl uppercase tracking-tight mb-3 group-hover:text-primary transition-colors leading-tight">
+                                CRT Still Being Taught Under Different Names in Texas Schools</h4>
+                            <p class="font-body text-on-surface-variant text-sm leading-relaxed mb-4">Despite Senate
+                                Bill 3 becoming law in 2021 to ban critical race theory concepts, the Texas Public
+                                Policy Foundation reports that CRT principles continue to be woven into curricula under
+                                rebranded terminology. The law's civics training mandate — requiring at least one
+                                teacher and one administrator from every district to complete state-approved training —
+                                didn't take full effect until the 2025-2026 school year. Parents across the state report
+                                that concepts like "systemic racism" and "intersectionality" still appear in classroom
+                                materials under labels like "culturally responsive teaching" and "equity frameworks."
+                            </p>
+                            <div class="flex items-center gap-3 mt-4">
+                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=150&h=150&q=80"
+                                    alt="Rachel Thornton"
+                                    class="w-8 h-8 rounded-full object-cover shadow-sm border border-slate-200" />
+                                <div>
+                                    <span
+                                        class="block font-headline font-bold text-xs text-on-surface capitalize tracking-tight group-hover:text-primary transition-colors">Rachel
+                                        Thornton</span>
+                                    <span
+                                        class="block font-headline font-bold text-[9px] uppercase tracking-widest text-on-surface-variant mt-0.5">March
+                                        22, 2026 &nbsp;·&nbsp; 6 min read</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Article 2: Parents Fight Back -->
+                    <a href="./articles/houston-parents-win-gender-lawsuit.html"
+                        class="reveal reveal-up group bg-white shadow-md hover:shadow-xl transition-all overflow-hidden"
+                        style="transition-delay: 0.15s;">
+                        <div class="overflow-hidden">
+                            <img alt="Parents at school board"
+                                class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500"
+                                src="https://images.unsplash.com/photo-1591123120675-6f7f1aae0e5b?w=600&q=80" />
+                        </div>
+                        <div class="p-8">
+                            <span
+                                class="font-headline font-bold text-[9px] tracking-[0.2em] uppercase text-primary mb-3 block">Parental
+                                Rights</span>
+                            <h4
+                                class="font-headline font-black text-xl uppercase tracking-tight mb-3 group-hover:text-primary transition-colors leading-tight">
+                                Houston Parents Win Lawsuit Over School's Secret Gender Transition of Daughter</h4>
+                            <p class="font-body text-on-surface-variant text-sm leading-relaxed mb-4">Terry and Sarah
+                                Osborn sued Houston ISD's Bellaire High School after discovering that more than six
+                                school employees referred to their daughter using a masculine name and male pronouns for
+                                two years — against the parents' explicit instructions. The school counselor, principal,
+                                and multiple teachers all participated in the secret social transition. After a federal
+                                lawsuit naming Superintendent Mike Miles and Principal Michael Niggli, the school
+                                settled, agreeing to address the student only by her given name and female pronouns.
+                                Attorney General Ken Paxton backed the parents' case.</p>
+                            <div class="flex items-center gap-3 mt-4">
+                                <img src="./david_reeves.png" alt="David Reeves"
+                                    class="w-8 h-8 rounded-full object-cover shadow-sm border border-slate-200" />
+                                <div>
+                                    <span
+                                        class="block font-headline font-bold text-xs text-on-surface capitalize tracking-tight group-hover:text-primary transition-colors">David
+                                        Reeves</span>
+                                    <span
+                                        class="block font-headline font-bold text-[9px] uppercase tracking-widest text-on-surface-variant mt-0.5">December
+                                        15, 2025 &nbsp;·&nbsp; 5 min read</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Article 3: DEI Investigation -->
+                    <a href="./articles/texas-dei-investigation-portal.html"
+                        class="reveal reveal-up group bg-white shadow-md hover:shadow-xl transition-all overflow-hidden"
+                        style="transition-delay: 0.3s;">
+                        <div class="overflow-hidden">
+                            <img alt="University building"
+                                class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500"
+                                src="https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?w=600&q=80" />
+                        </div>
+                        <div class="p-8">
+                            <span
+                                class="font-headline font-bold text-[9px] tracking-[0.2em] uppercase text-primary mb-3 block">Higher
+                                Education</span>
+                            <h4
+                                class="font-headline font-black text-xl uppercase tracking-tight mb-3 group-hover:text-primary transition-colors leading-tight">
+                                Texas Launches DEI Investigation Portal — Anyone Can Now File University Complaints</h4>
+                            <p class="font-body text-on-surface-variant text-sm leading-relaxed mb-4">On January 9,
+                                2026, the Texas Office of the Ombudsman launched a public complaint portal allowing any
+                                Texan to report state university violations of Senate Bill 17 — the 2023 law that banned
+                                diversity, equity, and inclusion offices, programs, and training at public institutions.
+                                Students, employees, and faculty can now serve as watchdogs. If a university fails to
+                                resolve a violation within 180 days, the ombudsman can refer the case to the state
+                                auditor and recommend that lawmakers block the institution from spending state funds
+                                until compliance is achieved.</p>
+                            <div class="flex items-center gap-3 mt-4">
+                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&h=150&q=80"
+                                    alt="Catherine Mercer"
+                                    class="w-8 h-8 rounded-full object-cover shadow-sm border border-slate-200" />
+                                <div>
+                                    <span
+                                        class="block font-headline font-bold text-xs text-on-surface capitalize tracking-tight group-hover:text-primary transition-colors">Catherine
+                                        Mercer</span>
+                                    <span
+                                        class="block font-headline font-bold text-[9px] uppercase tracking-widest text-on-surface-variant mt-0.5">January
+                                        12, 2026 &nbsp;·&nbsp; 7 min read</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Article 4: ESG -->
+                    <a href="./articles/esg-anti-woke-investment-law.html"
+                        class="reveal reveal-up group bg-white shadow-md hover:shadow-xl transition-all overflow-hidden"
+                        style="transition-delay: 0s;">
+                        <div class="overflow-hidden">
+                            <img alt="Oil pump in Texas"
+                                class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500"
+                                src="https://images.unsplash.com/photo-1513828583688-c52646db42da?w=600&q=80" />
+                        </div>
+                        <div class="p-8">
+                            <span
+                                class="font-headline font-bold text-[9px] tracking-[0.2em] uppercase text-primary mb-3 block">Energy
+                                &amp; Economy</span>
+                            <h4
+                                class="font-headline font-black text-xl uppercase tracking-tight mb-3 group-hover:text-primary transition-colors leading-tight">
+                                Exposing ESG: Court Strikes Down Texas Anti-Woke Investment Law, But the Fight Isn't
+                                Over</h4>
+                            <p class="font-body text-on-surface-variant text-sm leading-relaxed mb-4">A federal judge
+                                ruled that Texas' Energy Discrimination Elimination Act — which required state agencies
+                                to divest from companies boycotting fossil fuels — violated the First Amendment. The
+                                2021 law had blacklisted firms like BlackRock and HSBC. While BlackRock was removed from
+                                the blacklist in June 2025 after exiting climate-focused investment groups, the ruling
+                                threatens similar anti-ESG laws in 14 other states. Texas lawmakers are already
+                                preparing new legislation to protect the state's $300 billion energy sector from what
+                                they call "woke corporate activism."</p>
+                            <div class="flex items-center gap-3 mt-4">
+                                <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=150&h=150&q=80"
+                                    alt="Marcus Webb"
+                                    class="w-8 h-8 rounded-full object-cover shadow-sm border border-slate-200" />
+                                <div>
+                                    <span
+                                        class="block font-headline font-bold text-xs text-on-surface capitalize tracking-tight group-hover:text-primary transition-colors">Marcus
+                                        Webb</span>
+                                    <span
+                                        class="block font-headline font-bold text-[9px] uppercase tracking-widest text-on-surface-variant mt-0.5">February
+                                        8, 2026 &nbsp;·&nbsp; 6 min read</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Article 5: Texas Sovereignty -->
+                    <a href="./articles/texas-sovereignty-act-passes-house.html"
+                        class="reveal reveal-up group bg-white shadow-md hover:shadow-xl transition-all overflow-hidden"
+                        style="transition-delay: 0.15s;">
+                        <div class="overflow-hidden">
+                            <img alt="Texas State Capitol"
+                                class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500"
+                                src="https://images.unsplash.com/photo-1588416936097-41850ab3d86d?w=600&q=80" />
+                        </div>
+                        <div class="p-8">
+                            <span
+                                class="font-headline font-bold text-[9px] tracking-[0.2em] uppercase text-primary mb-3 block">State
+                                Sovereignty</span>
+                            <h4
+                                class="font-headline font-black text-xl uppercase tracking-tight mb-3 group-hover:text-primary transition-colors leading-tight">
+                                Texas Sovereignty Act Passes House 86-41 — State Could Nullify Unconstitutional Federal
+                                Actions</h4>
+                            <p class="font-body text-on-surface-variant text-sm leading-relaxed mb-4">House Bill 796
+                                passed the Texas House on May 6, 2025, creating the Joint Legislative Committee on
+                                Constitutional Enforcement — a 12-member bipartisan panel empowered to review federal
+                                laws, executive orders, agency rules, court decisions, and treaties that "challenge the
+                                sovereignty of the state." If the committee determines a federal action exceeds
+                                constitutional authority, Texas could declare it null and unenforceable by state
+                                agencies. The bill defines "unconstitutional federal action" broadly and represents a
+                                historic assertion of Tenth Amendment powers.</p>
+                            <div class="flex items-center gap-3 mt-4">
+                                <img src="./col_briggs.png" alt="Col. Samuel Briggs (Ret.)"
+                                    class="w-8 h-8 rounded-full object-cover shadow-sm border border-slate-200" />
+                                <div>
+                                    <span
+                                        class="block font-headline font-bold text-xs text-on-surface capitalize tracking-tight group-hover:text-primary transition-colors">Col.
+                                        Samuel Briggs (Ret.)</span>
+                                    <span
+                                        class="block font-headline font-bold text-[9px] uppercase tracking-widest text-on-surface-variant mt-0.5">May
+                                        8, 2025 &nbsp;·&nbsp; 7 min read</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Article 6: Texas A&M -->
+                    <a href="./articles/texas-am-gender-unicorn-firing.html"
+                        class="reveal reveal-up group bg-white shadow-md hover:shadow-xl transition-all overflow-hidden"
+                        style="transition-delay: 0.3s;">
+                        <div class="overflow-hidden">
+                            <img alt="University lecture hall"
+                                class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500"
+                                src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=600&q=80" />
+                        </div>
+                        <div class="p-8">
+                            <span
+                                class="font-headline font-bold text-[9px] tracking-[0.2em] uppercase text-primary mb-3 block">Campus
+                                Watch</span>
+                            <h4
+                                class="font-headline font-black text-xl uppercase tracking-tight mb-3 group-hover:text-primary transition-colors leading-tight">
+                                Texas A&amp;M Fires Professor, Forces Out President After "Gender Unicorn" Classroom
+                                Recording</h4>
+                            <p class="font-body text-on-surface-variant text-sm leading-relaxed mb-4">In September 2025,
+                                a Texas A&amp;M student secretly recorded a children's literature class in which
+                                instructor Melissa McCoul presented a "gender unicorn" graphic and discussed content
+                                recognizing more than two genders. Within days, the university fired Professor McCoul,
+                                removed the dean of the College of Arts and Sciences, and dismissed a department head.
+                                President Mark Welsh resigned on September 18, 2025, after regents issued an ultimatum.
+                                The incident became a rallying point for parents demanding transparency in how
+                                taxpayer-funded universities handle ideology in the classroom.</p>
+                            <div class="flex items-center gap-3 mt-4">
+                                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&h=150&q=80"
+                                    alt="Dr. Allison Price"
+                                    class="w-8 h-8 rounded-full object-cover shadow-sm border border-slate-200" />
+                                <div>
+                                    <span
+                                        class="block font-headline font-bold text-xs text-on-surface capitalize tracking-tight group-hover:text-primary transition-colors">Dr.
+                                        Allison Price</span>
+                                    <span
+                                        class="block font-headline font-bold text-[9px] uppercase tracking-widest text-on-surface-variant mt-0.5">September
+                                        20, 2025 &nbsp;·&nbsp; 8 min read</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+
+                <!-- View All Button -->
+                <div class="reveal reveal-up text-center mt-16">
+                    <button
+                        class="bg-primary text-on-primary font-headline font-bold px-12 py-5 text-sm uppercase tracking-widest hover:bg-primary-container transition-all shadow-xl">
+                        View All Reports
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Candidate Spotlight -->
+        <section class="py-32 bg-white relative overflow-hidden" id="candidate">
+            <div class="absolute top-0 left-0 w-full h-2 bg-primary"></div>
+            <div class="container mx-auto px-12">
+                <div class="reveal reveal-up text-center mb-20">
+                    <span class="block font-headline font-bold text-[10px] text-primary uppercase tracking-[0.3em] mb-4">Endorsed Candidate</span>
+                    <h2 class="font-headline font-black text-5xl md:text-6xl text-on-surface leading-none uppercase tracking-tighter">Our Fighter for Texas</h2>
+                    <p class="font-body italic text-xl text-on-surface-variant mt-4 max-w-2xl mx-auto">
+                        Meet the leader carrying the torch of faith, family, and freedom into the fight for Texas House District 125.
+                    </p>
+                </div>
+
+                <div class="flex flex-col lg:flex-row gap-16 items-center max-w-6xl mx-auto">
+                    <div class="lg:w-1/2">
+                        <div class="reveal reveal-left relative group">
+                            <div class="absolute -inset-4 bg-primary/10 -z-10 translate-x-4 translate-y-4"></div>
+                            <img alt="Rick Martinez, candidate for Texas House District 125"
+                                class="w-full aspect-[4/5] object-cover shadow-2xl"
+                                style="object-position: 72% 35%;"
+                                src="./rick_martinez.jpg" />
+                            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/85 via-black/50 to-transparent p-8 pt-16">
+                                <span class="inline-block bg-primary text-on-primary font-headline font-bold text-[9px] tracking-[0.2em] uppercase px-3 py-1 mb-3">Texas House · District 125</span>
+                                <h3 class="font-headline font-black text-4xl text-white leading-none uppercase tracking-tight">Rick Martinez</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2">
+                        <span class="reveal reveal-up block font-headline font-bold text-[10px] text-primary uppercase tracking-[0.3em] mb-6">A Servant's Heart. A Fighter's Will.</span>
+                        <h3 class="reveal reveal-up font-headline font-black text-4xl md:text-5xl text-on-surface leading-tight uppercase tracking-tight mb-8" style="transition-delay: 0.1s;">
+                            "San Antonio families deserve a voice that answers to God and to them — nobody else."
+                        </h3>
+                        <div class="reveal reveal-left border-grow border-l-4 border-primary pl-8 py-4 mb-10" style="transition-delay: 0.25s;">
+                            <p class="font-body italic text-xl text-on-surface-variant leading-relaxed">
+                                Raised on discipline and service. Built a business with his own two hands. Fed the hungry, stood with first responders, and carried meals to veterans when the cameras weren't rolling. Rick Martinez isn't running to be a politician — he's running to protect the people he loves.
+                            </p>
+                        </div>
+                        <ul class="stagger space-y-4 mb-10">
+                            <li class="reveal reveal-up flex items-start gap-4">
+                                <span class="material-symbols-outlined text-primary mt-1" style="font-variation-settings: 'FILL' 1;">shield</span>
+                                <span class="font-body text-lg text-on-surface leading-snug"><strong class="font-headline uppercase tracking-wide text-sm mr-2">Back the Blue.</strong>Hold criminals accountable and give police the support they have earned.</span>
+                            </li>
+                            <li class="reveal reveal-up flex items-start gap-4">
+                                <span class="material-symbols-outlined text-primary mt-1" style="font-variation-settings: 'FILL' 1;">home</span>
+                                <span class="font-body text-lg text-on-surface leading-snug"><strong class="font-headline uppercase tracking-wide text-sm mr-2">Abolish the Homestead Property Tax.</strong>No family should ever lose their home to the government.</span>
+                            </li>
+                            <li class="reveal reveal-up flex items-start gap-4">
+                                <span class="material-symbols-outlined text-primary mt-1" style="font-variation-settings: 'FILL' 1;">volunteer_activism</span>
+                                <span class="font-body text-lg text-on-surface leading-snug"><strong class="font-headline uppercase tracking-wide text-sm mr-2">Healthcare That Heals.</strong>Affordable, accessible care — not a bureaucratic maze.</span>
+                            </li>
+                            <li class="reveal reveal-up flex items-start gap-4">
+                                <span class="material-symbols-outlined text-primary mt-1" style="font-variation-settings: 'FILL' 1;">bolt</span>
+                                <span class="font-body text-lg text-on-surface leading-snug"><strong class="font-headline uppercase tracking-wide text-sm mr-2">Energy & Jobs.</strong>A dependable grid, modern infrastructure, and real opportunity.</span>
+                            </li>
+                        </ul>
+                        <div class="reveal reveal-up flex flex-wrap gap-4" style="transition-delay: 0.4s;">
+                            <a href="./articles/rick-martinez-fighter-for-district-125.html" class="bg-primary text-on-primary font-headline font-bold px-10 py-5 text-sm uppercase tracking-widest hover:bg-primary-container transition-all shadow-xl inline-block">
+                                Read His Story
+                            </a>
+                            <a href="https://www.voterickfortexas.com/" target="_blank" rel="noopener" class="bg-transparent border-2 border-primary text-primary font-headline font-bold px-10 py-5 text-sm uppercase tracking-widest hover:bg-primary hover:text-white transition-all inline-block">
+                                Official Campaign Site
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- High-Impact Join Section -->
+        <section class="py-32 bg-[#0a0c10] text-white relative overflow-hidden">
+            <!-- Decorative background elements -->
+            <div class="absolute top-0 right-0 w-1/2 h-full bg-primary/10 -skew-x-12 translate-x-1/4"></div>
+            <div class="container mx-auto px-12 relative z-10">
+                <div class="flex flex-col lg:flex-row gap-20">
+                    <div class="lg:w-1/2">
+                        <h2
+                            class="reveal reveal-up font-headline font-black text-6xl md:text-7xl leading-none mb-8 uppercase">
+                            Join Our<br />Patriot Team</h2>
+                        <p class="reveal reveal-up text-white/60 text-xl leading-relaxed mb-12 max-w-lg"
+                            style="transition-delay: 0.15s;">
+                            The radical establishment has unlimited resources. We have you. Sign up to volunteer,
+                            receive intelligence updates, and help us elect courageous patriots.
+                        </p>
+                        <ul class="stagger space-y-6 mb-12">
+                            <li class="reveal reveal-left flex items-center gap-4">
+                                <span class="material-symbols-outlined text-primary"
+                                    style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                <span class="font-headline font-bold text-xs uppercase tracking-widest">Receive critical
+                                    campaign updates</span>
+                            </li>
+                            <li class="reveal reveal-left flex items-center gap-4">
+                                <span class="material-symbols-outlined text-primary"
+                                    style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                <span class="font-headline font-bold text-xs uppercase tracking-widest">Volunteer
+                                    opportunities in your area</span>
+                            </li>
+                            <li class="reveal reveal-left flex items-center gap-4">
+                                <span class="material-symbols-outlined text-primary"
+                                    style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                <span class="font-headline font-bold text-xs uppercase tracking-widest">Direct access to
+                                    candidate town halls</span>
+                            </li>
+                        </ul>
+                        <div class="reveal reveal-up text-xl font-black text-white tracking-tighter font-headline mb-4 uppercase"
+                            style="transition-delay: 0.5s;">
+                            TEXAS UNITED PATRIOTS
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2">
+                        <div class="reveal reveal-right bg-white p-10 md:p-12 text-on-surface shadow-2xl">
+                            <h3 class="font-headline font-black text-2xl uppercase tracking-tighter mb-8">Fuel the
+                                Resistance</h3>
+                            <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div class="space-y-2">
+                                    <label
+                                        class="text-[10px] uppercase font-bold tracking-widest text-on-surface-variant">First
+                                        Name</label>
+                                    <input
+                                        class="w-full bg-slate-50 border-slate-200 focus:ring-primary focus:border-primary px-4 py-3 text-sm"
+                                        type="text" />
+                                </div>
+                                <div class="space-y-2">
+                                    <label
+                                        class="text-[10px] uppercase font-bold tracking-widest text-on-surface-variant">Last
+                                        Name</label>
+                                    <input
+                                        class="w-full bg-slate-50 border-slate-200 focus:ring-primary focus:border-primary px-4 py-3 text-sm"
+                                        type="text" />
+                                </div>
+                                <div class="md:col-span-2 space-y-2">
+                                    <label
+                                        class="text-[10px] uppercase font-bold tracking-widest text-on-surface-variant">Email
+                                        Address</label>
+                                    <input
+                                        class="w-full bg-slate-50 border-slate-200 focus:ring-primary focus:border-primary px-4 py-3 text-sm"
+                                        type="email" />
+                                </div>
+                                <div class="space-y-2">
+                                    <label
+                                        class="text-[10px] uppercase font-bold tracking-widest text-on-surface-variant">City</label>
+                                    <input
+                                        class="w-full bg-slate-50 border-slate-200 focus:ring-primary focus:border-primary px-4 py-3 text-sm"
+                                        type="text" />
+                                </div>
+                                <div class="space-y-2">
+                                    <label
+                                        class="text-[10px] uppercase font-bold tracking-widest text-on-surface-variant">Zip
+                                        Code</label>
+                                    <input
+                                        class="w-full bg-slate-50 border-slate-200 focus:ring-primary focus:border-primary px-4 py-3 text-sm"
+                                        type="text" />
+                                </div>
+                                <button
+                                    class="md:col-span-2 bg-primary text-on-primary font-headline font-black py-5 text-sm uppercase tracking-[0.2em] hover:bg-primary-container transition-all mt-4">
+                                    Send Message
+                                </button>
+                                <p
+                                    class="md:col-span-2 text-[9px] text-on-surface-variant leading-tight uppercase opacity-60">
+                                    By providing your information, you are consenting to receive communications from
+                                    Texas United Patriots. Message &amp; data rates may apply.
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Detailed Newsletter/CTA -->
+        <section class="py-20 bg-slate-100">
+            <div class="container mx-auto px-12">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-12">
+                    <div class="reveal reveal-left text-center md:text-left">
+                        <h4 class="font-headline font-black text-3xl uppercase tracking-tighter">Stay In The Fight</h4>
+                        <p class="font-body italic text-lg text-on-surface-variant">Get the alerts the mainstream media
+                            refuses to broadcast.</p>
+                    </div>
+                    <div class="reveal reveal-right flex w-full md:w-auto gap-4">
+                        <input
+                            class="flex-grow md:w-80 bg-white border-slate-200 px-6 py-4 focus:ring-primary font-headline text-sm"
+                            placeholder="Your Email Address" type="email" />
+                        <button
+                            class="bg-primary text-white font-headline font-bold px-8 py-4 text-xs uppercase tracking-widest">Join</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 pt-20 pb-10 px-12">
+        <div class="container mx-auto">
+            <div class="reveal reveal-up flex flex-col md:flex-row justify-between items-start gap-12 mb-20">
+                <div>
+                    <div class="text-xl font-black text-on-surface tracking-tighter font-headline mb-4 uppercase">TEXAS
+                        UNITED PATRIOTS</div>
+                    <div class="flex gap-8">
+                        <a class="font-headline font-bold text-[10px] uppercase tracking-widest text-on-surface-variant hover:text-primary"
+                            href="./about.html">About</a>
+                        <a class="font-headline font-bold text-[10px] uppercase tracking-widest text-on-surface-variant hover:text-primary"
+                            href="./issues.html">Issues</a>
+                        <a class="font-headline font-bold text-[10px] uppercase tracking-widest text-on-surface-variant hover:text-primary"
+                            href="#candidate">Candidate</a>
+                        <a class="font-headline font-bold text-[10px] uppercase tracking-widest text-on-surface-variant hover:text-primary"
+                            href="#news">News</a>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <div
+                        class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center hover:bg-slate-200 cursor-pointer transition-colors">
+                        <span class="material-symbols-outlined text-sm">share</span>
+                    </div>
+                    <div
+                        class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center hover:bg-slate-200 cursor-pointer transition-colors">
+                        <span class="material-symbols-outlined text-sm">public</span>
+                    </div>
+                    <button
+                        class="bg-primary text-white font-headline font-bold text-[10px] uppercase tracking-[0.2em] px-8 py-3 h-10">Donate
+                        $</button>
+                </div>
+            </div>
+            <div class="border-t border-slate-100 pt-10 text-center">
+                <div class="max-w-3xl mx-auto border border-slate-200 p-8 mb-8">
+                    <p
+                        class="font-headline font-bold text-[9px] uppercase tracking-widest text-on-surface-variant leading-relaxed">
+                        &copy; 2026 TEXAS UNITED PATRIOTS PAC. PAID FOR BY TEXAS UNITED PATRIOTS PAC. NOT AUTHORIZED BY
+                        ANY CANDIDATE OR CANDIDATE'S COMMITTEE.<br />
+                        CONTRIBUTIONS ARE NOT TAX DEDUCTIBLE FOR FEDERAL INCOME TAX PURPOSES.
+                    </p>
+                </div>
+                <div
+                    class="flex justify-center gap-8 font-headline font-bold text-[10px] uppercase tracking-widest text-slate-400">
+                    <a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+                    <a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+                    <a class="hover:text-primary transition-colors" href="#">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+            // Seamless video loop via crossfade between two identical videos
+            (function () {
+                const vidA = document.getElementById('heroVidA');
+                const vidB = document.getElementById('heroVidB');
+                const FADE_TIME = 1; // seconds before end to start crossfade
+
+                function setupCrossfade(current, next) {
+                    current.addEventListener('timeupdate', function handler() {
+                        if (current.duration && current.currentTime >= current.duration - FADE_TIME) {
+                            next.currentTime = 0;
+                            next.play();
+                            next.style.opacity = '0.8';
+                            current.style.opacity = '0';
+                            current.removeEventListener('timeupdate', handler);
+                            // After fade completes, reset and swap roles
+                            setTimeout(function () {
+                                current.pause();
+                                current.currentTime = 0;
+                                setupCrossfade(next, current);
+                            }, 1000);
+                        }
+                    });
+                }
+
+                vidA.addEventListener('loadeddata', function () {
+                    setupCrossfade(vidA, vidB);
+                });
+            })();
+
+        // Scroll reveal animations via IntersectionObserver
+        (function () {
+            const reveals = document.querySelectorAll('.reveal');
+            const observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
+
+            reveals.forEach(function (el) { observer.observe(el); });
+        })();
+
+        // Animated number counters
+        (function () {
+            const counters = document.querySelectorAll('.counter');
+            const observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        const el = entry.target;
+                        const target = parseInt(el.getAttribute('data-target'));
+                        const duration = 2000;
+                        const start = performance.now();
+
+                        function easeOutQuart(t) { return 1 - Math.pow(1 - t, 4); }
+
+                        function update(now) {
+                            const elapsed = now - start;
+                            const progress = Math.min(elapsed / duration, 1);
+                            const value = Math.floor(easeOutQuart(progress) * target);
+                            el.textContent = value.toLocaleString();
+                            if (progress < 1) {
+                                requestAnimationFrame(update);
+                            } else {
+                                el.textContent = target.toLocaleString();
+                            }
+                        }
+                        requestAnimationFrame(update);
+                        observer.unobserve(el);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            counters.forEach(function (el) { observer.observe(el); });
+        })();
+
+        // Navbar: fade to white on scroll, swap text colors
+        (function () {
+            const nav = document.getElementById('mainNav');
+            const logo = document.getElementById('navLogo');
+            const links = document.querySelectorAll('.nav-link');
+
+            window.addEventListener('scroll', function () {
+                if (window.scrollY > 80) {
+                    nav.classList.remove('bg-transparent');
+                    nav.classList.add('bg-white', 'shadow-lg', 'py-4');
+                    logo.classList.remove('text-white');
+                    logo.classList.add('text-primary');
+                    links.forEach(function (link) {
+                        link.classList.remove('text-white');
+                        link.classList.add('text-on-surface');
+                    });
+                } else {
+                    nav.classList.add('bg-transparent');
+                    nav.classList.remove('bg-white', 'shadow-lg', 'py-4');
+                    logo.classList.add('text-white');
+                    logo.classList.remove('text-primary');
+                    links.forEach(function (link) {
+                        link.classList.add('text-white');
+                        link.classList.remove('text-on-surface');
+                    });
+                }
+            });
+        })();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Our Issues — Texas United Patriots</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;700;800;900&family=Newsreader:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#5d0011",
+                        "on-primary": "#ffffff",
+                        "primary-container": "#87001d",
+                        "primary-fixed": "#ffdad9",
+                        "surface": "#f9f9f9",
+                        "on-surface": "#1a1c1c",
+                        "on-surface-variant": "#47464f",
+                        "surface-variant": "#e2e2e2",
+                        "background": "#f9f9f9"
+                    },
+                    fontFamily: {
+                        headline: ["Public Sans"],
+                        body: ["Newsreader"],
+                        label: ["Public Sans"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .reveal { opacity: 0; transition: opacity 0.8s ease, transform 0.8s ease; }
+        .reveal.visible { opacity: 1; transform: translate(0, 0) !important; }
+        .reveal-up { transform: translateY(40px); }
+    </style>
+</head>
+
+<body class="bg-surface text-on-surface font-body">
+
+    <!-- Nav -->
+    <nav id="mainNav" class="fixed top-0 w-full z-50 flex justify-between items-center px-12 py-4 bg-white shadow-lg transition-all duration-300">
+        <a href="./index.html" class="text-2xl font-black text-primary tracking-tighter font-headline">TEXAS UNITED PATRIOTS</a>
+        <div class="hidden md:flex items-center gap-x-12">
+            <a class="font-headline font-bold text-xs uppercase tracking-widest text-primary transition-colors" href="./issues.html">Issues</a>
+            <a class="font-headline font-bold text-xs uppercase tracking-widest text-on-surface hover:text-primary transition-colors" href="./about.html">About</a>
+            <a class="font-headline font-bold text-xs uppercase tracking-widest text-on-surface hover:text-primary transition-colors" href="./index.html#candidate">Candidate</a>
+            <a class="font-headline font-bold text-xs uppercase tracking-widest text-on-surface hover:text-primary transition-colors" href="./index.html#news">News</a>
+            <button class="bg-primary text-on-primary font-headline font-bold text-xs uppercase tracking-widest px-8 py-3 active:scale-95 duration-150">Donate Now</button>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <header class="relative pt-40 pb-24 bg-[#0a0c10] text-white overflow-hidden">
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-primary/10 -skew-x-12 translate-x-1/4"></div>
+        <div class="container mx-auto px-12 relative z-10">
+            <span class="inline-flex items-center gap-2 bg-primary text-on-primary px-3 py-1 mb-6 font-headline font-bold text-[10px] tracking-[0.2em] uppercase">
+                <span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">flag</span>
+                The Fight Ahead
+            </span>
+            <h1 class="font-headline font-black text-6xl md:text-7xl lg:text-8xl leading-[0.85] tracking-tighter uppercase mb-6">
+                Where We<br/>Draw the Line.
+            </h1>
+            <p class="font-body italic text-xl md:text-2xl text-white/80 max-w-3xl leading-snug">
+                Texas United Patriots stands for the values that built this state and the principles that will save it. These are the issues we will not compromise on — not now, not ever.
+            </p>
+        </div>
+    </header>
+
+    <!-- Issues Grid -->
+    <main>
+        <section class="py-24 bg-white">
+            <div class="container mx-auto px-12">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+
+                    <div class="reveal reveal-up bg-white border border-slate-200 p-10 hover:shadow-xl transition-shadow">
+                        <div class="flex items-center gap-4 mb-5">
+                            <span class="material-symbols-outlined text-primary text-4xl" style="font-variation-settings: 'FILL' 1;">school</span>
+                            <h2 class="font-headline font-black text-2xl uppercase tracking-tight">Education & Parental Rights</h2>
+                        </div>
+                        <p class="font-body text-lg text-on-surface-variant leading-relaxed mb-4">
+                            Our schools exist to educate — not to indoctrinate. We will expose CRT in every rebranded form it hides behind. We will defend the right of parents to know, question, and direct their children's education. Gender ideology has no place in a first-grade classroom, and taxpayer-funded universities will not be sanctuaries for ideological coercion.
+                        </p>
+                        <p class="font-headline font-bold text-[10px] text-primary uppercase tracking-widest">Priority: Tier One</p>
+                    </div>
+
+                    <div class="reveal reveal-up bg-white border border-slate-200 p-10 hover:shadow-xl transition-shadow">
+                        <div class="flex items-center gap-4 mb-5">
+                            <span class="material-symbols-outlined text-primary text-4xl" style="font-variation-settings: 'FILL' 1;">gavel</span>
+                            <h2 class="font-headline font-black text-2xl uppercase tracking-tight">State Sovereignty</h2>
+                        </div>
+                        <p class="font-body text-lg text-on-surface-variant leading-relaxed mb-4">
+                            Texas is not a branch office of Washington, D.C. The Tenth Amendment still means what it says. We back the Texas Sovereignty Act, support the Joint Legislative Committee on Constitutional Enforcement, and will nullify unconstitutional federal overreach — from bureaucratic mandates to runaway court rulings.
+                        </p>
+                        <p class="font-headline font-bold text-[10px] text-primary uppercase tracking-widest">Priority: Tier One</p>
+                    </div>
+
+                    <div class="reveal reveal-up bg-white border border-slate-200 p-10 hover:shadow-xl transition-shadow">
+                        <div class="flex items-center gap-4 mb-5">
+                            <span class="material-symbols-outlined text-primary text-4xl" style="font-variation-settings: 'FILL' 1;">local_police</span>
+                            <h2 class="font-headline font-black text-2xl uppercase tracking-tight">Back the Blue. Secure the Border.</h2>
+                        </div>
+                        <p class="font-body text-lg text-on-surface-variant leading-relaxed mb-4">
+                            No state can be free if its citizens are not safe. We fully and unconditionally support Texas law enforcement and the National Guard troops standing on our southern border. We reject every effort to "catch and release" criminal aliens and every attempt to hamstring the officers who protect our families.
+                        </p>
+                        <p class="font-headline font-bold text-[10px] text-primary uppercase tracking-widest">Priority: Tier One</p>
+                    </div>
+
+                    <div class="reveal reveal-up bg-white border border-slate-200 p-10 hover:shadow-xl transition-shadow">
+                        <div class="flex items-center gap-4 mb-5">
+                            <span class="material-symbols-outlined text-primary text-4xl" style="font-variation-settings: 'FILL' 1;">home</span>
+                            <h2 class="font-headline font-black text-2xl uppercase tracking-tight">End the Property Tax Squeeze</h2>
+                        </div>
+                        <p class="font-body text-lg text-on-surface-variant leading-relaxed mb-4">
+                            A home is a sanctuary, not a revenue stream. We will expand homestead exemptions, compress school tax rates, and fight toward the ultimate goal: eliminating the homestead property tax so that no Texan is ever "renting" their own home from the government.
+                        </p>
+                        <p class="font-headline font-bold text-[10px] text-primary uppercase tracking-widest">Priority: Tier One</p>
+                    </div>
+
+                    <div class="reveal reveal-up bg-white border border-slate-200 p-10 hover:shadow-xl transition-shadow">
+                        <div class="flex items-center gap-4 mb-5">
+                            <span class="material-symbols-outlined text-primary text-4xl" style="font-variation-settings: 'FILL' 1;">bolt</span>
+                            <h2 class="font-headline font-black text-2xl uppercase tracking-tight">Energy Dominance</h2>
+                        </div>
+                        <p class="font-body text-lg text-on-surface-variant leading-relaxed mb-4">
+                            Texas oil, gas, and nuclear power the American economy. We reject ESG boycotts, defend our $300 billion energy sector from "woke" corporate activism, and demand a dependable grid that never leaves a Texas family freezing in the dark again.
+                        </p>
+                        <p class="font-headline font-bold text-[10px] text-primary uppercase tracking-widest">Priority: Tier One</p>
+                    </div>
+
+                    <div class="reveal reveal-up bg-white border border-slate-200 p-10 hover:shadow-xl transition-shadow">
+                        <div class="flex items-center gap-4 mb-5">
+                            <span class="material-symbols-outlined text-primary text-4xl" style="font-variation-settings: 'FILL' 1;">account_balance</span>
+                            <h2 class="font-headline font-black text-2xl uppercase tracking-tight">Dismantle DEI in Public Institutions</h2>
+                        </div>
+                        <p class="font-body text-lg text-on-surface-variant leading-relaxed mb-4">
+                            Senate Bill 17 is the law. We will enforce it. Every taxpayer-funded university that continues to fund DEI programs under new labels will be held accountable through the Ombudsman's public complaint portal and, if needed, state auditor referrals.
+                        </p>
+                        <p class="font-headline font-bold text-[10px] text-primary uppercase tracking-widest">Priority: Tier Two</p>
+                    </div>
+
+                    <div class="reveal reveal-up bg-white border border-slate-200 p-10 hover:shadow-xl transition-shadow">
+                        <div class="flex items-center gap-4 mb-5">
+                            <span class="material-symbols-outlined text-primary text-4xl" style="font-variation-settings: 'FILL' 1;">family_restroom</span>
+                            <h2 class="font-headline font-black text-2xl uppercase tracking-tight">Faith, Family & Life</h2>
+                        </div>
+                        <p class="font-body text-lg text-on-surface-variant leading-relaxed mb-4">
+                            The family is the irreplaceable foundation of a free society. We defend the unborn, protect religious liberty, and will not stand by while faith-based institutions are dragged into court for teaching what billions of Christians, Jews, and Muslims have always believed.
+                        </p>
+                        <p class="font-headline font-bold text-[10px] text-primary uppercase tracking-widest">Priority: Tier Two</p>
+                    </div>
+
+                    <div class="reveal reveal-up bg-white border border-slate-200 p-10 hover:shadow-xl transition-shadow">
+                        <div class="flex items-center gap-4 mb-5">
+                            <span class="material-symbols-outlined text-primary text-4xl" style="font-variation-settings: 'FILL' 1;">storefront</span>
+                            <h2 class="font-headline font-black text-2xl uppercase tracking-tight">Small Business & Economic Freedom</h2>
+                        </div>
+                        <p class="font-body text-lg text-on-surface-variant leading-relaxed mb-4">
+                            Main Street built Texas. We will cut red tape that strangles job creators, reject federal schemes to centralize banking and commerce, and keep Texas the number-one state in America to start, scale, and sell a business.
+                        </p>
+                        <p class="font-headline font-bold text-[10px] text-primary uppercase tracking-widest">Priority: Tier Two</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Strip -->
+        <section class="py-24 bg-primary text-white">
+            <div class="container mx-auto px-12 text-center">
+                <h2 class="font-headline font-black text-4xl md:text-5xl uppercase tracking-tighter mb-6 max-w-3xl mx-auto leading-tight">
+                    These issues don't fight themselves. We do.
+                </h2>
+                <p class="font-body italic text-xl text-white/90 max-w-2xl mx-auto mb-10">
+                    Add your name to the roll call of Texans refusing to surrender the state we love.
+                </p>
+                <a href="./index.html#candidate" class="inline-block bg-white text-primary font-headline font-bold px-12 py-5 text-sm uppercase tracking-widest hover:bg-primary-fixed transition-all shadow-xl">
+                    Meet Our Candidate
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 pt-20 pb-10 px-12">
+        <div class="container mx-auto text-center">
+            <div class="text-xl font-black text-on-surface tracking-tighter font-headline mb-4 uppercase">TEXAS UNITED PATRIOTS</div>
+            <div class="flex justify-center gap-8 mb-10 flex-wrap">
+                <a class="font-headline font-bold text-[10px] uppercase tracking-widest text-on-surface-variant hover:text-primary" href="./about.html">About</a>
+                <a class="font-headline font-bold text-[10px] uppercase tracking-widest text-on-surface-variant hover:text-primary" href="./issues.html">Issues</a>
+                <a class="font-headline font-bold text-[10px] uppercase tracking-widest text-on-surface-variant hover:text-primary" href="./index.html#candidate">Candidate</a>
+                <a class="font-headline font-bold text-[10px] uppercase tracking-widest text-on-surface-variant hover:text-primary" href="./index.html#news">News</a>
+            </div>
+            <p class="font-headline font-bold text-[9px] uppercase tracking-widest text-on-surface-variant leading-relaxed max-w-3xl mx-auto border border-slate-200 p-6">
+                &copy; 2026 TEXAS UNITED PATRIOTS PAC. PAID FOR BY TEXAS UNITED PATRIOTS PAC. NOT AUTHORIZED BY ANY CANDIDATE OR CANDIDATE'S COMMITTEE. CONTRIBUTIONS ARE NOT TAX DEDUCTIBLE FOR FEDERAL INCOME TAX PURPOSES.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        (function () {
+            const reveals = document.querySelectorAll('.reveal');
+            const observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
+            reveals.forEach(function (el) { observer.observe(el); });
+        })();
+    </script>
+</body>
+</html>
