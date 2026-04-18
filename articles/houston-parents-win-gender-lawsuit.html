@@ -85,6 +85,9 @@
         .share-bar.on-dark .share-label { color: rgba(255,255,255,0.6); }
         .share-bar.on-dark .share-btn { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.15); color: #fff; }
         .share-bar.on-dark .share-btn:hover { border-color: transparent; }
+        /* Smooth cross-page transitions (modern browsers: Chrome 126+, Safari 18+) */
+        @view-transition { navigation: auto; }
+        ::view-transition-old(root), ::view-transition-new(root) { animation-duration: 0.4s; animation-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1); }
     </style>
 </head>
 <body class="bg-surface text-on-surface font-body">
@@ -342,7 +345,7 @@
                 lastToggle = now;
                 if (btn.getAttribute('aria-expanded') === 'true') close(); else open();
             });
-            menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', close); });
+            menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { menu.style.transition = 'none'; close(); }); });
             document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && btn.getAttribute('aria-expanded') === 'true') close(); });
         })();
     </script>

@@ -489,6 +489,13 @@
         .share-bar.on-dark .share-btn:hover {
             border-color: transparent;
         }
+        /* Smooth cross-page transitions (modern browsers: Chrome 126+, Safari 18+) */
+        @view-transition { navigation: auto; }
+        ::view-transition-old(root),
+        ::view-transition-new(root) {
+            animation-duration: 0.4s;
+            animation-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
+        }
     </style>
 </head>
 
@@ -1465,7 +1472,11 @@
 
             // Close when an internal link is clicked
             menu.querySelectorAll('a').forEach(function (a) {
-                a.addEventListener('click', close);
+                a.addEventListener('click', function () {
+                    // Close menu instantly so it doesn't animate while the page is transitioning
+                    menu.style.transition = 'none';
+                    close();
+                });
             });
 
             // Close on ESC
