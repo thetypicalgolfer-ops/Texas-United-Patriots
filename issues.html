@@ -37,7 +37,33 @@
         }
     </script>
     <style>
-        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        
+        /* Kill horizontal scroll */
+        html, body { overflow-x: hidden; }
+
+        /* Hamburger button */
+        .hamburger { width: 28px; height: 22px; position: relative; display: inline-block; }
+        .hamburger span { position: absolute; left: 0; height: 2px; width: 100%; background-color: currentColor; border-radius: 2px; transition: transform 0.35s ease, top 0.35s ease, opacity 0.2s ease, background-color 0.3s ease; }
+        .hamburger span:nth-child(1) { top: 2px; }
+        .hamburger span:nth-child(2) { top: 10px; width: 75%; }
+        .hamburger span:nth-child(3) { top: 18px; }
+        #mobileMenuBtn[aria-expanded="true"] .hamburger span:nth-child(1) { top: 10px; transform: rotate(45deg); }
+        #mobileMenuBtn[aria-expanded="true"] .hamburger span:nth-child(2) { opacity: 0; transform: translateX(-10px); }
+        #mobileMenuBtn[aria-expanded="true"] .hamburger span:nth-child(3) { top: 10px; transform: rotate(-45deg); }
+
+        /* Mobile menu — editorial fade-in */
+        #mobileMenu { opacity: 0; visibility: hidden; transition: opacity 0.35s ease, visibility 0s linear 0.35s; }
+        #mobileMenu.open { opacity: 1; visibility: visible; transition: opacity 0.35s ease, visibility 0s linear 0s; }
+        #mobileMenu .menu-item { opacity: 0; transform: translateY(14px); transition: opacity 0.45s ease, transform 0.45s ease; }
+        #mobileMenu.open .menu-item { opacity: 1; transform: translateY(0); }
+        #mobileMenu.open .menu-item:nth-child(1) { transition-delay: 0.12s; }
+        #mobileMenu.open .menu-item:nth-child(2) { transition-delay: 0.18s; }
+        #mobileMenu.open .menu-item:nth-child(3) { transition-delay: 0.24s; }
+        #mobileMenu.open .menu-item:nth-child(4) { transition-delay: 0.30s; }
+        #mobileMenu.open .menu-item:nth-child(5) { transition-delay: 0.40s; }
+        #mobileMenu .menu-index { font-variant-numeric: tabular-nums; }
+
+.material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
         .reveal { opacity: 0; transition: opacity 0.8s ease, transform 0.8s ease; }
         .reveal.visible { opacity: 1; transform: translate(0, 0) !important; }
         .reveal-up { transform: translateY(40px); }
@@ -56,7 +82,45 @@
             <a class="font-headline font-bold text-xs uppercase tracking-widest text-on-surface hover:text-primary transition-colors" href="./index.html#news">News</a>
             <button class="bg-primary text-on-primary font-headline font-bold text-xs uppercase tracking-widest px-8 py-3 active:scale-95 duration-150">Donate Now</button>
         </div>
-    </nav>
+    <button id="mobileMenuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu" class="md:hidden text-primary p-2 -mr-2"><span class="hamburger"><span></span><span></span><span></span></span></button></nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="fixed inset-0 z-[65] bg-[#0a0c10] flex flex-col overflow-y-auto">
+        <div class="absolute inset-x-0 top-0 h-1 bg-primary"></div>
+        <div class="flex justify-between items-center px-6 pt-5 pb-5 border-b border-white/10">
+            <a href="index.html" class="text-lg font-black text-white tracking-tighter font-headline">TEXAS UNITED PATRIOTS</a>
+        </div>
+        <nav class="flex-1 flex flex-col px-6 pt-6">
+            <a class="menu-item group flex items-baseline gap-5 py-5 border-b border-white/10 text-white hover:text-primary-fixed transition-colors" href="issues.html">
+                <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">01</span>
+                <span class="font-headline font-black text-3xl uppercase tracking-tight flex-1">Issues</span>
+                <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
+            </a>
+            <a class="menu-item group flex items-baseline gap-5 py-5 border-b border-white/10 text-white hover:text-primary-fixed transition-colors" href="about.html">
+                <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">02</span>
+                <span class="font-headline font-black text-3xl uppercase tracking-tight flex-1">About</span>
+                <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
+            </a>
+            <a class="menu-item group flex items-baseline gap-5 py-5 border-b border-white/10 text-white hover:text-primary-fixed transition-colors" href="index.html#candidate">
+                <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">03</span>
+                <span class="font-headline font-black text-3xl uppercase tracking-tight flex-1">Candidate</span>
+                <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
+            </a>
+            <a class="menu-item group flex items-baseline gap-5 py-5 border-b border-white/10 text-white hover:text-primary-fixed transition-colors" href="index.html#news">
+                <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">04</span>
+                <span class="font-headline font-black text-3xl uppercase tracking-tight flex-1">News</span>
+                <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
+            </a>
+        </nav>
+        <div class="menu-item px-6 pt-8 pb-10 border-t border-white/10 mt-6">
+            <button class="w-full bg-primary text-on-primary font-headline font-black uppercase tracking-[0.2em] py-5 text-sm shadow-xl hover:bg-primary-container transition-colors flex items-center justify-center gap-2">
+                <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+                Donate Now
+            </button>
+            <p class="mt-6 font-headline font-bold text-[10px] text-white/40 uppercase tracking-[0.3em] text-center">Faith · Family · Freedom</p>
+        </div>
+    </div>
+
 
     <!-- Page Hero -->
     <header class="relative pt-40 pb-24 bg-[#0a0c10] text-white overflow-hidden">
@@ -219,5 +283,31 @@
             reveals.forEach(function (el) { observer.observe(el); });
         })();
     </script>
+
+    <script>
+        (function () {
+            const btn = document.getElementById('mobileMenuBtn');
+            const menu = document.getElementById('mobileMenu');
+            if (!btn || !menu) return;
+            function open() {
+                menu.classList.add('open');
+                btn.setAttribute('aria-expanded', 'true');
+                btn.setAttribute('aria-label', 'Close menu');
+                document.body.style.overflow = 'hidden';
+            }
+            function close() {
+                menu.classList.remove('open');
+                btn.setAttribute('aria-expanded', 'false');
+                btn.setAttribute('aria-label', 'Open menu');
+                document.body.style.overflow = '';
+            }
+            btn.addEventListener('click', function () {
+                if (btn.getAttribute('aria-expanded') === 'true') close(); else open();
+            });
+            menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', close); });
+            document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && btn.getAttribute('aria-expanded') === 'true') close(); });
+        })();
+    </script>
+
 </body>
 </html>

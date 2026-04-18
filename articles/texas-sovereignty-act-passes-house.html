@@ -32,7 +32,45 @@
             <a class="font-headline font-bold text-xs uppercase tracking-widest text-on-surface hover:text-primary transition-colors" href="../index.html">About</a>
             <button class="bg-primary text-on-primary font-headline font-bold text-xs uppercase tracking-widest px-8 py-3 active:scale-95 duration-150">Donate Now</button>
         </div>
-    <a href="../index.html" aria-label="Back to home" class="md:hidden text-primary p-2 -mr-2"><span class="material-symbols-outlined text-3xl">menu</span></a></nav>
+    <button id="mobileMenuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu" class="md:hidden text-primary p-2 -mr-2"><span class="hamburger"><span></span><span></span><span></span></span></button></nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="fixed inset-0 z-[65] bg-[#0a0c10] flex flex-col overflow-y-auto">
+        <div class="absolute inset-x-0 top-0 h-1 bg-primary"></div>
+        <div class="flex justify-between items-center px-6 pt-5 pb-5 border-b border-white/10">
+            <a href="../index.html" class="text-lg font-black text-white tracking-tighter font-headline">TEXAS UNITED PATRIOTS</a>
+        </div>
+        <nav class="flex-1 flex flex-col px-6 pt-6">
+            <a class="menu-item group flex items-baseline gap-5 py-5 border-b border-white/10 text-white hover:text-primary-fixed transition-colors" href="../issues.html">
+                <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">01</span>
+                <span class="font-headline font-black text-3xl uppercase tracking-tight flex-1">Issues</span>
+                <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
+            </a>
+            <a class="menu-item group flex items-baseline gap-5 py-5 border-b border-white/10 text-white hover:text-primary-fixed transition-colors" href="../about.html">
+                <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">02</span>
+                <span class="font-headline font-black text-3xl uppercase tracking-tight flex-1">About</span>
+                <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
+            </a>
+            <a class="menu-item group flex items-baseline gap-5 py-5 border-b border-white/10 text-white hover:text-primary-fixed transition-colors" href="../index.html#candidate">
+                <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">03</span>
+                <span class="font-headline font-black text-3xl uppercase tracking-tight flex-1">Candidate</span>
+                <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
+            </a>
+            <a class="menu-item group flex items-baseline gap-5 py-5 border-b border-white/10 text-white hover:text-primary-fixed transition-colors" href="../index.html#news">
+                <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">04</span>
+                <span class="font-headline font-black text-3xl uppercase tracking-tight flex-1">News</span>
+                <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
+            </a>
+        </nav>
+        <div class="menu-item px-6 pt-8 pb-10 border-t border-white/10 mt-6">
+            <button class="w-full bg-primary text-on-primary font-headline font-black uppercase tracking-[0.2em] py-5 text-sm shadow-xl hover:bg-primary-container transition-colors flex items-center justify-center gap-2">
+                <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+                Donate Now
+            </button>
+            <p class="mt-6 font-headline font-bold text-[10px] text-white/40 uppercase tracking-[0.3em] text-center">Faith · Family · Freedom</p>
+        </div>
+    </div>
+
 
     <header class="relative pt-24">
         <img alt="Texas State Capitol" class="w-full h-[50vh] object-cover" src="https://images.unsplash.com/photo-1588416936097-41850ab3d86d?w=1200&q=80"/>
@@ -191,5 +229,31 @@
             </p>
         </div>
     </footer>
+
+    <script>
+        (function () {
+            const btn = document.getElementById('mobileMenuBtn');
+            const menu = document.getElementById('mobileMenu');
+            if (!btn || !menu) return;
+            function open() {
+                menu.classList.add('open');
+                btn.setAttribute('aria-expanded', 'true');
+                btn.setAttribute('aria-label', 'Close menu');
+                document.body.style.overflow = 'hidden';
+            }
+            function close() {
+                menu.classList.remove('open');
+                btn.setAttribute('aria-expanded', 'false');
+                btn.setAttribute('aria-label', 'Open menu');
+                document.body.style.overflow = '';
+            }
+            btn.addEventListener('click', function () {
+                if (btn.getAttribute('aria-expanded') === 'true') close(); else open();
+            });
+            menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', close); });
+            document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && btn.getAttribute('aria-expanded') === 'true') close(); });
+        })();
+    </script>
+
 </body>
 </html>
