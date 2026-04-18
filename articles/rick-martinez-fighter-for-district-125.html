@@ -51,15 +51,18 @@
 <body class="bg-surface text-on-surface font-body">
 
     <!-- Nav -->
-    <nav id="mainNav" class="fixed top-0 w-full z-50 flex justify-between items-center px-12 py-4 bg-white shadow-lg transition-all duration-300">
-        <a href="../index.html" class="text-2xl font-black text-primary tracking-tighter font-headline">TEXAS UNITED PATRIOTS</a>
-        <div class="hidden md:flex items-center gap-x-12">
+    <nav id="mainNav" class="fixed top-0 w-full z-50 flex justify-between items-center px-6 md:px-12 py-3 md:py-4 bg-white shadow-lg transition-all duration-300">
+        <a href="../index.html" class="text-lg md:text-2xl font-black text-primary tracking-tighter font-headline">TEXAS UNITED PATRIOTS</a>
+        <div class="hidden md:flex items-center gap-x-8 lg:gap-x-12">
             <a class="font-headline font-bold text-xs uppercase tracking-widest text-on-surface hover:text-primary transition-colors" href="../issues.html">Issues</a>
             <a class="font-headline font-bold text-xs uppercase tracking-widest text-on-surface hover:text-primary transition-colors" href="../about.html">About</a>
             <a class="font-headline font-bold text-xs uppercase tracking-widest text-on-surface hover:text-primary transition-colors" href="../index.html#candidate">Candidate</a>
             <a class="font-headline font-bold text-xs uppercase tracking-widest text-on-surface hover:text-primary transition-colors" href="../index.html#news">News</a>
             <button class="bg-primary text-on-primary font-headline font-bold text-xs uppercase tracking-widest px-8 py-3 active:scale-95 duration-150">Donate Now</button>
         </div>
+        <a href="../index.html" aria-label="Back to home" class="md:hidden text-primary p-2 -mr-2">
+            <span class="material-symbols-outlined text-3xl">menu</span>
+        </a>
     </nav>
 
     <!-- Article Hero -->
@@ -80,7 +83,7 @@
             <div class="flex flex-col lg:flex-row gap-8">
                 <!-- Left: Article Card -->
                 <div class="lg:w-2/3">
-                    <div class="bg-white shadow-2xl p-8 md:p-16">
+                    <div class="bg-white shadow-2xl p-6 sm:p-8 md:p-16">
                         <span class="inline-block bg-primary text-on-primary font-headline font-bold text-[9px] tracking-[0.2em] uppercase px-3 py-1 mb-6">Candidate Spotlight</span>
                         <h1 class="font-headline font-black text-4xl md:text-5xl lg:text-6xl text-on-surface leading-[0.9] tracking-tight uppercase mb-6">Rick Martinez: The Servant-Leader San Antonio — and Texas — Has Been Waiting For</h1>
                         <p class="font-body italic text-xl md:text-2xl text-on-surface-variant leading-snug mb-10">A soldier's son. A self-made man. A neighbor who shows up when the lights go out. A generational leader stepping into the arena for Texas House District 125 — and carrying a future the whole Lone Star State can feel coming.</p>
@@ -368,7 +371,7 @@
     </article>
 
     <!-- Footer -->
-    <footer class="bg-white border-t border-slate-200 pt-20 pb-10 px-12 mt-32">
+    <footer class="bg-white border-t border-slate-200 pt-16 md:pt-20 pb-10 px-6 md:px-12 mt-20 md:mt-32">
         <div class="container mx-auto text-center">
             <div class="text-xl font-black text-on-surface tracking-tighter font-headline mb-4 uppercase">TEXAS UNITED PATRIOTS</div>
             <div class="flex justify-center gap-8 mb-10 flex-wrap">

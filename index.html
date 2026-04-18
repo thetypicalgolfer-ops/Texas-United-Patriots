@@ -110,6 +110,60 @@
                     rgba(0, 0, 0, 0.18) 100%);
         }
 
+        /* Hamburger button with animated bars */
+        .hamburger {
+            width: 28px;
+            height: 22px;
+            position: relative;
+            display: inline-block;
+        }
+        .hamburger span {
+            position: absolute;
+            left: 0;
+            height: 2px;
+            width: 100%;
+            background-color: currentColor;
+            border-radius: 2px;
+            transition: transform 0.35s ease, top 0.35s ease, opacity 0.2s ease, background-color 0.3s ease;
+        }
+        .hamburger span:nth-child(1) { top: 2px; }
+        .hamburger span:nth-child(2) { top: 10px; width: 75%; }
+        .hamburger span:nth-child(3) { top: 18px; }
+        #mobileMenuBtn[aria-expanded="true"] .hamburger span:nth-child(1) {
+            top: 10px; transform: rotate(45deg);
+        }
+        #mobileMenuBtn[aria-expanded="true"] .hamburger span:nth-child(2) {
+            opacity: 0; transform: translateX(-10px);
+        }
+        #mobileMenuBtn[aria-expanded="true"] .hamburger span:nth-child(3) {
+            top: 10px; transform: rotate(-45deg);
+        }
+
+        /* Mobile menu slide-in */
+        #mobileMenu {
+            transform: translateX(100%);
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+            opacity: 0;
+        }
+        #mobileMenu.open {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        #mobileMenu .menu-item {
+            opacity: 0;
+            transform: translateX(30px);
+            transition: opacity 0.4s ease, transform 0.4s ease;
+        }
+        #mobileMenu.open .menu-item {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        #mobileMenu.open .menu-item:nth-child(1) { transition-delay: 0.15s; }
+        #mobileMenu.open .menu-item:nth-child(2) { transition-delay: 0.22s; }
+        #mobileMenu.open .menu-item:nth-child(3) { transition-delay: 0.29s; }
+        #mobileMenu.open .menu-item:nth-child(4) { transition-delay: 0.36s; }
+        #mobileMenu.open .menu-item:nth-child(5) { transition-delay: 0.45s; }
+
         /* Mobile hero: show the whole video, no cropping */
         @media (max-width: 767px) {
             .hero-section {
@@ -252,12 +306,12 @@
 
     <!-- TopNavBar -->
     <nav id="mainNav"
-        class="fixed top-0 w-full z-50 flex justify-between items-center px-12 py-6 max-w-full transition-all duration-300 bg-transparent">
+        class="fixed top-0 w-full z-50 flex justify-between items-center px-6 md:px-12 py-4 md:py-6 max-w-full transition-all duration-300 bg-transparent">
         <a id="navLogo" href="./index.html"
-            class="text-2xl font-black text-white tracking-tighter font-headline transition-colors duration-300 hover:opacity-80">
+            class="text-lg md:text-2xl font-black text-white tracking-tighter font-headline transition-colors duration-300 hover:opacity-80">
             TEXAS UNITED PATRIOTS
         </a>
-        <div class="hidden md:flex items-center gap-x-12">
+        <div class="hidden md:flex items-center gap-x-8 lg:gap-x-12">
             <a class="nav-link font-headline font-bold text-xs uppercase tracking-widest text-white hover:text-primary-fixed transition-colors duration-300"
                 href="./issues.html">Issues</a>
             <a class="nav-link font-headline font-bold text-xs uppercase tracking-widest text-white hover:text-primary-fixed transition-colors duration-300"
@@ -271,7 +325,40 @@
                 Donate Now
             </button>
         </div>
+        <button id="mobileMenuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu" class="md:hidden text-white p-2 -mr-2 z-[70] relative">
+            <span class="hamburger"><span></span><span></span><span></span></span>
+        </button>
     </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="fixed inset-0 z-[65] bg-gradient-to-br from-[#0a0c10] via-[#1a0408] to-[#0a0c10] flex flex-col items-stretch overflow-y-auto">
+        <div class="flex-1 flex flex-col justify-center px-8 py-24 max-w-md mx-auto w-full">
+            <span class="menu-item block font-headline font-bold text-[10px] text-primary-fixed uppercase tracking-[0.3em] mb-6">The Movement</span>
+            <nav class="flex flex-col">
+                <a class="menu-item group font-headline font-black text-4xl sm:text-5xl uppercase tracking-tight text-white py-5 border-b border-white/10 hover:text-primary-fixed flex items-center justify-between transition-colors" href="./issues.html">
+                    <span>Issues</span>
+                    <span class="material-symbols-outlined text-2xl opacity-40 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
+                </a>
+                <a class="menu-item group font-headline font-black text-4xl sm:text-5xl uppercase tracking-tight text-white py-5 border-b border-white/10 hover:text-primary-fixed flex items-center justify-between transition-colors" href="./about.html">
+                    <span>About</span>
+                    <span class="material-symbols-outlined text-2xl opacity-40 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
+                </a>
+                <a class="menu-item group font-headline font-black text-4xl sm:text-5xl uppercase tracking-tight text-white py-5 border-b border-white/10 hover:text-primary-fixed flex items-center justify-between transition-colors" href="#candidate">
+                    <span>Candidate</span>
+                    <span class="material-symbols-outlined text-2xl opacity-40 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
+                </a>
+                <a class="menu-item group font-headline font-black text-4xl sm:text-5xl uppercase tracking-tight text-white py-5 border-b border-white/10 hover:text-primary-fixed flex items-center justify-between transition-colors" href="#news">
+                    <span>News</span>
+                    <span class="material-symbols-outlined text-2xl opacity-40 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
+                </a>
+            </nav>
+            <button class="menu-item mt-10 bg-primary text-on-primary font-headline font-black uppercase tracking-[0.2em] py-5 text-sm shadow-2xl hover:bg-primary-container transition-colors flex items-center justify-center gap-2">
+                <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+                Donate Now
+            </button>
+            <p class="menu-item mt-8 font-headline font-bold text-[10px] text-white/40 uppercase tracking-[0.2em] text-center">Faith · Family · Freedom · Texas First</p>
+        </div>
+    </div>
 
     <main>
         <!-- High-Impact Hero Section -->
@@ -324,7 +411,7 @@
         <div class="bg-primary py-3 border-y border-white/10 relative z-20">
             <div class="flex items-center whitespace-nowrap">
                 <span
-                    class="bg-white text-primary font-headline font-black text-[10px] px-3 py-1 uppercase tracking-widest shrink-0 ml-12 mr-6 relative z-10">Latest
+                    class="bg-white text-primary font-headline font-black text-[10px] px-3 py-1 uppercase tracking-widest shrink-0 ml-4 md:ml-12 mr-4 md:mr-6 relative z-10">Latest
                     Updates</span>
                 <div class="flex-1 overflow-hidden">
                     <div class="marquee-track animate-[marquee_102.8s_linear_infinite]">
@@ -352,35 +439,35 @@
         </div>
 
         <!-- Editorial Mission Section -->
-        <section class="py-32 bg-white">
-            <div class="container mx-auto px-12">
-                <div class="flex flex-col lg:flex-row gap-20 items-center">
+        <section class="py-20 md:py-32 bg-white">
+            <div class="container mx-auto px-6 md:px-12">
+                <div class="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
                     <div class="lg:w-1/2 order-2 lg:order-1">
                         <span
-                            class="reveal reveal-up block font-headline font-bold text-[10px] text-primary uppercase tracking-[0.3em] mb-6">Mission
+                            class="reveal reveal-up block font-headline font-bold text-[10px] text-primary uppercase tracking-[0.3em] mb-5">Mission
                             &amp; Values</span>
-                        <h2 class="reveal reveal-up font-headline font-black text-5xl md:text-6xl text-on-surface leading-none mb-8"
+                        <h2 class="reveal reveal-up font-headline font-black text-4xl md:text-5xl lg:text-6xl text-on-surface leading-tight md:leading-none mb-7"
                             style="transition-delay: 0.1s;">
                             "The people of Texas deserve leaders who will stand up for their values."
                         </h2>
-                        <div class="reveal reveal-left border-grow border-l-4 border-primary pl-8 py-4 mb-10"
+                        <div class="reveal reveal-left border-grow border-l-4 border-primary pl-6 md:pl-8 py-4 mb-8"
                             style="transition-delay: 0.25s;">
-                            <p class="font-body italic text-xl text-on-surface-variant leading-relaxed">
+                            <p class="font-body italic text-lg md:text-xl text-on-surface-variant leading-relaxed">
                                 "We are drawing a line in the sand. Texas institutions must remain focused on
                                 excellence, family, and freedom—not social engineering or biased mainstream narratives."
                             </p>
                             <p class="mt-4 font-headline font-bold text-xs uppercase tracking-widest text-primary">—
                                 Texas United Leadership</p>
                         </div>
-                        <p class="reveal reveal-up text-on-surface-variant text-lg leading-relaxed max-w-xl mb-8"
+                        <p class="reveal reveal-up text-on-surface-variant text-base md:text-lg leading-relaxed max-w-xl"
                             style="transition-delay: 0.4s;">
                             Texas United Patriots is a grassroots-driven movement dedicated to protecting the bedrock
                             principles that made our state the greatest economic engine in the nation. We provide raw
                             truth and investigative clarity.
                         </p>
                     </div>
-                    <div class="lg:w-1/2 order-1 lg:order-2">
-                        <div class="reveal reveal-right relative group">
+                    <div class="lg:w-1/2 order-1 lg:order-2 w-full">
+                        <div class="reveal reveal-right relative group max-w-md mx-auto lg:max-w-none">
                             <div class="absolute -inset-4 bg-slate-100 -z-10 translate-x-4 translate-y-4"></div>
                             <img alt="Texas State Capitol" class="w-full aspect-[4/5] object-cover shadow-2xl"
                                 src="./statecapital.png" />
@@ -391,29 +478,29 @@
         </section>
 
         <!-- Stats Counter Bar -->
-        <section class="py-16 bg-primary text-white">
-            <div class="container mx-auto px-12">
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <section class="py-14 md:py-16 bg-primary text-white">
+            <div class="container mx-auto px-6 md:px-12">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-y-10 gap-x-6 md:gap-8 text-center">
                     <div class="reveal reveal-up" style="transition-delay: 0s;">
-                        <div class="font-headline font-black text-5xl md:text-6xl tracking-tighter"><span
+                        <div class="font-headline font-black text-4xl md:text-6xl tracking-tighter"><span
                                 class="counter" data-target="50000">0</span>+</div>
                         <p class="font-headline font-bold text-[10px] uppercase tracking-[0.2em] text-white/70 mt-2">
                             Patriots Strong</p>
                     </div>
                     <div class="reveal reveal-up" style="transition-delay: 0.15s;">
-                        <div class="font-headline font-black text-5xl md:text-6xl tracking-tighter"><span
+                        <div class="font-headline font-black text-4xl md:text-6xl tracking-tighter"><span
                                 class="counter" data-target="254">0</span></div>
                         <p class="font-headline font-bold text-[10px] uppercase tracking-[0.2em] text-white/70 mt-2">
                             Counties Reached</p>
                     </div>
                     <div class="reveal reveal-up" style="transition-delay: 0.3s;">
-                        <div class="font-headline font-black text-5xl md:text-6xl tracking-tighter">$<span
+                        <div class="font-headline font-black text-4xl md:text-6xl tracking-tighter">$<span
                                 class="counter" data-target="2" data-suffix="M">0</span>M</div>
                         <p class="font-headline font-bold text-[10px] uppercase tracking-[0.2em] text-white/70 mt-2">
                             Raised for Candidates</p>
                     </div>
                     <div class="reveal reveal-up" style="transition-delay: 0.45s;">
-                        <div class="font-headline font-black text-5xl md:text-6xl tracking-tighter"><span
+                        <div class="font-headline font-black text-4xl md:text-6xl tracking-tighter"><span
                                 class="counter" data-target="12">0</span></div>
                         <p class="font-headline font-bold text-[10px] uppercase tracking-[0.2em] text-white/70 mt-2">
                             Races Won in 2024</p>
@@ -423,16 +510,16 @@
         </section>
 
         <!-- News Section -->
-        <section class="py-32 bg-surface" id="news">
-            <div class="container mx-auto px-12">
-                <div class="reveal reveal-up text-center mb-16">
+        <section class="py-20 md:py-32 bg-surface" id="news">
+            <div class="container mx-auto px-6 md:px-12">
+                <div class="reveal reveal-up text-center mb-12 md:mb-16">
                     <span
                         class="block font-headline font-bold text-[10px] text-primary uppercase tracking-[0.3em] mb-4">Investigative
                         Reports</span>
                     <h2
-                        class="font-headline font-black text-5xl md:text-6xl text-on-surface leading-none uppercase tracking-tighter">
+                        class="font-headline font-black text-4xl md:text-6xl text-on-surface leading-tight md:leading-none uppercase tracking-tighter">
                         Latest News</h2>
-                    <p class="font-body italic text-xl text-on-surface-variant mt-4 max-w-2xl mx-auto">The stories the
+                    <p class="font-body italic text-lg md:text-xl text-on-surface-variant mt-4 max-w-2xl mx-auto">The stories the
                         mainstream media won't tell you. Real reporting, real facts, real accountability.</p>
                 </div>
 
@@ -446,14 +533,14 @@
                                     class="w-full h-full min-h-[300px] object-cover group-hover:scale-105 transition-transform duration-500"
                                     src="https://images.unsplash.com/photo-1562774053-701939374585?w=800&q=80" />
                             </div>
-                            <div class="lg:w-1/2 p-10 md:p-14 flex flex-col justify-center">
+                            <div class="lg:w-1/2 p-7 md:p-14 flex flex-col justify-center">
                                 <span
                                     class="inline-block bg-primary text-on-primary font-headline font-bold text-[9px] tracking-[0.2em] uppercase px-3 py-1 mb-4 w-fit">Breaking</span>
                                 <h3
-                                    class="font-headline font-black text-3xl md:text-4xl text-on-surface leading-tight mb-4 uppercase tracking-tight group-hover:text-primary transition-colors">
+                                    class="font-headline font-black text-2xl md:text-4xl text-on-surface leading-tight mb-4 uppercase tracking-tight group-hover:text-primary transition-colors">
                                     Texas Tech System Eliminates All Gender Identity Programs Across Five Universities
                                 </h3>
-                                <p class="font-body text-on-surface-variant text-lg leading-relaxed mb-6">In a landmark
+                                <p class="font-body text-on-surface-variant text-base md:text-lg leading-relaxed mb-6">In a landmark
                                     decision on April 10, 2026, Texas Tech Chancellor Brandon Creighton ordered the full
                                     phase-out of all academic programs "centered on" Sexual Orientation and Gender
                                     Identity (SOGI) across all five system universities — including Texas Tech, Angelo
@@ -493,7 +580,7 @@
                                 class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500"
                                 src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&q=80" />
                         </div>
-                        <div class="p-8">
+                        <div class="p-7 md:p-8">
                             <span
                                 class="font-headline font-bold text-[9px] tracking-[0.2em] uppercase text-primary mb-3 block">Education</span>
                             <h4
@@ -533,7 +620,7 @@
                                 class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500"
                                 src="https://images.unsplash.com/photo-1591123120675-6f7f1aae0e5b?w=600&q=80" />
                         </div>
-                        <div class="p-8">
+                        <div class="p-7 md:p-8">
                             <span
                                 class="font-headline font-bold text-[9px] tracking-[0.2em] uppercase text-primary mb-3 block">Parental
                                 Rights</span>
@@ -572,7 +659,7 @@
                                 class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500"
                                 src="https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?w=600&q=80" />
                         </div>
-                        <div class="p-8">
+                        <div class="p-7 md:p-8">
                             <span
                                 class="font-headline font-bold text-[9px] tracking-[0.2em] uppercase text-primary mb-3 block">Higher
                                 Education</span>
@@ -612,7 +699,7 @@
                                 class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500"
                                 src="https://images.unsplash.com/photo-1513828583688-c52646db42da?w=600&q=80" />
                         </div>
-                        <div class="p-8">
+                        <div class="p-7 md:p-8">
                             <span
                                 class="font-headline font-bold text-[9px] tracking-[0.2em] uppercase text-primary mb-3 block">Energy
                                 &amp; Economy</span>
@@ -653,7 +740,7 @@
                                 class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500"
                                 src="https://images.unsplash.com/photo-1588416936097-41850ab3d86d?w=600&q=80" />
                         </div>
-                        <div class="p-8">
+                        <div class="p-7 md:p-8">
                             <span
                                 class="font-headline font-bold text-[9px] tracking-[0.2em] uppercase text-primary mb-3 block">State
                                 Sovereignty</span>
@@ -693,7 +780,7 @@
                                 class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500"
                                 src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=600&q=80" />
                         </div>
-                        <div class="p-8">
+                        <div class="p-7 md:p-8">
                             <span
                                 class="font-headline font-bold text-[9px] tracking-[0.2em] uppercase text-primary mb-3 block">Campus
                                 Watch</span>
@@ -738,64 +825,64 @@
         </section>
 
         <!-- Candidate Spotlight -->
-        <section class="py-32 bg-white relative overflow-hidden" id="candidate">
+        <section class="py-20 md:py-32 bg-white relative overflow-hidden" id="candidate">
             <div class="absolute top-0 left-0 w-full h-2 bg-primary"></div>
-            <div class="container mx-auto px-12">
-                <div class="reveal reveal-up text-center mb-20">
+            <div class="container mx-auto px-6 md:px-12">
+                <div class="reveal reveal-up text-center mb-12 md:mb-20">
                     <span class="block font-headline font-bold text-[10px] text-primary uppercase tracking-[0.3em] mb-4">Endorsed Candidate</span>
-                    <h2 class="font-headline font-black text-5xl md:text-6xl text-on-surface leading-none uppercase tracking-tighter">Our Fighter for Texas</h2>
-                    <p class="font-body italic text-xl text-on-surface-variant mt-4 max-w-2xl mx-auto">
+                    <h2 class="font-headline font-black text-4xl md:text-6xl text-on-surface leading-tight md:leading-none uppercase tracking-tighter">Our Fighter for Texas</h2>
+                    <p class="font-body italic text-lg md:text-xl text-on-surface-variant mt-4 max-w-2xl mx-auto">
                         Meet the leader carrying the torch of faith, family, and freedom into the fight for Texas House District 125.
                     </p>
                 </div>
 
-                <div class="flex flex-col lg:flex-row gap-16 items-center max-w-6xl mx-auto">
-                    <div class="lg:w-1/2">
-                        <div class="reveal reveal-left relative group">
-                            <div class="absolute -inset-4 bg-primary/10 -z-10 translate-x-4 translate-y-4"></div>
+                <div class="flex flex-col lg:flex-row gap-10 lg:gap-16 items-center max-w-6xl mx-auto">
+                    <div class="lg:w-1/2 w-full">
+                        <div class="reveal reveal-left relative group max-w-md mx-auto lg:max-w-none">
+                            <div class="absolute -inset-3 md:-inset-4 bg-primary/10 -z-10 translate-x-3 md:translate-x-4 translate-y-3 md:translate-y-4"></div>
                             <img alt="Rick Martinez, candidate for Texas House District 125"
                                 class="w-full aspect-[4/5] object-cover shadow-2xl"
                                 style="object-position: 72% 35%;"
                                 src="./rick_martinez.jpg" />
-                            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/85 via-black/50 to-transparent p-8 pt-16">
-                                <span class="inline-block bg-primary text-on-primary font-headline font-bold text-[9px] tracking-[0.2em] uppercase px-3 py-1 mb-3">Texas House · District 125</span>
-                                <h3 class="font-headline font-black text-4xl text-white leading-none uppercase tracking-tight">Rick Martinez</h3>
+                            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/85 via-black/50 to-transparent p-6 md:p-8 pt-12 md:pt-16">
+                                <span class="inline-block bg-primary text-on-primary font-headline font-bold text-[9px] tracking-[0.2em] uppercase px-3 py-1 mb-2 md:mb-3">Texas House · District 125</span>
+                                <h3 class="font-headline font-black text-3xl md:text-4xl text-white leading-none uppercase tracking-tight">Rick Martinez</h3>
                             </div>
                         </div>
                     </div>
-                    <div class="lg:w-1/2">
-                        <span class="reveal reveal-up block font-headline font-bold text-[10px] text-primary uppercase tracking-[0.3em] mb-6">A Servant's Heart. A Fighter's Will.</span>
-                        <h3 class="reveal reveal-up font-headline font-black text-4xl md:text-5xl text-on-surface leading-tight uppercase tracking-tight mb-8" style="transition-delay: 0.1s;">
+                    <div class="lg:w-1/2 w-full">
+                        <span class="reveal reveal-up block font-headline font-bold text-[10px] text-primary uppercase tracking-[0.3em] mb-5">A Servant's Heart. A Fighter's Will.</span>
+                        <h3 class="reveal reveal-up font-headline font-black text-3xl md:text-5xl text-on-surface leading-tight uppercase tracking-tight mb-7" style="transition-delay: 0.1s;">
                             "San Antonio families deserve a voice that answers to God and to them — nobody else."
                         </h3>
-                        <div class="reveal reveal-left border-grow border-l-4 border-primary pl-8 py-4 mb-10" style="transition-delay: 0.25s;">
-                            <p class="font-body italic text-xl text-on-surface-variant leading-relaxed">
+                        <div class="reveal reveal-left border-grow border-l-4 border-primary pl-6 md:pl-8 py-3 md:py-4 mb-8 md:mb-10" style="transition-delay: 0.25s;">
+                            <p class="font-body italic text-lg md:text-xl text-on-surface-variant leading-relaxed">
                                 Raised on discipline and service. Built a business with his own two hands. Fed the hungry, stood with first responders, and carried meals to veterans when the cameras weren't rolling. Rick Martinez isn't running to be a politician — he's running to protect the people he loves.
                             </p>
                         </div>
-                        <ul class="stagger space-y-4 mb-10">
+                        <ul class="stagger space-y-4 mb-8 md:mb-10">
                             <li class="reveal reveal-up flex items-start gap-4">
-                                <span class="material-symbols-outlined text-primary mt-1" style="font-variation-settings: 'FILL' 1;">shield</span>
-                                <span class="font-body text-lg text-on-surface leading-snug"><strong class="font-headline uppercase tracking-wide text-sm mr-2">Back the Blue.</strong>Hold criminals accountable and give police the support they have earned.</span>
+                                <span class="material-symbols-outlined text-primary mt-1 flex-shrink-0" style="font-variation-settings: 'FILL' 1;">shield</span>
+                                <span class="font-body text-base md:text-lg text-on-surface leading-snug"><strong class="font-headline uppercase tracking-wide text-sm mr-2">Back the Blue.</strong>Hold criminals accountable and give police the support they have earned.</span>
                             </li>
                             <li class="reveal reveal-up flex items-start gap-4">
-                                <span class="material-symbols-outlined text-primary mt-1" style="font-variation-settings: 'FILL' 1;">home</span>
-                                <span class="font-body text-lg text-on-surface leading-snug"><strong class="font-headline uppercase tracking-wide text-sm mr-2">Abolish the Homestead Property Tax.</strong>No family should ever lose their home to the government.</span>
+                                <span class="material-symbols-outlined text-primary mt-1 flex-shrink-0" style="font-variation-settings: 'FILL' 1;">home</span>
+                                <span class="font-body text-base md:text-lg text-on-surface leading-snug"><strong class="font-headline uppercase tracking-wide text-sm mr-2">Abolish the Homestead Property Tax.</strong>No family should ever lose their home to the government.</span>
                             </li>
                             <li class="reveal reveal-up flex items-start gap-4">
-                                <span class="material-symbols-outlined text-primary mt-1" style="font-variation-settings: 'FILL' 1;">volunteer_activism</span>
-                                <span class="font-body text-lg text-on-surface leading-snug"><strong class="font-headline uppercase tracking-wide text-sm mr-2">Healthcare That Heals.</strong>Affordable, accessible care — not a bureaucratic maze.</span>
+                                <span class="material-symbols-outlined text-primary mt-1 flex-shrink-0" style="font-variation-settings: 'FILL' 1;">volunteer_activism</span>
+                                <span class="font-body text-base md:text-lg text-on-surface leading-snug"><strong class="font-headline uppercase tracking-wide text-sm mr-2">Healthcare That Heals.</strong>Affordable, accessible care — not a bureaucratic maze.</span>
                             </li>
                             <li class="reveal reveal-up flex items-start gap-4">
-                                <span class="material-symbols-outlined text-primary mt-1" style="font-variation-settings: 'FILL' 1;">bolt</span>
-                                <span class="font-body text-lg text-on-surface leading-snug"><strong class="font-headline uppercase tracking-wide text-sm mr-2">Energy & Jobs.</strong>A dependable grid, modern infrastructure, and real opportunity.</span>
+                                <span class="material-symbols-outlined text-primary mt-1 flex-shrink-0" style="font-variation-settings: 'FILL' 1;">bolt</span>
+                                <span class="font-body text-base md:text-lg text-on-surface leading-snug"><strong class="font-headline uppercase tracking-wide text-sm mr-2">Energy & Jobs.</strong>A dependable grid, modern infrastructure, and real opportunity.</span>
                             </li>
                         </ul>
-                        <div class="reveal reveal-up flex flex-wrap gap-4" style="transition-delay: 0.4s;">
-                            <a href="./articles/rick-martinez-fighter-for-district-125.html" class="bg-primary text-on-primary font-headline font-bold px-10 py-5 text-sm uppercase tracking-widest hover:bg-primary-container transition-all shadow-xl inline-block">
+                        <div class="reveal reveal-up flex flex-col sm:flex-row gap-3 sm:gap-4" style="transition-delay: 0.4s;">
+                            <a href="./articles/rick-martinez-fighter-for-district-125.html" class="bg-primary text-on-primary font-headline font-bold px-8 sm:px-10 py-5 text-sm uppercase tracking-widest hover:bg-primary-container transition-all shadow-xl inline-block text-center">
                                 Read His Story
                             </a>
-                            <a href="https://www.voterickfortexas.com/" target="_blank" rel="noopener" class="bg-transparent border-2 border-primary text-primary font-headline font-bold px-10 py-5 text-sm uppercase tracking-widest hover:bg-primary hover:text-white transition-all inline-block">
+                            <a href="https://www.voterickfortexas.com/" target="_blank" rel="noopener" class="bg-transparent border-2 border-primary text-primary font-headline font-bold px-8 sm:px-10 py-5 text-sm uppercase tracking-widest hover:bg-primary hover:text-white transition-all inline-block text-center">
                                 Official Campaign Site
                             </a>
                         </div>
@@ -805,47 +892,43 @@
         </section>
 
         <!-- High-Impact Join Section -->
-        <section class="py-32 bg-[#0a0c10] text-white relative overflow-hidden">
+        <section class="py-20 md:py-32 bg-[#0a0c10] text-white relative overflow-hidden">
             <!-- Decorative background elements -->
             <div class="absolute top-0 right-0 w-1/2 h-full bg-primary/10 -skew-x-12 translate-x-1/4"></div>
-            <div class="container mx-auto px-12 relative z-10">
-                <div class="flex flex-col lg:flex-row gap-20">
+            <div class="container mx-auto px-6 md:px-12 relative z-10">
+                <div class="flex flex-col lg:flex-row gap-12 lg:gap-20">
                     <div class="lg:w-1/2">
                         <h2
-                            class="reveal reveal-up font-headline font-black text-6xl md:text-7xl leading-none mb-8 uppercase">
+                            class="reveal reveal-up font-headline font-black text-5xl md:text-7xl leading-none mb-6 md:mb-8 uppercase">
                             Join Our<br />Patriot Team</h2>
-                        <p class="reveal reveal-up text-white/60 text-xl leading-relaxed mb-12 max-w-lg"
+                        <p class="reveal reveal-up text-white/60 text-lg md:text-xl leading-relaxed mb-10 md:mb-12 max-w-lg"
                             style="transition-delay: 0.15s;">
                             The radical establishment has unlimited resources. We have you. Sign up to volunteer,
                             receive intelligence updates, and help us elect courageous patriots.
                         </p>
-                        <ul class="stagger space-y-6 mb-12">
+                        <ul class="stagger space-y-5 md:space-y-6 mb-10 md:mb-12">
                             <li class="reveal reveal-left flex items-center gap-4">
-                                <span class="material-symbols-outlined text-primary"
+                                <span class="material-symbols-outlined text-primary flex-shrink-0"
                                     style="font-variation-settings: 'FILL' 1;">check_circle</span>
                                 <span class="font-headline font-bold text-xs uppercase tracking-widest">Receive critical
                                     campaign updates</span>
                             </li>
                             <li class="reveal reveal-left flex items-center gap-4">
-                                <span class="material-symbols-outlined text-primary"
+                                <span class="material-symbols-outlined text-primary flex-shrink-0"
                                     style="font-variation-settings: 'FILL' 1;">check_circle</span>
                                 <span class="font-headline font-bold text-xs uppercase tracking-widest">Volunteer
                                     opportunities in your area</span>
                             </li>
                             <li class="reveal reveal-left flex items-center gap-4">
-                                <span class="material-symbols-outlined text-primary"
+                                <span class="material-symbols-outlined text-primary flex-shrink-0"
                                     style="font-variation-settings: 'FILL' 1;">check_circle</span>
                                 <span class="font-headline font-bold text-xs uppercase tracking-widest">Direct access to
                                     candidate town halls</span>
                             </li>
                         </ul>
-                        <div class="reveal reveal-up text-xl font-black text-white tracking-tighter font-headline mb-4 uppercase"
-                            style="transition-delay: 0.5s;">
-                            TEXAS UNITED PATRIOTS
-                        </div>
                     </div>
                     <div class="lg:w-1/2">
-                        <div class="reveal reveal-right bg-white p-10 md:p-12 text-on-surface shadow-2xl">
+                        <div class="reveal reveal-right bg-white p-7 md:p-12 text-on-surface shadow-2xl">
                             <h3 class="font-headline font-black text-2xl uppercase tracking-tighter mb-8">Fuel the
                                 Resistance</h3>
                             <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -905,20 +988,20 @@
         </section>
 
         <!-- Detailed Newsletter/CTA -->
-        <section class="py-20 bg-slate-100">
-            <div class="container mx-auto px-12">
-                <div class="flex flex-col md:flex-row justify-between items-center gap-12">
+        <section class="py-16 md:py-20 bg-slate-100">
+            <div class="container mx-auto px-6 md:px-12">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-8 md:gap-12">
                     <div class="reveal reveal-left text-center md:text-left">
-                        <h4 class="font-headline font-black text-3xl uppercase tracking-tighter">Stay In The Fight</h4>
-                        <p class="font-body italic text-lg text-on-surface-variant">Get the alerts the mainstream media
+                        <h4 class="font-headline font-black text-2xl md:text-3xl uppercase tracking-tighter">Stay In The Fight</h4>
+                        <p class="font-body italic text-base md:text-lg text-on-surface-variant">Get the alerts the mainstream media
                             refuses to broadcast.</p>
                     </div>
-                    <div class="reveal reveal-right flex w-full md:w-auto gap-4">
+                    <div class="reveal reveal-right flex flex-col sm:flex-row w-full md:w-auto gap-3 sm:gap-4">
                         <input
                             class="flex-grow md:w-80 bg-white border-slate-200 px-6 py-4 focus:ring-primary font-headline text-sm"
                             placeholder="Your Email Address" type="email" />
                         <button
-                            class="bg-primary text-white font-headline font-bold px-8 py-4 text-xs uppercase tracking-widest">Join</button>
+                            class="bg-primary text-white font-headline font-bold px-8 py-4 text-xs uppercase tracking-widest hover:bg-primary-container transition-colors">Join</button>
                     </div>
                 </div>
             </div>
@@ -926,13 +1009,13 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-white border-t border-slate-200 pt-20 pb-10 px-12">
+    <footer class="bg-white border-t border-slate-200 pt-16 md:pt-20 pb-10 px-6 md:px-12">
         <div class="container mx-auto">
-            <div class="reveal reveal-up flex flex-col md:flex-row justify-between items-start gap-12 mb-20">
-                <div>
+            <div class="reveal reveal-up flex flex-col md:flex-row justify-between items-start gap-8 md:gap-12 mb-12 md:mb-20">
+                <div class="w-full md:w-auto">
                     <div class="text-xl font-black text-on-surface tracking-tighter font-headline mb-4 uppercase">TEXAS
                         UNITED PATRIOTS</div>
-                    <div class="flex gap-8">
+                    <div class="flex flex-wrap gap-5 md:gap-8">
                         <a class="font-headline font-bold text-[10px] uppercase tracking-widest text-on-surface-variant hover:text-primary"
                             href="./about.html">About</a>
                         <a class="font-headline font-bold text-[10px] uppercase tracking-widest text-on-surface-variant hover:text-primary"
@@ -943,7 +1026,7 @@
                             href="#news">News</a>
                     </div>
                 </div>
-                <div class="flex gap-4">
+                <div class="flex gap-4 w-full md:w-auto">
                     <div
                         class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center hover:bg-slate-200 cursor-pointer transition-colors">
                         <span class="material-symbols-outlined text-sm">share</span>
@@ -953,7 +1036,7 @@
                         <span class="material-symbols-outlined text-sm">public</span>
                     </div>
                     <button
-                        class="bg-primary text-white font-headline font-bold text-[10px] uppercase tracking-[0.2em] px-8 py-3 h-10">Donate
+                        class="bg-primary text-white font-headline font-bold text-[10px] uppercase tracking-[0.2em] px-8 py-3 h-10 ml-auto md:ml-0">Donate
                         $</button>
                 </div>
             </div>
@@ -1054,11 +1137,55 @@
             counters.forEach(function (el) { observer.observe(el); });
         })();
 
+        // Mobile menu toggle
+        (function () {
+            const btn = document.getElementById('mobileMenuBtn');
+            const menu = document.getElementById('mobileMenu');
+            if (!btn || !menu) return;
+
+            // Set initial state: hidden but still in DOM for animation
+            menu.style.display = 'none';
+
+            function open() {
+                menu.style.display = 'flex';
+                requestAnimationFrame(function () {
+                    menu.classList.add('open');
+                });
+                btn.setAttribute('aria-expanded', 'true');
+                btn.setAttribute('aria-label', 'Close menu');
+                document.body.style.overflow = 'hidden';
+            }
+            function close() {
+                menu.classList.remove('open');
+                btn.setAttribute('aria-expanded', 'false');
+                btn.setAttribute('aria-label', 'Open menu');
+                document.body.style.overflow = '';
+                setTimeout(function () {
+                    if (!menu.classList.contains('open')) menu.style.display = 'none';
+                }, 400);
+            }
+
+            btn.addEventListener('click', function () {
+                if (btn.getAttribute('aria-expanded') === 'true') close(); else open();
+            });
+
+            // Close when an internal link is clicked
+            menu.querySelectorAll('a').forEach(function (a) {
+                a.addEventListener('click', close);
+            });
+
+            // Close on ESC
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape' && btn.getAttribute('aria-expanded') === 'true') close();
+            });
+        })();
+
         // Navbar: fade to white on scroll, swap text colors
         (function () {
             const nav = document.getElementById('mainNav');
             const logo = document.getElementById('navLogo');
             const links = document.querySelectorAll('.nav-link');
+            const menuBtn = document.getElementById('mobileMenuBtn');
 
             window.addEventListener('scroll', function () {
                 if (window.scrollY > 80) {
@@ -1070,6 +1197,10 @@
                         link.classList.remove('text-white');
                         link.classList.add('text-on-surface');
                     });
+                    if (menuBtn) {
+                        menuBtn.classList.remove('text-white');
+                        menuBtn.classList.add('text-primary');
+                    }
                 } else {
                     nav.classList.add('bg-transparent');
                     nav.classList.remove('bg-white', 'shadow-lg', 'py-4');
@@ -1079,6 +1210,10 @@
                         link.classList.add('text-white');
                         link.classList.remove('text-on-surface');
                     });
+                    if (menuBtn) {
+                        menuBtn.classList.add('text-white');
+                        menuBtn.classList.remove('text-primary');
+                    }
                 }
             });
         })();
