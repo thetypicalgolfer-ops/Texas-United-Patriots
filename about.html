@@ -1,430 +1,157 @@
 <!DOCTYPE html>
-<html class="light" lang="en">
+<html lang="en">
 
 <head>
     <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>About Us — Texas United Patriots</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Site Offline</title>
     <link
-        href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;700;800;900&family=Newsreader:ital,wght@0,400;0,700;1,400&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700;800&display=swap"
         rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
-        rel="stylesheet" />
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script>
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#5d0011",
-                        "on-primary": "#ffffff",
-                        "primary-container": "#87001d",
-                        "primary-fixed": "#ffdad9",
-                        "surface": "#f9f9f9",
-                        "on-surface": "#1a1c1c",
-                        "on-surface-variant": "#47464f",
-                        "surface-variant": "#e2e2e2",
-                        "background": "#f9f9f9"
-                    },
-                    fontFamily: {
-                        headline: ["Public Sans"],
-                        body: ["Newsreader"],
-                        label: ["Public Sans"]
-                    }
-                },
-            },
-        }
-    </script>
     <style>
-        
-        /* Kill horizontal scroll */
-        html, body { overflow-x: hidden; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
 
-        /* Mobile menu button — fixed above everything else */
-        @media (max-width: 767px) {
-            #mobileMenuBtn {
-                position: fixed !important;
-                top: 14px !important;
-                right: 16px !important;
-                z-index: 9999 !important;
-                display: inline-flex !important;
-                align-items: center;
-                justify-content: center;
-                padding: 8px;
-            }
+        html, body {
+            height: 100%;
+            font-family: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: #0e1012;
+            color: #e6e6e6;
+            -webkit-font-smoothing: antialiased;
         }
 
-        /* Hamburger button */
-        .hamburger { width: 28px; height: 22px; position: relative; display: inline-block; }
-        .hamburger span { position: absolute; left: 0; height: 2px; width: 100%; background-color: currentColor; border-radius: 2px; transition: transform 0.35s ease, top 0.35s ease, opacity 0.2s ease, background-color 0.3s ease; }
-        .hamburger span:nth-child(1) { top: 2px; }
-        .hamburger span:nth-child(2) { top: 10px; width: 75%; }
-        .hamburger span:nth-child(3) { top: 18px; }
-        #mobileMenuBtn[aria-expanded="true"] .hamburger span:nth-child(1) { top: 10px; transform: rotate(45deg); }
-        #mobileMenuBtn[aria-expanded="true"] .hamburger span:nth-child(2) { opacity: 0; transform: translateX(-10px); }
-        #mobileMenuBtn[aria-expanded="true"] .hamburger span:nth-child(3) { top: 10px; transform: rotate(-45deg); }
-        #mobileMenuBtn { transition: color 0.25s ease, background-color 0.25s ease; border-radius: 999px; }
-        #mobileMenuBtn[aria-expanded="true"] { color: #fff; background-color: rgba(255, 255, 255, 0.12); }
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            background:
+                radial-gradient(ellipse at top, rgba(93, 0, 17, 0.18), transparent 60%),
+                radial-gradient(ellipse at bottom, rgba(0, 0, 0, 0.6), transparent 70%),
+                #0e1012;
+        }
 
-        /* Mobile menu — editorial fade-in */
-        #mobileMenu { transform: translateX(100%); visibility: hidden; transition: transform 0.58s cubic-bezier(0.22, 0.61, 0.36, 1), visibility 0s linear 0.58s; padding-top: env(safe-area-inset-top); padding-bottom: env(safe-area-inset-bottom); overscroll-behavior: contain; -webkit-overflow-scrolling: touch; will-change: transform; }
-        #mobileMenu.open { transform: translateX(0); visibility: visible; transition: transform 0.62s cubic-bezier(0.22, 0.61, 0.36, 1), visibility 0s linear 0s; }
-        #mobileMenu .menu-item { opacity: 0; transform: translateY(18px); transition: opacity 0.6s cubic-bezier(0.22, 0.61, 0.36, 1), transform 0.6s cubic-bezier(0.22, 0.61, 0.36, 1); }
-        #mobileMenu.open .menu-item { opacity: 1; transform: translateY(0); }
-        #mobileMenu.open .menu-item:nth-child(1) { transition-delay: 0.22s; }
-        #mobileMenu.open .menu-item:nth-child(2) { transition-delay: 0.30s; }
-        #mobileMenu.open .menu-item:nth-child(3) { transition-delay: 0.38s; }
-        #mobileMenu.open .menu-item:nth-child(4) { transition-delay: 0.46s; }
-        #mobileMenu.open .menu-item:nth-child(5) { transition-delay: 0.56s; }
-        #mobileMenu .menu-index { font-variant-numeric: tabular-nums; }
+        .card {
+            width: 100%;
+            max-width: 560px;
+            text-align: center;
+            padding: 3rem 2.25rem;
+            background: rgba(20, 22, 25, 0.85);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 14px;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45);
+            backdrop-filter: blur(8px);
+        }
 
-.material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
-        .reveal { opacity: 0; transition: opacity 0.8s ease, transform 0.8s ease; }
-        .reveal.visible { opacity: 1; transform: translate(0, 0) !important; }
-        .reveal-up { transform: translateY(40px); }
-        .reveal-left { transform: translateX(-40px); }
-        .reveal-right { transform: translateX(40px); }
-    
-        /* Social share bar */
-        .share-bar { display: flex; flex-direction: column; align-items: stretch; gap: 0.75rem; }
-        @media (min-width: 640px) { .share-bar { flex-direction: row; align-items: center; } }
-        .share-bar .share-label { font-family: 'Public Sans', sans-serif; font-weight: 700; font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: #5d0011; }
-        .share-bar .share-icons { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-        .share-btn { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border: 1px solid #e5e7eb; background: #fff; color: #1a1c1c; transition: all 0.2s ease; cursor: pointer; }
-        .share-btn:hover { color: #fff; border-color: transparent; transform: translateY(-2px); }
-        .share-btn svg { width: 18px; height: 18px; fill: currentColor; }
-        .share-btn[data-share="facebook"]:hover { background: #1877f2; }
-        .share-btn[data-share="x"]:hover { background: #000; }
-        .share-btn[data-share="truth"]:hover { background: #5d0011; }
-        .share-btn[data-share="telegram"]:hover { background: #229ED9; }
-        .share-btn[data-share="whatsapp"]:hover { background: #25D366; }
-        .share-btn[data-share="email"]:hover { background: #5d0011; }
-        .share-btn[data-share="copy"]:hover { background: #1a1c1c; }
-        .share-btn .copied-msg { display: none; }
-        .share-btn.copied { background: #16a34a; color: #fff; border-color: transparent; }
-        .share-bar.on-dark .share-label { color: rgba(255,255,255,0.6); }
-        .share-bar.on-dark .share-btn { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.15); color: #fff; }
-        .share-bar.on-dark .share-btn:hover { border-color: transparent; }
+        .status-dot {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.55rem;
+            padding: 0.4rem 0.9rem;
+            border-radius: 999px;
+            background: rgba(255, 80, 80, 0.08);
+            border: 1px solid rgba(255, 80, 80, 0.25);
+            color: #ff8b8b;
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
 
-        /* Smooth cross-page transitions (modern browsers: Chrome 126+, Safari 18+) */
-        @view-transition { navigation: auto; }
-        ::view-transition-old(root), ::view-transition-new(root) { animation-duration: 0.4s; animation-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1); }
+        .status-dot::before {
+            content: "";
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #ff5050;
+            box-shadow: 0 0 0 0 rgba(255, 80, 80, 0.7);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%   { box-shadow: 0 0 0 0 rgba(255, 80, 80, 0.55); }
+            70%  { box-shadow: 0 0 0 12px rgba(255, 80, 80, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 80, 80, 0); }
+        }
+
+        h1 {
+            margin-top: 1.75rem;
+            font-size: 1.85rem;
+            font-weight: 800;
+            letter-spacing: -0.01em;
+            color: #f5f5f5;
+        }
+
+        .lede {
+            margin-top: 0.85rem;
+            color: #9aa0a6;
+            font-size: 1rem;
+            line-height: 1.55;
+        }
+
+        .divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, rgba(255,255,255,0.08), transparent);
+            margin: 2rem 0 1.5rem;
+        }
+
+        .meta {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 0.55rem 1.25rem;
+            text-align: left;
+            font-size: 0.92rem;
+            color: #c8ccd1;
+        }
+
+        .meta dt {
+            color: #7d828a;
+            font-weight: 500;
+        }
+
+        .footer-note {
+            margin-top: 2rem;
+            font-size: 0.8rem;
+            color: #6b7079;
+            line-height: 1.5;
+        }
+
+        .footer-note a {
+            color: #c9a35f;
+            text-decoration: none;
+        }
+        .footer-note a:hover { text-decoration: underline; }
+
+        @media (max-width: 480px) {
+            .card { padding: 2.25rem 1.5rem; }
+            h1 { font-size: 1.5rem; }
+            .meta { grid-template-columns: 1fr; gap: 0.15rem 0; }
+            .meta dt { margin-top: 0.6rem; }
+        }
     </style>
 </head>
 
-<body class="bg-surface text-on-surface font-body">
+<body>
+    <main class="card" role="main">
+        <span class="status-dot">Service Suspended</span>
+        <h1>This site is currently offline</h1>
+        <p class="lede">
+            The account associated with this domain is suspended pending payment.
+            Service will be restored once the outstanding balance is settled.
+        </p>
 
-    <!-- Nav -->
-    <nav id="mainNav" class="fixed top-0 w-full z-50 flex justify-between items-center px-6 md:px-12 py-4 md:py-5 bg-white shadow-lg transition-all duration-300">
-        <a href="./index.html" class="text-base sm:text-lg md:text-2xl font-black text-primary tracking-tighter font-headline whitespace-nowrap">TEXAS UNITED PATRIOTS</a>
-        <div class="hidden md:flex items-center gap-x-12">
-            <a class="font-headline font-bold text-xs uppercase tracking-widest text-on-surface hover:text-primary transition-colors" href="./issues.html">Issues</a>
-            <a class="font-headline font-bold text-xs uppercase tracking-widest text-primary transition-colors" href="./about.html">About</a>
-            <a class="font-headline font-bold text-xs uppercase tracking-widest text-on-surface hover:text-primary transition-colors" href="./index.html#candidate">Candidate</a>
-            <a class="font-headline font-bold text-xs uppercase tracking-widest text-on-surface hover:text-primary transition-colors" href="./index.html#news">News</a>
-            <button class="bg-primary text-on-primary font-headline font-bold text-xs uppercase tracking-widest px-8 py-3 active:scale-95 duration-150">Donate Now</button>
-        </div>
-    </nav>
-    <button id="mobileMenuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu" class="md:hidden fixed top-3 right-4 text-primary p-2 z-[80]"><span class="hamburger"><span></span><span></span><span></span></span></button>
+        <div class="divider"></div>
 
-    <!-- Mobile Menu -->
-    <div id="mobileMenu" class="fixed inset-0 z-[65] bg-[#141821] flex flex-col overflow-y-auto">
-        <div class="absolute inset-x-0 top-0 h-1 bg-primary"></div>
-        <div class="flex justify-between items-center px-6 pt-5 pb-5 border-b border-white/10">
-            <a href="index.html" class="text-lg font-black text-white tracking-tighter font-headline">TEXAS UNITED PATRIOTS</a>
-        </div>
-        <nav class="flex-1 flex flex-col px-6 pt-6">
-            <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors" href="issues.html">
-                <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">01</span>
-                <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">Issues</span>
-                <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
-            </a>
-            <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors" href="about.html">
-                <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">02</span>
-                <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">About</span>
-                <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
-            </a>
-            <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors" href="index.html#candidate">
-                <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">03</span>
-                <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">Candidate</span>
-                <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
-            </a>
-            <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors" href="index.html#news">
-                <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">04</span>
-                <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">News</span>
-                <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
-            </a>
-        </nav>
-        <div class="menu-item px-6 pt-8 pb-10 border-t border-white/10 mt-6">
-            <button class="w-full bg-primary text-on-primary font-headline font-semibold uppercase tracking-[0.15em] py-4 text-sm hover:bg-primary-container transition-colors flex items-center justify-center gap-2 rounded-lg">
-                <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
-                Donate Now
-            </button>
-            <p class="mt-6 font-headline font-bold text-[10px] text-white/40 uppercase tracking-[0.3em] text-center">Faith · Family · Freedom</p>
-        </div>
-    </div>
+        <dl class="meta">
+            <dt>Status</dt><dd>Suspended &mdash; non-payment</dd>
+            <dt>Site</dt><dd>Texas United Patriots</dd>
+            <dt>Action required</dt><dd>Account holder must settle the outstanding invoice</dd>
+        </dl>
 
-
-    <!-- Hero -->
-    <header class="relative pt-40 pb-24 bg-[#0a0c10] text-white overflow-hidden">
-        <div class="absolute inset-0 opacity-30">
-            <img src="./texas_flag_hero.png" alt="" class="w-full h-full object-cover"/>
-        </div>
-        <div class="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent"></div>
-        <div class="container mx-auto px-6 md:px-12 relative z-10">
-            <span class="inline-flex items-center gap-2 bg-primary text-on-primary px-3 py-1 mb-6 font-headline font-bold text-[10px] tracking-[0.2em] uppercase">
-                <span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">groups</span>
-                Who We Are
-            </span>
-            <h1 class="font-headline font-black text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[0.9] sm:leading-[0.85] tracking-tighter uppercase mb-6">
-                A Grassroots<br/>Movement.
-            </h1>
-            <p class="font-body italic text-lg sm:text-xl md:text-2xl text-white/80 max-w-3xl leading-snug">
-                Texas United Patriots is a statewide advocacy movement of everyday Texans who refuse to let our state, our families, or our freedoms be surrendered to the radical Left.
-            </p>
-        </div>
-    </header>
-
-    <!-- Our Story -->
-    <section class="py-24 bg-white">
-        <div class="container mx-auto px-6 md:px-12">
-            <div class="flex flex-col lg:flex-row gap-20 items-start max-w-6xl mx-auto">
-                <div class="lg:w-1/2">
-                    <span class="reveal reveal-up block font-headline font-bold text-[10px] text-primary uppercase tracking-[0.3em] mb-4">Our Story</span>
-                    <h2 class="reveal reveal-up font-headline font-black text-4xl md:text-5xl text-on-surface leading-none uppercase tracking-tighter mb-8">Built by Texans. Accountable to Texans.</h2>
-                    <p class="reveal reveal-up font-body text-lg text-on-surface-variant leading-relaxed mb-6">
-                        Texas United Patriots was founded by a coalition of veterans, small-business owners, pastors, teachers, and parents who saw one undeniable truth: the Lone Star State was under attack — from radical federal overreach, from corrupt corporate activism, and from a mainstream press determined to rewrite our values into their image.
-                    </p>
-                    <p class="reveal reveal-up font-body text-lg text-on-surface-variant leading-relaxed mb-6">
-                        We do not answer to Washington. We do not answer to Wall Street. We answer to the people who raise their kids here, pay their taxes here, and bury their parents here. That is the entire mission. That is the entire mandate.
-                    </p>
-                    <p class="reveal reveal-up font-body text-lg text-on-surface-variant leading-relaxed">
-                        We recruit. We report. We train. We mobilize. And when the election comes, we elect the kind of leaders Texas used to take for granted — principled, tough, plainspoken men and women who put faith, family, and freedom first.
-                    </p>
-                </div>
-                <div class="lg:w-1/2">
-                    <div class="reveal reveal-right relative">
-                        <div class="absolute -inset-4 bg-primary/10 -z-10 translate-x-4 translate-y-4"></div>
-                        <img src="./statecapital.png" alt="Texas State Capitol" class="w-full aspect-[4/5] object-cover shadow-2xl"/>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Core Values -->
-    <section class="py-24 bg-slate-50">
-        <div class="container mx-auto px-6 md:px-12">
-            <div class="reveal reveal-up text-center max-w-3xl mx-auto mb-16">
-                <span class="block font-headline font-bold text-[10px] text-primary uppercase tracking-[0.3em] mb-4">Core Values</span>
-                <h2 class="font-headline font-black text-4xl md:text-5xl text-on-surface leading-none uppercase tracking-tighter">Four Non-Negotiables.</h2>
-            </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="reveal reveal-up bg-white p-10 border-t-4 border-primary shadow-md">
-                    <span class="material-symbols-outlined text-primary text-5xl mb-4 block" style="font-variation-settings: 'FILL' 1;">church</span>
-                    <h3 class="font-headline font-black text-xl uppercase tracking-tight mb-3">Faith</h3>
-                    <p class="font-body text-base text-on-surface-variant leading-relaxed">
-                        Our rights come from God, not from government. A nation that forgets its Creator forgets its citizens next.
-                    </p>
-                </div>
-                <div class="reveal reveal-up bg-white p-10 border-t-4 border-primary shadow-md">
-                    <span class="material-symbols-outlined text-primary text-5xl mb-4 block" style="font-variation-settings: 'FILL' 1;">family_restroom</span>
-                    <h3 class="font-headline font-black text-xl uppercase tracking-tight mb-3">Family</h3>
-                    <p class="font-body text-base text-on-surface-variant leading-relaxed">
-                        The family is the oldest and most important institution on earth. We will defend it without apology.
-                    </p>
-                </div>
-                <div class="reveal reveal-up bg-white p-10 border-t-4 border-primary shadow-md">
-                    <span class="material-symbols-outlined text-primary text-5xl mb-4 block" style="font-variation-settings: 'FILL' 1;">flag</span>
-                    <h3 class="font-headline font-black text-xl uppercase tracking-tight mb-3">Freedom</h3>
-                    <p class="font-body text-base text-on-surface-variant leading-relaxed">
-                        A free people do not ask permission to speak, to worship, to bear arms, or to raise their children.
-                    </p>
-                </div>
-                <div class="reveal reveal-up bg-white p-10 border-t-4 border-primary shadow-md">
-                    <span class="material-symbols-outlined text-primary text-5xl mb-4 block" style="font-variation-settings: 'FILL' 1;">public</span>
-                    <h3 class="font-headline font-black text-xl uppercase tracking-tight mb-3">Texas First</h3>
-                    <p class="font-body text-base text-on-surface-variant leading-relaxed">
-                        Texas is sovereign. Texas is exceptional. Texas answers to no bureaucrat and bends to no mandate.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- How We Fight -->
-    <section class="py-24 bg-white">
-        <div class="container mx-auto px-6 md:px-12">
-            <div class="reveal reveal-up text-center max-w-3xl mx-auto mb-16">
-                <span class="block font-headline font-bold text-[10px] text-primary uppercase tracking-[0.3em] mb-4">How We Fight</span>
-                <h2 class="font-headline font-black text-4xl md:text-5xl text-on-surface leading-none uppercase tracking-tighter">Three Fronts. One Mission.</h2>
-            </div>
-            <div class="grid md:grid-cols-3 gap-10">
-                <div class="reveal reveal-up">
-                    <div class="text-primary font-headline font-black text-5xl mb-3">01</div>
-                    <h3 class="font-headline font-black text-2xl uppercase tracking-tight mb-4">Investigative Reporting</h3>
-                    <p class="font-body text-lg text-on-surface-variant leading-relaxed">
-                        We publish the stories the mainstream press refuses to touch — from CRT rebranded as "equity" to ESG schemes that punish Texas energy. Sunlight is the best disinfectant. We bring it.
-                    </p>
-                </div>
-                <div class="reveal reveal-up">
-                    <div class="text-primary font-headline font-black text-5xl mb-3">02</div>
-                    <h3 class="font-headline font-black text-2xl uppercase tracking-tight mb-4">Grassroots Organizing</h3>
-                    <p class="font-body text-lg text-on-surface-variant leading-relaxed">
-                        Over 50,000 Texans across all 254 counties. Block walkers, phone bankers, sign-wavers, prayer warriors, and neighbors who refuse to be bystanders.
-                    </p>
-                </div>
-                <div class="reveal reveal-up">
-                    <div class="text-primary font-headline font-black text-5xl mb-3">03</div>
-                    <h3 class="font-headline font-black text-2xl uppercase tracking-tight mb-4">Electing Patriots</h3>
-                    <p class="font-body text-lg text-on-surface-variant leading-relaxed">
-                        Twelve races won in 2024. Over $2 million raised for principled candidates. This cycle, we are backing leaders like Rick Martinez — fighters who know San Antonio the way you know your own street.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pledge -->
-    <section class="py-24 bg-[#0a0c10] text-white relative overflow-hidden">
-        <div class="absolute top-0 right-0 w-1/2 h-full bg-primary/10 -skew-x-12 translate-x-1/4"></div>
-        <div class="container mx-auto px-6 md:px-12 relative z-10 max-w-4xl">
-            <span class="block font-headline font-bold text-[10px] text-primary-fixed uppercase tracking-[0.3em] mb-6">Our Pledge to Texas</span>
-            <h2 class="font-headline font-black text-4xl md:text-6xl leading-none uppercase tracking-tighter mb-10">
-                We will not go quiet. We will not go soft. We will not go home.
-            </h2>
-            <p class="font-body italic text-xl text-white/80 leading-relaxed mb-10">
-                Every Texan who signs up, shows up, and speaks up strengthens this movement. If you are tired of being told your values are "outdated," your faith is "dangerous," and your patriotism is "extreme" — you are already one of us.
-            </p>
-            <div class="flex flex-wrap gap-4">
-                <a href="./index.html#candidate" class="bg-primary text-on-primary font-headline font-bold px-6 md:px-12 py-5 text-sm uppercase tracking-widest hover:bg-primary-container transition-all shadow-xl inline-block">
-                    Meet Our Candidate
-                </a>
-                <a href="./issues.html" class="bg-transparent border-2 border-white text-white font-headline font-bold px-6 md:px-12 py-5 text-sm uppercase tracking-widest hover:bg-white hover:text-black transition-all inline-block">
-                    Read the Issues
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <!-- Share Strip -->
-    <section class="py-12 bg-white border-t border-slate-200">
-        <div class="container mx-auto px-6 md:px-12">
-            <div class="max-w-4xl mx-auto text-center sm:text-left">
-                <div class="share-bar" data-share-bar>
-    <span class="share-label">Spread the Word</span>
-    <div class="share-icons">
-        <button class="share-btn" data-share="facebook" aria-label="Share on Facebook" title="Share on Facebook"><svg viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg></button>
-        <button class="share-btn" data-share="x" aria-label="Share on X" title="Share on X"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></button>
-        <button class="share-btn" data-share="truth" aria-label="Share on Truth Social" title="Share on Truth Social"><svg viewBox="0 0 24 24"><path d="M3 3h18v4h-7v14h-4V7H3V3z"/></svg></button>
-        <button class="share-btn" data-share="email" aria-label="Share via Email" title="Share via Email"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></button>
-        <button class="share-btn" data-share="copy" aria-label="Copy link" title="Copy link"><svg viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg></button>
-    </div>
-</div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="bg-white border-t border-slate-200 pt-20 pb-10 px-6 md:px-12">
-        <div class="container mx-auto text-center">
-            <div class="text-xl font-black text-on-surface tracking-tighter font-headline mb-4 uppercase">TEXAS UNITED PATRIOTS</div>
-            <div class="flex justify-center gap-8 mb-10 flex-wrap">
-                <a class="font-headline font-bold text-[10px] uppercase tracking-widest text-on-surface-variant hover:text-primary" href="./about.html">About</a>
-                <a class="font-headline font-bold text-[10px] uppercase tracking-widest text-on-surface-variant hover:text-primary" href="./issues.html">Issues</a>
-                <a class="font-headline font-bold text-[10px] uppercase tracking-widest text-on-surface-variant hover:text-primary" href="./index.html#candidate">Candidate</a>
-                <a class="font-headline font-bold text-[10px] uppercase tracking-widest text-on-surface-variant hover:text-primary" href="./index.html#news">News</a>
-            </div>
-            <p class="font-headline font-bold text-[9px] uppercase tracking-widest text-on-surface-variant leading-relaxed max-w-3xl mx-auto border border-slate-200 p-6">
-                &copy; 2026 TEXAS UNITED PATRIOTS PAC. PAID FOR BY TEXAS UNITED PATRIOTS PAC. NOT AUTHORIZED BY ANY CANDIDATE OR CANDIDATE'S COMMITTEE. CONTRIBUTIONS ARE NOT TAX DEDUCTIBLE FOR FEDERAL INCOME TAX PURPOSES.
-            </p>
-        </div>
-    </footer>
-
-    <script>
-        (function () {
-            const reveals = document.querySelectorAll('.reveal');
-            const observer = new IntersectionObserver(function (entries) {
-                entries.forEach(function (entry) {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
-            reveals.forEach(function (el) { observer.observe(el); });
-        })();
-    </script>
-
-    <script>
-        (function () {
-            const btn = document.getElementById('mobileMenuBtn');
-            const menu = document.getElementById('mobileMenu');
-            if (!btn || !menu) return;
-            function open() {
-                menu.classList.add('open');
-                btn.setAttribute('aria-expanded', 'true');
-                btn.setAttribute('aria-label', 'Close menu');
-                document.body.style.overflow = 'hidden';
-            }
-            function close() {
-                menu.classList.remove('open');
-                btn.setAttribute('aria-expanded', 'false');
-                btn.setAttribute('aria-label', 'Open menu');
-                document.body.style.overflow = '';
-            }
-            let lastToggle = 0;
-            btn.addEventListener('click', function () {
-                const now = Date.now();
-                if (now - lastToggle < 400) return;
-                lastToggle = now;
-                if (btn.getAttribute('aria-expanded') === 'true') close(); else open();
-            });
-            menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { menu.style.transition = 'none'; close(); }); });
-            document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && btn.getAttribute('aria-expanded') === 'true') close(); });
-        })();
-    </script>
-
-<script>
-        // Social share bar
-        (function () {
-            const bars = document.querySelectorAll('[data-share-bar]');
-            if (!bars.length) return;
-            const pageUrl = window.location.href;
-            const pageTitle = document.title;
-            bars.forEach(function (bar) {
-                bar.querySelectorAll('.share-btn').forEach(function (btn) {
-                    const type = btn.getAttribute('data-share');
-                    const u = encodeURIComponent(pageUrl);
-                    const t = encodeURIComponent(pageTitle);
-                    btn.addEventListener('click', function (e) {
-                        e.preventDefault();
-                        let url = '';
-                        if (type === 'facebook') url = 'https://www.facebook.com/sharer/sharer.php?u=' + u;
-                        else if (type === 'x') url = 'https://twitter.com/intent/tweet?url=' + u + '&text=' + t;
-                        else if (type === 'truth') url = 'https://truthsocial.com/share?url=' + u + '&text=' + t;
-                        else if (type === 'telegram') url = 'https://t.me/share/url?url=' + u + '&text=' + t;
-                        else if (type === 'whatsapp') url = 'https://api.whatsapp.com/send?text=' + t + '%20' + u;
-                        else if (type === 'email') url = 'mailto:?subject=' + t + '&body=' + t + '%0A%0A' + u;
-                        else if (type === 'copy') {
-                            navigator.clipboard.writeText(pageUrl).then(function () {
-                                btn.classList.add('copied');
-                                const original = btn.getAttribute('title');
-                                btn.setAttribute('title', 'Link copied!');
-                                setTimeout(function () {
-                                    btn.classList.remove('copied');
-                                    btn.setAttribute('title', original);
-                                }, 1800);
-                            });
-                            return;
-                        }
-                        if (url) window.open(url, '_blank', 'noopener,width=600,height=540');
-                    });
-                });
-            });
-        })();
-
-</script>
+        <p class="footer-note">
+            If you are the site owner, please contact your site administrator to restore service.
+        </p>
+    </main>
 </body>
+
 </html>

@@ -1,429 +1,157 @@
 <!DOCTYPE html>
-<html class="light" lang="en">
-<head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Texas Tech System Eliminates All Gender Identity Programs — Texas United Patriots</title>
-    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;700;800;900&family=Newsreader:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script>
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              "primary": "#5d0011",
-              "on-primary": "#ffffff",
-              "primary-container": "#87001d",
-              "on-primary-container": "#ff8b8d",
-              "primary-fixed": "#ffdad9",
-              "surface": "#f9f9f9",
-              "on-surface": "#1a1c1c",
-              "on-surface-variant": "#47464f",
-              "surface-variant": "#e2e2e2",
-              "on-background": "#1a1c1c",
-              "background": "#f9f9f9"
-            },
-            fontFamily: {
-              headline: ["Public Sans"],
-              body: ["Newsreader"],
-              label: ["Public Sans"]
-            }
-          },
-        },
-      }
-    </script>
-    <style>
-        
-        /* Kill horizontal scroll */
-        html, body { overflow-x: hidden; }
+<html lang="en">
 
-        /* Mobile menu button — fixed above everything else */
-        @media (max-width: 767px) {
-            #mobileMenuBtn {
-                position: fixed !important;
-                top: 14px !important;
-                right: 16px !important;
-                z-index: 9999 !important;
-                display: inline-flex !important;
-                align-items: center;
-                justify-content: center;
-                padding: 8px;
-            }
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Site Offline</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700;800&display=swap"
+        rel="stylesheet" />
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        html, body {
+            height: 100%;
+            font-family: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: #0e1012;
+            color: #e6e6e6;
+            -webkit-font-smoothing: antialiased;
         }
 
-        /* Hamburger button */
-        .hamburger { width: 28px; height: 22px; position: relative; display: inline-block; }
-        .hamburger span { position: absolute; left: 0; height: 2px; width: 100%; background-color: currentColor; border-radius: 2px; transition: transform 0.35s ease, top 0.35s ease, opacity 0.2s ease, background-color 0.3s ease; }
-        .hamburger span:nth-child(1) { top: 2px; }
-        .hamburger span:nth-child(2) { top: 10px; width: 75%; }
-        .hamburger span:nth-child(3) { top: 18px; }
-        #mobileMenuBtn[aria-expanded="true"] .hamburger span:nth-child(1) { top: 10px; transform: rotate(45deg); }
-        #mobileMenuBtn[aria-expanded="true"] .hamburger span:nth-child(2) { opacity: 0; transform: translateX(-10px); }
-        #mobileMenuBtn[aria-expanded="true"] .hamburger span:nth-child(3) { top: 10px; transform: rotate(-45deg); }
-        #mobileMenuBtn { transition: color 0.25s ease, background-color 0.25s ease; border-radius: 999px; }
-        #mobileMenuBtn[aria-expanded="true"] { color: #fff; background-color: rgba(255, 255, 255, 0.12); }
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            background:
+                radial-gradient(ellipse at top, rgba(93, 0, 17, 0.18), transparent 60%),
+                radial-gradient(ellipse at bottom, rgba(0, 0, 0, 0.6), transparent 70%),
+                #0e1012;
+        }
 
-        /* Mobile menu — editorial fade-in */
-        #mobileMenu { transform: translateX(100%); visibility: hidden; transition: transform 0.58s cubic-bezier(0.22, 0.61, 0.36, 1), visibility 0s linear 0.58s; padding-top: env(safe-area-inset-top); padding-bottom: env(safe-area-inset-bottom); overscroll-behavior: contain; -webkit-overflow-scrolling: touch; will-change: transform; }
-        #mobileMenu.open { transform: translateX(0); visibility: visible; transition: transform 0.62s cubic-bezier(0.22, 0.61, 0.36, 1), visibility 0s linear 0s; }
-        #mobileMenu .menu-item { opacity: 0; transform: translateY(18px); transition: opacity 0.6s cubic-bezier(0.22, 0.61, 0.36, 1), transform 0.6s cubic-bezier(0.22, 0.61, 0.36, 1); }
-        #mobileMenu.open .menu-item { opacity: 1; transform: translateY(0); }
-        #mobileMenu.open .menu-item:nth-child(1) { transition-delay: 0.22s; }
-        #mobileMenu.open .menu-item:nth-child(2) { transition-delay: 0.30s; }
-        #mobileMenu.open .menu-item:nth-child(3) { transition-delay: 0.38s; }
-        #mobileMenu.open .menu-item:nth-child(4) { transition-delay: 0.46s; }
-        #mobileMenu.open .menu-item:nth-child(5) { transition-delay: 0.56s; }
-        #mobileMenu .menu-index { font-variant-numeric: tabular-nums; }
+        .card {
+            width: 100%;
+            max-width: 560px;
+            text-align: center;
+            padding: 3rem 2.25rem;
+            background: rgba(20, 22, 25, 0.85);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 14px;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45);
+            backdrop-filter: blur(8px);
+        }
 
-.material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
-    
-        /* Social share bar */
-        .share-bar { display: flex; flex-direction: column; align-items: stretch; gap: 0.75rem; }
-        @media (min-width: 640px) { .share-bar { flex-direction: row; align-items: center; } }
-        .share-bar .share-label { font-family: 'Public Sans', sans-serif; font-weight: 700; font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: #5d0011; }
-        .share-bar .share-icons { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-        .share-btn { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border: 1px solid #e5e7eb; background: #fff; color: #1a1c1c; transition: all 0.2s ease; cursor: pointer; }
-        .share-btn:hover { color: #fff; border-color: transparent; transform: translateY(-2px); }
-        .share-btn svg { width: 18px; height: 18px; fill: currentColor; }
-        .share-btn[data-share="facebook"]:hover { background: #1877f2; }
-        .share-btn[data-share="x"]:hover { background: #000; }
-        .share-btn[data-share="truth"]:hover { background: #5d0011; }
-        .share-btn[data-share="telegram"]:hover { background: #229ED9; }
-        .share-btn[data-share="whatsapp"]:hover { background: #25D366; }
-        .share-btn[data-share="email"]:hover { background: #5d0011; }
-        .share-btn[data-share="copy"]:hover { background: #1a1c1c; }
-        .share-btn .copied-msg { display: none; }
-        .share-btn.copied { background: #16a34a; color: #fff; border-color: transparent; }
-        .share-bar.on-dark .share-label { color: rgba(255,255,255,0.6); }
-        .share-bar.on-dark .share-btn { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.15); color: #fff; }
-        .share-bar.on-dark .share-btn:hover { border-color: transparent; }
+        .status-dot {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.55rem;
+            padding: 0.4rem 0.9rem;
+            border-radius: 999px;
+            background: rgba(255, 80, 80, 0.08);
+            border: 1px solid rgba(255, 80, 80, 0.25);
+            color: #ff8b8b;
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
 
-        /* Smooth cross-page transitions (modern browsers: Chrome 126+, Safari 18+) */
-        @view-transition { navigation: auto; }
-        ::view-transition-old(root), ::view-transition-new(root) { animation-duration: 0.4s; animation-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1); }
+        .status-dot::before {
+            content: "";
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #ff5050;
+            box-shadow: 0 0 0 0 rgba(255, 80, 80, 0.7);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%   { box-shadow: 0 0 0 0 rgba(255, 80, 80, 0.55); }
+            70%  { box-shadow: 0 0 0 12px rgba(255, 80, 80, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 80, 80, 0); }
+        }
+
+        h1 {
+            margin-top: 1.75rem;
+            font-size: 1.85rem;
+            font-weight: 800;
+            letter-spacing: -0.01em;
+            color: #f5f5f5;
+        }
+
+        .lede {
+            margin-top: 0.85rem;
+            color: #9aa0a6;
+            font-size: 1rem;
+            line-height: 1.55;
+        }
+
+        .divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, rgba(255,255,255,0.08), transparent);
+            margin: 2rem 0 1.5rem;
+        }
+
+        .meta {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 0.55rem 1.25rem;
+            text-align: left;
+            font-size: 0.92rem;
+            color: #c8ccd1;
+        }
+
+        .meta dt {
+            color: #7d828a;
+            font-weight: 500;
+        }
+
+        .footer-note {
+            margin-top: 2rem;
+            font-size: 0.8rem;
+            color: #6b7079;
+            line-height: 1.5;
+        }
+
+        .footer-note a {
+            color: #c9a35f;
+            text-decoration: none;
+        }
+        .footer-note a:hover { text-decoration: underline; }
+
+        @media (max-width: 480px) {
+            .card { padding: 2.25rem 1.5rem; }
+            h1 { font-size: 1.5rem; }
+            .meta { grid-template-columns: 1fr; gap: 0.15rem 0; }
+            .meta dt { margin-top: 0.6rem; }
+        }
     </style>
 </head>
-<body class="bg-surface text-on-surface font-body">
 
-    <!-- Nav -->
-    <nav id="mainNav" class="fixed top-0 w-full z-50 flex justify-between items-center px-6 md:px-12 py-4 md:py-5 bg-white shadow-lg transition-all duration-300">
-        <a href="../index.html" class="text-lg md:text-2xl font-black text-primary tracking-tighter font-headline">TEXAS UNITED PATRIOTS</a>
-        <div class="hidden md:flex items-center gap-x-8 lg:gap-x-12">
-            <a class="font-headline font-bold text-xs uppercase tracking-widest text-on-surface hover:text-primary transition-colors" href="../index.html#news">News</a>
-            <a class="font-headline font-bold text-xs uppercase tracking-widest text-on-surface hover:text-primary transition-colors" href="../index.html">About</a>
-            <button class="bg-primary text-on-primary font-headline font-bold text-xs uppercase tracking-widest px-8 py-3 active:scale-95 duration-150">Donate Now</button>
-        </div>
-    </nav>
-    <button id="mobileMenuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu" class="md:hidden fixed top-3 right-4 text-primary p-2 z-[80]"><span class="hamburger"><span></span><span></span><span></span></span></button>
+<body>
+    <main class="card" role="main">
+        <span class="status-dot">Service Suspended</span>
+        <h1>This site is currently offline</h1>
+        <p class="lede">
+            The account associated with this domain is suspended pending payment.
+            Service will be restored once the outstanding balance is settled.
+        </p>
 
-    <!-- Mobile Menu -->
-    <div id="mobileMenu" class="fixed inset-0 z-[65] bg-[#141821] flex flex-col overflow-y-auto">
-        <div class="absolute inset-x-0 top-0 h-1 bg-primary"></div>
-        <div class="flex justify-between items-center px-6 pt-5 pb-5 border-b border-white/10">
-            <a href="../index.html" class="text-lg font-black text-white tracking-tighter font-headline">TEXAS UNITED PATRIOTS</a>
-        </div>
-        <nav class="flex-1 flex flex-col px-6 pt-6">
-            <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors" href="../issues.html">
-                <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">01</span>
-                <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">Issues</span>
-                <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
-            </a>
-            <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors" href="../about.html">
-                <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">02</span>
-                <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">About</span>
-                <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
-            </a>
-            <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors" href="../index.html#candidate">
-                <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">03</span>
-                <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">Candidate</span>
-                <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
-            </a>
-            <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors" href="../index.html#news">
-                <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">04</span>
-                <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">News</span>
-                <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
-            </a>
-        </nav>
-        <div class="menu-item px-6 pt-8 pb-10 border-t border-white/10 mt-6">
-            <button class="w-full bg-primary text-on-primary font-headline font-semibold uppercase tracking-[0.15em] py-4 text-sm hover:bg-primary-container transition-colors flex items-center justify-center gap-2 rounded-lg">
-                <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
-                Donate Now
-            </button>
-            <p class="mt-6 font-headline font-bold text-[10px] text-white/40 uppercase tracking-[0.3em] text-center">Faith · Family · Freedom</p>
-        </div>
-    </div>
+        <div class="divider"></div>
 
+        <dl class="meta">
+            <dt>Status</dt><dd>Suspended &mdash; non-payment</dd>
+            <dt>Site</dt><dd>Texas United Patriots</dd>
+            <dt>Action required</dt><dd>Account holder must settle the outstanding invoice</dd>
+        </dl>
 
-    <!-- Article Hero -->
-    <header class="relative pt-24">
-        <img alt="Texas Tech University campus" class="w-full h-[50vh] object-cover" src="https://images.unsplash.com/photo-1562774053-701939374585?w=1200&q=80"/>
-        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-    </header>
-
-    <!-- Article Content -->
-    <article class="container mx-auto px-6 md:px-12 -mt-24 md:-mt-32 relative z-10">
-        <div class="max-w-7xl mx-auto">
-            <div class="flex flex-col lg:flex-row gap-8">
-                <!-- Left: Article Card -->
-                <div class="lg:w-2/3">
-                    <div class="bg-white shadow-2xl p-6 sm:p-8 md:p-16">
-                        <span class="inline-block bg-primary text-on-primary font-headline font-bold text-[9px] tracking-[0.2em] uppercase px-3 py-1 mb-6">Breaking</span>
-                        <h1 class="font-headline font-black text-4xl md:text-5xl lg:text-6xl text-on-surface leading-[0.9] tracking-tight uppercase mb-6">Texas Tech System Eliminates All Gender Identity Programs Across Five Universities</h1>
-                        <div class="flex items-center gap-4 mb-10 border-b border-slate-200 pb-8">
-                            <span class="font-headline font-bold text-[10px] uppercase tracking-widest text-on-surface-variant">April 10, 2026</span>
-                            <span class="text-slate-300">|</span>
-                            <span class="font-headline font-bold text-[10px] uppercase tracking-widest text-on-surface-variant">8 min read</span>
-                            <span class="text-slate-300">|</span>
-                            <span class="font-headline font-bold text-[10px] uppercase tracking-widest text-primary">Texas United Patriots Staff</span>
-                        </div>
-                        <div class="mt-8 pb-6 border-b border-slate-200"><div class="share-bar" data-share-bar>
-    <span class="share-label">Spread the Word</span>
-    <div class="share-icons">
-        <button class="share-btn" data-share="facebook" aria-label="Share on Facebook" title="Share on Facebook"><svg viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg></button>
-        <button class="share-btn" data-share="x" aria-label="Share on X" title="Share on X"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></button>
-        <button class="share-btn" data-share="truth" aria-label="Share on Truth Social" title="Share on Truth Social"><svg viewBox="0 0 24 24"><path d="M3 3h18v4h-7v14h-4V7H3V3z"/></svg></button>
-        <button class="share-btn" data-share="email" aria-label="Share via Email" title="Share via Email"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></button>
-        <button class="share-btn" data-share="copy" aria-label="Copy link" title="Copy link"><svg viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg></button>
-    </div>
-</div></div>
-
-
-                        <div class="prose prose-lg max-w-none">
-                            <p class="font-body text-xl leading-relaxed text-on-surface mb-6 italic">
-                                In what may be the most decisive blow against ideological overreach in Texas higher education, the Texas Tech University System has ordered the complete elimination of all academic programs centered on Sexual Orientation and Gender Identity. This is what accountability looks like.
-                            </p>
-
-                            <p class="font-body text-lg leading-relaxed text-on-surface-variant mb-6">
-                                On April 10, 2026, Texas Tech Chancellor Brandon Creighton — a former Republican state senator who understands the values of Texas families — issued a sweeping memorandum to all five system universities: Texas Tech University, Angelo State University, Midwestern State University, and both Health Sciences Centers. The directive is unambiguous: phase out every academic credential "centered on" Sexual Orientation and Gender Identity (SOGI), including undergraduate majors, minors, certificates, and graduate degrees.
-                            </p>
-
-                            <p class="font-body text-lg leading-relaxed text-on-surface-variant mb-6">
-                                Provosts have been given until June 15, 2026, to identify every targeted program. Admissions into these programs are frozen effective immediately. No new students may declare majors in the phased-out fields. Students currently enrolled will be allowed to complete their degrees — a fair and measured approach that respects existing commitments while charting a new course.
-                            </p>
-
-                            <h2 class="font-headline font-black text-2xl uppercase tracking-tight mt-12 mb-4">A New Framework for Academic Integrity</h2>
-
-                            <p class="font-body text-lg leading-relaxed text-on-surface-variant mb-6">
-                                Chancellor Creighton's memo goes beyond simply cutting programs. It establishes a new intellectual framework for how these topics can be discussed in remaining coursework. The policy requires "the legal recognition of only two human sexes" and "strictly prohibits the endorsement of a gender spectrum or fluid gender identities as empirical biological science."
-                            </p>
-
-                            <p class="font-body text-lg leading-relaxed text-on-surface-variant mb-6">
-                                This is not censorship — it is a return to scientific rigor. For too long, activist professors have presented ideological positions as settled science. The new framework allows limited exceptions: demographic data analysis, clinical psychology and health services, and objective discussion of policy and legal frameworks — provided the instruction "lacks advocacy for contemporary matters."
-                            </p>
-
-                            <p class="font-body text-lg leading-relaxed text-on-surface-variant mb-6">
-                                Historical and literary material where SOGI topics are "inextricably linked to the subject's historical significance" may still be taught, but with a focus on "objective literary/historical analysis, not contemporary SOGI advocacy."
-                            </p>
-
-                            <!-- Donation CTA -->
-                            <div class="bg-slate-50 border-l-4 border-primary p-8 my-10">
-                                <p class="font-headline font-black text-lg uppercase tracking-tight mb-2">Victories like this don't happen by accident.</p>
-                                <p class="font-body text-on-surface-variant mb-4">Grassroots pressure from Texas patriots — people like you — is what holds our institutions accountable. Every dollar strengthens our ability to investigate, report, and push for real change.</p>
-                                <button class="bg-primary text-on-primary font-headline font-bold text-xs uppercase tracking-widest px-8 py-3 hover:bg-primary-container transition-all">Support Our Mission</button>
-                            </div>
-
-                            <h2 class="font-headline font-black text-2xl uppercase tracking-tight mt-12 mb-4">Part of a Larger Reckoning</h2>
-
-                            <p class="font-body text-lg leading-relaxed text-on-surface-variant mb-6">
-                                This decision did not occur in a vacuum. It follows a series of actions across Texas higher education that signal a fundamental shift. In September 2025, Texas A&M fired a professor and forced out its president after a student recorded a children's literature class promoting gender ideology. The state's Office of the Ombudsman launched a public complaint portal in January 2026, empowering any Texan to report DEI violations at state universities.
-                            </p>
-
-                            <p class="font-body text-lg leading-relaxed text-on-surface-variant mb-6">
-                                The Texas Tech decision sends a clear message to every public university in the state: the era of using taxpayer-funded institutions to advance progressive social agendas is over. Parents who send their children to Texas universities expect them to receive a rigorous education — not ideological indoctrination.
-                            </p>
-
-                            <h2 class="font-headline font-black text-2xl uppercase tracking-tight mt-12 mb-4">What It Means for Texas Families</h2>
-
-                            <p class="font-body text-lg leading-relaxed text-on-surface-variant mb-6">
-                                For the thousands of Texas families who have contacted their representatives, attended school board meetings, and demanded change — this is your victory. Chancellor Creighton's action proves that persistent, organized pressure from principled citizens can reshape institutions that had drifted far from their core mission.
-                            </p>
-
-                            <p class="font-body text-lg leading-relaxed text-on-surface-variant mb-6">
-                                But the work is far from over. Other university systems across Texas and the nation continue to operate programs that prioritize ideology over education. Texas United Patriots will continue to monitor every public institution in the state and hold them accountable to the values of the families they serve.
-                            </p>
-
-                            <p class="font-body text-lg leading-relaxed text-on-surface font-semibold mb-6">
-                                This is what happens when Texans stand up. This is what happens when we refuse to be silent. And this is just the beginning.
-                            </p>
-                        </div>
-
-                        <!-- Share & Tags -->
-                        <div class="border-t border-slate-200 mt-12 pt-8 flex flex-wrap justify-between items-center">
-                            <div class="flex gap-3">
-                                <span class="bg-slate-100 font-headline font-bold text-[9px] uppercase tracking-widest px-4 py-2">Higher Education</span>
-                                <span class="bg-slate-100 font-headline font-bold text-[9px] uppercase tracking-widest px-4 py-2">Gender Ideology</span>
-                                <span class="bg-slate-100 font-headline font-bold text-[9px] uppercase tracking-widest px-4 py-2">Texas Tech</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Right: Sidebar -->
-                <div class="lg:w-1/3">
-                    <div class="lg:sticky lg:top-24 flex flex-col gap-6">
-
-                        <!-- Author Card -->
-                        <div class="bg-white shadow-lg p-6">
-                            <div class="flex items-center gap-4 mb-4">
-                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&h=150&q=80" alt="James McAllister" class="w-16 h-16 rounded-full object-cover"/>
-                                <div>
-                                    <p class="font-headline font-bold text-[9px] uppercase tracking-[0.2em] text-on-surface-variant mb-1">Written by</p>
-                                    <p class="font-headline font-black text-sm uppercase tracking-tight text-on-surface">James McAllister</p>
-                                    <p class="font-headline font-bold text-[10px] uppercase tracking-widest text-primary">Senior Investigative Reporter</p>
-                                </div>
-                            </div>
-                            <p class="font-body text-sm leading-relaxed text-on-surface-variant">
-                                James McAllister is a senior investigative reporter for Texas United Patriots with 15 years of experience in Texas journalism. A graduate of the University of Texas at Austin School of Journalism, he previously covered higher education and state politics for the Dallas Morning News and the Texas Tribune. His investigative work has been recognized by the Texas Press Association and the Society of Professional Journalists.
-                            </p>
-                        </div>
-
-                        <!-- Key Takeaways -->
-                        <div class="bg-white shadow-lg p-6 border-l-4 border-primary">
-                            <h3 class="font-headline font-black text-sm uppercase tracking-tight text-on-surface mb-4">Key Takeaways</h3>
-                            <ul class="space-y-3">
-                                <li class="flex items-start gap-3">
-                                    <span class="material-symbols-outlined text-primary text-lg mt-0.5">check_circle</span>
-                                    <span class="font-body text-sm leading-relaxed text-on-surface-variant">Chancellor Brandon Creighton orders full phase-out of all SOGI programs across 5 universities</span>
-                                </li>
-                                <li class="flex items-start gap-3">
-                                    <span class="material-symbols-outlined text-primary text-lg mt-0.5">check_circle</span>
-                                    <span class="font-body text-sm leading-relaxed text-on-surface-variant">Provosts must identify targeted programs by June 15, 2026; admissions frozen immediately</span>
-                                </li>
-                                <li class="flex items-start gap-3">
-                                    <span class="material-symbols-outlined text-primary text-lg mt-0.5">check_circle</span>
-                                    <span class="font-body text-sm leading-relaxed text-on-surface-variant">New framework requires "legal recognition of only two human sexes"</span>
-                                </li>
-                                <li class="flex items-start gap-3">
-                                    <span class="material-symbols-outlined text-primary text-lg mt-0.5">check_circle</span>
-                                    <span class="font-body text-sm leading-relaxed text-on-surface-variant">Currently enrolled students will be allowed to complete their degrees</span>
-                                </li>
-                                <li class="flex items-start gap-3">
-                                    <span class="material-symbols-outlined text-primary text-lg mt-0.5">check_circle</span>
-                                    <span class="font-body text-sm leading-relaxed text-on-surface-variant">Decision follows Texas A&M firing and DEI complaint portal launch</span>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <!-- Support Our Work -->
-                        <div class="bg-primary text-on-primary shadow-lg p-6 text-center">
-                            <span class="material-symbols-outlined text-3xl mb-2">volunteer_activism</span>
-                            <h3 class="font-headline font-black text-sm uppercase tracking-tight mb-2">Support Our Work</h3>
-                            <p class="font-body text-white/80 text-sm leading-relaxed mb-4">Your contribution funds the investigative journalism that holds Texas institutions accountable.</p>
-                            <button class="bg-white text-primary font-headline font-bold text-xs uppercase tracking-widest px-6 py-3 hover:bg-slate-100 transition-all w-full">Donate Now</button>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-            <!-- Bottom Donation CTA -->
-            <div class="bg-primary text-on-primary p-10 md:p-14 mt-0 text-center">
-                <h3 class="font-headline font-black text-3xl uppercase tracking-tight mb-4">Help Us Keep Fighting</h3>
-                <p class="font-body text-white/80 text-lg mb-8 max-w-xl mx-auto">Independent journalism and grassroots advocacy aren't free. Your contribution directly funds the investigations and pressure campaigns that produce results like this.</p>
-                <button class="bg-white text-primary font-headline font-bold text-sm uppercase tracking-widest px-12 py-5 hover:bg-slate-100 transition-all">Donate Now</button>
-            </div>
-
-            <!-- Back to News -->
-            <div class="text-center mt-12 mb-20">
-                <a href="../index.html#news" class="font-headline font-bold text-xs uppercase tracking-widest text-primary hover:text-primary-container transition-colors">&larr; Back to All News</a>
-            </div>
-        </div>
-                        <div class="mt-16 pt-10 border-t border-slate-200">
-                            <div class="share-bar" data-share-bar>
-    <span class="share-label">Share This Story</span>
-    <div class="share-icons">
-        <button class="share-btn" data-share="facebook" aria-label="Share on Facebook" title="Share on Facebook"><svg viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg></button>
-        <button class="share-btn" data-share="x" aria-label="Share on X" title="Share on X"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></button>
-        <button class="share-btn" data-share="truth" aria-label="Share on Truth Social" title="Share on Truth Social"><svg viewBox="0 0 24 24"><path d="M3 3h18v4h-7v14h-4V7H3V3z"/></svg></button>
-        <button class="share-btn" data-share="email" aria-label="Share via Email" title="Share via Email"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></button>
-        <button class="share-btn" data-share="copy" aria-label="Copy link" title="Copy link"><svg viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg></button>
-    </div>
-</div>
-                        </div>
-
-    </article>
-
-    <!-- Footer -->
-    <footer class="bg-white border-t border-slate-200 pt-12 pb-8 px-12">
-        <div class="container mx-auto text-center">
-            <div class="text-xl font-black text-on-surface tracking-tighter font-headline mb-4 uppercase">TEXAS UNITED PATRIOTS</div>
-            <p class="font-headline font-bold text-[9px] uppercase tracking-widest text-on-surface-variant leading-relaxed max-w-2xl mx-auto">
-                &copy; 2024 TEXAS UNITED PATRIOTS PAC. PAID FOR BY TEXAS UNITED PATRIOTS PAC. NOT AUTHORIZED BY ANY CANDIDATE OR CANDIDATE'S COMMITTEE.
-            </p>
-        </div>
-    </footer>
-
-
-    <script>
-        (function () {
-            const btn = document.getElementById('mobileMenuBtn');
-            const menu = document.getElementById('mobileMenu');
-            if (!btn || !menu) return;
-            function open() {
-                menu.classList.add('open');
-                btn.setAttribute('aria-expanded', 'true');
-                btn.setAttribute('aria-label', 'Close menu');
-                document.body.style.overflow = 'hidden';
-            }
-            function close() {
-                menu.classList.remove('open');
-                btn.setAttribute('aria-expanded', 'false');
-                btn.setAttribute('aria-label', 'Open menu');
-                document.body.style.overflow = '';
-            }
-            let lastToggle = 0;
-            btn.addEventListener('click', function () {
-                const now = Date.now();
-                if (now - lastToggle < 400) return;
-                lastToggle = now;
-                if (btn.getAttribute('aria-expanded') === 'true') close(); else open();
-            });
-            menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { menu.style.transition = 'none'; close(); }); });
-            document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && btn.getAttribute('aria-expanded') === 'true') close(); });
-        })();
-    </script>
-
-<script>
-        // Social share bar
-        (function () {
-            const bars = document.querySelectorAll('[data-share-bar]');
-            if (!bars.length) return;
-            const pageUrl = window.location.href;
-            const pageTitle = document.title;
-            bars.forEach(function (bar) {
-                bar.querySelectorAll('.share-btn').forEach(function (btn) {
-                    const type = btn.getAttribute('data-share');
-                    const u = encodeURIComponent(pageUrl);
-                    const t = encodeURIComponent(pageTitle);
-                    btn.addEventListener('click', function (e) {
-                        e.preventDefault();
-                        let url = '';
-                        if (type === 'facebook') url = 'https://www.facebook.com/sharer/sharer.php?u=' + u;
-                        else if (type === 'x') url = 'https://twitter.com/intent/tweet?url=' + u + '&text=' + t;
-                        else if (type === 'truth') url = 'https://truthsocial.com/share?url=' + u + '&text=' + t;
-                        else if (type === 'telegram') url = 'https://t.me/share/url?url=' + u + '&text=' + t;
-                        else if (type === 'whatsapp') url = 'https://api.whatsapp.com/send?text=' + t + '%20' + u;
-                        else if (type === 'email') url = 'mailto:?subject=' + t + '&body=' + t + '%0A%0A' + u;
-                        else if (type === 'copy') {
-                            navigator.clipboard.writeText(pageUrl).then(function () {
-                                btn.classList.add('copied');
-                                const original = btn.getAttribute('title');
-                                btn.setAttribute('title', 'Link copied!');
-                                setTimeout(function () {
-                                    btn.classList.remove('copied');
-                                    btn.setAttribute('title', original);
-                                }, 1800);
-                            });
-                            return;
-                        }
-                        if (url) window.open(url, '_blank', 'noopener,width=600,height=540');
-                    });
-                });
-            });
-        })();
-
-</script>
+        <p class="footer-note">
+            If you are the site owner, please contact your site administrator to restore service.
+        </p>
+    </main>
 </body>
+
 </html>

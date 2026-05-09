@@ -1,587 +1,157 @@
 <!DOCTYPE html>
-<html class="light" lang="en">
+<html lang="en">
+
 <head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Rick Martinez: The Servant-Leader San Antonio — and Texas — Has Been Waiting For — Texas United Patriots</title>
-    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;700;800;900&family=Newsreader:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script>
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              "primary": "#5d0011",
-              "on-primary": "#ffffff",
-              "primary-container": "#87001d",
-              "on-primary-container": "#ff8b8d",
-              "primary-fixed": "#ffdad9",
-              "surface": "#f9f9f9",
-              "on-surface": "#1a1c1c",
-              "on-surface-variant": "#47464f",
-              "surface-variant": "#e2e2e2",
-              "on-background": "#1a1c1c",
-              "background": "#f9f9f9"
-            },
-            fontFamily: {
-              headline: ["Public Sans"],
-              body: ["Newsreader"],
-              label: ["Public Sans"]
-            }
-          },
-        },
-      }
-    </script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Site Offline</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700;800&display=swap"
+        rel="stylesheet" />
     <style>
-        
-        /* Kill horizontal scroll */
-        html, body { overflow-x: hidden; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
 
-        /* Mobile menu button — fixed above everything else */
-        @media (max-width: 767px) {
-            #mobileMenuBtn {
-                position: fixed !important;
-                top: 14px !important;
-                right: 16px !important;
-                z-index: 9999 !important;
-                display: inline-flex !important;
-                align-items: center;
-                justify-content: center;
-                padding: 8px;
-            }
+        html, body {
+            height: 100%;
+            font-family: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: #0e1012;
+            color: #e6e6e6;
+            -webkit-font-smoothing: antialiased;
         }
 
-        /* Hamburger button */
-        .hamburger { width: 28px; height: 22px; position: relative; display: inline-block; }
-        .hamburger span { position: absolute; left: 0; height: 2px; width: 100%; background-color: currentColor; border-radius: 2px; transition: transform 0.35s ease, top 0.35s ease, opacity 0.2s ease, background-color 0.3s ease; }
-        .hamburger span:nth-child(1) { top: 2px; }
-        .hamburger span:nth-child(2) { top: 10px; width: 75%; }
-        .hamburger span:nth-child(3) { top: 18px; }
-        #mobileMenuBtn[aria-expanded="true"] .hamburger span:nth-child(1) { top: 10px; transform: rotate(45deg); }
-        #mobileMenuBtn[aria-expanded="true"] .hamburger span:nth-child(2) { opacity: 0; transform: translateX(-10px); }
-        #mobileMenuBtn[aria-expanded="true"] .hamburger span:nth-child(3) { top: 10px; transform: rotate(-45deg); }
-        #mobileMenuBtn { transition: color 0.25s ease, background-color 0.25s ease; border-radius: 999px; }
-        #mobileMenuBtn[aria-expanded="true"] { color: #fff; background-color: rgba(255, 255, 255, 0.12); }
-
-        /* Mobile menu — editorial fade-in */
-        #mobileMenu { transform: translateX(100%); visibility: hidden; transition: transform 0.58s cubic-bezier(0.22, 0.61, 0.36, 1), visibility 0s linear 0.58s; padding-top: env(safe-area-inset-top); padding-bottom: env(safe-area-inset-bottom); overscroll-behavior: contain; -webkit-overflow-scrolling: touch; will-change: transform; }
-        #mobileMenu.open { transform: translateX(0); visibility: visible; transition: transform 0.62s cubic-bezier(0.22, 0.61, 0.36, 1), visibility 0s linear 0s; }
-        #mobileMenu .menu-item { opacity: 0; transform: translateY(18px); transition: opacity 0.6s cubic-bezier(0.22, 0.61, 0.36, 1), transform 0.6s cubic-bezier(0.22, 0.61, 0.36, 1); }
-        #mobileMenu.open .menu-item { opacity: 1; transform: translateY(0); }
-        #mobileMenu.open .menu-item:nth-child(1) { transition-delay: 0.22s; }
-        #mobileMenu.open .menu-item:nth-child(2) { transition-delay: 0.30s; }
-        #mobileMenu.open .menu-item:nth-child(3) { transition-delay: 0.38s; }
-        #mobileMenu.open .menu-item:nth-child(4) { transition-delay: 0.46s; }
-        #mobileMenu.open .menu-item:nth-child(5) { transition-delay: 0.56s; }
-        #mobileMenu .menu-index { font-variant-numeric: tabular-nums; }
-
-.material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
-        .dropcap::first-letter {
-            font-family: 'Public Sans', sans-serif;
-            font-weight: 900;
-            float: left;
-            font-size: 5.5rem;
-            line-height: 0.85;
-            padding-right: 0.75rem;
-            padding-top: 0.5rem;
-            color: #5d0011;
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            background:
+                radial-gradient(ellipse at top, rgba(93, 0, 17, 0.18), transparent 60%),
+                radial-gradient(ellipse at bottom, rgba(0, 0, 0, 0.6), transparent 70%),
+                #0e1012;
         }
-    
-        /* Social share bar */
-        .share-bar { display: flex; flex-direction: column; align-items: stretch; gap: 0.75rem; }
-        @media (min-width: 640px) { .share-bar { flex-direction: row; align-items: center; } }
-        .share-bar .share-label { font-family: 'Public Sans', sans-serif; font-weight: 700; font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: #5d0011; }
-        .share-bar .share-icons { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-        .share-btn { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border: 1px solid #e5e7eb; background: #fff; color: #1a1c1c; transition: all 0.2s ease; cursor: pointer; }
-        .share-btn:hover { color: #fff; border-color: transparent; transform: translateY(-2px); }
-        .share-btn svg { width: 18px; height: 18px; fill: currentColor; }
-        .share-btn[data-share="facebook"]:hover { background: #1877f2; }
-        .share-btn[data-share="x"]:hover { background: #000; }
-        .share-btn[data-share="truth"]:hover { background: #5d0011; }
-        .share-btn[data-share="telegram"]:hover { background: #229ED9; }
-        .share-btn[data-share="whatsapp"]:hover { background: #25D366; }
-        .share-btn[data-share="email"]:hover { background: #5d0011; }
-        .share-btn[data-share="copy"]:hover { background: #1a1c1c; }
-        .share-btn .copied-msg { display: none; }
-        .share-btn.copied { background: #16a34a; color: #fff; border-color: transparent; }
-        .share-bar.on-dark .share-label { color: rgba(255,255,255,0.6); }
-        .share-bar.on-dark .share-btn { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.15); color: #fff; }
-        .share-bar.on-dark .share-btn:hover { border-color: transparent; }
 
-        /* Smooth cross-page transitions (modern browsers: Chrome 126+, Safari 18+) */
-        @view-transition { navigation: auto; }
-        ::view-transition-old(root), ::view-transition-new(root) { animation-duration: 0.4s; animation-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1); }
+        .card {
+            width: 100%;
+            max-width: 560px;
+            text-align: center;
+            padding: 3rem 2.25rem;
+            background: rgba(20, 22, 25, 0.85);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 14px;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45);
+            backdrop-filter: blur(8px);
+        }
+
+        .status-dot {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.55rem;
+            padding: 0.4rem 0.9rem;
+            border-radius: 999px;
+            background: rgba(255, 80, 80, 0.08);
+            border: 1px solid rgba(255, 80, 80, 0.25);
+            color: #ff8b8b;
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .status-dot::before {
+            content: "";
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #ff5050;
+            box-shadow: 0 0 0 0 rgba(255, 80, 80, 0.7);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%   { box-shadow: 0 0 0 0 rgba(255, 80, 80, 0.55); }
+            70%  { box-shadow: 0 0 0 12px rgba(255, 80, 80, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 80, 80, 0); }
+        }
+
+        h1 {
+            margin-top: 1.75rem;
+            font-size: 1.85rem;
+            font-weight: 800;
+            letter-spacing: -0.01em;
+            color: #f5f5f5;
+        }
+
+        .lede {
+            margin-top: 0.85rem;
+            color: #9aa0a6;
+            font-size: 1rem;
+            line-height: 1.55;
+        }
+
+        .divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, rgba(255,255,255,0.08), transparent);
+            margin: 2rem 0 1.5rem;
+        }
+
+        .meta {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 0.55rem 1.25rem;
+            text-align: left;
+            font-size: 0.92rem;
+            color: #c8ccd1;
+        }
+
+        .meta dt {
+            color: #7d828a;
+            font-weight: 500;
+        }
+
+        .footer-note {
+            margin-top: 2rem;
+            font-size: 0.8rem;
+            color: #6b7079;
+            line-height: 1.5;
+        }
+
+        .footer-note a {
+            color: #c9a35f;
+            text-decoration: none;
+        }
+        .footer-note a:hover { text-decoration: underline; }
+
+        @media (max-width: 480px) {
+            .card { padding: 2.25rem 1.5rem; }
+            h1 { font-size: 1.5rem; }
+            .meta { grid-template-columns: 1fr; gap: 0.15rem 0; }
+            .meta dt { margin-top: 0.6rem; }
+        }
     </style>
 </head>
-<body class="bg-surface text-on-surface font-body">
 
-    <!-- Nav -->
-    <nav id="mainNav" class="fixed top-0 w-full z-50 flex justify-between items-center px-6 md:px-12 py-4 md:py-5 bg-white shadow-lg transition-all duration-300">
-        <a href="../index.html" class="text-lg md:text-2xl font-black text-primary tracking-tighter font-headline">TEXAS UNITED PATRIOTS</a>
-        <div class="hidden md:flex items-center gap-x-8 lg:gap-x-12">
-            <a class="font-headline font-bold text-xs uppercase tracking-widest text-on-surface hover:text-primary transition-colors" href="../issues.html">Issues</a>
-            <a class="font-headline font-bold text-xs uppercase tracking-widest text-on-surface hover:text-primary transition-colors" href="../about.html">About</a>
-            <a class="font-headline font-bold text-xs uppercase tracking-widest text-on-surface hover:text-primary transition-colors" href="../index.html#candidate">Candidate</a>
-            <a class="font-headline font-bold text-xs uppercase tracking-widest text-on-surface hover:text-primary transition-colors" href="../index.html#news">News</a>
-            <button class="bg-primary text-on-primary font-headline font-bold text-xs uppercase tracking-widest px-8 py-3 active:scale-95 duration-150">Donate Now</button>
-        </div>
-    </nav>
-    <button id="mobileMenuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu" class="md:hidden fixed top-3 right-4 text-primary p-2 z-[80]"><span class="hamburger"><span></span><span></span><span></span></span></button>
+<body>
+    <main class="card" role="main">
+        <span class="status-dot">Service Suspended</span>
+        <h1>This site is currently offline</h1>
+        <p class="lede">
+            The account associated with this domain is suspended pending payment.
+            Service will be restored once the outstanding balance is settled.
+        </p>
 
-    <!-- Mobile Menu -->
-    <div id="mobileMenu" class="fixed inset-0 z-[65] bg-[#141821] flex flex-col overflow-y-auto">
-        <div class="absolute inset-x-0 top-0 h-1 bg-primary"></div>
-        <div class="flex justify-between items-center px-6 pt-5 pb-5 border-b border-white/10">
-            <a href="../index.html" class="text-lg font-black text-white tracking-tighter font-headline">TEXAS UNITED PATRIOTS</a>
-        </div>
-        <nav class="flex-1 flex flex-col px-6 pt-6">
-            <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors" href="../issues.html">
-                <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">01</span>
-                <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">Issues</span>
-                <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
-            </a>
-            <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors" href="../about.html">
-                <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">02</span>
-                <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">About</span>
-                <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
-            </a>
-            <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors" href="../index.html#candidate">
-                <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">03</span>
-                <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">Candidate</span>
-                <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
-            </a>
-            <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors" href="../index.html#news">
-                <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">04</span>
-                <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">News</span>
-                <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
-            </a>
-        </nav>
-        <div class="menu-item px-6 pt-8 pb-10 border-t border-white/10 mt-6">
-            <button class="w-full bg-primary text-on-primary font-headline font-semibold uppercase tracking-[0.15em] py-4 text-sm hover:bg-primary-container transition-colors flex items-center justify-center gap-2 rounded-lg">
-                <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
-                Donate Now
-            </button>
-            <p class="mt-6 font-headline font-bold text-[10px] text-white/40 uppercase tracking-[0.3em] text-center">Faith · Family · Freedom</p>
-        </div>
-    </div>
+        <div class="divider"></div>
 
+        <dl class="meta">
+            <dt>Status</dt><dd>Suspended &mdash; non-payment</dd>
+            <dt>Site</dt><dd>Texas United Patriots</dd>
+            <dt>Action required</dt><dd>Account holder must settle the outstanding invoice</dd>
+        </dl>
 
-    <!-- Article Hero -->
-    <header class="relative pt-24">
-        <div class="w-full h-[65vh] bg-black relative overflow-hidden">
-            <img alt="Rick Martinez, candidate for Texas House District 125"
-                class="w-full h-full object-cover opacity-75"
-                style="object-position: 72% 30%;"
-                src="../rick_martinez.jpg"/>
-            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent"></div>
-            <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/30 to-transparent"></div>
-        </div>
-    </header>
-
-    <!-- Article Content -->
-    <article class="container mx-auto px-6 md:px-12 -mt-40 relative z-10">
-        <div class="max-w-7xl mx-auto">
-            <div class="flex flex-col lg:flex-row gap-8">
-                <!-- Left: Article Card -->
-                <div class="lg:w-2/3">
-                    <div class="bg-white shadow-2xl p-6 sm:p-8 md:p-16">
-                        <span class="inline-block bg-primary text-on-primary font-headline font-bold text-[9px] tracking-[0.2em] uppercase px-3 py-1 mb-6">Candidate Spotlight</span>
-                        <h1 class="font-headline font-black text-4xl md:text-5xl lg:text-6xl text-on-surface leading-[0.9] tracking-tight uppercase mb-6">Rick Martinez: The Servant-Leader San Antonio — and Texas — Has Been Waiting For</h1>
-                        <p class="font-body italic text-xl md:text-2xl text-on-surface-variant leading-snug mb-10">A soldier's son. A self-made man. A neighbor who shows up when the lights go out. A generational leader stepping into the arena for Texas House District 125 — and carrying a future the whole Lone Star State can feel coming.</p>
-
-                        <div class="flex items-center gap-4 mb-10 border-b border-slate-200 pb-8">
-                            <span class="font-headline font-bold text-[10px] uppercase tracking-widest text-on-surface-variant">April 17, 2026</span>
-                            <span class="text-slate-300">|</span>
-                            <span class="font-headline font-bold text-[10px] uppercase tracking-widest text-on-surface-variant">9 min read</span>
-                            <span class="text-slate-300">|</span>
-                            <span class="font-headline font-bold text-[10px] uppercase tracking-widest text-primary">Texas United Patriots Staff</span>
-                        </div>
-                        <div class="mt-8 pb-6 border-b border-slate-200"><div class="share-bar" data-share-bar>
-    <span class="share-label">Spread the Word</span>
-    <div class="share-icons">
-        <button class="share-btn" data-share="facebook" aria-label="Share on Facebook" title="Share on Facebook"><svg viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg></button>
-        <button class="share-btn" data-share="x" aria-label="Share on X" title="Share on X"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></button>
-        <button class="share-btn" data-share="truth" aria-label="Share on Truth Social" title="Share on Truth Social"><svg viewBox="0 0 24 24"><path d="M3 3h18v4h-7v14h-4V7H3V3z"/></svg></button>
-        <button class="share-btn" data-share="email" aria-label="Share via Email" title="Share via Email"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></button>
-        <button class="share-btn" data-share="copy" aria-label="Copy link" title="Copy link"><svg viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg></button>
-    </div>
-</div></div>
-
-
-                        <div class="prose prose-lg max-w-none">
-                            <p class="font-body text-lg leading-relaxed text-on-surface mb-8 dropcap">
-                                In an age of slick-talking politicians and hollow photo ops, San Antonio has produced something increasingly rare: a candidate whose résumé was written by his actions, not his press releases. Ricardo "Rick" Martinez — son of a U.S. Army soldier, entrepreneur, philanthropist, and neighbor — is running for the Texas House of Representatives in District 125 not because he's chasing a title, but because he refuses to watch his community be failed by people who never knew it.
-                            </p>
-
-                            <p class="font-body text-lg leading-relaxed text-on-surface mb-6">
-                                This is a man who built something from nothing. This is a man who feeds the hungry on weekends when no newspaper is watching. This is a man who believes, without apology, that the dignity of the human person is a gift from God — and that government exists to protect it, not to ration it. In a state that already leads the nation in courage, Rick Martinez is the next voice Texas needs in the fight.
-                            </p>
-
-                            <p class="font-body text-lg leading-relaxed text-on-surface mb-6">
-                                And make no mistake: the Texans watching this race closely are not only watching District 125. They are watching a leader whose character, clarity, and courage are exactly the qualities the Lone Star State will need in its highest offices for the next generation. But first things first — and Rick is the first one to say so. The road to a freer, stronger Texas starts with one seat, one district, one race. <em>This</em> race.
-                            </p>
-
-                            <h2 class="font-headline font-black text-3xl md:text-4xl uppercase tracking-tight text-on-surface mt-14 mb-6 leading-tight">Forged on a Military Base. Anchored in Faith.</h2>
-
-                            <p class="font-body text-lg leading-relaxed text-on-surface mb-6">
-                                Rick Martinez was born on a U.S. Army installation in Germany, the son of a soldier. He will tell you, without pride but without hesitation, that he learned three things in that household before he learned anything else: <em>discipline, service, and love of country</em>. Those are not slogans he picked up from a consultant. They are the air he breathed before he could speak.
-                            </p>
-
-                            <p class="font-body text-lg leading-relaxed text-on-surface mb-6">
-                                From military barracks to a high school in Corpus Christi, from college in Lubbock — close to his sister, because family was never optional — to the streets of San Antonio, where he has made his home for more than a decade, Rick has carried those values with him like a compass. Ask anyone who knows him: he does not leave home without them.
-                            </p>
-
-                            <div class="bg-slate-50 border-l-4 border-primary pl-8 pr-6 py-8 my-10">
-                                <p class="font-body italic text-xl md:text-2xl text-on-surface leading-snug mb-3">
-                                    "My father taught me that serving others is not a hobby. It's the reason you exist. Every morning I wake up and ask the Lord: put me where I'm useful."
-                                </p>
-                                <p class="font-headline font-bold text-xs uppercase tracking-widest text-primary">— Rick Martinez</p>
-                            </div>
-
-                            <h2 class="font-headline font-black text-3xl md:text-4xl uppercase tracking-tight text-on-surface mt-14 mb-6 leading-tight">A Builder, Not a Bureaucrat</h2>
-
-                            <p class="font-body text-lg leading-relaxed text-on-surface mb-6">
-                                Rick Martinez is not a career politician. He has never drawn a government paycheck. He has never lobbied an agency. What he has done is build a company — from a single idea at a kitchen table into a real, tax-paying, job-creating Texas business that serves customers and honors its commitments.
-                            </p>
-
-                            <p class="font-body text-lg leading-relaxed text-on-surface mb-6">
-                                That matters. It matters because the Texas Capitol is already overflowing with men and women who have never met a payroll, never fixed a broken truck, never sweated over a quarterly tax bill. Rick has done all three. When he speaks about property taxes, he is not repeating a talking point. He is describing what it feels like to write the check.
-                            </p>
-
-                            <p class="font-body text-lg leading-relaxed text-on-surface mb-6">
-                                And when Rick talks about the dignity of work, he means it in a way that polished politicians never can. He has been the small-business owner who skipped his own paycheck so his employees could take theirs home. That is leadership. That is the kind of man you want between your family and a runaway government.
-                            </p>
-
-                            <h2 class="font-headline font-black text-3xl md:text-4xl uppercase tracking-tight text-on-surface mt-14 mb-6 leading-tight">The Neighbor Who Shows Up</h2>
-
-                            <p class="font-body text-lg leading-relaxed text-on-surface mb-6">
-                                You can tell the measure of a man by what he does when nobody is watching. Rick Martinez founded his own charity. He volunteers with the <strong>Loving Heart Foundation</strong>, the <strong>San Antonio Food Bank</strong>, and the <strong>Ferrari Kid Foundation</strong>. He carries meals to homeless Texans and to veterans who gave everything for this country and came home to a government that forgot them.
-                            </p>
-
-                            <p class="font-body text-lg leading-relaxed text-on-surface mb-6">
-                                When the floods tore through South Texas, Rick was not on a podium calling for "thoughts and prayers." He was on the ground, phone in hand, rallying local businesses to donate supplies, water, and hot meals to families who had lost everything. When first responders came off a brutal shift, Rick was there with food and with the thing they needed most — a community that said, out loud and in public, <em>thank you</em>.
-                            </p>
-
-                            <p class="font-body text-lg leading-relaxed text-on-surface mb-6">
-                                This is not the charity of a man angling for office. This is the life of a man who was already living it, years before a ballot was ever printed. Scripture tells us that faith without works is dead. Rick Martinez's works have been alive in San Antonio for over a decade.
-                            </p>
-
-                            <div class="bg-primary text-on-primary p-10 my-12">
-                                <p class="font-headline font-black text-2xl md:text-3xl uppercase tracking-tight leading-tight mb-3">
-                                    "I don't need a title to serve my neighbors. I already serve them. I'm running so San Antonio finally has someone in Austin who will keep serving them."
-                                </p>
-                                <p class="font-headline font-bold text-[10px] uppercase tracking-[0.2em] opacity-80">— Rick Martinez, announcing his candidacy</p>
-                            </div>
-
-                            <h2 class="font-headline font-black text-3xl md:text-4xl uppercase tracking-tight text-on-surface mt-14 mb-6 leading-tight">The Fight for District 125</h2>
-
-                            <p class="font-body text-lg leading-relaxed text-on-surface mb-6">
-                                Texas House District 125 is not a safe seat for the soul of South Texas. It is a frontline. Working families in this district are being squeezed between skyrocketing property taxes, a border crisis created by Washington, an energy grid stretched thin by lawless federal mandates, and a healthcare system that treats patients like case numbers.
-                            </p>
-
-                            <p class="font-body text-lg leading-relaxed text-on-surface mb-6">
-                                Rick Martinez has walked into that fight with a clear, concrete platform — not vague promises, but battle plans:
-                            </p>
-
-                            <div class="grid md:grid-cols-2 gap-6 my-10">
-                                <div class="border border-slate-200 p-8 bg-white">
-                                    <div class="flex items-center gap-3 mb-3">
-                                        <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">shield</span>
-                                        <h3 class="font-headline font-black text-lg uppercase tracking-tight">Back the Blue</h3>
-                                    </div>
-                                    <p class="font-body text-base text-on-surface-variant leading-relaxed">
-                                        Fully support law enforcement. Hold violent criminals accountable. End the "catch and release" culture that treats officers like the problem and criminals like the victim.
-                                    </p>
-                                </div>
-                                <div class="border border-slate-200 p-8 bg-white">
-                                    <div class="flex items-center gap-3 mb-3">
-                                        <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">home</span>
-                                        <h3 class="font-headline font-black text-lg uppercase tracking-tight">Kill the Homestead Tax</h3>
-                                    </div>
-                                    <p class="font-body text-base text-on-surface-variant leading-relaxed">
-                                        Expand the homestead exemption. Compress school tax rates. Work toward the ultimate goal: eliminating the homestead property tax so no Texan is ever renting their own home from the government.
-                                    </p>
-                                </div>
-                                <div class="border border-slate-200 p-8 bg-white">
-                                    <div class="flex items-center gap-3 mb-3">
-                                        <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">volunteer_activism</span>
-                                        <h3 class="font-headline font-black text-lg uppercase tracking-tight">Affordable Healthcare</h3>
-                                    </div>
-                                    <p class="font-body text-base text-on-surface-variant leading-relaxed">
-                                        Break the bureaucratic stranglehold on medicine. Empower doctors and patients. Deliver accessible, affordable healthcare without handing Texas over to federal one-size-fits-all mandates.
-                                    </p>
-                                </div>
-                                <div class="border border-slate-200 p-8 bg-white">
-                                    <div class="flex items-center gap-3 mb-3">
-                                        <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">bolt</span>
-                                        <h3 class="font-headline font-black text-lg uppercase tracking-tight">Energy & Opportunity</h3>
-                                    </div>
-                                    <p class="font-body text-base text-on-surface-variant leading-relaxed">
-                                        A modern, dependable energy grid. Real infrastructure investment. Good jobs built on Texas oil, gas, and ingenuity — not on Washington's green fantasies.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <h2 class="font-headline font-black text-3xl md:text-4xl uppercase tracking-tight text-on-surface mt-14 mb-6 leading-tight">No More RINOs. No More Promises Without Delivery.</h2>
-
-                            <p class="font-body text-lg leading-relaxed text-on-surface mb-6">
-                                Let's be honest about something too many Texans are finally saying out loud: for too long, our state has been led by "Republicans In Name Only" — RINOs who campaign like conservatives and govern like consultants. They raise money on faith, family, and freedom, then spend it negotiating with the very bureaucracies that are crushing us. They promise to end the property tax, year after year — and year after year your bill still goes up. They promise to secure the border — and the cartels still operate like they own South Texas. They promise to stand against DEI and gender ideology — then quietly let taxpayer dollars fund both under new acronyms.
-                            </p>
-
-                            <p class="font-body text-lg leading-relaxed text-on-surface mb-6">
-                                The current leadership in Austin has had every advantage a governor could ask for — a conservative Legislature, a booming economy, a mandate from the voters — and has still managed to leave Texans waiting. Waiting for real property tax abolition. Waiting for a border truly sealed. Waiting for an energy grid that doesn't fail in a cold snap. Waiting for universities that actually answer to the taxpayers who fund them. Texans are done waiting. And the establishment that keeps asking for patience is running out of the one thing it cannot print: credibility.
-                            </p>
-
-                            <p class="font-body text-lg leading-relaxed text-on-surface mb-6">
-                                Rick Martinez is not cut from that cloth. He does not owe a single lobbyist, a single consultant, or a single donor class a single favor. He has never needed a title to do the right thing — the food he has delivered, the families he has helped, the first responders he has fed all prove that. In Austin, he will not "grow" into the establishment. The establishment will feel the floor shift when he walks in.
-                            </p>
-
-                            <div class="bg-slate-50 border-l-4 border-primary pl-8 pr-6 py-8 my-10">
-                                <p class="font-body italic text-xl md:text-2xl text-on-surface leading-snug mb-3">
-                                    "The people of Texas didn't vote for a brand. They voted for promises. It's time the people we send to Austin actually keep them."
-                                </p>
-                                <p class="font-headline font-bold text-xs uppercase tracking-widest text-primary">— Rick Martinez</p>
-                            </div>
-
-                            <h2 class="font-headline font-black text-3xl md:text-4xl uppercase tracking-tight text-on-surface mt-14 mb-6 leading-tight">A Bigger Horizon — But First, the Work in Front of Him</h2>
-
-                            <p class="font-body text-lg leading-relaxed text-on-surface mb-6">
-                                It is hard to sit with Rick Martinez for five minutes without realizing you are talking to a man with the temperament, the clarity, and the moral spine that this state will eventually need in its highest office. Seasoned political observers in San Antonio have begun quietly using the phrase <em>"the next generation of Texas leadership"</em> when his name comes up — and nobody who has watched him in a room full of families, first responders, or small-business owners disagrees.
-                            </p>
-
-                            <p class="font-body text-lg leading-relaxed text-on-surface mb-6">
-                                But Rick Martinez is not running for Governor. Not today. Not yet. And he will be the first to tell you that is by design. Men who skip steps do damage. Men who want the spotlight more than the work do more damage still. Rick is running for the Texas House because that is where this fight is being fought right now — in classrooms, in sheriff's offices, in property tax appraisal rolls, in the kitchens of families who are one unexpected bill away from losing their home.
-                            </p>
-
-                            <p class="font-body text-lg leading-relaxed text-on-surface mb-6">
-                                Win District 125, and San Antonio gets the representative it has been praying for. Win District 125, and Texas gets something it has not had in a very long time: a principled conservative leader whose résumé is not written in press releases but in the lives of the people he has already served. The road that follows — whatever road the Lord lays in front of him — begins with <strong>this</strong> vote, <strong>this</strong> donation, and <strong>this</strong> neighbor you tell tomorrow morning.
-                            </p>
-
-                            <div class="bg-primary text-on-primary p-10 my-12">
-                                <p class="font-headline font-black text-2xl md:text-3xl uppercase tracking-tight leading-tight mb-3">
-                                    "I'm not here to climb a ladder. I'm here to serve San Antonio. If God wills more later, He will say so. Right now, my job is District 125."
-                                </p>
-                                <p class="font-headline font-bold text-[10px] uppercase tracking-[0.2em] opacity-80">— Rick Martinez</p>
-                            </div>
-
-                            <h2 class="font-headline font-black text-3xl md:text-4xl uppercase tracking-tight text-on-surface mt-14 mb-6 leading-tight">Why This Race. Why Now.</h2>
-
-                            <p class="font-body text-lg leading-relaxed text-on-surface mb-6">
-                                Make no mistake: the people who have spent decades mismanaging South Texas families do not want Rick Martinez to win. They have already begun the smears. They will call him extreme. They will call his faith "dangerous." They will call his love of country "divisive." This is the oldest playbook in politics — and it is running out of pages.
-                            </p>
-
-                            <p class="font-body text-lg leading-relaxed text-on-surface mb-6">
-                                San Antonio is not fooled. San Antonio families know the difference between a photo-op and a food drop. They know the difference between a press release and a paycheck. They know the difference between a politician who lectures them about their values and a neighbor who <em>lives</em> those values on their street.
-                            </p>
-
-                            <p class="font-body text-lg leading-relaxed text-on-surface mb-6">
-                                Rick Martinez is that neighbor. And come Election Day, District 125 has a choice: more of the same bureaucratic indifference, or a proven fighter with calloused hands, a clear conscience, and a spine made of Texas steel.
-                            </p>
-
-                            <div class="bg-slate-50 border-l-4 border-primary pl-8 pr-6 py-8 my-10">
-                                <p class="font-body italic text-xl md:text-2xl text-on-surface leading-snug mb-3">
-                                    "San Antonio families deserve a voice that answers to God and to them — nobody else. No lobbyists. No bosses in Austin. Just the truth, and a fight."
-                                </p>
-                                <p class="font-headline font-bold text-xs uppercase tracking-widest text-primary">— Rick Martinez</p>
-                            </div>
-
-                            <h2 class="font-headline font-black text-3xl md:text-4xl uppercase tracking-tight text-on-surface mt-14 mb-6 leading-tight">The Call to Stand With Him — Vote. Give. Tell Every Neighbor.</h2>
-
-                            <p class="font-body text-lg leading-relaxed text-on-surface mb-6">
-                                Texas United Patriots is proud — truly, heart-fully proud — to stand behind Rick Martinez in his campaign for Texas House District 125. He represents the best of what this state has always produced: the self-made, the service-minded, the faith-driven, the unbought. He is the answer to a prayer a lot of Texans have been whispering for a long time.
-                            </p>
-
-                            <p class="font-body text-lg leading-relaxed text-on-surface mb-6">
-                                If you believe that government should fear its citizens instead of the other way around. If you believe that a father's duty and a mother's love and a church's faith come before any bureaucrat's opinion. If you believe San Antonio deserves a fighter — and Texas deserves, one day, a Governor cut from this exact cloth — then Rick Martinez is your candidate, and this is your moment.
-                            </p>
-
-                            <p class="font-body text-lg leading-relaxed text-on-surface mb-10">
-                                The RINO class and the consultant machine are already lining up against him. They have more money than you. They have more lobbyists than you. They have more favors to hand out than you. <strong>But they do not have you.</strong> And one engaged, prayerful, generous Texan is worth ten of their consultants on any day that ends in <em>y</em>.
-                            </p>
-
-                            <div class="border-2 border-primary p-10 my-12 bg-white">
-                                <span class="block font-headline font-bold text-[10px] text-primary uppercase tracking-[0.3em] mb-4">Three Things. Today.</span>
-                                <h3 class="font-headline font-black text-3xl uppercase tracking-tight mb-6 leading-tight">What You Can Do Before You Close This Tab</h3>
-                                <ol class="space-y-5 font-body text-lg text-on-surface">
-                                    <li class="flex gap-4"><span class="font-headline font-black text-primary text-2xl leading-none">1.</span><span><strong class="font-headline uppercase tracking-wide text-sm block mb-1">Commit to Vote.</strong>Confirm you are registered at your current address. Put Election Day on your calendar. Then pick up the phone and confirm with three friends.</span></li>
-                                    <li class="flex gap-4"><span class="font-headline font-black text-primary text-2xl leading-none">2.</span><span><strong class="font-headline uppercase tracking-wide text-sm block mb-1">Donate Today.</strong>Ten dollars from a hundred neighbors beats ten thousand from one lobbyist. Every dollar funds yard signs, door-knockers, and mailers that reach the families the establishment is counting on staying home.</span></li>
-                                    <li class="flex gap-4"><span class="font-headline font-black text-primary text-2xl leading-none">3.</span><span><strong class="font-headline uppercase tracking-wide text-sm block mb-1">Share His Story.</strong>Send this article to one Texan — just one — who needs to hear that a real one is finally on the ballot.</span></li>
-                                </ol>
-                            </div>
-
-                            <p class="font-body text-lg leading-relaxed text-on-surface mb-10">
-                                On Election Day, make sure the man who has quietly served San Antonio for over a decade is the man San Antonio publicly sends to Austin to fight for every one of us. Win District 125, and the door to a stronger, freer, truer Texas begins to open — one hinge at a time, one race at a time, one neighbor at a time. That is how movements win. That is how states are saved.
-                            </p>
-
-                            <div class="flex flex-wrap gap-4 my-10">
-                                <a href="https://www.voterickfortexas.com/" target="_blank" rel="noopener" class="bg-primary text-on-primary font-headline font-bold px-10 py-5 text-sm uppercase tracking-widest hover:bg-primary-container transition-all shadow-xl inline-block">
-                                    Donate to Rick Martinez
-                                </a>
-                                <a href="https://www.voterickfortexas.com/" target="_blank" rel="noopener" class="bg-on-surface text-white font-headline font-bold px-10 py-5 text-sm uppercase tracking-widest hover:bg-primary transition-all shadow-xl inline-block">
-                                    Volunteer &amp; Vote
-                                </a>
-                                <a href="../index.html#candidate" class="bg-transparent border-2 border-primary text-primary font-headline font-bold px-10 py-5 text-sm uppercase tracking-widest hover:bg-primary hover:text-white transition-all inline-block">
-                                    Back to the Spotlight
-                                </a>
-                            </div>
-
-                            <p class="font-body italic text-sm text-on-surface-variant leading-relaxed border-t border-slate-200 pt-6 mt-10">
-                                <em>Texas United Patriots is a political advocacy organization dedicated to electing principled, America-First leaders in the Lone Star State. This feature reflects the views of Texas United Patriots and is not authorized by any candidate or candidate's committee.</em>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Right: Sidebar -->
-                <aside class="lg:w-1/3 lg:sticky lg:top-28 self-start space-y-8 mt-8 lg:mt-0">
-                    <div class="bg-white shadow-xl p-8">
-                        <span class="block font-headline font-bold text-[10px] uppercase tracking-[0.2em] text-primary mb-4">At A Glance</span>
-                        <h3 class="font-headline font-black text-2xl uppercase tracking-tight mb-6 leading-tight">Rick Martinez</h3>
-                        <ul class="space-y-4 font-body text-sm text-on-surface-variant">
-                            <li class="flex gap-3">
-                                <span class="material-symbols-outlined text-primary text-[18px]">flag</span>
-                                <span><strong class="text-on-surface">Running for:</strong> Texas House District 125</span>
-                            </li>
-                            <li class="flex gap-3">
-                                <span class="material-symbols-outlined text-primary text-[18px]">location_on</span>
-                                <span><strong class="text-on-surface">Home:</strong> San Antonio, TX (10+ years)</span>
-                            </li>
-                            <li class="flex gap-3">
-                                <span class="material-symbols-outlined text-primary text-[18px]">military_tech</span>
-                                <span><strong class="text-on-surface">Raised:</strong> On a U.S. Army base in Germany</span>
-                            </li>
-                            <li class="flex gap-3">
-                                <span class="material-symbols-outlined text-primary text-[18px]">business_center</span>
-                                <span><strong class="text-on-surface">Career:</strong> Small-business founder and entrepreneur</span>
-                            </li>
-                            <li class="flex gap-3">
-                                <span class="material-symbols-outlined text-primary text-[18px]">favorite</span>
-                                <span><strong class="text-on-surface">Service:</strong> Loving Heart Foundation · San Antonio Food Bank · Ferrari Kid Foundation · founder of his own charity</span>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="bg-primary text-on-primary shadow-xl p-8">
-                        <h3 class="font-headline font-black text-xl uppercase tracking-tight mb-3 leading-tight">Stand With Rick</h3>
-                        <p class="font-body text-sm leading-relaxed mb-6 opacity-90">Join a movement of San Antonio families ready to send a fighter to Austin.</p>
-                        <a href="https://www.voterickfortexas.com/" target="_blank" rel="noopener" class="block w-full bg-white text-primary text-center font-headline font-black py-4 text-xs uppercase tracking-[0.2em] hover:bg-primary-fixed transition-colors">
-                            Visit Campaign Site
-                        </a>
-                    </div>
-
-                    <div class="bg-white shadow-xl p-8">
-                        <span class="block font-headline font-bold text-[10px] uppercase tracking-[0.2em] text-primary mb-4">Contact HQ</span>
-                        <ul class="space-y-3 font-body text-sm text-on-surface-variant">
-                            <li class="flex gap-3"><span class="material-symbols-outlined text-primary text-[18px]">place</span><span>7117 Bandera Rd.<br/>San Antonio, TX 78238</span></li>
-                            <li class="flex gap-3"><span class="material-symbols-outlined text-primary text-[18px]">call</span><span>210-900-0818</span></li>
-                            <li class="flex gap-3"><span class="material-symbols-outlined text-primary text-[18px]">mail</span><span class="break-all">rickmartinez4sa125@gmail.com</span></li>
-                        </ul>
-                    </div>
-                </aside>
-            </div>
-        </div>
-                        <div class="mt-16 pt-10 border-t border-slate-200">
-                            <div class="share-bar" data-share-bar>
-    <span class="share-label">Share This Story</span>
-    <div class="share-icons">
-        <button class="share-btn" data-share="facebook" aria-label="Share on Facebook" title="Share on Facebook"><svg viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg></button>
-        <button class="share-btn" data-share="x" aria-label="Share on X" title="Share on X"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></button>
-        <button class="share-btn" data-share="truth" aria-label="Share on Truth Social" title="Share on Truth Social"><svg viewBox="0 0 24 24"><path d="M3 3h18v4h-7v14h-4V7H3V3z"/></svg></button>
-        <button class="share-btn" data-share="email" aria-label="Share via Email" title="Share via Email"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></button>
-        <button class="share-btn" data-share="copy" aria-label="Copy link" title="Copy link"><svg viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg></button>
-    </div>
-</div>
-                        </div>
-
-    </article>
-
-    <!-- Footer -->
-    <footer class="bg-white border-t border-slate-200 pt-16 md:pt-20 pb-10 px-6 md:px-12 mt-20 md:mt-32">
-        <div class="container mx-auto text-center">
-            <div class="text-xl font-black text-on-surface tracking-tighter font-headline mb-4 uppercase">TEXAS UNITED PATRIOTS</div>
-            <div class="flex justify-center gap-8 mb-10 flex-wrap">
-                <a class="font-headline font-bold text-[10px] uppercase tracking-widest text-on-surface-variant hover:text-primary" href="../about.html">About</a>
-                <a class="font-headline font-bold text-[10px] uppercase tracking-widest text-on-surface-variant hover:text-primary" href="../issues.html">Issues</a>
-                <a class="font-headline font-bold text-[10px] uppercase tracking-widest text-on-surface-variant hover:text-primary" href="../index.html#candidate">Candidate</a>
-                <a class="font-headline font-bold text-[10px] uppercase tracking-widest text-on-surface-variant hover:text-primary" href="../index.html#news">News</a>
-            </div>
-            <p class="font-headline font-bold text-[9px] uppercase tracking-widest text-on-surface-variant leading-relaxed max-w-3xl mx-auto border border-slate-200 p-6">
-                &copy; 2026 TEXAS UNITED PATRIOTS PAC. PAID FOR BY TEXAS UNITED PATRIOTS PAC. NOT AUTHORIZED BY ANY CANDIDATE OR CANDIDATE'S COMMITTEE. CONTRIBUTIONS ARE NOT TAX DEDUCTIBLE FOR FEDERAL INCOME TAX PURPOSES.
-            </p>
-        </div>
-    </footer>
-
-
-    <script>
-        (function () {
-            const btn = document.getElementById('mobileMenuBtn');
-            const menu = document.getElementById('mobileMenu');
-            if (!btn || !menu) return;
-            function open() {
-                menu.classList.add('open');
-                btn.setAttribute('aria-expanded', 'true');
-                btn.setAttribute('aria-label', 'Close menu');
-                document.body.style.overflow = 'hidden';
-            }
-            function close() {
-                menu.classList.remove('open');
-                btn.setAttribute('aria-expanded', 'false');
-                btn.setAttribute('aria-label', 'Open menu');
-                document.body.style.overflow = '';
-            }
-            let lastToggle = 0;
-            btn.addEventListener('click', function () {
-                const now = Date.now();
-                if (now - lastToggle < 400) return;
-                lastToggle = now;
-                if (btn.getAttribute('aria-expanded') === 'true') close(); else open();
-            });
-            menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { menu.style.transition = 'none'; close(); }); });
-            document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && btn.getAttribute('aria-expanded') === 'true') close(); });
-        })();
-    </script>
-
-<script>
-        // Social share bar
-        (function () {
-            const bars = document.querySelectorAll('[data-share-bar]');
-            if (!bars.length) return;
-            const pageUrl = window.location.href;
-            const pageTitle = document.title;
-            bars.forEach(function (bar) {
-                bar.querySelectorAll('.share-btn').forEach(function (btn) {
-                    const type = btn.getAttribute('data-share');
-                    const u = encodeURIComponent(pageUrl);
-                    const t = encodeURIComponent(pageTitle);
-                    btn.addEventListener('click', function (e) {
-                        e.preventDefault();
-                        let url = '';
-                        if (type === 'facebook') url = 'https://www.facebook.com/sharer/sharer.php?u=' + u;
-                        else if (type === 'x') url = 'https://twitter.com/intent/tweet?url=' + u + '&text=' + t;
-                        else if (type === 'truth') url = 'https://truthsocial.com/share?url=' + u + '&text=' + t;
-                        else if (type === 'telegram') url = 'https://t.me/share/url?url=' + u + '&text=' + t;
-                        else if (type === 'whatsapp') url = 'https://api.whatsapp.com/send?text=' + t + '%20' + u;
-                        else if (type === 'email') url = 'mailto:?subject=' + t + '&body=' + t + '%0A%0A' + u;
-                        else if (type === 'copy') {
-                            navigator.clipboard.writeText(pageUrl).then(function () {
-                                btn.classList.add('copied');
-                                const original = btn.getAttribute('title');
-                                btn.setAttribute('title', 'Link copied!');
-                                setTimeout(function () {
-                                    btn.classList.remove('copied');
-                                    btn.setAttribute('title', original);
-                                }, 1800);
-                            });
-                            return;
-                        }
-                        if (url) window.open(url, '_blank', 'noopener,width=600,height=540');
-                    });
-                });
-            });
-        })();
-
-</script>
+        <p class="footer-note">
+            If you are the site owner, please contact your site administrator to restore service.
+        </p>
+    </main>
 </body>
+
 </html>

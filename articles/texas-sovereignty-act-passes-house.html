@@ -1,395 +1,157 @@
 <!DOCTYPE html>
-<html class="light" lang="en">
-<head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Texas Sovereignty Act Passes House — Texas United Patriots</title>
-    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;700;800;900&family=Newsreader:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script>
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              "primary": "#5d0011", "on-primary": "#ffffff", "primary-container": "#87001d",
-              "primary-fixed": "#ffdad9", "surface": "#f9f9f9", "on-surface": "#1a1c1c",
-              "on-surface-variant": "#47464f", "background": "#f9f9f9"
-            },
-            fontFamily: { headline: ["Public Sans"], body: ["Newsreader"], label: ["Public Sans"] }
-          },
-        },
-      }
-    </script>
-    <style>
-        html, body { overflow-x: hidden; }
+<html lang="en">
 
-        /* Mobile menu button — fixed above everything else */
-        @media (max-width: 767px) {
-            #mobileMenuBtn {
-                position: fixed !important;
-                top: 14px !important;
-                right: 16px !important;
-                z-index: 9999 !important;
-                display: inline-flex !important;
-                align-items: center;
-                justify-content: center;
-                padding: 8px;
-            }
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Site Offline</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700;800&display=swap"
+        rel="stylesheet" />
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        html, body {
+            height: 100%;
+            font-family: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: #0e1012;
+            color: #e6e6e6;
+            -webkit-font-smoothing: antialiased;
         }
 
-        /* Hamburger button */
-        .hamburger { width: 28px; height: 22px; position: relative; display: inline-block; }
-        .hamburger span { position: absolute; left: 0; height: 2px; width: 100%; background-color: currentColor; border-radius: 2px; transition: transform 0.35s ease, top 0.35s ease, opacity 0.2s ease, background-color 0.3s ease; }
-        .hamburger span:nth-child(1) { top: 2px; }
-        .hamburger span:nth-child(2) { top: 10px; width: 75%; }
-        .hamburger span:nth-child(3) { top: 18px; }
-        #mobileMenuBtn[aria-expanded="true"] .hamburger span:nth-child(1) { top: 10px; transform: rotate(45deg); }
-        #mobileMenuBtn[aria-expanded="true"] .hamburger span:nth-child(2) { opacity: 0; transform: translateX(-10px); }
-        #mobileMenuBtn[aria-expanded="true"] .hamburger span:nth-child(3) { top: 10px; transform: rotate(-45deg); }
-        #mobileMenuBtn { transition: color 0.25s ease, background-color 0.25s ease; border-radius: 999px; }
-        #mobileMenuBtn[aria-expanded="true"] { color: #fff; background-color: rgba(255, 255, 255, 0.12); }
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            background:
+                radial-gradient(ellipse at top, rgba(93, 0, 17, 0.18), transparent 60%),
+                radial-gradient(ellipse at bottom, rgba(0, 0, 0, 0.6), transparent 70%),
+                #0e1012;
+        }
 
-        /* Mobile menu — editorial fade-in */
-        #mobileMenu { transform: translateX(100%); visibility: hidden; transition: transform 0.58s cubic-bezier(0.22, 0.61, 0.36, 1), visibility 0s linear 0.58s; padding-top: env(safe-area-inset-top); padding-bottom: env(safe-area-inset-bottom); overscroll-behavior: contain; -webkit-overflow-scrolling: touch; will-change: transform; }
-        #mobileMenu.open { transform: translateX(0); visibility: visible; transition: transform 0.62s cubic-bezier(0.22, 0.61, 0.36, 1), visibility 0s linear 0s; }
-        #mobileMenu .menu-item { opacity: 0; transform: translateY(18px); transition: opacity 0.6s cubic-bezier(0.22, 0.61, 0.36, 1), transform 0.6s cubic-bezier(0.22, 0.61, 0.36, 1); }
-        #mobileMenu.open .menu-item { opacity: 1; transform: translateY(0); }
-        #mobileMenu.open .menu-item:nth-child(1) { transition-delay: 0.22s; }
-        #mobileMenu.open .menu-item:nth-child(2) { transition-delay: 0.30s; }
-        #mobileMenu.open .menu-item:nth-child(3) { transition-delay: 0.38s; }
-        #mobileMenu.open .menu-item:nth-child(4) { transition-delay: 0.46s; }
-        #mobileMenu.open .menu-item:nth-child(5) { transition-delay: 0.56s; }
-        #mobileMenu .menu-index { font-variant-numeric: tabular-nums; }
+        .card {
+            width: 100%;
+            max-width: 560px;
+            text-align: center;
+            padding: 3rem 2.25rem;
+            background: rgba(20, 22, 25, 0.85);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 14px;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45);
+            backdrop-filter: blur(8px);
+        }
 
-        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .status-dot {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.55rem;
+            padding: 0.4rem 0.9rem;
+            border-radius: 999px;
+            background: rgba(255, 80, 80, 0.08);
+            border: 1px solid rgba(255, 80, 80, 0.25);
+            color: #ff8b8b;
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
 
-        /* Social share bar */
-        .share-bar { display: flex; flex-direction: column; align-items: stretch; gap: 0.75rem; }
-        @media (min-width: 640px) { .share-bar { flex-direction: row; align-items: center; } }
-        .share-bar .share-label { font-family: 'Public Sans', sans-serif; font-weight: 700; font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: #5d0011; }
-        .share-bar .share-icons { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-        .share-btn { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border: 1px solid #e5e7eb; background: #fff; color: #1a1c1c; transition: all 0.2s ease; cursor: pointer; }
-        .share-btn:hover { color: #fff; border-color: transparent; transform: translateY(-2px); }
-        .share-btn svg { width: 18px; height: 18px; fill: currentColor; }
-        .share-btn[data-share="facebook"]:hover { background: #1877f2; }
-        .share-btn[data-share="x"]:hover { background: #000; }
-        .share-btn[data-share="truth"]:hover { background: #5d0011; }
-        .share-btn[data-share="telegram"]:hover { background: #229ED9; }
-        .share-btn[data-share="whatsapp"]:hover { background: #25D366; }
-        .share-btn[data-share="email"]:hover { background: #5d0011; }
-        .share-btn[data-share="copy"]:hover { background: #1a1c1c; }
-        .share-btn .copied-msg { display: none; }
-        .share-btn.copied { background: #16a34a; color: #fff; border-color: transparent; }
-        .share-bar.on-dark .share-label { color: rgba(255,255,255,0.6); }
-        .share-bar.on-dark .share-btn { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.15); color: #fff; }
-        .share-bar.on-dark .share-btn:hover { border-color: transparent; }
-        /* Smooth cross-page transitions (modern browsers: Chrome 126+, Safari 18+) */
-        @view-transition { navigation: auto; }
-        ::view-transition-old(root), ::view-transition-new(root) { animation-duration: 0.4s; animation-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1); }
+        .status-dot::before {
+            content: "";
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #ff5050;
+            box-shadow: 0 0 0 0 rgba(255, 80, 80, 0.7);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%   { box-shadow: 0 0 0 0 rgba(255, 80, 80, 0.55); }
+            70%  { box-shadow: 0 0 0 12px rgba(255, 80, 80, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 80, 80, 0); }
+        }
+
+        h1 {
+            margin-top: 1.75rem;
+            font-size: 1.85rem;
+            font-weight: 800;
+            letter-spacing: -0.01em;
+            color: #f5f5f5;
+        }
+
+        .lede {
+            margin-top: 0.85rem;
+            color: #9aa0a6;
+            font-size: 1rem;
+            line-height: 1.55;
+        }
+
+        .divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, rgba(255,255,255,0.08), transparent);
+            margin: 2rem 0 1.5rem;
+        }
+
+        .meta {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 0.55rem 1.25rem;
+            text-align: left;
+            font-size: 0.92rem;
+            color: #c8ccd1;
+        }
+
+        .meta dt {
+            color: #7d828a;
+            font-weight: 500;
+        }
+
+        .footer-note {
+            margin-top: 2rem;
+            font-size: 0.8rem;
+            color: #6b7079;
+            line-height: 1.5;
+        }
+
+        .footer-note a {
+            color: #c9a35f;
+            text-decoration: none;
+        }
+        .footer-note a:hover { text-decoration: underline; }
+
+        @media (max-width: 480px) {
+            .card { padding: 2.25rem 1.5rem; }
+            h1 { font-size: 1.5rem; }
+            .meta { grid-template-columns: 1fr; gap: 0.15rem 0; }
+            .meta dt { margin-top: 0.6rem; }
+        }
     </style>
 </head>
-<body class="bg-surface text-on-surface font-body">
 
-    <nav class="fixed top-0 w-full z-50 flex justify-between items-center px-6 md:px-12 py-4 md:py-5 bg-white shadow-lg">
-        <a href="../index.html" class="text-lg md:text-2xl font-black text-primary tracking-tighter font-headline">TEXAS UNITED PATRIOTS</a>
-        <div class="hidden md:flex items-center gap-x-8 lg:gap-x-12">
-            <a class="font-headline font-bold text-xs uppercase tracking-widest text-on-surface hover:text-primary transition-colors" href="../index.html#news">News</a>
-            <a class="font-headline font-bold text-xs uppercase tracking-widest text-on-surface hover:text-primary transition-colors" href="../index.html">About</a>
-            <button class="bg-primary text-on-primary font-headline font-bold text-xs uppercase tracking-widest px-8 py-3 active:scale-95 duration-150">Donate Now</button>
-        </div>
-    </nav>
-    <button id="mobileMenuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu" class="md:hidden fixed top-3 right-4 text-primary p-2 z-[80]"><span class="hamburger"><span></span><span></span><span></span></span></button>
+<body>
+    <main class="card" role="main">
+        <span class="status-dot">Service Suspended</span>
+        <h1>This site is currently offline</h1>
+        <p class="lede">
+            The account associated with this domain is suspended pending payment.
+            Service will be restored once the outstanding balance is settled.
+        </p>
 
-    <!-- Mobile Menu -->
-    <div id="mobileMenu" class="fixed inset-0 z-[65] bg-[#141821] flex flex-col overflow-y-auto">
-        <div class="absolute inset-x-0 top-0 h-1 bg-primary"></div>
-        <div class="flex justify-between items-center px-6 pt-5 pb-5 border-b border-white/10">
-            <a href="../index.html" class="text-lg font-black text-white tracking-tighter font-headline">TEXAS UNITED PATRIOTS</a>
-        </div>
-        <nav class="flex-1 flex flex-col px-6 pt-6">
-            <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors" href="../issues.html">
-                <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">01</span>
-                <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">Issues</span>
-                <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
-            </a>
-            <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors" href="../about.html">
-                <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">02</span>
-                <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">About</span>
-                <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
-            </a>
-            <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors" href="../index.html#candidate">
-                <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">03</span>
-                <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">Candidate</span>
-                <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
-            </a>
-            <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors" href="../index.html#news">
-                <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">04</span>
-                <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">News</span>
-                <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
-            </a>
-        </nav>
-        <div class="menu-item px-6 pt-8 pb-10 border-t border-white/10 mt-6">
-            <button class="w-full bg-primary text-on-primary font-headline font-semibold uppercase tracking-[0.15em] py-4 text-sm hover:bg-primary-container transition-colors flex items-center justify-center gap-2 rounded-lg">
-                <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
-                Donate Now
-            </button>
-            <p class="mt-6 font-headline font-bold text-[10px] text-white/40 uppercase tracking-[0.3em] text-center">Faith · Family · Freedom</p>
-        </div>
-    </div>
+        <div class="divider"></div>
 
+        <dl class="meta">
+            <dt>Status</dt><dd>Suspended &mdash; non-payment</dd>
+            <dt>Site</dt><dd>Texas United Patriots</dd>
+            <dt>Action required</dt><dd>Account holder must settle the outstanding invoice</dd>
+        </dl>
 
-    <header class="relative pt-24">
-        <img alt="Texas State Capitol" class="w-full h-[50vh] object-cover" src="https://images.unsplash.com/photo-1588416936097-41850ab3d86d?w=1200&q=80"/>
-        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-    </header>
-
-    <article class="container mx-auto px-6 md:px-12 -mt-24 md:-mt-32 relative z-10">
-        <div class="max-w-7xl mx-auto">
-            <div class="flex flex-col lg:flex-row gap-8">
-
-                <!-- Article (left column) -->
-                <div class="lg:w-2/3">
-                    <div class="bg-white shadow-2xl p-6 sm:p-8 md:p-16">
-                        <span class="inline-block bg-primary text-on-primary font-headline font-bold text-[9px] tracking-[0.2em] uppercase px-3 py-1 mb-6">State Sovereignty</span>
-                        <h1 class="font-headline font-black text-4xl md:text-5xl lg:text-6xl text-on-surface leading-[0.9] tracking-tight uppercase mb-6">Texas Sovereignty Act Passes House 86-41 — State Could Nullify Unconstitutional Federal Actions</h1>
-                        <div class="flex items-center gap-4 mb-10 border-b border-slate-200 pb-8">
-                            <span class="font-headline font-bold text-[10px] uppercase tracking-widest text-on-surface-variant">May 8, 2025</span>
-                            <span class="text-slate-300">|</span>
-                            <span class="font-headline font-bold text-[10px] uppercase tracking-widest text-on-surface-variant">7 min read</span>
-                            <span class="text-slate-300">|</span>
-                            <span class="font-headline font-bold text-[10px] uppercase tracking-widest text-primary">Col. Samuel Briggs (Ret.)</span>
-                        </div>
-                        <div class="mt-8 pb-6 border-b border-slate-200"><div class="share-bar" data-share-bar>
-    <span class="share-label">Spread the Word</span>
-    <div class="share-icons">
-        <button class="share-btn" data-share="facebook" aria-label="Share on Facebook" title="Share on Facebook"><svg viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg></button>
-        <button class="share-btn" data-share="x" aria-label="Share on X" title="Share on X"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></button>
-        <button class="share-btn" data-share="truth" aria-label="Share on Truth Social" title="Share on Truth Social"><svg viewBox="0 0 24 24"><path d="M3 3h18v4h-7v14h-4V7H3V3z"/></svg></button>
-        <button class="share-btn" data-share="email" aria-label="Share via Email" title="Share via Email"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></button>
-        <button class="share-btn" data-share="copy" aria-label="Copy link" title="Copy link"><svg viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg></button>
-    </div>
-</div></div>
-
-
-                        <div class="prose prose-lg max-w-none">
-                            <p class="font-body text-xl leading-relaxed text-on-surface mb-6 italic">
-                                Texas just put Washington on notice. House Bill 796 — the Texas Sovereignty Act — passed the state House by a decisive 86-41 vote, creating a formal mechanism for the Lone Star State to review, challenge, and potentially nullify federal overreach.
-                            </p>
-
-                            <p class="font-body text-lg leading-relaxed text-on-surface-variant mb-6">
-                                On May 6, 2025, the Texas House of Representatives passed one of the most consequential pieces of state sovereignty legislation in modern American history. HB 796 establishes the Joint Legislative Committee on Constitutional Enforcement — a 12-member bipartisan panel consisting of six House members appointed by the Speaker and six Senate members appointed by the Lieutenant Governor, with no more than four members from the majority party in either chamber.
-                            </p>
-
-                            <p class="font-body text-lg leading-relaxed text-on-surface-variant mb-6">
-                                The committee's mandate is extraordinary in its scope: review federal laws, agency rules and regulations, executive orders, federal court decisions, and treaties "that challenge the sovereignty of the state and of the people to determine if the federal action is unconstitutional."
-                            </p>
-
-                            <h2 class="font-headline font-black text-2xl uppercase tracking-tight mt-12 mb-4">How It Works</h2>
-
-                            <p class="font-body text-lg leading-relaxed text-on-surface-variant mb-6">
-                                HB 796 defines "unconstitutional federal action" broadly — encompassing not only laws and executive orders but also treaties, agency rules, and federal court decisions. The standard for review is whether the action exceeds federal authority "under the original meaning of the Constitution." This is a critical distinction: the committee evaluates constitutionality based on what the Founders intended, not what decades of activist judicial interpretation have stretched the Commerce Clause and other provisions to cover.
-                            </p>
-
-                            <p class="font-body text-lg leading-relaxed text-on-surface-variant mb-6">
-                                If the committee determines that a federal action is unconstitutional, and if both chambers of the Texas Legislature and the Governor concur, that action can be declared null in Texas and unenforceable by state agencies. This means no Texas state employee, no Texas law enforcement officer, and no Texas agency would be permitted to enforce, implement, or cooperate with the invalidated federal action.
-                            </p>
-
-                            <div class="bg-slate-50 border-l-4 border-primary p-8 my-10">
-                                <p class="font-headline font-black text-lg uppercase tracking-tight mb-2">State sovereignty doesn't defend itself.</p>
-                                <p class="font-body text-on-surface-variant mb-4">The Texas Sovereignty Act exists because citizens demanded it. Help us continue pushing for legislation that protects Texans from federal overreach — from the border to the schoolhouse.</p>
-                                <button class="bg-primary text-on-primary font-headline font-bold text-xs uppercase tracking-widest px-8 py-3 hover:bg-primary-container transition-all">Defend Texas Sovereignty</button>
-                            </div>
-
-                            <h2 class="font-headline font-black text-2xl uppercase tracking-tight mt-12 mb-4">Companion Legislation Strengthens the Framework</h2>
-
-                            <p class="font-body text-lg leading-relaxed text-on-surface-variant mb-6">
-                                HB 796 doesn't stand alone. It's part of a package of sovereignty legislation moving through the Texas Legislature. Senate Bill 888 by Senator Lois Kolkhorst protects local prosecutors from federal lawsuits when they enforce state law. Senate Bill 707 by Senator Phil King gives the Legislature a formal mechanism to reject unconstitutional federal directives. Together, these bills create a comprehensive shield against federal overreach.
-                            </p>
-
-                            <p class="font-body text-lg leading-relaxed text-on-surface-variant mb-6">
-                                The Texas Sovereignty Act also complements existing state efforts on border security. Congressman Jodey Arrington's House Resolution 50 — supported by 25 Texas state lawmakers — reaffirms states' constitutional right to defend their borders in cases of invasion. Senate Bill 4, which grants state and local police the power to arrest individuals suspected of entering Texas unlawfully, continues to test the boundaries of state authority in areas where the federal government has failed to act.
-                            </p>
-
-                            <h2 class="font-headline font-black text-2xl uppercase tracking-tight mt-12 mb-4">No Fiscal Impact — Just Constitutional Enforcement</h2>
-
-                            <p class="font-body text-lg leading-relaxed text-on-surface-variant mb-6">
-                                According to the Legislative Budget Board, HB 796 will have no significant fiscal impact on the state. Any administrative costs associated with the committee's operation can be absorbed within existing agency resources. This is constitutional enforcement at zero additional cost to taxpayers — a rare achievement in government.
-                            </p>
-
-                            <p class="font-body text-lg leading-relaxed text-on-surface font-semibold mb-6">
-                                The Tenth Amendment was not a suggestion. It was a command: "The powers not delegated to the United States by the Constitution, nor prohibited by it to the States, are reserved to the States respectively, or to the people." Texas is finally building the tools to enforce it. The question now is whether the Senate and the Governor will finish what the House started.
-                            </p>
-                        </div>
-
-                        <div class="border-t border-slate-200 mt-12 pt-8 flex flex-wrap gap-3">
-                            <span class="bg-slate-100 font-headline font-bold text-[9px] uppercase tracking-widest px-4 py-2">Sovereignty</span>
-                            <span class="bg-slate-100 font-headline font-bold text-[9px] uppercase tracking-widest px-4 py-2">Tenth Amendment</span>
-                            <span class="bg-slate-100 font-headline font-bold text-[9px] uppercase tracking-widest px-4 py-2">Legislature</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Sidebar (right column) -->
-                <div class="lg:w-1/3">
-                    <div class="lg:sticky lg:top-28 space-y-6">
-
-                        <!-- Author Card -->
-                        <div class="bg-white shadow-2xl p-10 text-center">
-                            <div class="mb-6 flex justify-center">
-                                <img src="../col_briggs.png" alt="Col. Samuel Briggs (Ret.)" class="w-32 h-32 rounded-full object-cover shadow-lg border-4 border-slate-50"/>
-                            </div>
-                            <p class="font-headline font-bold text-[10px] uppercase tracking-[0.25em] text-on-surface-variant mb-2">Written by</p>
-                            <h3 class="font-headline font-black text-xl text-on-surface leading-tight mb-1">Col. Samuel Briggs (Ret.)</h3>
-                            <p class="font-headline font-bold text-[11px] uppercase tracking-widest text-primary mb-6">Senior State Affairs Editor</p>
-                            <p class="font-body text-sm leading-relaxed text-on-surface-variant text-left">
-                                Col. Samuel Briggs (Ret.) is the state affairs editor for Texas United Patriots. A West Point graduate and former Army Judge Advocate General officer with 25 years of service, he specializes in constitutional law, federal-state relations, and legislative analysis. His expertise in military and constitutional law provides authoritative insight into Texas' sovereignty efforts.
-                            </p>
-                        </div>
-
-                        <!-- Key Takeaways -->
-                        <div class="bg-white shadow-2xl p-8">
-                            <h3 class="font-headline font-black text-lg uppercase tracking-tight mb-6">Key Takeaways</h3>
-                            <ul class="space-y-4">
-                                <li class="flex items-start gap-3">
-                                    <span class="material-symbols-outlined text-primary text-xl mt-0.5" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-                                    <span class="font-body text-sm leading-relaxed text-on-surface-variant">HB 796 passed the Texas House 86-41 on May 6, 2025</span>
-                                </li>
-                                <li class="flex items-start gap-3">
-                                    <span class="material-symbols-outlined text-primary text-xl mt-0.5" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-                                    <span class="font-body text-sm leading-relaxed text-on-surface-variant">Creates 12-member Joint Legislative Committee on Constitutional Enforcement</span>
-                                </li>
-                                <li class="flex items-start gap-3">
-                                    <span class="material-symbols-outlined text-primary text-xl mt-0.5" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-                                    <span class="font-body text-sm leading-relaxed text-on-surface-variant">Committee can review federal laws, executive orders, court decisions, and treaties</span>
-                                </li>
-                                <li class="flex items-start gap-3">
-                                    <span class="material-symbols-outlined text-primary text-xl mt-0.5" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-                                    <span class="font-body text-sm leading-relaxed text-on-surface-variant">Actions deemed unconstitutional could be declared null and unenforceable in Texas</span>
-                                </li>
-                                <li class="flex items-start gap-3">
-                                    <span class="material-symbols-outlined text-primary text-xl mt-0.5" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-                                    <span class="font-body text-sm leading-relaxed text-on-surface-variant">Zero fiscal impact — absorbed within existing state agency resources</span>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <!-- Sidebar Donate Card -->
-                        <div class="bg-primary text-on-primary p-8">
-                            <h3 class="font-headline font-black text-lg uppercase tracking-tight mb-3">Support Our Work</h3>
-                            <p class="font-body text-white/80 text-sm leading-relaxed mb-6">Help us continue covering the fight for Texas sovereignty and holding Washington accountable.</p>
-                            <button class="w-full bg-white text-primary font-headline font-bold text-xs uppercase tracking-widest px-6 py-3 hover:bg-slate-100 transition-all">Donate Now</button>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- Full-width bottom donation CTA -->
-            <div class="bg-primary text-on-primary p-10 md:p-14 mt-8 text-center">
-                <h3 class="font-headline font-black text-3xl uppercase tracking-tight mb-4">Texas First. Always.</h3>
-                <p class="font-body text-white/80 text-lg mb-8 max-w-xl mx-auto">Every dollar you contribute goes directly toward electing leaders who will stand up to Washington and defend Texas sovereignty.</p>
-                <button class="bg-white text-primary font-headline font-bold text-sm uppercase tracking-widest px-12 py-5 hover:bg-slate-100 transition-all">Donate Now</button>
-            </div>
-
-            <div class="text-center mt-12 mb-20">
-                <a href="../index.html#news" class="font-headline font-bold text-xs uppercase tracking-widest text-primary hover:text-primary-container transition-colors">&larr; Back to All News</a>
-            </div>
-        </div>
-                        <div class="mt-16 pt-10 border-t border-slate-200">
-                            <div class="share-bar" data-share-bar>
-    <span class="share-label">Share This Story</span>
-    <div class="share-icons">
-        <button class="share-btn" data-share="facebook" aria-label="Share on Facebook" title="Share on Facebook"><svg viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg></button>
-        <button class="share-btn" data-share="x" aria-label="Share on X" title="Share on X"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></button>
-        <button class="share-btn" data-share="truth" aria-label="Share on Truth Social" title="Share on Truth Social"><svg viewBox="0 0 24 24"><path d="M3 3h18v4h-7v14h-4V7H3V3z"/></svg></button>
-        <button class="share-btn" data-share="email" aria-label="Share via Email" title="Share via Email"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></button>
-        <button class="share-btn" data-share="copy" aria-label="Copy link" title="Copy link"><svg viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg></button>
-    </div>
-</div>
-                        </div>
-
-    </article>
-
-    <footer class="bg-white border-t border-slate-200 pt-12 pb-8 px-12">
-        <div class="container mx-auto text-center">
-            <div class="text-xl font-black text-on-surface tracking-tighter font-headline mb-4 uppercase">TEXAS UNITED PATRIOTS</div>
-            <p class="font-headline font-bold text-[9px] uppercase tracking-widest text-on-surface-variant leading-relaxed max-w-2xl mx-auto">
-                &copy; 2024 TEXAS UNITED PATRIOTS PAC. PAID FOR BY TEXAS UNITED PATRIOTS PAC. NOT AUTHORIZED BY ANY CANDIDATE OR CANDIDATE'S COMMITTEE.
-            </p>
-        </div>
-    </footer>
-
-    <script>
-        (function () {
-            const btn = document.getElementById('mobileMenuBtn');
-            const menu = document.getElementById('mobileMenu');
-            if (!btn || !menu) return;
-            function open() {
-                menu.classList.add('open');
-                btn.setAttribute('aria-expanded', 'true');
-                btn.setAttribute('aria-label', 'Close menu');
-                document.body.style.overflow = 'hidden';
-            }
-            function close() {
-                menu.classList.remove('open');
-                btn.setAttribute('aria-expanded', 'false');
-                btn.setAttribute('aria-label', 'Open menu');
-                document.body.style.overflow = '';
-            }
-            let lastToggle = 0;
-            btn.addEventListener('click', function () {
-                const now = Date.now();
-                if (now - lastToggle < 400) return;
-                lastToggle = now;
-                if (btn.getAttribute('aria-expanded') === 'true') close(); else open();
-            });
-            menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { menu.style.transition = 'none'; close(); }); });
-            document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && btn.getAttribute('aria-expanded') === 'true') close(); });
-        })();
-    </script>
-
-<script>
-        // Social share bar
-        (function () {
-            const bars = document.querySelectorAll('[data-share-bar]');
-            if (!bars.length) return;
-            const pageUrl = window.location.href;
-            const pageTitle = document.title;
-            bars.forEach(function (bar) {
-                bar.querySelectorAll('.share-btn').forEach(function (btn) {
-                    const type = btn.getAttribute('data-share');
-                    const u = encodeURIComponent(pageUrl);
-                    const t = encodeURIComponent(pageTitle);
-                    btn.addEventListener('click', function (e) {
-                        e.preventDefault();
-                        let url = '';
-                        if (type === 'facebook') url = 'https://www.facebook.com/sharer/sharer.php?u=' + u;
-                        else if (type === 'x') url = 'https://twitter.com/intent/tweet?url=' + u + '&text=' + t;
-                        else if (type === 'truth') url = 'https://truthsocial.com/share?url=' + u + '&text=' + t;
-                        else if (type === 'telegram') url = 'https://t.me/share/url?url=' + u + '&text=' + t;
-                        else if (type === 'whatsapp') url = 'https://api.whatsapp.com/send?text=' + t + '%20' + u;
-                        else if (type === 'email') url = 'mailto:?subject=' + t + '&body=' + t + '%0A%0A' + u;
-                        else if (type === 'copy') {
-                            navigator.clipboard.writeText(pageUrl).then(function () {
-                                btn.classList.add('copied');
-                                const original = btn.getAttribute('title');
-                                btn.setAttribute('title', 'Link copied!');
-                                setTimeout(function () {
-                                    btn.classList.remove('copied');
-                                    btn.setAttribute('title', original);
-                                }, 1800);
-                            });
-                            return;
-                        }
-                        if (url) window.open(url, '_blank', 'noopener,width=600,height=540');
-                    });
-                });
-            });
-        })();
-
-</script>
+        <p class="footer-note">
+            If you are the site owner, please contact your site administrator to restore service.
+        </p>
+    </main>
 </body>
+
 </html>
