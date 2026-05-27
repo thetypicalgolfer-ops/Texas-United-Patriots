@@ -1,0 +1,5 @@
+# Texas United Patriots — allow all crawlers, including AI/search agents.
+User-agent: *
+Allow: /
+
+Sitemap: https://texasunitedpatriots.org/sitemap.xml
