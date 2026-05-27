@@ -354,6 +354,13 @@
             transform: scale(0.9);
         }
 
+        /* Footer fades in faster on mobile */
+        @media (max-width: 767px) {
+            footer .reveal {
+                transition: opacity 0.5s cubic-bezier(0.22, 0.61, 0.36, 1), transform 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+            }
+        }
+
         /* Staggered children */
         .stagger>.reveal:nth-child(1) {
             transition-delay: 0s;
