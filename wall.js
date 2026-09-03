@@ -48,6 +48,7 @@
   /* ── Guards ──────────────────────────────────────────────────────────────────────── */
 
   var PREVIEW = /[?&]wall=preview\b/.test(location.search);
+  var HAS_PROVIDERS = !!(GOOGLE_CLIENT_ID || APPLE_CLIENT_ID) || PREVIEW;
 
   if (!SHEET_ENDPOINT && !PREVIEW) {
     console.warn("[wall] OFF — no SHEET_ENDPOINT. Add ?wall=preview to look at it.");
@@ -87,7 +88,10 @@
     /* FULL-BLEED sheet anchored to the bottom, like the NYT panel. Not a card: it spans
        the entire viewport width and the content is centred inside it. */
     ".tup-ovl{position:fixed;left:0;right:0;bottom:0;z-index:2000;background:#fff;",
-    "max-height:calc(100vh - 76px);overflow-y:auto;-webkit-overflow-scrolling:touch;",
+    "max-height:calc(100vh - 170px);overflow-y:auto;-webkit-overflow-scrolling:touch;",
+    /* 170px, not 76: at 76 the sheet ran right up under the navbar on a laptop and the
+       reader never saw the headline or the teaser at all — the one thing Bart asked to
+       come FIRST. It scrolls internally on a short screen instead of eating the story. */
     /* the drop shadow the NYT casts UPWARD onto the article */
     "box-shadow:0 -14px 34px rgba(0,0,0,.20),0 -2px 6px rgba(0,0,0,.06)}",
     /* and a soft gradient sitting just above the top edge, so the article fades into it */
@@ -167,7 +171,10 @@
     '    <button class="tup-btn" type="submit" id="tup-submit">Continue</button>',
     '    <div class="tup-err" id="tup-err" role="alert"></div>',
     '  </form>',
-    '  <div class="tup-or">or</div>',
+    // The "or" divider renders ONLY when a provider button will follow it. Shipped without
+    // this guard once: with no client ids set the sheet showed an "or" leading to blank
+    // space — a control implying a choice that does not exist.
+    (HAS_PROVIDERS ? '  <div class="tup-or">or</div>' : ''),
     '  <p class="tup-fine">By continuing, you agree to our <a href="/terms.html">Terms of Service</a> and <a href="/privacy.html">Privacy Policy</a>. We use your name and email to send you our updates. We do not sell your personal information.</p>',
     '  <div id="tup-providers"></div>',
     '</div>',
