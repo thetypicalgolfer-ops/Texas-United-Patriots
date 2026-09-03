@@ -35,7 +35,7 @@
   "use strict";
 
   // ← TURNS THE WALL ON. Apps Script Web app URL, .../exec  (see tools/registrations-sheet.gs)
-  var SHEET_ENDPOINT = "";
+  var SHEET_ENDPOINT = "https://script.google.com/macros/s/AKfycbywh83BRIfdpq0jUO3uDIk2W09aNIaw4xvs3IxvJVWrBWJ8nm0UczIur_DVKRIidMW9/exec";
   var GOOGLE_CLIENT_ID = "";   // ← optional, e.g. "1234567890-abc.apps.googleusercontent.com"
 
   var TEASER_BLOCKS = 2;       // body elements left readable before the fade
