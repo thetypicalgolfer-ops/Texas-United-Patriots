@@ -38,7 +38,7 @@
   "use strict";
 
   var SHEET_ENDPOINT = "https://script.google.com/macros/s/AKfycbywh83BRIfdpq0jUO3uDIk2W09aNIaw4xvs3IxvJVWrBWJ8nm0UczIur_DVKRIidMW9/exec";
-  var GOOGLE_CLIENT_ID = "";   // ← free. e.g. "1234567890-abc.apps.googleusercontent.com"
+  var GOOGLE_CLIENT_ID = "762455340749-h90mh2ru2tsrj7fgojhrfpf04sh5mbfj.apps.googleusercontent.com";
   var APPLE_CLIENT_ID = "";    // ← needs the $99/yr Apple Developer Program, e.g. "org.texasunitedpatriots.web"
   var APPLE_REDIRECT_URI = "https://texasunitedpatriots.org/";
 
