@@ -2,3 +2,9 @@
 # To restore: remove these entries and move _archive/ files back into place.
 _archive/
 rick_martinez.jpg
+
+# Unpublished drafts — never deployed.
+_drafts/
+
+# Apps Script source for the registration sheet — reference only, never deployed.
+tools/

@@ -14,13 +14,17 @@
    not have. Bart chose this knowing that, with the real paywall to follow.
 
    ── THE ONE BLANK THAT TURNS IT ON, AND IT IS BART'S ────────────────────────────────
-   KIT_FORM_ID — the numeric id of a free form at kit.com. It is the same service the
-   homepage newsletter box uses. NO api key and NO secret belongs in this file; the form
-   endpoint is public by design.
+   SHEET_ENDPOINT — the Web app URL of the Apps Script in tools/registrations-sheet.gs,
+   which appends every registration straight to a Google Sheet in Bart's own Drive. His
+   choice, and the right one: the list lives in his Drive, exports to Excel or CSV in two
+   clicks, and no third-party list service ever holds his readers.
 
-   Until that id is set the wall stays OFF for real readers, on purpose. A registration
-   box that blocks the article while throwing the email away is worse than no box at all:
-   it costs readers AND builds no list, and Bart would believe he was collecting one.
+   It is NOT a secret. That endpoint only accepts new rows — it never reads the sheet and
+   never returns anybody's data. It still belongs in this file and nowhere else.
+
+   Until it is set the wall stays OFF for real readers, on purpose. A registration box
+   that blocks the article while throwing the email away is worse than no box at all: it
+   costs readers AND builds no list, and Bart would believe he was collecting one.
    Use ?wall=preview on any article to look at it without collecting anything.
 
    GOOGLE_CLIENT_ID is optional. Blank = the Google button is not shown and the email form
@@ -30,7 +34,8 @@
 (function () {
   "use strict";
 
-  var KIT_FORM_ID = "";        // ← numeric Kit form id, e.g. "7654321"   ← TURNS THE WALL ON
+  // ← TURNS THE WALL ON. Apps Script Web app URL, .../exec  (see tools/registrations-sheet.gs)
+  var SHEET_ENDPOINT = "";
   var GOOGLE_CLIENT_ID = "";   // ← optional, e.g. "1234567890-abc.apps.googleusercontent.com"
 
   var TEASER_BLOCKS = 2;       // body elements left readable before the fade
@@ -40,8 +45,8 @@
 
   var PREVIEW = /[?&]wall=preview\b/.test(location.search);
 
-  if (!KIT_FORM_ID && !PREVIEW) {
-    console.warn("[wall] OFF — no KIT_FORM_ID. Set it in wall.js to switch the wall on for readers. Add ?wall=preview to any article to look at it.");
+  if (!SHEET_ENDPOINT && !PREVIEW) {
+    console.warn("[wall] OFF — no SHEET_ENDPOINT. Set it in wall.js to switch the wall on for readers. Add ?wall=preview to any article to look at it.");
     return;
   }
 
@@ -171,10 +176,10 @@
     setTimeout(showModal, 6000);
   }
 
-  if (PREVIEW && !KIT_FORM_ID) {
+  if (PREVIEW && !SHEET_ENDPOINT) {
     var note = document.createElement("p");
     note.className = "tup-note";
-    note.textContent = "Preview — nothing is saved until a Kit form is connected";
+    note.textContent = "Preview — nothing is saved until the Google Sheet is connected";
     ovl.querySelector(".tup-card").appendChild(note);
   }
 
@@ -191,19 +196,30 @@
     if (ovl.parentNode) ovl.parentNode.removeChild(ovl);
   }
 
-  /* Kit's public form endpoint — no api key, no secret, CORS-open by design. */
-  function register(name, email) {
+  /* Append one row to Bart's Google Sheet, via the Apps Script Web app.
+     `text/plain` is deliberate: it keeps this a CORS "simple request", so the browser
+     sends it straight through with no preflight. Apps Script has no way to answer an
+     OPTIONS preflight, so any other content type fails before it leaves the browser. */
+  function register(name, email, source) {
     // Preview has nowhere to save to and must never pretend it saved.
-    if (!KIT_FORM_ID) return Promise.resolve(true);
-    var body = new URLSearchParams();
-    body.set("email_address", email);
-    if (name) body.set("first_name", name);
-    return fetch("https://app.convertkit.com/forms/" + KIT_FORM_ID + "/subscriptions", {
+    if (!SHEET_ENDPOINT) return Promise.resolve(true);
+    var payload = JSON.stringify({
+      name: name,
+      email: email,
+      source: source || "form",
+      article: (document.querySelector("h1") || {}).textContent ? document.querySelector("h1").textContent.trim().slice(0, 200) : location.pathname,
+      referrer: document.referrer || "",
+    });
+    return fetch(SHEET_ENDPOINT, {
       method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded", Accept: "application/json" },
-      body: body.toString(),
+      headers: { "Content-Type": "text/plain;charset=utf-8" },
+      body: payload,
+      redirect: "follow", // Apps Script bounces /exec → googleusercontent.com
     }).then(function (r) {
-      if (!r.ok) throw new Error("kit " + r.status);
+      if (!r.ok) throw new Error("sheet " + r.status);
+      return r.json().catch(function () { return { ok: true }; }); // readable body is a bonus, not a requirement
+    }).then(function (j) {
+      if (j && j.ok === false) throw new Error(j.error || "sheet refused");
       return true;
     });
   }
@@ -217,7 +233,7 @@
     if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { err.textContent = "Please enter a valid email address."; return; }
     submit.disabled = true;
     submit.textContent = "Registering…";
-    register(name, email)
+    register(name, email, "form")
       .then(function () { unlock(name, email); })
       .catch(function () {
         // Honest failure: say so and do NOT unlock. An unlock we didn't capture an email
@@ -248,7 +264,7 @@
           var email = claims.email || "";
           var name = claims.given_name || (claims.name || "").split(" ")[0] || "";
           if (!email) { err.textContent = "Google didn't return an email address. Please register above."; return; }
-          register(name, email)
+          register(name, email, "google")
             .then(function () { unlock(name, email); })
             .catch(function () { err.textContent = "That didn't go through. Please try the form above."; });
         },
