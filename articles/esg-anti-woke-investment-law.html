@@ -36,6 +36,23 @@
       }
     </script>
     <style>
+        /* ── Readability for older eyes (Bart, 2026-09-12) ─────────────────────────────
+           His instruction: "There has to be old people reading this... I need all the
+           little text that is the article to be way bigger."
+           Done here rather than by editing 187 individual Tailwind classes, so the whole
+           site's body type can be retuned from one block per article.
+           Specificity (.prose p.font-body = 0,2,1) beats Tailwind's .text-lg (0,1,0),
+           so these win regardless of stylesheet order. */
+        .prose p.font-body { font-size: 1.5rem; line-height: 1.8; margin-bottom: 1.8rem; }
+        .prose p.font-body.text-xl { font-size: 1.75rem; line-height: 1.65; }
+        .prose h2 { font-size: 2.25rem; line-height: 1.2; }
+        .prose li, .prose ul, .prose ol { font-size: 1.5rem; line-height: 1.8; }
+        @media (max-width: 640px) {
+            .prose p.font-body { font-size: 1.3125rem; line-height: 1.75; }
+            .prose p.font-body.text-xl { font-size: 1.5rem; }
+            .prose h2 { font-size: 1.875rem; }
+        }
+
         html, body { overflow-x: hidden; }
 
         /* Mobile menu button — fixed above everything else */
