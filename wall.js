@@ -44,6 +44,39 @@
 
   var TEASER_BLOCKS = 2;
   var STORAGE_KEY = "tup_reader_v1";
+  var COOKIE_KEY = "tup_reader";
+  var COOKIE_MAX_AGE = 34560000; // 400 days — the longest Chrome will honour
+
+  /* Remembering a reader, belt and braces.
+     localStorage alone was losing people: private windows, "clear on exit", and Safari's
+     ITP, which evicts script-written storage after 7 days of no first-party interaction.
+     So we ALSO drop a cookie, and a reader is remembered if EITHER survives — then the
+     survivor re-seeds the one that was wiped.
+     The cookie deliberately carries NO personal data, only "1". The gate just needs to
+     know they registered; it does not need their email, and a cookie is sent on every
+     single request to the domain. The name and email stay in localStorage. */
+  function readCookie(k) {
+    var m = document.cookie.match(new RegExp("(?:^|; )" + k + "=([^;]*)"));
+    return m ? decodeURIComponent(m[1]) : null;
+  }
+  function writeCookie(k, v) {
+    try {
+      document.cookie = k + "=" + encodeURIComponent(v) + "; Max-Age=" + COOKIE_MAX_AGE +
+        "; Path=/; SameSite=Lax" + (location.protocol === "https:" ? "; Secure" : "");
+    } catch (e) { /* cookies refused — localStorage may still carry them */ }
+  }
+  function readReader() {
+    var ls = null;
+    try { ls = JSON.parse(localStorage.getItem(STORAGE_KEY) || "null"); } catch (e) { ls = null; }
+    var ck = readCookie(COOKIE_KEY);
+    if (ls && ls.email) { if (!ck) writeCookie(COOKIE_KEY, "1"); return ls; }
+    if (ck) return { email: null, viaCookie: true };   // cookie outlived localStorage
+    return null;
+  }
+  function writeReader(name, email) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify({ name: name, email: email, at: Date.now() })); } catch (e) { /* private mode — they read this once */ }
+    writeCookie(COOKIE_KEY, "1");
+  }
 
   /* ── Guards ──────────────────────────────────────────────────────────────────────── */
 
@@ -63,9 +96,8 @@
   if (!prose) return;
 
   if (!PREVIEW) {
-    var saved = null;
-    try { saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || "null"); } catch (e) { saved = null; }
-    if (saved && saved.email) return;
+    var saved = readReader();
+    if (saved) return;   // registered before, on either store — never ask twice
   }
 
   /* ── Split the body into teaser and gated remainder ──────────────────────────────── */
@@ -216,9 +248,7 @@
   var providers = ovl.querySelector("#tup-providers");
 
   function unlock(name, email) {
-    if (!PREVIEW) {
-      try { localStorage.setItem(STORAGE_KEY, JSON.stringify({ name: name, email: email, at: Date.now() })); } catch (e) { /* private mode — they read this once */ }
-    }
+    if (!PREVIEW) writeReader(name, email);
     gated.forEach(function (el) { el.classList.remove("tup-gated"); });
     if (fade.parentNode) fade.parentNode.removeChild(fade);
     document.body.classList.remove("tup-locked");
