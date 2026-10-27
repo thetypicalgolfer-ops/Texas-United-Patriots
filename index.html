@@ -688,566 +688,125 @@
         </div>
 
         <!-- Editorial Mission Section -->
-        <!-- News Section -->
-        <section class="py-20 md:py-32 bg-surface" id="news">
-            <div class="container mx-auto px-6 md:px-12">
-                <div class="reveal reveal-up text-center mb-12 md:mb-16">
-                    <span
-                        class="block font-headline font-bold text-[10px] text-primary uppercase tracking-[0.3em] mb-4">Texas News</span>
-                    <h2
-                        class="font-headline font-black text-4xl md:text-6xl text-on-surface leading-tight md:leading-none uppercase tracking-tighter">
-                        Latest News</h2>
-                    <p class="font-body italic text-lg md:text-xl text-on-surface-variant mt-4 max-w-2xl mx-auto">The
-                        stories the
-                        mainstream media won't tell you. Real reporting, real facts, real accountability.</p>
+        <!-- News Section: a newspaper front page (Bart, 2026-10-27: "take a look at the New York Times, Vogue… copy their
+             format… it needs to look very, very professional"). A fixed front: lead story, two beside it, a row of four
+             headlines and four latest, then the full archive on news.html. Built by the front-page script from the article cards. -->
+        <section class="py-14 md:py-20 bg-white" id="news">
+            <div class="container mx-auto px-6 md:px-12 max-w-7xl">
+                <header class="text-center">
+                    <div class="border-t-[3px] border-on-surface"></div>
+                    <div class="border-t border-on-surface mt-[3px]"></div>
+                    <h2 class="py-4 md:py-5 font-headline font-black text-3xl md:text-5xl uppercase tracking-[0.08em] text-on-surface">Texas News</h2>
+                    <div class="flex items-center justify-between gap-4 border-y border-slate-300 py-2.5 font-headline font-bold text-[10px] uppercase tracking-[0.18em] text-on-surface-variant">
+                        <span id="newsDate" class="text-left"></span>
+                        <span class="hidden sm:inline">Faith · Family · Freedom</span>
+                        <a href="./news.html" class="text-primary hover:underline">All news &rarr;</a>
+                    </div>
+                </header>
+
+                <div class="mt-8 md:mt-10 grid grid-cols-1 lg:grid-cols-12 gap-y-8">
+                    <a href="./articles/come-and-take-it-gonzales-the-line-texans-still-draw.html" class="group block lg:col-span-8 lg:pr-10">
+                        <div class="overflow-hidden"><img alt="A Come and Take It flag with a lone star and a cannon on display in a frame" loading="lazy" class="w-full aspect-[16/10] object-cover group-hover:scale-[1.02] transition-transform duration-700" src="./come-and-take-it-flag-gonzales.webp" /></div>
+                        <span class="block font-headline font-bold text-[10px] uppercase tracking-[0.22em] text-primary mt-5">Texas History</span>
+                        <h3 class="mt-2 font-body font-bold text-on-surface group-hover:text-primary transition-colors text-3xl sm:text-4xl lg:text-5xl leading-[1.05] tracking-tight">Come and Take It: The Cannon, the Flag and the Line Texans Still Draw</h3>
+                        <p class="mt-4 font-body text-lg md:text-xl leading-relaxed text-on-surface-variant max-w-3xl">In 1835 the settlers of Gonzales were told to hand over a small cannon. They answered with a homemade flag and three words. Why Come and Take It still means something in Texas.</p>
+                        <p class="mt-4 font-headline font-bold text-[10px] uppercase tracking-[0.18em] text-on-surface-variant">October 27, 2026 &nbsp;·&nbsp; 4 min read</p>
+                    </a>
+                    <div class="lg:col-span-4 lg:pl-10 lg:border-l border-slate-300 divide-y divide-slate-200 border-t lg:border-t-0 pt-6 lg:pt-0">
+                        <a href="./articles/district-125-is-open-and-the-landslide-was-not-one.html" class="group grid grid-cols-[1fr_112px] lg:grid-cols-1 gap-4 py-6 first:pt-0 lg:first:pt-0">
+                            <div class="min-w-0 lg:order-2">
+                                <span class="block font-headline font-bold text-[10px] uppercase tracking-[0.22em] text-primary ">Analysis</span>
+                                <h3 class="mt-1.5 font-body font-bold text-on-surface group-hover:text-primary transition-colors text-xl lg:text-2xl leading-tight">District 125 Is Open. The Landslide That Wasn't.</h3>
+                                <p class="hidden lg:block mt-2 font-body text-base leading-relaxed text-on-surface-variant">Ray Lopez is not running again, so House District 125 has no incumbent for the first time in years. The 80 percent everyone reported came…</p>
+                                <p class="mt-2 font-headline font-bold text-[10px] uppercase tracking-[0.18em] text-on-surface-variant">September 12, 2026</p>
+                            </div>
+                            <div class="overflow-hidden lg:order-1"><img alt="Texas voters lined up at a polling place on election morning" loading="lazy" class="w-full aspect-square lg:aspect-[16/9] object-cover group-hover:scale-[1.03] transition-transform duration-700" src="./polling-place-hero.webp" /></div>
+                        </a>
+                        <a href="./articles/190-years-free-what-march-2-1836-still-asks-of-texans.html" class="group grid grid-cols-[1fr_112px] lg:grid-cols-1 gap-4 py-6 first:pt-0 lg:first:pt-0">
+                            <div class="min-w-0 lg:order-2">
+                                <span class="block font-headline font-bold text-[10px] uppercase tracking-[0.22em] text-primary ">Texas History</span>
+                                <h3 class="mt-1.5 font-body font-bold text-on-surface group-hover:text-primary transition-colors text-xl lg:text-2xl leading-tight">190 Years Free: What March 2, 1836 Still Asks of Every Texan</h3>
+                                <p class="hidden lg:block mt-2 font-body text-base leading-relaxed text-on-surface-variant">This year marks 190 years since Texas declared its independence at Washington-on-the-Brazos. The Alamo, San Jacinto, and what that…</p>
+                                <p class="mt-2 font-headline font-bold text-[10px] uppercase tracking-[0.18em] text-on-surface-variant">October 27, 2026</p>
+                            </div>
+                            <div class="overflow-hidden lg:order-1"><img alt="The front of the Alamo mission chapel in San Antonio under a summer sky" loading="lazy" class="w-full aspect-square lg:aspect-[16/9] object-cover group-hover:scale-[1.03] transition-transform duration-700" src="./alamo-mission-texas-independence.webp" /></div>
+                        </a>
+                    </div>
                 </div>
 
-                <!-- New this week (2026-10-27) -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-                    <!-- Article: come-and-take-it-gonzales-the-line-texans-still-draw (2026-10-27) -->
-                    <a href="./articles/come-and-take-it-gonzales-the-line-texans-still-draw.html"
-                        class="reveal reveal-up group bg-white shadow-md hover:shadow-xl transition-all overflow-hidden"
-                        style="transition-delay: 0s;">
-                        <div class="overflow-hidden">
-                            <img alt="A Come and Take It flag with a lone star and a cannon on display in a frame"
-                                class="w-full h-56 object-cover group-hover:scale-[1.03] transition-transform duration-[900ms] ease-out"
-                                src="./come-and-take-it-flag-gonzales.webp" />
-                        </div>
-                        <div class="p-7 md:p-8">
-                            <span
-                                class="font-headline font-bold text-[9px] tracking-[0.2em] uppercase text-primary mb-3 block">Texas History</span>
-                            <h4
-                                class="font-headline font-black text-xl uppercase tracking-tight mb-3 group-hover:text-primary transition-colors leading-tight">
-                                Come and Take It: The Cannon, the Flag and the Line Texans Still Draw</h4>
-                            <p class="font-body text-on-surface-variant text-sm leading-relaxed mb-4">In 1835 the settlers of Gonzales were told to hand over a small cannon. They answered with a homemade flag and three words. Why Come and Take It still means something in Texas.</p>
-                            <div class="flex items-center gap-3 mt-4">
-                                <div>
-                                    <span
-                                        class="block font-headline font-bold text-xs text-on-surface capitalize tracking-tight group-hover:text-primary transition-colors">Texas
-                                        United Patriots Staff</span>
-                                    <span
-                                        class="block font-headline font-bold text-[9px] uppercase tracking-widest text-on-surface-variant mt-0.5">October
-                                        27, 2026 &nbsp;·&nbsp; 4 min read</span>
-                                </div>
-                            </div>
-                        </div>
+                <div class="mt-10 border-t-2 border-on-surface pt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 lg:divide-x divide-slate-200">
+                    <a href="./articles/honor-the-texas-flag-the-pledge-texas-students-say-every-morning.html" class="group block py-5 lg:py-0 lg:px-6 first:lg:pl-0 last:lg:pr-0">
+                        <span class="block font-headline font-bold text-[10px] uppercase tracking-[0.22em] text-primary ">Faith · Family · Freedom</span>
+                        <h4 class="mt-1.5 font-body font-bold text-on-surface group-hover:text-primary transition-colors text-lg leading-snug">Honor the Texas Flag: The Pledge Texas Students Say Every Morning</h4>
+                        <p class="mt-2 font-headline font-bold text-[10px] uppercase tracking-[0.18em] text-on-surface-variant">October 27, 2026</p>
                     </a>
-
-                    <!-- Article: 190-years-free-what-march-2-1836-still-asks-of-texans (2026-10-27) -->
-                    <a href="./articles/190-years-free-what-march-2-1836-still-asks-of-texans.html"
-                        class="reveal reveal-up group bg-white shadow-md hover:shadow-xl transition-all overflow-hidden"
-                        style="transition-delay: 0s;">
-                        <div class="overflow-hidden">
-                            <img alt="The front of the Alamo mission chapel in San Antonio under a summer sky"
-                                class="w-full h-56 object-cover group-hover:scale-[1.03] transition-transform duration-[900ms] ease-out"
-                                src="./alamo-mission-texas-independence.webp" />
-                        </div>
-                        <div class="p-7 md:p-8">
-                            <span
-                                class="font-headline font-bold text-[9px] tracking-[0.2em] uppercase text-primary mb-3 block">Texas History</span>
-                            <h4
-                                class="font-headline font-black text-xl uppercase tracking-tight mb-3 group-hover:text-primary transition-colors leading-tight">
-                                190 Years Free: What March 2, 1836 Still Asks of Every Texan</h4>
-                            <p class="font-body text-on-surface-variant text-sm leading-relaxed mb-4">This year marks 190 years since Texas declared its independence at Washington-on-the-Brazos. The Alamo, San Jacinto, and what that sacrifice asks of Texans today.</p>
-                            <div class="flex items-center gap-3 mt-4">
-                                <div>
-                                    <span
-                                        class="block font-headline font-bold text-xs text-on-surface capitalize tracking-tight group-hover:text-primary transition-colors">Texas
-                                        United Patriots Staff</span>
-                                    <span
-                                        class="block font-headline font-bold text-[9px] uppercase tracking-widest text-on-surface-variant mt-0.5">October
-                                        27, 2026 &nbsp;·&nbsp; 5 min read</span>
-                                </div>
-                            </div>
-                        </div>
+                    <a href="./articles/texas-rewrote-history-class-nothing-changes-until-2030.html" class="group block py-5 lg:py-0 lg:px-6 first:lg:pl-0 last:lg:pr-0">
+                        <span class="block font-headline font-bold text-[10px] uppercase tracking-[0.22em] text-primary ">Analysis</span>
+                        <h4 class="mt-1.5 font-body font-bold text-on-surface group-hover:text-primary transition-colors text-lg leading-snug">Texas Just Rewrote High School History. Nothing Reaches a Classroom Until 2030.</h4>
+                        <p class="mt-2 font-headline font-bold text-[10px] uppercase tracking-[0.18em] text-on-surface-variant">September 3, 2026</p>
                     </a>
-
-                    <!-- Article: honor-the-texas-flag-the-pledge-texas-students-say-every-morning (2026-10-27) -->
-                    <a href="./articles/honor-the-texas-flag-the-pledge-texas-students-say-every-morning.html"
-                        class="reveal reveal-up group bg-white shadow-md hover:shadow-xl transition-all overflow-hidden"
-                        style="transition-delay: 0s;">
-                        <div class="overflow-hidden">
-                            <img alt="The Lone Star flag of Texas waving over the lights of Corpus Christi at night"
-                                class="w-full h-56 object-cover group-hover:scale-[1.03] transition-transform duration-[900ms] ease-out"
-                                src="./texas-flag-over-corpus-christi.webp" />
-                        </div>
-                        <div class="p-7 md:p-8">
-                            <span
-                                class="font-headline font-bold text-[9px] tracking-[0.2em] uppercase text-primary mb-3 block">Faith · Family · Freedom</span>
-                            <h4
-                                class="font-headline font-black text-xl uppercase tracking-tight mb-3 group-hover:text-primary transition-colors leading-tight">
-                                Honor the Texas Flag: The Pledge Texas Students Say Every Morning</h4>
-                            <p class="font-body text-on-surface-variant text-sm leading-relaxed mb-4">Texas public school students say two pledges every school day: one to the United States and one to Texas. What the Texas pledge says, where it came from, and what the Lone Star flag stands for.</p>
-                            <div class="flex items-center gap-3 mt-4">
-                                <div>
-                                    <span
-                                        class="block font-headline font-bold text-xs text-on-surface capitalize tracking-tight group-hover:text-primary transition-colors">Texas
-                                        United Patriots Staff</span>
-                                    <span
-                                        class="block font-headline font-bold text-[9px] uppercase tracking-widest text-on-surface-variant mt-0.5">October
-                                        27, 2026 &nbsp;·&nbsp; 4 min read</span>
-                                </div>
-                            </div>
-                        </div>
+                    <a href="./articles/10-red-flags-crt-renamed.html" class="group block py-5 lg:py-0 lg:px-6 first:lg:pl-0 last:lg:pr-0">
+                        <span class="block font-headline font-bold text-[10px] uppercase tracking-[0.22em] text-primary ">Investigation</span>
+                        <h4 class="mt-1.5 font-body font-bold text-on-surface group-hover:text-primary transition-colors text-lg leading-snug">10 Red Flags Your Child's School Renamed CRT Instead of Removing It</h4>
+                        <p class="mt-2 font-headline font-bold text-[10px] uppercase tracking-[0.18em] text-on-surface-variant">July 25, 2026</p>
                     </a>
-
-                </div>
-
-                <!-- Featured Article -->
-                <div class="reveal reveal-up mb-16">
-                    <a href="./articles/district-125-is-open-and-the-landslide-was-not-one.html"
-                        class="group block bg-white shadow-lg hover:shadow-2xl transition-shadow overflow-hidden">
-                        <div class="flex flex-col lg:flex-row">
-                            <div class="lg:w-1/2">
-                                <img alt="Texas voters lined up at a polling place on election morning"
-                                    class="w-full h-full min-h-[300px] object-cover object-center group-hover:scale-[1.03] transition-transform duration-[900ms] ease-out"
-                                    src="./polling-place-hero.webp" />
-                            </div>
-                            <div class="lg:w-1/2 p-7 md:p-14 flex flex-col justify-center">
-                                <span
-                                    class="inline-block bg-primary text-on-primary font-headline font-bold text-[9px] tracking-[0.2em] uppercase px-3 py-1 mb-4 self-start">Analysis</span>
-                                <h3
-                                    class="font-headline font-black text-2xl md:text-4xl text-on-surface leading-tight mb-4 uppercase tracking-tight group-hover:text-primary transition-colors">
-                                    District 125 Is Open. The Landslide That Wasn't.
-                                </h3>
-                                <p class="font-body text-on-surface-variant text-base md:text-lg leading-relaxed mb-6">
-                                    Ray Lopez is not running again, so House District 125 has no incumbent for the
-                                    first time in years. The 80 percent everyone reported came from the smallest
-                                    electorate of the cycle — and November is a third electorate nobody has measured.
-                                    The real numbers, and the three dates that decide it.
-                                </p>
-                                <div class="flex items-center gap-4 mt-auto">
-                                    <div>
-                                        <span
-                                            class="block font-headline font-bold text-sm text-on-surface capitalize tracking-tight">Texas
-                                            United Patriots Staff</span>
-                                        <span
-                                            class="block font-headline font-bold text-[10px] uppercase tracking-widest text-primary mt-1">September
-                                            12, 2026 &nbsp;·&nbsp; 4 min read</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <a href="./articles/why-i-almost-gave-up-on-the-legislature.html" class="group block py-5 lg:py-0 lg:px-6 first:lg:pl-0 last:lg:pr-0">
+                        <span class="block font-headline font-bold text-[10px] uppercase tracking-[0.22em] text-primary ">Opinion</span>
+                        <h4 class="mt-1.5 font-body font-bold text-on-surface group-hover:text-primary transition-colors text-lg leading-snug">Why I Almost Gave Up on the Texas Legislature This Year</h4>
+                        <p class="mt-2 font-headline font-bold text-[10px] uppercase tracking-[0.18em] text-on-surface-variant">July 25, 2026</p>
                     </a>
                 </div>
 
-                <!-- Article Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Article: SBOE standards (was Featured until 2026-09-12) -->
-                    <a href="./articles/texas-rewrote-history-class-nothing-changes-until-2030.html"
-                        class="reveal reveal-up group bg-white shadow-md hover:shadow-xl transition-all overflow-hidden"
-                        style="transition-delay: 0s;">
-                        <div class="overflow-hidden">
-                            <img alt="An empty school board meeting room"
-                                class="w-full h-56 object-cover group-hover:scale-[1.03] transition-transform duration-[900ms] ease-out"
-                                src="./board-room-hero.webp" />
+                <div class="mt-12">
+                    <div class="flex items-baseline justify-between border-b-2 border-on-surface pb-2">
+                        <h3 class="font-headline font-black text-sm uppercase tracking-[0.2em]">Latest</h3>
+                        <a href="./news.html" class="font-headline font-bold text-[10px] uppercase tracking-[0.18em] text-on-surface-variant text-primary hover:underline">See all &rarr;</a>
+                    </div>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-12 divide-y divide-slate-200 lg:divide-y-0">
+                    <a href="./articles/adrian-reyna-wrong-for-district-125.html" class="group grid grid-cols-[1fr_96px] gap-4 py-5">
+                        <div class="min-w-0">
+                            <span class="block font-headline font-bold text-[10px] uppercase tracking-[0.22em] text-primary ">2026 Election &middot; District 125</span>
+                            <h4 class="mt-1.5 font-body font-bold text-on-surface group-hover:text-primary transition-colors text-lg leading-snug">Union Money, a Transit Mess, and a War on School Choice: Why Adrian Reyna Is Wrong for District 125</h4>
+                            <p class="mt-2 font-headline font-bold text-[10px] uppercase tracking-[0.18em] text-on-surface-variant">May 27, 2026 &nbsp;·&nbsp; 6 min read</p>
                         </div>
-                        <div class="p-7 md:p-8">
-                            <span
-                                class="font-headline font-bold text-[9px] tracking-[0.2em] uppercase text-primary mb-3 block">Analysis</span>
-                            <h4
-                                class="font-headline font-black text-xl uppercase tracking-tight mb-3 group-hover:text-primary transition-colors leading-tight">
-                                Texas Just Rewrote High School History. Nothing Reaches a Classroom Until 2030.</h4>
-                            <p class="font-body text-on-surface-variant text-sm leading-relaxed mb-4">The State Board of
-                                Education rewrote four high school courses. The standards do not reach a classroom until
-                                the 2030-31 school year — after two more board elections.</p>
-                            <div class="flex items-center gap-3 mt-4">
-                                <div>
-                                    <span
-                                        class="block font-headline font-bold text-xs text-on-surface capitalize tracking-tight group-hover:text-primary transition-colors">Texas
-                                        United Patriots Staff</span>
-                                    <span
-                                        class="block font-headline font-bold text-[9px] uppercase tracking-widest text-on-surface-variant mt-0.5">September
-                                        3, 2026 &nbsp;·&nbsp; 5 min read</span>
-                                </div>
-                            </div>
-                        </div>
+                        <div class="overflow-hidden"><img alt="Adrian Reyna: Weak. Radical. Wrong for San Antonio." loading="lazy" class="w-full aspect-square object-cover group-hover:scale-[1.03] transition-transform duration-700" src="./reyna_district125.webp" /></div>
                     </a>
-
-                    <!-- Article: 10 Red Flags (was Featured until 2026-09-03) -->
-                    <a href="./articles/10-red-flags-crt-renamed.html"
-                        class="reveal reveal-up group bg-white shadow-md hover:shadow-xl transition-all overflow-hidden"
-                        style="transition-delay: 0s;">
-                        <div class="overflow-hidden">
-                            <img alt="A Texas classroom"
-                                class="w-full h-56 object-cover group-hover:scale-[1.03] transition-transform duration-[900ms] ease-out"
-                                src="./crt-classroom-hero.webp" />
+                    <a href="./articles/texas-tech-eliminates-gender-programs.html" class="group grid grid-cols-[1fr_96px] gap-4 py-5">
+                        <div class="min-w-0">
+                            <span class="block font-headline font-bold text-[10px] uppercase tracking-[0.22em] text-primary ">Higher Education</span>
+                            <h4 class="mt-1.5 font-body font-bold text-on-surface group-hover:text-primary transition-colors text-lg leading-snug">Texas Tech System Eliminates All Gender Identity Programs Across Five Universities</h4>
+                            <p class="mt-2 font-headline font-bold text-[10px] uppercase tracking-[0.18em] text-on-surface-variant">April 10, 2026 &nbsp;·&nbsp; 8 min read</p>
                         </div>
-                        <div class="p-7 md:p-8">
-                            <span
-                                class="font-headline font-bold text-[9px] tracking-[0.2em] uppercase text-primary mb-3 block">Investigation</span>
-                            <h4
-                                class="font-headline font-black text-xl uppercase tracking-tight mb-3 group-hover:text-primary transition-colors leading-tight">
-                                10 Red Flags Your Child's School Renamed CRT Instead of Removing It</h4>
-                            <p class="font-body text-on-surface-variant text-sm leading-relaxed mb-4">Texas banned
-                                Critical Race Theory in 2021. The framework did not leave — it changed vocabulary. Ten
-                                warning signs every Texas parent can check at their own district.</p>
-                            <div class="flex items-center gap-3 mt-4">
-                                <div>
-                                    <span
-                                        class="block font-headline font-bold text-xs text-on-surface capitalize tracking-tight group-hover:text-primary transition-colors">Texas
-                                        United Patriots Staff</span>
-                                    <span
-                                        class="block font-headline font-bold text-[9px] uppercase tracking-widest text-on-surface-variant mt-0.5">July
-                                        25, 2026 &nbsp;·&nbsp; 7 min read</span>
-                                </div>
-                            </div>
-                        </div>
+                        <div class="overflow-hidden"><img alt="Texas Tech University" loading="lazy" class="w-full aspect-square object-cover group-hover:scale-[1.03] transition-transform duration-700" src="https://images.unsplash.com/photo-1562774053-701939374585?w=600&q=80" /></div>
                     </a>
-
-
-                    <!-- Article: Adrian Reyna (was featured until 2026-08-09) -->
-                    <a href="./articles/adrian-reyna-wrong-for-district-125.html"
-                        class="reveal reveal-up group bg-white shadow-md hover:shadow-xl transition-all overflow-hidden"
-                        style="transition-delay: 0s;">
-                        <div class="overflow-hidden">
-                            <img alt="Adrian Reyna: Weak. Radical. Wrong for San Antonio."
-                                class="w-full h-56 object-cover object-top group-hover:scale-[1.03] transition-transform duration-[900ms] ease-out"
-                                src="./reyna_district125.webp" />
+                    <a href="./articles/crt-taught-under-different-names.html" class="group grid grid-cols-[1fr_96px] gap-4 py-5">
+                        <div class="min-w-0">
+                            <span class="block font-headline font-bold text-[10px] uppercase tracking-[0.22em] text-primary ">Education</span>
+                            <h4 class="mt-1.5 font-body font-bold text-on-surface group-hover:text-primary transition-colors text-lg leading-snug">CRT Still Being Taught Under Different Names in Texas Schools</h4>
+                            <p class="mt-2 font-headline font-bold text-[10px] uppercase tracking-[0.18em] text-on-surface-variant">March 22, 2026 &nbsp;·&nbsp; 6 min read</p>
                         </div>
-                        <div class="p-7 md:p-8">
-                            <span
-                                class="font-headline font-bold text-[9px] tracking-[0.2em] uppercase text-primary mb-3 block">2026 Election &middot; District 125</span>
-                            <h4
-                                class="font-headline font-black text-xl uppercase tracking-tight mb-3 group-hover:text-primary transition-colors leading-tight">
-                                Union Money, a Transit Mess, and a War on School Choice: Why Adrian Reyna Is Wrong for District 125</h4>
-                            <p class="font-body text-on-surface-variant text-sm leading-relaxed mb-4">A teachers'-union
-                                executive lifted by the AFL-CIO machine, a VIA Transit board member presiding over a
-                                near-$800 million buildout and eminent-domain land seizures, an opponent of school
-                                choice in his own words — and, by the Express-News' own account, "firmly opposed" to
-                                Operation Lone Star.</p>
-                            <div class="flex items-center gap-3 mt-4">
-                                <div>
-                                    <span
-                                        class="block font-headline font-bold text-xs text-on-surface capitalize tracking-tight group-hover:text-primary transition-colors">TUP
-                                        Editorial Board</span>
-                                    <span
-                                        class="block font-headline font-bold text-[9px] uppercase tracking-widest text-on-surface-variant mt-0.5">May
-                                        27, 2026 &nbsp;·&nbsp; 6 min read</span>
-                                </div>
-                            </div>
-                        </div>
+                        <div class="overflow-hidden"><img alt="Texas classroom" loading="lazy" class="w-full aspect-square object-cover group-hover:scale-[1.03] transition-transform duration-700" src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&q=80" /></div>
                     </a>
-
-                    <!-- Article: Why I Almost Gave Up on the Legislature -->
-                    <a href="./articles/why-i-almost-gave-up-on-the-legislature.html"
-                        class="reveal reveal-up group bg-white shadow-md hover:shadow-xl transition-all overflow-hidden"
-                        style="transition-delay: 0s;">
-                        <div class="overflow-hidden">
-                            <img alt="The Texas Capitol in Austin"
-                                class="w-full h-56 object-cover group-hover:scale-[1.03] transition-transform duration-[900ms] ease-out"
-                                src="https://images.unsplash.com/photo-1531218150217-54595bc2b934?w=600&q=80" />
+                    <a href="./articles/esg-anti-woke-investment-law.html" class="group grid grid-cols-[1fr_96px] gap-4 py-5">
+                        <div class="min-w-0">
+                            <span class="block font-headline font-bold text-[10px] uppercase tracking-[0.22em] text-primary ">Energy &amp; Economy</span>
+                            <h4 class="mt-1.5 font-body font-bold text-on-surface group-hover:text-primary transition-colors text-lg leading-snug">Exposing ESG: Court Strikes Down Texas Anti-Woke Investment Law, But the Fight Isn't Over</h4>
+                            <p class="mt-2 font-headline font-bold text-[10px] uppercase tracking-[0.18em] text-on-surface-variant">February 8, 2026 &nbsp;·&nbsp; 6 min read</p>
                         </div>
-                        <div class="p-7 md:p-8">
-                            <span
-                                class="font-headline font-bold text-[9px] tracking-[0.2em] uppercase text-primary mb-3 block">Opinion</span>
-                            <h4
-                                class="font-headline font-black text-xl uppercase tracking-tight mb-3 group-hover:text-primary transition-colors leading-tight">
-                                Why I Almost Gave Up on the Texas Legislature This Year</h4>
-                            <p class="font-body text-on-surface-variant text-sm leading-relaxed mb-4">A conservative's
-                                honest account of watching bills pass and nothing change — and why outcome-based
-                                accountability beats another press release.</p>
-                            <div class="flex items-center gap-3 mt-4">
-                                <div>
-                                    <span
-                                        class="block font-headline font-bold text-xs text-on-surface capitalize tracking-tight group-hover:text-primary transition-colors">Texas
-                                        United Patriots Staff</span>
-                                    <span
-                                        class="block font-headline font-bold text-[9px] uppercase tracking-widest text-on-surface-variant mt-0.5">July
-                                        25, 2026 &nbsp;·&nbsp; 5 min read</span>
-                                </div>
-                            </div>
-                        </div>
+                        <div class="overflow-hidden"><img alt="Oil pump in Texas" loading="lazy" class="w-full aspect-square object-cover group-hover:scale-[1.03] transition-transform duration-700" src="https://images.unsplash.com/photo-1513828583688-c52646db42da?w=600&q=80" /></div>
                     </a>
-
-                    <!-- Article: Texas Tech -->
-                    <a href="./articles/texas-tech-eliminates-gender-programs.html"
-                        class="reveal reveal-up group bg-white shadow-md hover:shadow-xl transition-all overflow-hidden"
-                        style="transition-delay: 0s;">
-                        <div class="overflow-hidden">
-                            <img alt="Texas Tech University"
-                                class="w-full h-56 object-cover group-hover:scale-[1.03] transition-transform duration-[900ms] ease-out"
-                                src="https://images.unsplash.com/photo-1562774053-701939374585?w=600&q=80" />
-                        </div>
-                        <div class="p-7 md:p-8">
-                            <span
-                                class="font-headline font-bold text-[9px] tracking-[0.2em] uppercase text-primary mb-3 block">Higher Education</span>
-                            <h4
-                                class="font-headline font-black text-xl uppercase tracking-tight mb-3 group-hover:text-primary transition-colors leading-tight">
-                                Texas Tech System Eliminates All Gender Identity Programs Across Five Universities</h4>
-                            <p class="font-body text-on-surface-variant text-sm leading-relaxed mb-4">In a landmark
-                                April 2026 decision, Chancellor Brandon Creighton ordered the full phase-out of all
-                                academic programs "centered on" Sexual Orientation and Gender Identity across the
-                                system's five universities — freezing new admissions and mandating a course framework
-                                that recognizes only two human sexes.</p>
-                            <div class="flex items-center gap-3 mt-4">
-                                <div>
-                                    <span
-                                        class="block font-headline font-bold text-xs text-on-surface capitalize tracking-tight group-hover:text-primary transition-colors">James
-                                        McAllister</span>
-                                    <span
-                                        class="block font-headline font-bold text-[9px] uppercase tracking-widest text-on-surface-variant mt-0.5">April
-                                        10, 2026 &nbsp;·&nbsp; 8 min read</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-
-                    <!-- Article 1: CRT -->
-                    <a href="./articles/crt-taught-under-different-names.html"
-                        class="reveal reveal-up group bg-white shadow-md hover:shadow-xl transition-all overflow-hidden"
-                        style="transition-delay: 0s;">
-                        <div class="overflow-hidden">
-                            <img alt="Texas classroom"
-                                class="w-full h-56 object-cover group-hover:scale-[1.03] transition-transform duration-[900ms] ease-out"
-                                src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&q=80" />
-                        </div>
-                        <div class="p-7 md:p-8">
-                            <span
-                                class="font-headline font-bold text-[9px] tracking-[0.2em] uppercase text-primary mb-3 block">Education</span>
-                            <h4
-                                class="font-headline font-black text-xl uppercase tracking-tight mb-3 group-hover:text-primary transition-colors leading-tight">
-                                CRT Still Being Taught Under Different Names in Texas Schools</h4>
-                            <p class="font-body text-on-surface-variant text-sm leading-relaxed mb-4">Despite Senate
-                                Bill 3 becoming law in 2021 to ban critical race theory concepts, the Texas Public
-                                Policy Foundation reports that CRT principles continue to be woven into curricula under
-                                rebranded terminology. The law's civics training mandate — requiring at least one
-                                teacher and one administrator from every district to complete state-approved training —
-                                didn't take full effect until the 2025-2026 school year. Parents across the state report
-                                that concepts like "systemic racism" and "intersectionality" still appear in classroom
-                                materials under labels like "culturally responsive teaching" and "equity frameworks."
-                            </p>
-                            <div class="flex items-center gap-3 mt-4">
-                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=150&h=150&q=80"
-                                    alt="Rachel Thornton"
-                                    class="w-8 h-8 rounded-full object-cover shadow-sm border border-slate-200" />
-                                <div>
-                                    <span
-                                        class="block font-headline font-bold text-xs text-on-surface capitalize tracking-tight group-hover:text-primary transition-colors">Rachel
-                                        Thornton</span>
-                                    <span
-                                        class="block font-headline font-bold text-[9px] uppercase tracking-widest text-on-surface-variant mt-0.5">March
-                                        22, 2026 &nbsp;·&nbsp; 6 min read</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-
-                    <!-- Article 2: Parents Fight Back -->
-                    <a href="./articles/houston-parents-win-gender-lawsuit.html"
-                        class="reveal reveal-up group bg-white shadow-md hover:shadow-xl transition-all overflow-hidden"
-                        style="transition-delay: 0.15s;">
-                        <div class="overflow-hidden">
-                            <img alt="Parents at school board"
-                                class="w-full h-56 object-cover group-hover:scale-[1.03] transition-transform duration-[900ms] ease-out"
-                                src="https://images.unsplash.com/photo-1591123120675-6f7f1aae0e5b?w=600&q=80" />
-                        </div>
-                        <div class="p-7 md:p-8">
-                            <span
-                                class="font-headline font-bold text-[9px] tracking-[0.2em] uppercase text-primary mb-3 block">Parental
-                                Rights</span>
-                            <h4
-                                class="font-headline font-black text-xl uppercase tracking-tight mb-3 group-hover:text-primary transition-colors leading-tight">
-                                Houston Parents Win Lawsuit Over School's Secret Gender Transition of Daughter</h4>
-                            <p class="font-body text-on-surface-variant text-sm leading-relaxed mb-4">Terry and Sarah
-                                Osborn sued Houston ISD's Bellaire High School after discovering that more than six
-                                school employees referred to their daughter using a masculine name and male pronouns for
-                                two years — against the parents' explicit instructions. The school counselor, principal,
-                                and multiple teachers all participated in the secret social transition. After a federal
-                                lawsuit naming Superintendent Mike Miles and Principal Michael Niggli, the school
-                                settled, agreeing to address the student only by her given name and female pronouns.
-                                Attorney General Ken Paxton backed the parents' case.</p>
-                            <div class="flex items-center gap-3 mt-4">
-                                <img src="./david_reeves.png" alt="David Reeves"
-                                    class="w-8 h-8 rounded-full object-cover shadow-sm border border-slate-200" />
-                                <div>
-                                    <span
-                                        class="block font-headline font-bold text-xs text-on-surface capitalize tracking-tight group-hover:text-primary transition-colors">David
-                                        Reeves</span>
-                                    <span
-                                        class="block font-headline font-bold text-[9px] uppercase tracking-widest text-on-surface-variant mt-0.5">December
-                                        15, 2025 &nbsp;·&nbsp; 5 min read</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-
-                    <!-- Article 3: DEI Investigation -->
-                    <a href="./articles/texas-dei-investigation-portal.html"
-                        class="reveal reveal-up group bg-white shadow-md hover:shadow-xl transition-all overflow-hidden"
-                        style="transition-delay: 0.3s;">
-                        <div class="overflow-hidden">
-                            <img alt="University building"
-                                class="w-full h-56 object-cover group-hover:scale-[1.03] transition-transform duration-[900ms] ease-out"
-                                src="https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?w=600&q=80" />
-                        </div>
-                        <div class="p-7 md:p-8">
-                            <span
-                                class="font-headline font-bold text-[9px] tracking-[0.2em] uppercase text-primary mb-3 block">Higher
-                                Education</span>
-                            <h4
-                                class="font-headline font-black text-xl uppercase tracking-tight mb-3 group-hover:text-primary transition-colors leading-tight">
-                                Texas Launches DEI Investigation Portal — Anyone Can Now File University Complaints</h4>
-                            <p class="font-body text-on-surface-variant text-sm leading-relaxed mb-4">On January 9,
-                                2026, the Texas Office of the Ombudsman launched a public complaint portal allowing any
-                                Texan to report state university violations of Senate Bill 17 — the 2023 law that banned
-                                diversity, equity, and inclusion offices, programs, and training at public institutions.
-                                Students, employees, and faculty can now serve as watchdogs. If a university fails to
-                                resolve a violation within 180 days, the ombudsman can refer the case to the state
-                                auditor and recommend that lawmakers block the institution from spending state funds
-                                until compliance is achieved.</p>
-                            <div class="flex items-center gap-3 mt-4">
-                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&h=150&q=80"
-                                    alt="Catherine Mercer"
-                                    class="w-8 h-8 rounded-full object-cover shadow-sm border border-slate-200" />
-                                <div>
-                                    <span
-                                        class="block font-headline font-bold text-xs text-on-surface capitalize tracking-tight group-hover:text-primary transition-colors">Catherine
-                                        Mercer</span>
-                                    <span
-                                        class="block font-headline font-bold text-[9px] uppercase tracking-widest text-on-surface-variant mt-0.5">January
-                                        12, 2026 &nbsp;·&nbsp; 7 min read</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-
-                    <!-- Article 4: ESG -->
-                    <a href="./articles/esg-anti-woke-investment-law.html"
-                        class="reveal reveal-up group bg-white shadow-md hover:shadow-xl transition-all overflow-hidden"
-                        style="transition-delay: 0s;">
-                        <div class="overflow-hidden">
-                            <img alt="Oil pump in Texas"
-                                class="w-full h-56 object-cover group-hover:scale-[1.03] transition-transform duration-[900ms] ease-out"
-                                src="https://images.unsplash.com/photo-1513828583688-c52646db42da?w=600&q=80" />
-                        </div>
-                        <div class="p-7 md:p-8">
-                            <span
-                                class="font-headline font-bold text-[9px] tracking-[0.2em] uppercase text-primary mb-3 block">Energy
-                                &amp; Economy</span>
-                            <h4
-                                class="font-headline font-black text-xl uppercase tracking-tight mb-3 group-hover:text-primary transition-colors leading-tight">
-                                Exposing ESG: Court Strikes Down Texas Anti-Woke Investment Law, But the Fight Isn't
-                                Over</h4>
-                            <p class="font-body text-on-surface-variant text-sm leading-relaxed mb-4">A federal judge
-                                ruled that Texas' Energy Discrimination Elimination Act — which required state agencies
-                                to divest from companies boycotting fossil fuels — violated the First Amendment. The
-                                2021 law had blacklisted firms like BlackRock and HSBC. While BlackRock was removed from
-                                the blacklist in June 2025 after exiting climate-focused investment groups, the ruling
-                                threatens similar anti-ESG laws in 14 other states. Texas lawmakers are already
-                                preparing new legislation to protect the state's $300 billion energy sector from what
-                                they call "woke corporate activism."</p>
-                            <div class="flex items-center gap-3 mt-4">
-                                <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=150&h=150&q=80"
-                                    alt="Marcus Webb"
-                                    class="w-8 h-8 rounded-full object-cover shadow-sm border border-slate-200" />
-                                <div>
-                                    <span
-                                        class="block font-headline font-bold text-xs text-on-surface capitalize tracking-tight group-hover:text-primary transition-colors">Marcus
-                                        Webb</span>
-                                    <span
-                                        class="block font-headline font-bold text-[9px] uppercase tracking-widest text-on-surface-variant mt-0.5">February
-                                        8, 2026 &nbsp;·&nbsp; 6 min read</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-
-                    <!-- Article 5: Texas Sovereignty -->
-                    <a href="./articles/texas-sovereignty-act-passes-house.html"
-                        class="reveal reveal-up group bg-white shadow-md hover:shadow-xl transition-all overflow-hidden"
-                        style="transition-delay: 0.15s;">
-                        <div class="overflow-hidden">
-                            <img alt="Texas State Capitol"
-                                class="w-full h-56 object-cover group-hover:scale-[1.03] transition-transform duration-[900ms] ease-out"
-                                src="https://images.unsplash.com/photo-1588416936097-41850ab3d86d?w=600&q=80" />
-                        </div>
-                        <div class="p-7 md:p-8">
-                            <span
-                                class="font-headline font-bold text-[9px] tracking-[0.2em] uppercase text-primary mb-3 block">State
-                                Sovereignty</span>
-                            <h4
-                                class="font-headline font-black text-xl uppercase tracking-tight mb-3 group-hover:text-primary transition-colors leading-tight">
-                                Texas Sovereignty Act Passes House 86-41 — State Could Nullify Unconstitutional Federal
-                                Actions</h4>
-                            <p class="font-body text-on-surface-variant text-sm leading-relaxed mb-4">House Bill 796
-                                passed the Texas House on May 6, 2025, creating the Joint Legislative Committee on
-                                Constitutional Enforcement — a 12-member bipartisan panel empowered to review federal
-                                laws, executive orders, agency rules, court decisions, and treaties that "challenge the
-                                sovereignty of the state." If the committee determines a federal action exceeds
-                                constitutional authority, Texas could declare it null and unenforceable by state
-                                agencies. The bill defines "unconstitutional federal action" broadly and represents a
-                                historic assertion of Tenth Amendment powers.</p>
-                            <div class="flex items-center gap-3 mt-4">
-                                <img src="./col_briggs.png" alt="Col. Samuel Briggs (Ret.)"
-                                    class="w-8 h-8 rounded-full object-cover shadow-sm border border-slate-200" />
-                                <div>
-                                    <span
-                                        class="block font-headline font-bold text-xs text-on-surface capitalize tracking-tight group-hover:text-primary transition-colors">Col.
-                                        Samuel Briggs (Ret.)</span>
-                                    <span
-                                        class="block font-headline font-bold text-[9px] uppercase tracking-widest text-on-surface-variant mt-0.5">May
-                                        8, 2025 &nbsp;·&nbsp; 7 min read</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-
-                    <!-- Article 6: Texas A&M -->
-                    <a href="./articles/texas-am-gender-unicorn-firing.html"
-                        class="reveal reveal-up group bg-white shadow-md hover:shadow-xl transition-all overflow-hidden"
-                        style="transition-delay: 0.3s;">
-                        <div class="overflow-hidden">
-                            <img alt="University lecture hall"
-                                class="w-full h-56 object-cover group-hover:scale-[1.03] transition-transform duration-[900ms] ease-out"
-                                src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=600&q=80" />
-                        </div>
-                        <div class="p-7 md:p-8">
-                            <span
-                                class="font-headline font-bold text-[9px] tracking-[0.2em] uppercase text-primary mb-3 block">Campus
-                                Watch</span>
-                            <h4
-                                class="font-headline font-black text-xl uppercase tracking-tight mb-3 group-hover:text-primary transition-colors leading-tight">
-                                Texas A&amp;M Fires Professor, Forces Out President After "Gender Unicorn" Classroom
-                                Recording</h4>
-                            <p class="font-body text-on-surface-variant text-sm leading-relaxed mb-4">In September 2025,
-                                a Texas A&amp;M student secretly recorded a children's literature class in which
-                                instructor Melissa McCoul presented a "gender unicorn" graphic and discussed content
-                                recognizing more than two genders. Within days, the university fired Professor McCoul,
-                                removed the dean of the College of Arts and Sciences, and dismissed a department head.
-                                President Mark Welsh resigned on September 18, 2025, after regents issued an ultimatum.
-                                The incident became a rallying point for parents demanding transparency in how
-                                taxpayer-funded universities handle ideology in the classroom.</p>
-                            <div class="flex items-center gap-3 mt-4">
-                                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&h=150&q=80"
-                                    alt="Dr. Allison Price"
-                                    class="w-8 h-8 rounded-full object-cover shadow-sm border border-slate-200" />
-                                <div>
-                                    <span
-                                        class="block font-headline font-bold text-xs text-on-surface capitalize tracking-tight group-hover:text-primary transition-colors">Dr.
-                                        Allison Price</span>
-                                    <span
-                                        class="block font-headline font-bold text-[9px] uppercase tracking-widest text-on-surface-variant mt-0.5">September
-                                        20, 2025 &nbsp;·&nbsp; 8 min read</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-
+                    </div>
                 </div>
 
-                <!-- View All Button -->
-                <div class="reveal reveal-up text-center mt-16">
-                    <button
-                        class="bg-primary text-on-primary font-headline font-bold px-12 py-5 text-sm uppercase tracking-widest hover:bg-primary-container transition-all shadow-xl">
-                        View All Reports
-                    </button>
+                <div class="mt-12 text-center">
+                    <a href="./news.html" class="inline-flex items-center gap-3 border-2 border-on-surface px-10 py-4 font-headline font-black text-xs uppercase tracking-[0.25em] text-on-surface hover:bg-on-surface hover:text-white transition-colors">All Texas News <span aria-hidden="true">&rarr;</span></a>
                 </div>
             </div>
+            <script>
+              (function () { var d = document.getElementById("newsDate"); if (d) d.textContent = new Date().toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric", year: "numeric", timeZone: "America/Chicago" }); })();
+            </script>
         </section>
 
-
-        <!-- High-Impact Join Section -->
         <section class="py-20 md:py-32 bg-white overflow-hidden">
             <div class="container mx-auto px-6 md:px-12">
                 <div class="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
