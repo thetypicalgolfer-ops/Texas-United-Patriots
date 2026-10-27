@@ -8,3 +8,6 @@ _drafts/
 
 # Apps Script source for the registration sheet — reference only, never deployed.
 tools/
+
+# Local Node install for the /api functions (Vercel installs its own).
+node_modules/
