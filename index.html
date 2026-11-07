@@ -36,7 +36,7 @@
     }
     </script>
     <link
-        href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;700;800;900&family=Newsreader:ital,wght@0,400;0,700;1,400&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=UnifrakturMaguntia&family=Public+Sans:wght@400;700;800;900&family=Newsreader:ital,wght@0,400;0,700;1,400&display=swap"
         rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
         rel="stylesheet" />
@@ -102,7 +102,8 @@
                         full: "9999px"
                     },
                     fontFamily: {
-                        headline: ["Public Sans"],
+                        headline: ["Oswald", "Public Sans", "sans-serif"],
+                        masthead: ["UnifrakturMaguntia", "serif"],
                         body: ["Newsreader"],
                         label: ["Public Sans"]
                     }
@@ -704,7 +705,7 @@
                 <header class="text-center">
                     <div class="border-t-[3px] border-on-surface"></div>
                     <div class="border-t border-on-surface mt-[3px]"></div>
-                    <h2 class="py-4 md:py-5 font-headline font-black text-3xl md:text-5xl uppercase tracking-[0.08em] text-on-surface">Texas News</h2>
+                    <h2 class="py-4 md:py-6"><span class="block font-headline font-semibold text-[11px] md:text-sm uppercase tracking-[0.5em] text-primary mb-1">★ &nbsp;The Lone Star State's&nbsp; ★</span><span class="font-masthead font-normal normal-case tracking-normal text-[3.4rem] sm:text-7xl md:text-8xl lg:text-[7.5rem] leading-[0.95] text-on-surface">Texas News</span></h2>
                     <div class="flex items-center justify-between gap-4 border-y border-slate-300 py-3 font-headline font-bold text-xs md:text-[13px] uppercase tracking-[0.16em] text-on-surface-variant">
                         <span id="newsDate" class="text-left"></span>
                         <span class="hidden sm:inline">Faith · Family · Freedom</span>
@@ -713,36 +714,41 @@
                 </header>
 
                 <div class="mt-8 md:mt-10 grid grid-cols-1 lg:grid-cols-12 gap-y-8">
-                    <a href="./articles/texas-woke-up-blue-here-is-who-stayed-home.html" class="group block lg:col-span-8 lg:pr-10">
-                        <div class="overflow-hidden"><img alt="Empty voting booths with American flags at a Texas polling place" loading="lazy" class="w-full aspect-[16/10] object-cover group-hover:scale-[1.02] transition-transform duration-700" src="./polling-place-vote-booths-flags.webp" /></div>
-                        <span class="block font-headline font-bold text-[13px] uppercase tracking-[0.2em] text-primary mt-5">2026 Election</span>
-                        <h3 class="mt-2 font-body font-bold text-on-surface group-hover:text-primary transition-colors text-4xl sm:text-5xl lg:text-6xl leading-[1.04] tracking-tight">Texas Woke Up Blue. Here&#x27;s Who Stayed Home.</h3>
-                        <p class="mt-4 font-body text-xl md:text-2xl leading-relaxed text-on-surface-variant max-w-3xl">Democrats won the governor&#x27;s mansion and a U.S. Senate seat on Tuesday. They didn&#x27;t win it with a wave. They won it while almost half of registered Texans sat it out.</p>
-                        <p class="mt-4 font-headline font-bold text-xs uppercase tracking-[0.16em] text-on-surface-variant">November 7, 2026 &nbsp;·&nbsp; 5 min read</p>
+                    <a href="./articles/how-tx-23-slipped-away.html" class="group block lg:col-span-8 lg:pr-10">
+                        <div class="overflow-hidden"><img alt="Texas voters lined up at a polling place on election morning" loading="lazy" class="w-full aspect-[16/10] object-cover group-hover:scale-[1.02] transition-transform duration-700" src="./polling-place-hero.webp" /></div>
+                        <span class="block font-headline font-bold text-[13px] uppercase tracking-[0.2em] text-primary mt-5">2026 Election · TX-23</span>
+                        <h3 class="mt-2 font-body font-bold text-on-surface group-hover:text-primary transition-colors text-4xl sm:text-5xl lg:text-6xl leading-[1.04] tracking-tight">How TX-23 Slipped Away</h3>
+                        <p class="mt-4 font-body text-xl md:text-2xl leading-relaxed text-on-surface-variant max-w-3xl">A Trump-endorsed Republican, a border district that had been ours for over a decade, and a loss that should never have happened. Here&#x27;s how it went wrong, and how we take it back.</p>
+                        <p class="mt-4 font-headline font-bold text-xs uppercase tracking-[0.16em] text-on-surface-variant">November 7, 2026 &nbsp;·&nbsp; 6 min read</p>
                     </a>
                     <div class="lg:col-span-4 lg:pl-10 lg:border-l border-slate-300 divide-y divide-slate-200 border-t lg:border-t-0 pt-6 lg:pt-0">
-                        <a href="./articles/governor-hinojosa-what-changes-on-day-one.html" class="group grid grid-cols-[1fr_128px] lg:grid-cols-1 gap-4 py-6 first:pt-0 lg:first:pt-0">
+                        <a href="./articles/texas-woke-up-blue-here-is-who-stayed-home.html" class="group grid grid-cols-[1fr_128px] lg:grid-cols-1 gap-4 py-6 first:pt-0 lg:first:pt-0">
                             <div class="min-w-0 lg:order-2">
-                                <span class="block font-headline font-bold text-[13px] uppercase tracking-[0.2em] text-primary">Analysis</span>
-                                <h3 class="mt-1.5 font-body font-bold text-on-surface group-hover:text-primary transition-colors text-2xl lg:text-3xl leading-tight">Governor Hinojosa: What Changes on Day One, and What Doesn&#x27;t</h3>
-                                <p class="hidden lg:block mt-2 font-body text-lg leading-relaxed text-on-surface-variant">Texas elected its first Democratic governor in 36 years. Before anyone panics or celebrates, here is what a Texas governor can and can&#x27;t do on her own.</p>
+                                <span class="block font-headline font-bold text-[13px] uppercase tracking-[0.2em] text-primary">2026 Election</span>
+                                <h3 class="mt-1.5 font-body font-bold text-on-surface group-hover:text-primary transition-colors text-2xl lg:text-3xl leading-tight">Texas Woke Up Blue. Here&#x27;s Who Stayed Home.</h3>
+                                <p class="hidden lg:block mt-2 font-body text-lg leading-relaxed text-on-surface-variant">Democrats won the governor&#x27;s mansion and a U.S. Senate seat on Tuesday. They didn&#x27;t win it with a wave. They won it while almost half of registered Texans sat it out.</p>
                                 <p class="mt-2 font-headline font-bold text-xs uppercase tracking-[0.16em] text-on-surface-variant">November 7, 2026</p>
                             </div>
-                            <div class="overflow-hidden lg:order-1"><img alt="A capitol dome at sunset" loading="lazy" class="w-full aspect-square lg:aspect-[16/9] object-cover group-hover:scale-[1.03] transition-transform duration-700" src="./statecapital.png" /></div>
+                            <div class="overflow-hidden lg:order-1"><img alt="Empty voting booths with American flags at a Texas polling place" loading="lazy" class="w-full aspect-square lg:aspect-[16/9] object-cover group-hover:scale-[1.03] transition-transform duration-700" src="./polling-place-vote-booths-flags.webp" /></div>
                         </a>
-                        <a href="./articles/they-organized-we-complained.html" class="group grid grid-cols-[1fr_128px] lg:grid-cols-1 gap-4 py-6 first:pt-0 lg:first:pt-0">
+                        <a href="./articles/texas-found-noncitizens-on-the-voter-rolls.html" class="group grid grid-cols-[1fr_128px] lg:grid-cols-1 gap-4 py-6 first:pt-0 lg:first:pt-0">
                             <div class="min-w-0 lg:order-2">
-                                <span class="block font-headline font-bold text-[13px] uppercase tracking-[0.2em] text-primary">Opinion</span>
-                                <h3 class="mt-1.5 font-body font-bold text-on-surface group-hover:text-primary transition-colors text-2xl lg:text-3xl leading-tight">They Organized. We Complained.</h3>
-                                <p class="hidden lg:block mt-2 font-body text-lg leading-relaxed text-on-surface-variant">The other side didn&#x27;t win with better ideas. They won with better organizing. Here&#x27;s what they did, and how we beat it.</p>
+                                <span class="block font-headline font-bold text-[13px] uppercase tracking-[0.2em] text-primary">Election Integrity</span>
+                                <h3 class="mt-1.5 font-body font-bold text-on-surface group-hover:text-primary transition-colors text-2xl lg:text-3xl leading-tight">Texas Found Noncitizens on the Voter Rolls. Here&#x27;s What Happens Next.</h3>
+                                <p class="hidden lg:block mt-2 font-body text-lg leading-relaxed text-on-surface-variant">The state checked every registered voter against a federal citizenship database. Thousands were flagged, and 117 cases are now with investigators. Here&#x27;s what&#x27;s real, and what you can do.</p>
                                 <p class="mt-2 font-headline font-bold text-xs uppercase tracking-[0.16em] text-on-surface-variant">November 7, 2026</p>
                             </div>
-                            <div class="overflow-hidden lg:order-1"><img alt="Texas voters lined up at a polling place on election morning" loading="lazy" class="w-full aspect-square lg:aspect-[16/9] object-cover group-hover:scale-[1.03] transition-transform duration-700" src="./polling-place-hero.webp" /></div>
+                            <div class="overflow-hidden lg:order-1"><img alt="A government building where election cases are investigated" loading="lazy" class="w-full aspect-square lg:aspect-[16/9] object-cover group-hover:scale-[1.03] transition-transform duration-700" src="./us-justice-department-building.webp" /></div>
                         </a>
                     </div>
                 </div>
 
                 <div class="mt-10 border-t-2 border-on-surface pt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 lg:divide-x divide-slate-200">
+                    <a href="./articles/governor-hinojosa-what-changes-on-day-one.html" class="group block py-5 lg:py-0 lg:px-6 first:lg:pl-0 last:lg:pr-0">
+                        <span class="block font-headline font-bold text-[13px] uppercase tracking-[0.2em] text-primary">Analysis</span>
+                        <h4 class="mt-1.5 font-body font-bold text-on-surface group-hover:text-primary transition-colors text-2xl leading-snug">Governor Hinojosa: What Changes on Day One, and What Doesn&#x27;t</h4>
+                        <p class="mt-2 font-headline font-bold text-xs uppercase tracking-[0.16em] text-on-surface-variant">November 7, 2026</p>
+                    </a>
                     <a href="./articles/the-legislature-is-still-ours-now-it-has-to-fight.html" class="group block py-5 lg:py-0 lg:px-6 first:lg:pl-0 last:lg:pr-0">
                         <span class="block font-headline font-bold text-[13px] uppercase tracking-[0.2em] text-primary">Opinion</span>
                         <h4 class="mt-1.5 font-body font-bold text-on-surface group-hover:text-primary transition-colors text-2xl leading-snug">The Legislature Is Still Ours. Now It Has to Fight.</h4>
@@ -753,14 +759,9 @@
                         <h4 class="mt-1.5 font-body font-bold text-on-surface group-hover:text-primary transition-colors text-2xl leading-snug">Senator Talarico: What It Means for Texas in Washington</h4>
                         <p class="mt-2 font-headline font-bold text-xs uppercase tracking-[0.16em] text-on-surface-variant">November 7, 2026</p>
                     </a>
-                    <a href="./articles/your-precinct-chair-seat-is-empty-take-it.html" class="group block py-5 lg:py-0 lg:px-6 first:lg:pl-0 last:lg:pr-0">
-                        <span class="block font-headline font-bold text-[13px] uppercase tracking-[0.2em] text-primary">Get Involved</span>
-                        <h4 class="mt-1.5 font-body font-bold text-on-surface group-hover:text-primary transition-colors text-2xl leading-snug">Your Precinct Chair Seat May Be Empty. Take It.</h4>
-                        <p class="mt-2 font-headline font-bold text-xs uppercase tracking-[0.16em] text-on-surface-variant">November 7, 2026</p>
-                    </a>
-                    <a href="./articles/the-2028-race-starts-today.html" class="group block py-5 lg:py-0 lg:px-6 first:lg:pl-0 last:lg:pr-0">
-                        <span class="block font-headline font-bold text-[13px] uppercase tracking-[0.2em] text-primary">2028 Election</span>
-                        <h4 class="mt-1.5 font-body font-bold text-on-surface group-hover:text-primary transition-colors text-2xl leading-snug">The 2028 Race Starts Today</h4>
+                    <a href="./articles/they-organized-we-complained.html" class="group block py-5 lg:py-0 lg:px-6 first:lg:pl-0 last:lg:pr-0">
+                        <span class="block font-headline font-bold text-[13px] uppercase tracking-[0.2em] text-primary">Opinion</span>
+                        <h4 class="mt-1.5 font-body font-bold text-on-surface group-hover:text-primary transition-colors text-2xl leading-snug">They Organized. We Complained.</h4>
                         <p class="mt-2 font-headline font-bold text-xs uppercase tracking-[0.16em] text-on-surface-variant">November 7, 2026</p>
                     </a>
                 </div>
@@ -771,6 +772,22 @@
                         <a href="./news.html" class="font-headline font-bold text-xs uppercase tracking-[0.16em] text-primary hover:underline">See all &rarr;</a>
                     </div>
                     <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-12 divide-y divide-slate-200 lg:divide-y-0">
+                    <a href="./articles/your-precinct-chair-seat-is-empty-take-it.html" class="group grid grid-cols-[1fr_128px] gap-5 py-6">
+                        <div class="min-w-0">
+                            <span class="block font-headline font-bold text-[13px] uppercase tracking-[0.2em] text-primary">Get Involved</span>
+                            <h4 class="mt-1.5 font-body font-bold text-on-surface group-hover:text-primary transition-colors text-2xl leading-snug">Your Precinct Chair Seat May Be Empty. Take It.</h4>
+                            <p class="mt-2 font-headline font-bold text-xs uppercase tracking-[0.16em] text-on-surface-variant">November 7, 2026 &nbsp;·&nbsp; 4 min read</p>
+                        </div>
+                        <div class="overflow-hidden"><img alt="A Texas flag waving against a blue sky" loading="lazy" class="w-full aspect-square object-cover group-hover:scale-[1.03] transition-transform duration-700" src="./texas_flag_hero.png" /></div>
+                    </a>
+                    <a href="./articles/the-2028-race-starts-today.html" class="group grid grid-cols-[1fr_128px] gap-5 py-6">
+                        <div class="min-w-0">
+                            <span class="block font-headline font-bold text-[13px] uppercase tracking-[0.2em] text-primary">2028 Election</span>
+                            <h4 class="mt-1.5 font-body font-bold text-on-surface group-hover:text-primary transition-colors text-2xl leading-snug">The 2028 Race Starts Today</h4>
+                            <p class="mt-2 font-headline font-bold text-xs uppercase tracking-[0.16em] text-on-surface-variant">November 7, 2026 &nbsp;·&nbsp; 4 min read</p>
+                        </div>
+                        <div class="overflow-hidden"><img alt="The front of the Alamo mission chapel in San Antonio" loading="lazy" class="w-full aspect-square object-cover group-hover:scale-[1.03] transition-transform duration-700" src="./alamo-mission-texas-independence.webp" /></div>
+                    </a>
                     <a href="./articles/every-vote-counts-become-a-poll-watcher.html" class="group grid grid-cols-[1fr_128px] gap-5 py-6">
                         <div class="min-w-0">
                             <span class="block font-headline font-bold text-[13px] uppercase tracking-[0.2em] text-primary">Election Integrity</span>
