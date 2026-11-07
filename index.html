@@ -681,36 +681,105 @@
             </div>
         </section>
 
-        <!-- Breaking News Style Bar -->
-        <div class="bg-primary py-3 border-y border-white/10 relative z-20">
-            <div class="flex items-center whitespace-nowrap">
-                <span
-                    class="bg-white text-primary font-headline font-black text-lg px-3 py-1 uppercase tracking-wider shrink-0 ml-4 md:ml-12 mr-4 md:mr-6 relative z-10">Latest
-                    Updates</span>
-                <div class="flex-1 overflow-hidden">
-                    <div class="marquee-track animate-[marquee_102.8s_linear_infinite]">
-                        <p class="text-white font-headline font-bold text-lg uppercase tracking-wider">Defeating Woke
-                            Ideology in Texas Schools &nbsp;★&nbsp; New Report: CRT Still Being Taught Under Different
-                            Names &nbsp;★&nbsp; Parents Fight Back Against Gender Ideology in Classrooms &nbsp;★&nbsp;
-                            Texas AG Launches Investigation Into DEI Spending at State Universities &nbsp;★&nbsp; School
-                            Board Recall Elections Sweep Across North Texas &nbsp;★&nbsp; Exposing ESG: How Woke
-                            Corporations Undermine Texas Energy &nbsp;★&nbsp; Citizens Demand Accountability From
-                            Radical School Boards &nbsp;★&nbsp; Join the Patriot Movement Today &nbsp;★&nbsp; Stop the
-                            Indoctrination — Protect Our Children &nbsp;★&nbsp; Texas Leads the Fight Against Federal
-                            Overreach &nbsp;★&nbsp;</p>
-                        <p class="text-white font-headline font-bold text-lg uppercase tracking-wider">Defeating Woke
-                            Ideology in Texas Schools &nbsp;★&nbsp; New Report: CRT Still Being Taught Under Different
-                            Names &nbsp;★&nbsp; Parents Fight Back Against Gender Ideology in Classrooms &nbsp;★&nbsp;
-                            Texas AG Launches Investigation Into DEI Spending at State Universities &nbsp;★&nbsp; School
-                            Board Recall Elections Sweep Across North Texas &nbsp;★&nbsp; Exposing ESG: How Woke
-                            Corporations Undermine Texas Energy &nbsp;★&nbsp; Citizens Demand Accountability From
-                            Radical School Boards &nbsp;★&nbsp; Join the Patriot Movement Today &nbsp;★&nbsp; Stop the
-                            Indoctrination — Protect Our Children &nbsp;★&nbsp; Texas Leads the Fight Against Federal
-                            Overreach &nbsp;★&nbsp;</p>
-                    </div>
+        <!-- LIVE NEWS WIRE (Bart, 2026-11-07): real headlines from the major newsrooms and Texas outlets,
+             re-checked every 10 seconds via /api/news; new stories scroll in as they break. -->
+        <div id="liveWire" class="bg-primary border-y border-white/10 relative z-20">
+            <div class="flex items-stretch">
+                <div class="wire-label shrink-0 relative z-10">
+                    <span class="wire-dot" aria-hidden="true"></span>
+                    <span class="wire-live">Live</span>
+                    <span class="wire-age" id="wireAge">updating…</span>
+                </div>
+                <div class="wire-window flex-1 overflow-hidden" aria-live="off">
+                    <div class="wire-track" id="wireTrack"></div>
                 </div>
             </div>
         </div>
+        <style>
+            #liveWire .wire-label{display:flex;align-items:center;gap:10px;background:#fff;color:#bf0a30;padding:0 20px 0 clamp(16px,3vw,48px);font:900 22px/1 "Libre Franklin","Public Sans",sans-serif;text-transform:uppercase;letter-spacing:.06em;box-shadow:12px 0 18px -6px rgba(0,0,0,.35)}
+            #liveWire .wire-dot{width:14px;height:14px;border-radius:50%;background:#e0243f;box-shadow:0 0 0 0 rgba(224,36,63,.7);animation:wirePulse 1.4s infinite}
+            #liveWire .wire-age{font-weight:700;font-size:16px;color:#5b6472;letter-spacing:.02em;text-transform:none;min-width:5.5em}
+            @keyframes wirePulse{0%{box-shadow:0 0 0 0 rgba(224,36,63,.7)}70%{box-shadow:0 0 0 12px rgba(224,36,63,0)}100%{box-shadow:0 0 0 0 rgba(224,36,63,0)}}
+            #liveWire .wire-window{padding:16px 0;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 40px,#000 calc(100% - 40px),transparent);mask-image:linear-gradient(90deg,transparent 0,#000 40px,#000 calc(100% - 40px),transparent)}
+            #liveWire .wire-track{display:flex;width:max-content;will-change:transform}
+            #liveWire .wire-item{display:inline-flex;align-items:baseline;gap:12px;white-space:nowrap;color:#fff;text-decoration:none;font:600 23px/1.2 "Libre Franklin","Public Sans",sans-serif;padding-right:28px}
+            #liveWire .wire-item:hover .wire-t{text-decoration:underline}
+            #liveWire .wire-src{font-weight:900;text-transform:uppercase;letter-spacing:.05em;color:#ffd7dc}
+            #liveWire .wire-ago{font-weight:600;font-size:17px;color:#ffc2ca}
+            #liveWire .wire-new{background:#fff;color:#bf0a30;font-weight:900;font-size:15px;padding:2px 8px;letter-spacing:.06em;align-self:center}
+            #liveWire .wire-sep{color:#fff;opacity:.7;padding-right:28px;font-size:20px;align-self:center}
+            @media (max-width:640px){#liveWire .wire-age{display:none}#liveWire .wire-item{font-size:20px}}
+        </style>
+        <script>
+        (function () {
+            var track = document.getElementById('wireTrack'), ageEl = document.getElementById('wireAge');
+            if (!track) return;
+            var FALLBACK = [
+                { t: 'Texas United Patriots — Faith, Family, Freedom', src: 'TUP', url: './news.html', ts: Date.now() }
+            ];
+            var pool = [], known = {}, fresh = [], cursor = 0, x = 0, last = performance.now(), lastOk = 0;
+            var SPEED = 75; // px per second — readable for older eyes
+            var started = Date.now();
+            var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+            function ago(ts) {
+                var m = Math.max(0, Math.round((Date.now() - ts) / 60000));
+                return m < 1 ? 'just now' : m < 60 ? m + ' min ago' : Math.floor(m / 60) + ' hr ago';
+            }
+            function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+            function node(it, isNew) {
+                var a = document.createElement('a');
+                a.className = 'wire-item'; a.href = it.url; a.target = '_blank'; a.rel = 'noopener';
+                a.dataset.ts = it.ts;
+                a.innerHTML = (isNew ? '<span class="wire-new">New</span>' : '') +
+                    '<span class="wire-src">' + esc(it.src) + '</span><span class="wire-t">' + esc(it.t) +
+                    '</span><span class="wire-ago">' + ago(it.ts) + '</span><span class="wire-sep">★</span>';
+                return a;
+            }
+            function next() {
+                if (fresh.length) return { it: fresh.shift(), isNew: true };
+                var list = pool.length ? pool : FALLBACK;
+                var it = list[cursor % list.length]; cursor++;
+                return { it: it, isNew: false };
+            }
+            function fill() {
+                var w = track.parentNode.clientWidth;
+                var guard = 0;
+                while (track.scrollWidth + x < w * 2 && guard++ < 40) { var n = next(); track.appendChild(node(n.it, n.isNew)); }
+            }
+            function frame(now) {
+                var dt = Math.min(0.1, (now - last) / 1000); last = now;
+                if (!reduce) x -= SPEED * dt;
+                var first = track.firstElementChild;
+                while (first && x + first.offsetWidth < 0) { x += first.offsetWidth; track.removeChild(first); first = track.firstElementChild; }
+                if (pool.length || Date.now() - started > 4000) fill();
+                track.style.transform = 'translate3d(' + x + 'px,0,0)';
+                requestAnimationFrame(frame);
+            }
+            function poll() {
+                fetch('/api/news', { cache: 'no-store' }).then(function (r) { return r.ok ? r.json() : null; }).then(function (d) {
+                    if (!d || !d.items || !d.items.length) return;
+                    var first = !pool.length;
+                    d.items.forEach(function (it) {
+                        var k = it.url;
+                        if (!known[k]) { known[k] = 1; if (!first) fresh.push(it); }
+                    });
+                    fresh.sort(function (a, b) { return b.ts - a.ts; });
+                    pool = d.items; lastOk = Date.now();
+                    if (first) { cursor = 0; }
+                }).catch(function () {});
+            }
+            setInterval(function () {
+                if (!lastOk) return;
+                var s = Math.round((Date.now() - lastOk) / 1000);
+                ageEl.textContent = 'checked ' + (s < 2 ? 'now' : s + 's ago');
+                Array.prototype.forEach.call(track.querySelectorAll('.wire-ago'), function (el) {
+                    el.textContent = ago(+el.parentNode.dataset.ts);
+                });
+            }, 1000);
+            poll(); setInterval(poll, 10000);
+            requestAnimationFrame(frame);
+        })();
+        </script>
 
         <!-- Editorial Mission Section -->
         <!-- News Section: a newspaper front page (Bart, 2026-10-27: "take a look at the New York Times, Vogue… copy their
