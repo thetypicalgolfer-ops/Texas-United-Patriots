@@ -17,7 +17,7 @@
     <meta name="twitter:title" content="Texas Tech System Eliminates All Gender Identity Programs — Texas United Patriots" />
     <meta name="twitter:description" content="In what may be the most decisive blow against ideological overreach in Texas higher education, the Texas Tech University System has ordered the complete…" />
     <meta name="twitter:image" content="https://texasunitedpatriots.org/texas_flag_hero.png" />
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=UnifrakturMaguntia&family=Public+Sans:wght@400;700;800;900&family=Newsreader:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Playfair+Display:wght@900&family=Public+Sans:wght@400;700;800;900&family=Newsreader:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script>
@@ -40,7 +40,7 @@
             },
             fontFamily: {
               headline: ["Oswald", "Public Sans", "sans-serif"],
-                        masthead: ["UnifrakturMaguntia", "serif"],
+                        masthead: ["Playfair Display", "Georgia", "serif"],
               body: ["Newsreader"],
               label: ["Public Sans"]
             }
@@ -113,7 +113,7 @@
         /* Social share bar */
         .share-bar { display: flex; flex-direction: column; align-items: stretch; gap: 0.75rem; }
         @media (min-width: 640px) { .share-bar { flex-direction: row; align-items: center; } }
-        .share-bar .share-label { font-family: 'Public Sans', sans-serif; font-weight: 700; font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: #5d0011; }
+        .share-bar .share-label { font-family: 'Public Sans', sans-serif; font-weight: 700; font-size: 18px; letter-spacing: 0.3em; text-transform: uppercase; color: #5d0011; }
         .share-bar .share-icons { display: flex; flex-wrap: wrap; gap: 0.5rem; }
         .share-btn { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border: 1px solid #e5e7eb; background: #fff; color: #1a1c1c; transition: all 0.2s ease; cursor: pointer; }
         .share-btn:hover { color: #fff; border-color: transparent; transform: translateY(-2px); }
@@ -140,13 +140,13 @@
 
     <!-- Nav -->
     <nav id="mainNav" class="fixed top-0 w-full z-50 flex justify-between items-center px-6 md:px-12 py-4 md:py-5 bg-white shadow-lg transition-all duration-300">
-        <a href="../index.html" class="text-xl md:text-3xl font-black text-primary tracking-tight font-headline">TEXAS UNITED PATRIOTS</a>
+        <a href="../index.html" class="text-2xl md:text-4xl font-black text-primary tracking-tight font-headline">TEXAS UNITED PATRIOTS</a>
         <div class="hidden md:flex items-center gap-x-8 lg:gap-x-12">
-            <a class="font-headline font-bold text-lg lg:text-xl xl:text-2xl uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="../index.html#news">News</a>
-            <a class="font-headline font-bold text-lg lg:text-xl xl:text-2xl uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="../national.html">National</a>
-            <a class="font-headline font-bold text-lg lg:text-xl xl:text-2xl uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="../members.html">Members</a>
-            <a class="font-headline font-bold text-lg lg:text-xl xl:text-2xl uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="../gear.html">Gear</a>
-            <a class="font-headline font-bold text-lg lg:text-xl xl:text-2xl uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="../index.html">About</a>
+            <a class="font-headline font-bold text-xl lg:text-2xl xl:text-[1.75rem] uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="../index.html#news">News</a>
+            <a class="font-headline font-bold text-xl lg:text-2xl xl:text-[1.75rem] uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="../national.html">National</a>
+            <a class="font-headline font-bold text-xl lg:text-2xl xl:text-[1.75rem] uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="../members.html">Members</a>
+            <a class="font-headline font-bold text-xl lg:text-2xl xl:text-[1.75rem] uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="../gear.html">Gear</a>
+            <a class="font-headline font-bold text-xl lg:text-2xl xl:text-[1.75rem] uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="../index.html">About</a>
 </div>
     </nav>
     <button id="mobileMenuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu" class="md:hidden fixed top-3 right-4 text-primary p-2 z-[80]"><span class="hamburger"><span></span><span></span><span></span></span></button>
@@ -155,42 +155,42 @@
     <div id="mobileMenu" class="fixed inset-0 z-[65] bg-[#141821] flex flex-col overflow-y-auto">
         <div class="absolute inset-x-0 top-0 h-1 bg-primary"></div>
         <div class="flex justify-between items-center px-6 pt-5 pb-5 border-b border-white/10">
-            <a href="../index.html" class="text-xl md:text-3xl font-black text-white tracking-tight font-headline">TEXAS UNITED PATRIOTS</a>
+            <a href="../index.html" class="text-2xl md:text-4xl font-black text-white tracking-tight font-headline">TEXAS UNITED PATRIOTS</a>
         </div>
         <nav class="flex-1 flex flex-col px-6 pt-6">
             <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors" href="../issues.html">
-                <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">01</span>
+                <span class="menu-index font-headline font-bold text-lg tracking-[0.08em] text-primary w-8">01</span>
                 <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">Issues</span>
                 <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
             </a>
             <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors" href="../about.html">
-                <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">02</span>
+                <span class="menu-index font-headline font-bold text-lg tracking-[0.08em] text-primary w-8">02</span>
                 <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">About</span>
                 <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
             </a>
             <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors" href="../index.html#news">
-                <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">03</span>
+                <span class="menu-index font-headline font-bold text-lg tracking-[0.08em] text-primary w-8">03</span>
                 <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">News</span>
                 <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
             </a>
             <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors" href="../national.html">
-                <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">04</span>
+                <span class="menu-index font-headline font-bold text-lg tracking-[0.08em] text-primary w-8">04</span>
                 <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">National</span>
                 <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
             </a>
             <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors" href="../members.html">
-                <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">05</span>
+                <span class="menu-index font-headline font-bold text-lg tracking-[0.08em] text-primary w-8">05</span>
                 <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">Members</span>
                 <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
             </a>
             <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors" href="../gear.html">
-                <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">06</span>
+                <span class="menu-index font-headline font-bold text-lg tracking-[0.08em] text-primary w-8">06</span>
                 <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">Gear</span>
                 <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
             </a>
         </nav>
         <div class="menu-item px-6 pt-8 pb-10 border-t border-white/10 mt-6">
-<p class="mt-6 font-headline font-bold text-[10px] text-white/40 uppercase tracking-[0.3em] text-center">Faith · Family · Freedom</p>
+<p class="mt-6 font-headline font-bold text-lg text-white/40 uppercase tracking-[0.08em] text-center">Faith · Family · Freedom</p>
         </div>
     </div>
 
@@ -208,14 +208,14 @@
                 <!-- Left: Article Card -->
                 <div class="lg:w-2/3">
                     <div class="bg-white shadow-2xl p-6 sm:p-8 md:p-16">
-                        <span class="inline-block bg-primary text-on-primary font-headline font-bold text-[9px] tracking-[0.2em] uppercase px-3 py-1 mb-6">Breaking</span>
+                        <span class="inline-block bg-primary text-on-primary font-headline font-bold text-base tracking-[0.08em] uppercase px-3 py-1 mb-6">Breaking</span>
                         <h1 class="font-headline font-black text-4xl md:text-5xl lg:text-6xl text-on-surface leading-[0.9] tracking-tight uppercase mb-6">Texas Tech System Eliminates All Gender Identity Programs Across Five Universities</h1>
                         <div class="flex items-center gap-4 mb-10 border-b border-slate-200 pb-8">
-                            <span class="font-headline font-bold text-[10px] uppercase tracking-widest text-on-surface-variant">April 10, 2026</span>
+                            <span class="font-headline font-bold text-lg uppercase tracking-wider text-on-surface-variant">April 10, 2026</span>
                             <span class="text-slate-300">|</span>
-                            <span class="font-headline font-bold text-[10px] uppercase tracking-widest text-on-surface-variant">8 min read</span>
+                            <span class="font-headline font-bold text-lg uppercase tracking-wider text-on-surface-variant">8 min read</span>
                             <span class="text-slate-300">|</span>
-                            <span class="font-headline font-bold text-[10px] uppercase tracking-widest text-primary">Texas United Patriots Staff</span>
+                            <span class="font-headline font-bold text-lg uppercase tracking-wider text-primary">Texas United Patriots Staff</span>
                         </div>
                         <div class="mt-8 pb-6 border-b border-slate-200"><div class="share-bar" data-share-bar>
     <span class="share-label">Spread the Word</span>
@@ -234,51 +234,51 @@
                                 In what may be the most decisive blow against ideological overreach in Texas higher education, the Texas Tech University System has ordered the complete elimination of all academic programs centered on Sexual Orientation and Gender Identity. This is what accountability looks like.
                             </p>
 
-                            <p class="font-body text-lg leading-relaxed text-on-surface-variant mb-6">
+                            <p class="font-body text-xl leading-relaxed text-on-surface-variant mb-6">
                                 On April 10, 2026, Texas Tech Chancellor Brandon Creighton — a former Republican state senator who understands the values of Texas families — issued a sweeping memorandum to all five system universities: Texas Tech University, Angelo State University, Midwestern State University, and both Health Sciences Centers. The directive is unambiguous: phase out every academic credential "centered on" Sexual Orientation and Gender Identity (SOGI), including undergraduate majors, minors, certificates, and graduate degrees.
                             </p>
 
-                            <p class="font-body text-lg leading-relaxed text-on-surface-variant mb-6">
+                            <p class="font-body text-xl leading-relaxed text-on-surface-variant mb-6">
                                 Provosts have been given until June 15, 2026, to identify every targeted program. Admissions into these programs are frozen effective immediately. No new students may declare majors in the phased-out fields. Students currently enrolled will be allowed to complete their degrees — a fair and measured approach that respects existing commitments while charting a new course.
                             </p>
 
                             <h2 class="font-headline font-black text-2xl uppercase tracking-tight mt-12 mb-4">A New Framework for Academic Integrity</h2>
 
-                            <p class="font-body text-lg leading-relaxed text-on-surface-variant mb-6">
+                            <p class="font-body text-xl leading-relaxed text-on-surface-variant mb-6">
                                 Chancellor Creighton's memo goes beyond simply cutting programs. It establishes a new intellectual framework for how these topics can be discussed in remaining coursework. The policy requires "the legal recognition of only two human sexes" and "strictly prohibits the endorsement of a gender spectrum or fluid gender identities as empirical biological science."
                             </p>
 
-                            <p class="font-body text-lg leading-relaxed text-on-surface-variant mb-6">
+                            <p class="font-body text-xl leading-relaxed text-on-surface-variant mb-6">
                                 This is not censorship — it is a return to scientific rigor. For too long, activist professors have presented ideological positions as settled science. The new framework allows limited exceptions: demographic data analysis, clinical psychology and health services, and objective discussion of policy and legal frameworks — provided the instruction "lacks advocacy for contemporary matters."
                             </p>
 
-                            <p class="font-body text-lg leading-relaxed text-on-surface-variant mb-6">
+                            <p class="font-body text-xl leading-relaxed text-on-surface-variant mb-6">
                                 Historical and literary material where SOGI topics are "inextricably linked to the subject's historical significance" may still be taught, but with a focus on "objective literary/historical analysis, not contemporary SOGI advocacy."
                             </p>
 
                             <!-- Donation CTA -->
                             <div class="bg-slate-50 border-l-4 border-primary p-8 my-10">
                                 <p class="font-headline font-black text-lg uppercase tracking-tight mb-2">Victories like this don't happen by accident.</p>
-<button class="bg-primary text-on-primary font-headline font-bold text-xs uppercase tracking-widest px-8 py-3 hover:bg-primary-container transition-all">Support Our Mission</button>
+<button class="bg-primary text-on-primary font-headline font-bold text-lg uppercase tracking-wider px-8 py-3 hover:bg-primary-container transition-all">Support Our Mission</button>
                             </div>
 
                             <h2 class="font-headline font-black text-2xl uppercase tracking-tight mt-12 mb-4">Part of a Larger Reckoning</h2>
 
-                            <p class="font-body text-lg leading-relaxed text-on-surface-variant mb-6">
+                            <p class="font-body text-xl leading-relaxed text-on-surface-variant mb-6">
                                 This decision did not occur in a vacuum. It follows a series of actions across Texas higher education that signal a fundamental shift. In September 2025, Texas A&M fired a professor and forced out its president after a student recorded a children's literature class promoting gender ideology. The state's Office of the Ombudsman launched a public complaint portal in January 2026, empowering any Texan to report DEI violations at state universities.
                             </p>
 
-                            <p class="font-body text-lg leading-relaxed text-on-surface-variant mb-6">
+                            <p class="font-body text-xl leading-relaxed text-on-surface-variant mb-6">
                                 The Texas Tech decision sends a clear message to every public university in the state: the era of using taxpayer-funded institutions to advance progressive social agendas is over. Parents who send their children to Texas universities expect them to receive a rigorous education — not ideological indoctrination.
                             </p>
 
                             <h2 class="font-headline font-black text-2xl uppercase tracking-tight mt-12 mb-4">What It Means for Texas Families</h2>
 
-                            <p class="font-body text-lg leading-relaxed text-on-surface-variant mb-6">
+                            <p class="font-body text-xl leading-relaxed text-on-surface-variant mb-6">
                                 For the thousands of Texas families who have contacted their representatives, attended school board meetings, and demanded change — this is your victory. Chancellor Creighton's action proves that persistent, organized pressure from principled citizens can reshape institutions that had drifted far from their core mission.
                             </p>
 
-                            <p class="font-body text-lg leading-relaxed text-on-surface-variant mb-6">
+                            <p class="font-body text-xl leading-relaxed text-on-surface-variant mb-6">
                                 But the work is far from over. Other university systems across Texas and the nation continue to operate programs that prioritize ideology over education. Texas United Patriots will continue to monitor every public institution in the state and hold them accountable to the values of the families they serve.
                             </p>
 
@@ -290,9 +290,9 @@
                         <!-- Share & Tags -->
                         <div class="border-t border-slate-200 mt-12 pt-8 flex flex-wrap justify-between items-center">
                             <div class="flex gap-3">
-                                <span class="bg-slate-100 font-headline font-bold text-[9px] uppercase tracking-widest px-4 py-2">Higher Education</span>
-                                <span class="bg-slate-100 font-headline font-bold text-[9px] uppercase tracking-widest px-4 py-2">Gender Ideology</span>
-                                <span class="bg-slate-100 font-headline font-bold text-[9px] uppercase tracking-widest px-4 py-2">Texas Tech</span>
+                                <span class="bg-slate-100 font-headline font-bold text-base uppercase tracking-wider px-4 py-2">Higher Education</span>
+                                <span class="bg-slate-100 font-headline font-bold text-base uppercase tracking-wider px-4 py-2">Gender Ideology</span>
+                                <span class="bg-slate-100 font-headline font-bold text-base uppercase tracking-wider px-4 py-2">Texas Tech</span>
                             </div>
                         </div>
                     </div>
@@ -307,39 +307,39 @@
                             <div class="flex items-center gap-4 mb-4">
                                 <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&h=150&q=80" alt="James McAllister" class="w-16 h-16 rounded-full object-cover"/>
                                 <div>
-                                    <p class="font-headline font-bold text-[9px] uppercase tracking-[0.2em] text-on-surface-variant mb-1">Written by</p>
-                                    <p class="font-headline font-black text-sm uppercase tracking-tight text-on-surface">James McAllister</p>
-                                    <p class="font-headline font-bold text-[10px] uppercase tracking-widest text-primary">Senior Investigative Reporter</p>
+                                    <p class="font-headline font-bold text-base uppercase tracking-[0.08em] text-on-surface-variant mb-1">Written by</p>
+                                    <p class="font-headline font-black text-lg uppercase tracking-tight text-on-surface">James McAllister</p>
+                                    <p class="font-headline font-bold text-lg uppercase tracking-wider text-primary">Senior Investigative Reporter</p>
                                 </div>
                             </div>
-                            <p class="font-body text-sm leading-relaxed text-on-surface-variant">
+                            <p class="font-body text-xl leading-relaxed text-on-surface-variant">
                                 James McAllister is a senior investigative reporter for Texas United Patriots with 15 years of experience in Texas journalism. A graduate of the University of Texas at Austin School of Journalism, he previously covered higher education and state politics for the Dallas Morning News and the Texas Tribune. His investigative work has been recognized by the Texas Press Association and the Society of Professional Journalists.
                             </p>
                         </div>
 
                         <!-- Key Takeaways -->
                         <div class="bg-white shadow-lg p-6 border-l-4 border-primary">
-                            <h3 class="font-headline font-black text-sm uppercase tracking-tight text-on-surface mb-4">Key Takeaways</h3>
+                            <h3 class="font-headline font-black text-lg uppercase tracking-tight text-on-surface mb-4">Key Takeaways</h3>
                             <ul class="space-y-3">
                                 <li class="flex items-start gap-3">
                                     <span class="material-symbols-outlined text-primary text-lg mt-0.5">check_circle</span>
-                                    <span class="font-body text-sm leading-relaxed text-on-surface-variant">Chancellor Brandon Creighton orders full phase-out of all SOGI programs across 5 universities</span>
+                                    <span class="font-body text-xl leading-relaxed text-on-surface-variant">Chancellor Brandon Creighton orders full phase-out of all SOGI programs across 5 universities</span>
                                 </li>
                                 <li class="flex items-start gap-3">
                                     <span class="material-symbols-outlined text-primary text-lg mt-0.5">check_circle</span>
-                                    <span class="font-body text-sm leading-relaxed text-on-surface-variant">Provosts must identify targeted programs by June 15, 2026; admissions frozen immediately</span>
+                                    <span class="font-body text-xl leading-relaxed text-on-surface-variant">Provosts must identify targeted programs by June 15, 2026; admissions frozen immediately</span>
                                 </li>
                                 <li class="flex items-start gap-3">
                                     <span class="material-symbols-outlined text-primary text-lg mt-0.5">check_circle</span>
-                                    <span class="font-body text-sm leading-relaxed text-on-surface-variant">New framework requires "legal recognition of only two human sexes"</span>
+                                    <span class="font-body text-xl leading-relaxed text-on-surface-variant">New framework requires "legal recognition of only two human sexes"</span>
                                 </li>
                                 <li class="flex items-start gap-3">
                                     <span class="material-symbols-outlined text-primary text-lg mt-0.5">check_circle</span>
-                                    <span class="font-body text-sm leading-relaxed text-on-surface-variant">Currently enrolled students will be allowed to complete their degrees</span>
+                                    <span class="font-body text-xl leading-relaxed text-on-surface-variant">Currently enrolled students will be allowed to complete their degrees</span>
                                 </li>
                                 <li class="flex items-start gap-3">
                                     <span class="material-symbols-outlined text-primary text-lg mt-0.5">check_circle</span>
-                                    <span class="font-body text-sm leading-relaxed text-on-surface-variant">Decision follows Texas A&M firing and DEI complaint portal launch</span>
+                                    <span class="font-body text-xl leading-relaxed text-on-surface-variant">Decision follows Texas A&M firing and DEI complaint portal launch</span>
                                 </li>
                             </ul>
                         </div>
@@ -347,7 +347,7 @@
                         <!-- Support Our Work -->
                         <div class="bg-primary text-on-primary shadow-lg p-6 text-center">
                             <span class="material-symbols-outlined text-3xl mb-2">volunteer_activism</span>
-                            <h3 class="font-headline font-black text-sm uppercase tracking-tight mb-2">Support Our Work</h3>
+                            <h3 class="font-headline font-black text-lg uppercase tracking-tight mb-2">Support Our Work</h3>
 </div>
 
                     </div>
@@ -361,7 +361,7 @@
 
             <!-- Back to News -->
             <div class="text-center mt-12 mb-20">
-                <a href="../index.html#news" class="font-headline font-bold text-xs uppercase tracking-widest text-primary hover:text-primary-container transition-colors">&larr; Back to All News</a>
+                <a href="../index.html#news" class="font-headline font-bold text-lg uppercase tracking-wider text-primary hover:text-primary-container transition-colors">&larr; Back to All News</a>
             </div>
         </div>
                         <div class="mt-16 pt-10 border-t border-slate-200">
@@ -383,10 +383,10 @@
     <footer class="bg-white border-t border-slate-200 pt-12 pb-8 px-12">
         <div class="container mx-auto text-center">
             <div class="text-xl font-black text-on-surface tracking-tighter font-headline mb-4 uppercase">TEXAS UNITED PATRIOTS</div>
-            <p class="font-headline font-bold text-[9px] uppercase tracking-widest text-on-surface-variant leading-relaxed max-w-2xl mx-auto">
+            <p class="font-headline font-bold text-base uppercase tracking-wider text-on-surface-variant leading-relaxed max-w-2xl mx-auto">
                 &copy; 2024 TEXAS UNITED PATRIOTS. PAID FOR BY TEXAS UNITED PATRIOTS. NOT AUTHORIZED BY ANY CANDIDATE OR CANDIDATE'S COMMITTEE.
             </p>
-            <div class="flex justify-center gap-8 mt-10 font-headline font-bold text-[10px] uppercase tracking-widest text-slate-600">
+            <div class="flex justify-center gap-8 mt-10 font-headline font-bold text-lg uppercase tracking-wider text-slate-600">
                 <a class="hover:text-primary transition-colors" href="../privacy.html">Privacy Policy</a>
                 <a class="hover:text-primary transition-colors" href="../terms.html">Terms of Service</a>
                 <a class="hover:text-primary transition-colors" href="../contact.html">Contact</a>

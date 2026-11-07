@@ -17,7 +17,7 @@
     <meta name="twitter:title" content="Texas Just Rewrote High School History. Nothing Reaches a Classroom Until 2030. — Texas United Patriots" />
     <meta name="twitter:description" content="The State Board of Education spent this week rewriting four high school social studies courses. The standards take effect in the 2030-31 school year — after two more board elections. Here is who is supposed to check." />
     <meta name="twitter:image" content="https://texasunitedpatriots.org/board-room-hero_og.jpg" />
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=UnifrakturMaguntia&family=Public+Sans:wght@400;700;800;900&family=Newsreader:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Playfair+Display:wght@900&family=Public+Sans:wght@400;700;800;900&family=Newsreader:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script>
@@ -31,7 +31,7 @@
               "on-surface-variant": "#47464f", "background": "#f9f9f9"
             },
             fontFamily: { headline: ["Oswald", "Public Sans", "sans-serif"],
-                        masthead: ["UnifrakturMaguntia", "serif"], body: ["Newsreader"], label: ["Public Sans"] }
+                        masthead: ["Playfair Display", "Georgia", "serif"], body: ["Newsreader"], label: ["Public Sans"] }
           },
         },
       }
@@ -99,7 +99,7 @@
         /* Social share bar */
         .share-bar { display: flex; flex-direction: column; align-items: stretch; gap: 0.75rem; }
         @media (min-width: 640px) { .share-bar { flex-direction: row; align-items: center; } }
-        .share-bar .share-label { font-family: 'Public Sans', sans-serif; font-weight: 700; font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: #5d0011; }
+        .share-bar .share-label { font-family: 'Public Sans', sans-serif; font-weight: 700; font-size: 18px; letter-spacing: 0.3em; text-transform: uppercase; color: #5d0011; }
         .share-bar .share-icons { display: flex; flex-wrap: wrap; gap: 0.5rem; }
         .share-btn { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border: 1px solid #e5e7eb; background: #fff; color: #1a1c1c; transition: all 0.2s ease; cursor: pointer; }
         .share-btn:hover { color: #fff; border-color: transparent; transform: translateY(-2px); }
@@ -124,13 +124,13 @@
 <body class="bg-surface text-on-surface font-body">
 
     <nav class="fixed top-0 w-full z-50 flex justify-between items-center px-6 md:px-12 py-4 md:py-5 bg-white shadow-lg">
-        <a href="../index.html" class="text-xl md:text-3xl font-black text-primary tracking-tight font-headline">TEXAS UNITED PATRIOTS</a>
+        <a href="../index.html" class="text-2xl md:text-4xl font-black text-primary tracking-tight font-headline">TEXAS UNITED PATRIOTS</a>
         <div class="hidden md:flex items-center gap-x-8 lg:gap-x-12">
-            <a class="font-headline font-bold text-lg lg:text-xl xl:text-2xl uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="../index.html#news">News</a>
-            <a class="font-headline font-bold text-lg lg:text-xl xl:text-2xl uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="../national.html">National</a>
-            <a class="font-headline font-bold text-lg lg:text-xl xl:text-2xl uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="../members.html">Members</a>
-            <a class="font-headline font-bold text-lg lg:text-xl xl:text-2xl uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="../gear.html">Gear</a>
-            <a class="font-headline font-bold text-lg lg:text-xl xl:text-2xl uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="../index.html">About</a>
+            <a class="font-headline font-bold text-xl lg:text-2xl xl:text-[1.75rem] uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="../index.html#news">News</a>
+            <a class="font-headline font-bold text-xl lg:text-2xl xl:text-[1.75rem] uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="../national.html">National</a>
+            <a class="font-headline font-bold text-xl lg:text-2xl xl:text-[1.75rem] uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="../members.html">Members</a>
+            <a class="font-headline font-bold text-xl lg:text-2xl xl:text-[1.75rem] uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="../gear.html">Gear</a>
+            <a class="font-headline font-bold text-xl lg:text-2xl xl:text-[1.75rem] uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="../index.html">About</a>
 </div>
     </nav>
     <button id="mobileMenuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu" class="md:hidden fixed top-3 right-4 text-primary p-2 z-[80]"><span class="hamburger"><span></span><span></span><span></span></span></button>
@@ -139,42 +139,42 @@
     <div id="mobileMenu" class="fixed inset-0 z-[65] bg-[#141821] flex flex-col overflow-y-auto">
         <div class="absolute inset-x-0 top-0 h-1 bg-primary"></div>
         <div class="flex justify-between items-center px-6 pt-5 pb-5 border-b border-white/10">
-            <a href="../index.html" class="text-xl md:text-3xl font-black text-white tracking-tight font-headline">TEXAS UNITED PATRIOTS</a>
+            <a href="../index.html" class="text-2xl md:text-4xl font-black text-white tracking-tight font-headline">TEXAS UNITED PATRIOTS</a>
         </div>
         <nav class="flex-1 flex flex-col px-6 pt-6">
             <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors" href="../issues.html">
-                <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">01</span>
+                <span class="menu-index font-headline font-bold text-lg tracking-[0.08em] text-primary w-8">01</span>
                 <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">Issues</span>
                 <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
             </a>
             <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors" href="../about.html">
-                <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">02</span>
+                <span class="menu-index font-headline font-bold text-lg tracking-[0.08em] text-primary w-8">02</span>
                 <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">About</span>
                 <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
             </a>
             <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors" href="../index.html#news">
-                <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">03</span>
+                <span class="menu-index font-headline font-bold text-lg tracking-[0.08em] text-primary w-8">03</span>
                 <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">News</span>
                 <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
             </a>
             <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors" href="../national.html">
-                <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">04</span>
+                <span class="menu-index font-headline font-bold text-lg tracking-[0.08em] text-primary w-8">04</span>
                 <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">National</span>
                 <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
             </a>
             <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors" href="../members.html">
-                <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">05</span>
+                <span class="menu-index font-headline font-bold text-lg tracking-[0.08em] text-primary w-8">05</span>
                 <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">Members</span>
                 <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
             </a>
             <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors" href="../gear.html">
-                <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">06</span>
+                <span class="menu-index font-headline font-bold text-lg tracking-[0.08em] text-primary w-8">06</span>
                 <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">Gear</span>
                 <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
             </a>
         </nav>
         <div class="menu-item px-6 pt-8 pb-10 border-t border-white/10 mt-6">
-<p class="mt-6 font-headline font-bold text-[10px] text-white/40 uppercase tracking-[0.3em] text-center">Faith · Family · Freedom</p>
+<p class="mt-6 font-headline font-bold text-lg text-white/40 uppercase tracking-[0.08em] text-center">Faith · Family · Freedom</p>
         </div>
     </div>
 
@@ -191,14 +191,14 @@
                 <!-- Article (Left Column) -->
                 <div class="lg:w-2/3">
                     <div class="bg-white shadow-2xl p-6 sm:p-8 md:p-16">
-                        <span class="inline-block bg-primary text-on-primary font-headline font-bold text-[9px] tracking-[0.2em] uppercase px-3 py-1 mb-6">Analysis</span>
+                        <span class="inline-block bg-primary text-on-primary font-headline font-bold text-base tracking-[0.08em] uppercase px-3 py-1 mb-6">Analysis</span>
                         <h1 class="font-headline font-black text-4xl md:text-5xl lg:text-6xl text-on-surface leading-[0.9] tracking-tight uppercase mb-6">Texas Just Rewrote High School History. Nothing Reaches a Classroom Until 2030.</h1>
                         <div class="flex items-center gap-4 mb-10 border-b border-slate-200 pb-8">
-                            <span class="font-headline font-bold text-[10px] uppercase tracking-widest text-on-surface-variant">September 3, 2026</span>
+                            <span class="font-headline font-bold text-lg uppercase tracking-wider text-on-surface-variant">September 3, 2026</span>
                             <span class="text-slate-300">|</span>
-                            <span class="font-headline font-bold text-[10px] uppercase tracking-widest text-on-surface-variant">5 min read</span>
+                            <span class="font-headline font-bold text-lg uppercase tracking-wider text-on-surface-variant">5 min read</span>
                             <span class="text-slate-300">|</span>
-                            <span class="font-headline font-bold text-[10px] uppercase tracking-widest text-primary">Texas United Patriots Staff</span>
+                            <span class="font-headline font-bold text-lg uppercase tracking-wider text-primary">Texas United Patriots Staff</span>
                         </div>
                         <div class="mt-8 pb-6 border-b border-slate-200"><div class="share-bar" data-share-bar>
     <span class="share-label">Spread the Word</span>
@@ -216,29 +216,29 @@
                             <p class="font-body text-xl leading-relaxed text-on-surface mb-6 italic">
                                 The State Board of Education spent this week rewriting what Texas teenagers will learn in history and government. The fight over the wording is loud, it is national, and it is not the part that decides what happens in your child's classroom.
                             </p>
-                            <p class="font-body text-lg leading-relaxed text-on-surface-variant mb-6">Here is the sequence, because it matters. The board met from Monday, August 31 through Friday, September 4. On Monday and Tuesday it gave <strong>preliminary</strong> approval to new standards for four high school courses — United States History, United States Government, World History and World Geography. Final votes were set for Friday.</p>
-                            <p class="font-body text-lg leading-relaxed text-on-surface-variant mb-6">Those four courses have their own history. In June the board adopted the new K-8 social studies standards and then pulled these four out of the package to be handled separately, which is why they are only being settled now. In the state's own rulebook they are §113.24, §113.25, §113.27 and §113.28 of Chapter 113. Adoption requires a two-thirds vote, and the rules take effect twenty days after they are filed with the Texas Register.</p>
+                            <p class="font-body text-xl leading-relaxed text-on-surface-variant mb-6">Here is the sequence, because it matters. The board met from Monday, August 31 through Friday, September 4. On Monday and Tuesday it gave <strong>preliminary</strong> approval to new standards for four high school courses — United States History, United States Government, World History and World Geography. Final votes were set for Friday.</p>
+                            <p class="font-body text-xl leading-relaxed text-on-surface-variant mb-6">Those four courses have their own history. In June the board adopted the new K-8 social studies standards and then pulled these four out of the package to be handled separately, which is why they are only being settled now. In the state's own rulebook they are §113.24, §113.25, §113.27 and §113.28 of Chapter 113. Adoption requires a two-thirds vote, and the rules take effect twenty days after they are filed with the Texas Register.</p>
                             <h2 class="font-headline font-black text-2xl uppercase tracking-tight mt-12 mb-4">The Date Nobody Put in a Headline</h2>
-                            <p class="font-body text-lg leading-relaxed text-on-surface-variant mb-6">Schools begin phasing in the new standards in the <strong>2030-31 school year</strong>.</p>
-                            <p class="font-body text-lg leading-relaxed text-on-surface-variant mb-6">Read that again. A board seated in 2026 has written the standards for a classroom five years out. Between the vote and the first lesson there are two more State Board of Education election cycles. Members who voted this week may not be on the board when the first student opens the first textbook written to these rules.</p>
-                            <p class="font-body text-lg leading-relaxed text-on-surface-variant mb-6">That is not a scandal. Curriculum revisions are slow by design — publishers need lead time, districts need to budget, teachers need retraining. But it does mean something specific: <strong>the announcement and the outcome are five years apart, and almost nobody is going to be watching the gap.</strong></p>
+                            <p class="font-body text-xl leading-relaxed text-on-surface-variant mb-6">Schools begin phasing in the new standards in the <strong>2030-31 school year</strong>.</p>
+                            <p class="font-body text-xl leading-relaxed text-on-surface-variant mb-6">Read that again. A board seated in 2026 has written the standards for a classroom five years out. Between the vote and the first lesson there are two more State Board of Education election cycles. Members who voted this week may not be on the board when the first student opens the first textbook written to these rules.</p>
+                            <p class="font-body text-xl leading-relaxed text-on-surface-variant mb-6">That is not a scandal. Curriculum revisions are slow by design — publishers need lead time, districts need to budget, teachers need retraining. But it does mean something specific: <strong>the announcement and the outcome are five years apart, and almost nobody is going to be watching the gap.</strong></p>
                             <h2 class="font-headline font-black text-2xl uppercase tracking-tight mt-12 mb-4">Standards Are Not Curriculum</h2>
-                            <p class="font-body text-lg leading-relaxed text-on-surface-variant mb-6">This is the distinction that will trip up most parents reading about this week, and the board itself said so out loud. Chairman Aaron Kinsey (R-District 15) put it plainly: the board should be "pretty agnostic" to specific curricula and focus on standards.</p>
-                            <p class="font-body text-lg leading-relaxed text-on-surface-variant mb-6">He is describing how the system actually works. The state sets what must be covered. Your district decides what book, what worksheet, what teacher, what emphasis. Two districts working from identical state standards can produce classrooms that look nothing alike.</p>
-                            <p class="font-body text-lg leading-relaxed text-on-surface-variant mb-6">So a headline saying Texas changed its history standards is true and tells you almost nothing about your own school.</p>
+                            <p class="font-body text-xl leading-relaxed text-on-surface-variant mb-6">This is the distinction that will trip up most parents reading about this week, and the board itself said so out loud. Chairman Aaron Kinsey (R-District 15) put it plainly: the board should be "pretty agnostic" to specific curricula and focus on standards.</p>
+                            <p class="font-body text-xl leading-relaxed text-on-surface-variant mb-6">He is describing how the system actually works. The state sets what must be covered. Your district decides what book, what worksheet, what teacher, what emphasis. Two districts working from identical state standards can produce classrooms that look nothing alike.</p>
+                            <p class="font-body text-xl leading-relaxed text-on-surface-variant mb-6">So a headline saying Texas changed its history standards is true and tells you almost nothing about your own school.</p>
                             <h2 class="font-headline font-black text-2xl uppercase tracking-tight mt-12 mb-4">The Detail That Proves the Point</h2>
-                            <p class="font-body text-lg leading-relaxed text-on-surface-variant mb-6">The clearest example came from the same meeting, in a different course. The board also took up Applied Personal Financial Literacy — a new half-credit course the Legislature required in House Bill 27.</p>
-                            <p class="font-body text-lg leading-relaxed text-on-surface-variant mb-6">Back in June, the board <strong>rejected</strong> one particular personal-finance curriculum, the Next Gen Personal Finance materials, over a unit dealing with racial discrimination in finance and reparations. A win, if you opposed that material.</p>
-                            <p class="font-body text-lg leading-relaxed text-on-surface-variant mb-6">Except, as board member Julie Pickren (R-District 7) noted, districts may still purchase it independently.</p>
-                            <p class="font-body text-lg leading-relaxed text-on-surface-variant mb-6">That is the whole lesson in one sentence. The state board said no. The state board's no does not reach the purchase order. Whether that curriculum lands in a Texas classroom this year is decided by a school district, not by the fifteen people who took the vote everyone reported on.</p>
+                            <p class="font-body text-xl leading-relaxed text-on-surface-variant mb-6">The clearest example came from the same meeting, in a different course. The board also took up Applied Personal Financial Literacy — a new half-credit course the Legislature required in House Bill 27.</p>
+                            <p class="font-body text-xl leading-relaxed text-on-surface-variant mb-6">Back in June, the board <strong>rejected</strong> one particular personal-finance curriculum, the Next Gen Personal Finance materials, over a unit dealing with racial discrimination in finance and reparations. A win, if you opposed that material.</p>
+                            <p class="font-body text-xl leading-relaxed text-on-surface-variant mb-6">Except, as board member Julie Pickren (R-District 7) noted, districts may still purchase it independently.</p>
+                            <p class="font-body text-xl leading-relaxed text-on-surface-variant mb-6">That is the whole lesson in one sentence. The state board said no. The state board's no does not reach the purchase order. Whether that curriculum lands in a Texas classroom this year is decided by a school district, not by the fifteen people who took the vote everyone reported on.</p>
                             <h2 class="font-headline font-black text-2xl uppercase tracking-tight mt-12 mb-4">Who Is Assigned To Check</h2>
-                            <p class="font-body text-lg leading-relaxed text-on-surface-variant mb-6">We have said before on this site that a law with no enforcement mechanism is a press release with better formatting. The same is true of a standard. A standard is a requirement on paper until somebody compares it to what is being taught and reports the difference.</p>
-                            <p class="font-body text-lg leading-relaxed text-on-surface-variant mb-6">So the useful questions are not about the wording that passed in Austin. They are these, and they are answerable at the local level:</p>
-                            <p class="font-body text-lg leading-relaxed text-on-surface-variant mb-6">Which social studies materials has your district adopted, and when does that contract come up for renewal? What did your district's own instructional-materials review conclude? When is the next school board meeting where materials are on the agenda? And who, by name and title, is responsible for confirming the adopted materials match the state standards?</p>
-                            <p class="font-body text-lg leading-relaxed text-on-surface-variant mb-6">Those answers exist. They are usually public. They are almost never in the news, because a Tuesday-night board meeting with eleven people in the room does not generate coverage — and that is exactly why it is where decisions survive.</p>
+                            <p class="font-body text-xl leading-relaxed text-on-surface-variant mb-6">We have said before on this site that a law with no enforcement mechanism is a press release with better formatting. The same is true of a standard. A standard is a requirement on paper until somebody compares it to what is being taught and reports the difference.</p>
+                            <p class="font-body text-xl leading-relaxed text-on-surface-variant mb-6">So the useful questions are not about the wording that passed in Austin. They are these, and they are answerable at the local level:</p>
+                            <p class="font-body text-xl leading-relaxed text-on-surface-variant mb-6">Which social studies materials has your district adopted, and when does that contract come up for renewal? What did your district's own instructional-materials review conclude? When is the next school board meeting where materials are on the agenda? And who, by name and title, is responsible for confirming the adopted materials match the state standards?</p>
+                            <p class="font-body text-xl leading-relaxed text-on-surface-variant mb-6">Those answers exist. They are usually public. They are almost never in the news, because a Tuesday-night board meeting with eleven people in the room does not generate coverage — and that is exactly why it is where decisions survive.</p>
                             <h2 class="font-headline font-black text-2xl uppercase tracking-tight mt-12 mb-4">What This Site Will Do</h2>
-                            <p class="font-body text-lg leading-relaxed text-on-surface-variant mb-6">We are going to track the gap. Not the press releases — the implementation. Which districts adopt what, on what date, and whether the classroom matches the standard by the time the standard is real.</p>
-                            <p class="font-body text-lg leading-relaxed text-on-surface-variant mb-6">Five years is long enough for everyone to stop paying attention. That is usually the point.</p>
+                            <p class="font-body text-xl leading-relaxed text-on-surface-variant mb-6">We are going to track the gap. Not the press releases — the implementation. Which districts adopt what, on what date, and whether the classroom matches the standard by the time the standard is real.</p>
+                            <p class="font-body text-xl leading-relaxed text-on-surface-variant mb-6">Five years is long enough for everyone to stop paying attention. That is usually the point.</p>
 
                         </div>
 
@@ -254,7 +254,7 @@
 </div>
 
             <div class="text-center mt-12 mb-20">
-                <a href="../index.html#news" class="font-headline font-bold text-xs uppercase tracking-widest text-primary hover:text-primary-container transition-colors">&larr; Back to All News</a>
+                <a href="../index.html#news" class="font-headline font-bold text-lg uppercase tracking-wider text-primary hover:text-primary-container transition-colors">&larr; Back to All News</a>
             </div>
         </div>
                         <div class="mt-16 pt-10 border-t border-slate-200">
@@ -275,10 +275,10 @@
     <footer class="bg-white border-t border-slate-200 pt-12 pb-8 px-12">
         <div class="container mx-auto text-center">
             <div class="text-xl font-black text-on-surface tracking-tighter font-headline mb-4 uppercase">TEXAS UNITED PATRIOTS</div>
-            <p class="font-headline font-bold text-[9px] uppercase tracking-widest text-on-surface-variant leading-relaxed max-w-2xl mx-auto">
+            <p class="font-headline font-bold text-base uppercase tracking-wider text-on-surface-variant leading-relaxed max-w-2xl mx-auto">
                 &copy; 2024 TEXAS UNITED PATRIOTS. PAID FOR BY TEXAS UNITED PATRIOTS. NOT AUTHORIZED BY ANY CANDIDATE OR CANDIDATE'S COMMITTEE.
             </p>
-            <div class="flex justify-center gap-8 mt-10 font-headline font-bold text-[10px] uppercase tracking-widest text-slate-600">
+            <div class="flex justify-center gap-8 mt-10 font-headline font-bold text-lg uppercase tracking-wider text-slate-600">
                 <a class="hover:text-primary transition-colors" href="../privacy.html">Privacy Policy</a>
                 <a class="hover:text-primary transition-colors" href="../terms.html">Terms of Service</a>
                 <a class="hover:text-primary transition-colors" href="../contact.html">Contact</a>

@@ -19,7 +19,7 @@
     <meta name="twitter:description" content="Texas United Patriots is a statewide advocacy movement of everyday Texans who refuse to let our state, our families, or our freedoms be surrendered to the…" />
     <meta name="twitter:image" content="https://texasunitedpatriots.org/texas_flag_hero.png" />
     <link
-        href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=UnifrakturMaguntia&family=Public+Sans:wght@400;700;800;900&family=Newsreader:ital,wght@0,400;0,700;1,400&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Playfair+Display:wght@900&family=Public+Sans:wght@400;700;800;900&family=Newsreader:ital,wght@0,400;0,700;1,400&display=swap"
         rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
         rel="stylesheet" />
@@ -42,7 +42,7 @@
                     },
                     fontFamily: {
                         headline: ["Oswald", "Public Sans", "sans-serif"],
-                        masthead: ["UnifrakturMaguntia", "serif"],
+                        masthead: ["Playfair Display", "Georgia", "serif"],
                         body: ["Newsreader"],
                         label: ["Public Sans"]
                     }
@@ -103,7 +103,7 @@
         /* Social share bar */
         .share-bar { display: flex; flex-direction: column; align-items: stretch; gap: 0.75rem; }
         @media (min-width: 640px) { .share-bar { flex-direction: row; align-items: center; } }
-        .share-bar .share-label { font-family: 'Public Sans', sans-serif; font-weight: 700; font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: #5d0011; }
+        .share-bar .share-label { font-family: 'Public Sans', sans-serif; font-weight: 700; font-size: 18px; letter-spacing: 0.3em; text-transform: uppercase; color: #5d0011; }
         .share-bar .share-icons { display: flex; flex-wrap: wrap; gap: 0.5rem; }
         .share-btn { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border: 1px solid #e5e7eb; background: #fff; color: #1a1c1c; transition: all 0.2s ease; cursor: pointer; }
         .share-btn:hover { color: #fff; border-color: transparent; transform: translateY(-2px); }
@@ -131,14 +131,14 @@
 
     <!-- Nav -->
     <nav id="mainNav" class="fixed top-0 w-full z-50 flex justify-between items-center px-6 md:px-12 py-4 md:py-5 bg-white shadow-lg transition-all duration-300">
-        <a href="./index.html" class="text-base sm:text-xl md:text-3xl font-black text-primary tracking-tight font-headline whitespace-nowrap">TEXAS UNITED PATRIOTS</a>
+        <a href="./index.html" class="text-xl sm:text-2xl md:text-4xl font-black text-primary tracking-tight font-headline whitespace-nowrap">TEXAS UNITED PATRIOTS</a>
         <div class="hidden md:flex items-center gap-x-12">
-            <a class="font-headline font-bold text-lg lg:text-xl xl:text-2xl uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="./issues.html">Issues</a>
-            <a class="font-headline font-bold text-lg lg:text-xl xl:text-2xl uppercase tracking-wider text-primary transition-colors" href="./about.html">About</a>
-            <a class="font-headline font-bold text-lg lg:text-xl xl:text-2xl uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="./index.html#news">News</a>
-            <a class="font-headline font-bold text-lg lg:text-xl xl:text-2xl uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="./national.html">National</a>
-            <a class="font-headline font-bold text-lg lg:text-xl xl:text-2xl uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="./members.html">Members</a>
-            <a class="font-headline font-bold text-lg lg:text-xl xl:text-2xl uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="./gear.html">Gear</a>
+            <a class="font-headline font-bold text-xl lg:text-2xl xl:text-[1.75rem] uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="./issues.html">Issues</a>
+            <a class="font-headline font-bold text-xl lg:text-2xl xl:text-[1.75rem] uppercase tracking-wider text-primary transition-colors" href="./about.html">About</a>
+            <a class="font-headline font-bold text-xl lg:text-2xl xl:text-[1.75rem] uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="./index.html#news">News</a>
+            <a class="font-headline font-bold text-xl lg:text-2xl xl:text-[1.75rem] uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="./national.html">National</a>
+            <a class="font-headline font-bold text-xl lg:text-2xl xl:text-[1.75rem] uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="./members.html">Members</a>
+            <a class="font-headline font-bold text-xl lg:text-2xl xl:text-[1.75rem] uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="./gear.html">Gear</a>
 </div>
     </nav>
     <button id="mobileMenuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu" class="md:hidden fixed top-3 right-4 text-primary p-2 z-[80]"><span class="hamburger"><span></span><span></span><span></span></span></button>
@@ -147,42 +147,42 @@
     <div id="mobileMenu" class="fixed inset-0 z-[65] bg-[#141821] flex flex-col overflow-y-auto">
         <div class="absolute inset-x-0 top-0 h-1 bg-primary"></div>
         <div class="flex justify-between items-center px-6 pt-5 pb-5 border-b border-white/10">
-            <a href="index.html" class="text-xl md:text-3xl font-black text-white tracking-tight font-headline">TEXAS UNITED PATRIOTS</a>
+            <a href="index.html" class="text-2xl md:text-4xl font-black text-white tracking-tight font-headline">TEXAS UNITED PATRIOTS</a>
         </div>
         <nav class="flex-1 flex flex-col px-6 pt-6">
             <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors" href="issues.html">
-                <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">01</span>
+                <span class="menu-index font-headline font-bold text-lg tracking-[0.08em] text-primary w-8">01</span>
                 <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">Issues</span>
                 <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
             </a>
             <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors" href="about.html">
-                <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">02</span>
+                <span class="menu-index font-headline font-bold text-lg tracking-[0.08em] text-primary w-8">02</span>
                 <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">About</span>
                 <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
             </a>
             <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors" href="index.html#news">
-                <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">03</span>
+                <span class="menu-index font-headline font-bold text-lg tracking-[0.08em] text-primary w-8">03</span>
                 <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">News</span>
                 <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
             </a>
             <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors" href="./national.html">
-                <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">04</span>
+                <span class="menu-index font-headline font-bold text-lg tracking-[0.08em] text-primary w-8">04</span>
                 <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">National</span>
                 <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
             </a>
             <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors" href="./members.html">
-                <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">05</span>
+                <span class="menu-index font-headline font-bold text-lg tracking-[0.08em] text-primary w-8">05</span>
                 <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">Members</span>
                 <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
             </a>
             <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors" href="./gear.html">
-                <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">06</span>
+                <span class="menu-index font-headline font-bold text-lg tracking-[0.08em] text-primary w-8">06</span>
                 <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">Gear</span>
                 <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
             </a>
         </nav>
         <div class="menu-item px-6 pt-8 pb-10 border-t border-white/10 mt-6">
-<p class="mt-6 font-headline font-bold text-[10px] text-white/40 uppercase tracking-[0.3em] text-center">Faith · Family · Freedom</p>
+<p class="mt-6 font-headline font-bold text-lg text-white/40 uppercase tracking-[0.08em] text-center">Faith · Family · Freedom</p>
         </div>
     </div>
 
@@ -194,8 +194,8 @@
         </div>
         <div class="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent"></div>
         <div class="container mx-auto px-6 md:px-12 relative z-10">
-            <span class="inline-flex items-center gap-2 bg-primary text-on-primary px-3 py-1 mb-6 font-headline font-bold text-[10px] tracking-[0.2em] uppercase">
-                <span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">groups</span>
+            <span class="inline-flex items-center gap-2 bg-primary text-on-primary px-3 py-1 mb-6 font-headline font-bold text-lg tracking-[0.08em] uppercase">
+                <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">groups</span>
                 Who We Are
             </span>
             <h1 class="font-headline font-black text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[0.9] sm:leading-[0.85] tracking-tighter uppercase mb-6">
@@ -212,7 +212,7 @@
         <div class="container mx-auto px-6 md:px-12">
             <div class="flex flex-col lg:flex-row gap-20 items-start max-w-6xl mx-auto">
                 <div class="lg:w-1/2">
-                    <span class="reveal reveal-up block font-headline font-bold text-[10px] text-primary uppercase tracking-[0.3em] mb-4">Our Story</span>
+                    <span class="reveal reveal-up block font-headline font-bold text-lg text-primary uppercase tracking-[0.08em] mb-4">Our Story</span>
                     <h2 class="reveal reveal-up font-headline font-black text-4xl md:text-5xl text-on-surface leading-none uppercase tracking-tighter mb-8">Built by Texans. Accountable to Texans.</h2>
                     <p class="reveal reveal-up font-body text-lg text-on-surface-variant leading-relaxed mb-6">
                         Texas United Patriots was founded by a coalition of veterans, small-business owners, pastors, teachers, and parents who saw one undeniable truth: the Lone Star State was under attack — from radical federal overreach, from corrupt corporate activism, and from a mainstream press determined to rewrite our values into their image.
@@ -238,35 +238,35 @@
     <section class="py-24 bg-slate-50">
         <div class="container mx-auto px-6 md:px-12">
             <div class="reveal reveal-up text-center max-w-3xl mx-auto mb-16">
-                <span class="block font-headline font-bold text-[10px] text-primary uppercase tracking-[0.3em] mb-4">Core Values</span>
+                <span class="block font-headline font-bold text-lg text-primary uppercase tracking-[0.08em] mb-4">Core Values</span>
                 <h2 class="font-headline font-black text-4xl md:text-5xl text-on-surface leading-none uppercase tracking-tighter">Four Non-Negotiables.</h2>
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="reveal reveal-up bg-white p-10 border-t-4 border-primary shadow-md">
                     <span class="material-symbols-outlined text-primary text-5xl mb-4 block" style="font-variation-settings: 'FILL' 1;">church</span>
                     <h3 class="font-headline font-black text-xl uppercase tracking-tight mb-3">Faith</h3>
-                    <p class="font-body text-base text-on-surface-variant leading-relaxed">
+                    <p class="font-body text-xl text-on-surface-variant leading-relaxed">
                         Our rights come from God, not from government. A nation that forgets its Creator forgets its citizens next.
                     </p>
                 </div>
                 <div class="reveal reveal-up bg-white p-10 border-t-4 border-primary shadow-md">
                     <span class="material-symbols-outlined text-primary text-5xl mb-4 block" style="font-variation-settings: 'FILL' 1;">family_restroom</span>
                     <h3 class="font-headline font-black text-xl uppercase tracking-tight mb-3">Family</h3>
-                    <p class="font-body text-base text-on-surface-variant leading-relaxed">
+                    <p class="font-body text-xl text-on-surface-variant leading-relaxed">
                         The family is the oldest and most important institution on earth. We will defend it without apology.
                     </p>
                 </div>
                 <div class="reveal reveal-up bg-white p-10 border-t-4 border-primary shadow-md">
                     <span class="material-symbols-outlined text-primary text-5xl mb-4 block" style="font-variation-settings: 'FILL' 1;">flag</span>
                     <h3 class="font-headline font-black text-xl uppercase tracking-tight mb-3">Freedom</h3>
-                    <p class="font-body text-base text-on-surface-variant leading-relaxed">
+                    <p class="font-body text-xl text-on-surface-variant leading-relaxed">
                         A free people do not ask permission to speak, to worship, to bear arms, or to raise their children.
                     </p>
                 </div>
                 <div class="reveal reveal-up bg-white p-10 border-t-4 border-primary shadow-md">
                     <span class="material-symbols-outlined text-primary text-5xl mb-4 block" style="font-variation-settings: 'FILL' 1;">public</span>
                     <h3 class="font-headline font-black text-xl uppercase tracking-tight mb-3">Texas First</h3>
-                    <p class="font-body text-base text-on-surface-variant leading-relaxed">
+                    <p class="font-body text-xl text-on-surface-variant leading-relaxed">
                         Texas is sovereign. Texas is exceptional. Texas answers to no bureaucrat and bends to no mandate.
                     </p>
                 </div>
@@ -278,7 +278,7 @@
     <section class="py-24 bg-white">
         <div class="container mx-auto px-6 md:px-12">
             <div class="reveal reveal-up text-center max-w-3xl mx-auto mb-16">
-                <span class="block font-headline font-bold text-[10px] text-primary uppercase tracking-[0.3em] mb-4">How We Fight</span>
+                <span class="block font-headline font-bold text-lg text-primary uppercase tracking-[0.08em] mb-4">How We Fight</span>
                 <h2 class="font-headline font-black text-4xl md:text-5xl text-on-surface leading-none uppercase tracking-tighter">Three Fronts. One Mission.</h2>
             </div>
             <div class="grid md:grid-cols-3 gap-10">
@@ -311,7 +311,7 @@
     <section class="py-24 bg-[#0a0c10] text-white relative overflow-hidden">
         <div class="absolute top-0 right-0 w-1/2 h-full bg-primary/10 -skew-x-12 translate-x-1/4"></div>
         <div class="container mx-auto px-6 md:px-12 relative z-10 max-w-4xl">
-            <span class="block font-headline font-bold text-[10px] text-primary-fixed uppercase tracking-[0.3em] mb-6">Our Pledge to Texas</span>
+            <span class="block font-headline font-bold text-lg text-primary-fixed uppercase tracking-[0.08em] mb-6">Our Pledge to Texas</span>
             <h2 class="font-headline font-black text-4xl md:text-6xl leading-none uppercase tracking-tighter mb-10">
                 We will not go quiet. We will not go soft. We will not go home.
             </h2>
@@ -319,7 +319,7 @@
                 Every Texan who signs up, shows up, and speaks up strengthens this movement. If you are tired of being told your values are "outdated," your faith is "dangerous," and your patriotism is "extreme" — you are already one of us.
             </p>
             <div class="flex flex-wrap gap-4">
-                <a href="./issues.html" class="bg-transparent border-2 border-white text-white font-headline font-bold px-6 md:px-12 py-5 text-sm uppercase tracking-widest hover:bg-white hover:text-black transition-all inline-block">
+                <a href="./issues.html" class="bg-transparent border-2 border-white text-white font-headline font-bold px-6 md:px-12 py-5 text-lg uppercase tracking-wider hover:bg-white hover:text-black transition-all inline-block">
                     Read the Issues
                 </a>
             </div>
@@ -349,13 +349,13 @@
         <div class="container mx-auto text-center">
             <div class="text-xl font-black text-on-surface tracking-tighter font-headline mb-4 uppercase">TEXAS UNITED PATRIOTS</div>
             <div class="flex justify-center gap-8 mb-10 flex-wrap">
-                <a class="font-headline font-bold text-base md:text-lg uppercase tracking-wider text-on-surface-variant hover:text-primary" href="./about.html">About</a>
-                <a class="font-headline font-bold text-base md:text-lg uppercase tracking-wider text-on-surface-variant hover:text-primary" href="./issues.html">Issues</a>
-                <a class="font-headline font-bold text-base md:text-lg uppercase tracking-wider text-on-surface-variant hover:text-primary" href="./index.html#news">News</a>
+                <a class="font-headline font-bold text-xl md:text-lg uppercase tracking-wider text-on-surface-variant hover:text-primary" href="./about.html">About</a>
+                <a class="font-headline font-bold text-xl md:text-lg uppercase tracking-wider text-on-surface-variant hover:text-primary" href="./issues.html">Issues</a>
+                <a class="font-headline font-bold text-xl md:text-lg uppercase tracking-wider text-on-surface-variant hover:text-primary" href="./index.html#news">News</a>
             </div>
-            <p class="font-headline font-bold text-[9px] uppercase tracking-widest text-on-surface-variant leading-relaxed max-w-3xl mx-auto border border-slate-200 p-6">
+            <p class="font-headline font-bold text-base uppercase tracking-wider text-on-surface-variant leading-relaxed max-w-3xl mx-auto border border-slate-200 p-6">
                 &copy; 2026 TEXAS UNITED PATRIOTS. PAID FOR BY TEXAS UNITED PATRIOTS. NOT AUTHORIZED BY ANY CANDIDATE OR CANDIDATE'S COMMITTEE.</p>
-            <div class="flex justify-center gap-8 mt-10 font-headline font-bold text-[10px] uppercase tracking-widest text-slate-600">
+            <div class="flex justify-center gap-8 mt-10 font-headline font-bold text-lg uppercase tracking-wider text-slate-600">
                 <a class="hover:text-primary transition-colors" href="./privacy.html">Privacy Policy</a>
                 <a class="hover:text-primary transition-colors" href="./terms.html">Terms of Service</a>
                 <a class="hover:text-primary transition-colors" href="./contact.html">Contact</a>

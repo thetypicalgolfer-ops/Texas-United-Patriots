@@ -56,7 +56,7 @@
       }
     }
     </script>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=UnifrakturMaguntia&family=Public+Sans:wght@400;700;800;900&family=Newsreader:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Playfair+Display:wght@900&family=Public+Sans:wght@400;700;800;900&family=Newsreader:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script>
@@ -70,7 +70,7 @@
               "on-surface-variant": "#47464f", "background": "#f9f9f9"
             },
             fontFamily: { headline: ["Oswald", "Public Sans", "sans-serif"],
-                        masthead: ["UnifrakturMaguntia", "serif"], body: ["Newsreader"], label: ["Public Sans"] }
+                        masthead: ["Playfair Display", "Georgia", "serif"], body: ["Newsreader"], label: ["Public Sans"] }
           },
         },
       }
@@ -132,7 +132,7 @@
 
         .share-bar { display: flex; flex-direction: column; align-items: stretch; gap: 0.75rem; }
         @media (min-width: 640px) { .share-bar { flex-direction: row; align-items: center; } }
-        .share-bar .share-label { font-family: 'Public Sans', sans-serif; font-weight: 700; font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: #5d0011; }
+        .share-bar .share-label { font-family: 'Public Sans', sans-serif; font-weight: 700; font-size: 18px; letter-spacing: 0.3em; text-transform: uppercase; color: #5d0011; }
         .share-bar .share-icons { display: flex; flex-wrap: wrap; gap: 0.5rem; }
         .share-btn { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border: 1px solid #e5e7eb; background: #fff; color: #1a1c1c; transition: all 0.2s ease; cursor: pointer; }
         .share-btn:hover { color: #fff; border-color: transparent; transform: translateY(-2px); }
@@ -153,20 +153,20 @@
         #imgLightbox img { max-width: 95vw; max-height: 90vh; object-fit: contain; box-shadow: 0 25px 60px rgba(0,0,0,0.55); cursor: default; }
         #imgLightboxClose { position: absolute; top: 16px; right: 22px; width: 44px; height: 44px; display: inline-flex; align-items: center; justify-content: center; color: #fff; background: rgba(255,255,255,0.1); border: none; border-radius: 999px; font-size: 30px; line-height: 1; cursor: pointer; opacity: 0.85; transition: opacity 0.2s ease, background 0.2s ease; }
         #imgLightboxClose:hover { opacity: 1; background: rgba(255,255,255,0.2); }
-        #imgLightboxHint { position: absolute; bottom: 20px; left: 0; right: 0; text-align: center; color: rgba(255,255,255,0.55); font-family: 'Public Sans', sans-serif; font-weight: 700; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; }
+        #imgLightboxHint { position: absolute; bottom: 20px; left: 0; right: 0; text-align: center; color: rgba(255,255,255,0.55); font-family: 'Public Sans', sans-serif; font-weight: 700; font-size: 18px; letter-spacing: 0.2em; text-transform: uppercase; }
     </style>
 </head>
 <body class="bg-surface text-on-surface font-body">
 
     <nav class="fixed top-0 w-full z-50 flex justify-between items-center px-6 md:px-12 py-4 md:py-5 bg-white shadow-lg">
-        <a href="../index.html" class="text-xl md:text-3xl font-black text-primary tracking-tight font-headline">TEXAS UNITED PATRIOTS</a>
+        <a href="../index.html" class="text-2xl md:text-4xl font-black text-primary tracking-tight font-headline">TEXAS UNITED PATRIOTS</a>
         <div class="hidden md:flex items-center gap-x-8 lg:gap-x-12">
-            <a class="font-headline font-bold text-lg lg:text-xl xl:text-2xl uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="../issues.html">Issues</a>
-            <a class="font-headline font-bold text-lg lg:text-xl xl:text-2xl uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="../about.html">About</a>
-            <a class="font-headline font-bold text-lg lg:text-xl xl:text-2xl uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="../index.html#news">News</a>
-            <a class="font-headline font-bold text-lg lg:text-xl xl:text-2xl uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="../national.html">National</a>
-            <a class="font-headline font-bold text-lg lg:text-xl xl:text-2xl uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="../members.html">Members</a>
-            <a class="font-headline font-bold text-lg lg:text-xl xl:text-2xl uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="../gear.html">Gear</a>
+            <a class="font-headline font-bold text-xl lg:text-2xl xl:text-[1.75rem] uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="../issues.html">Issues</a>
+            <a class="font-headline font-bold text-xl lg:text-2xl xl:text-[1.75rem] uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="../about.html">About</a>
+            <a class="font-headline font-bold text-xl lg:text-2xl xl:text-[1.75rem] uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="../index.html#news">News</a>
+            <a class="font-headline font-bold text-xl lg:text-2xl xl:text-[1.75rem] uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="../national.html">National</a>
+            <a class="font-headline font-bold text-xl lg:text-2xl xl:text-[1.75rem] uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="../members.html">Members</a>
+            <a class="font-headline font-bold text-xl lg:text-2xl xl:text-[1.75rem] uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="../gear.html">Gear</a>
 </div>
     </nav>
     <button id="mobileMenuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu" class="md:hidden fixed top-3 right-4 text-primary p-2 z-[80]"><span class="hamburger"><span></span><span></span><span></span></span></button>
@@ -175,42 +175,42 @@
     <div id="mobileMenu" class="fixed inset-0 z-[65] bg-[#141821] flex flex-col overflow-y-auto">
         <div class="absolute inset-x-0 top-0 h-1 bg-primary"></div>
         <div class="flex justify-between items-center px-6 pt-5 pb-5 border-b border-white/10">
-            <a href="../index.html" class="text-xl md:text-3xl font-black text-white tracking-tight font-headline">TEXAS UNITED PATRIOTS</a>
+            <a href="../index.html" class="text-2xl md:text-4xl font-black text-white tracking-tight font-headline">TEXAS UNITED PATRIOTS</a>
         </div>
         <nav class="flex-1 flex flex-col px-6 pt-6">
             <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors" href="../issues.html">
-                <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">01</span>
+                <span class="menu-index font-headline font-bold text-lg tracking-[0.08em] text-primary w-8">01</span>
                 <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">Issues</span>
                 <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
             </a>
             <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors" href="../about.html">
-                <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">02</span>
+                <span class="menu-index font-headline font-bold text-lg tracking-[0.08em] text-primary w-8">02</span>
                 <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">About</span>
                 <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
             </a>
             <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors" href="../index.html#news">
-                <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">03</span>
+                <span class="menu-index font-headline font-bold text-lg tracking-[0.08em] text-primary w-8">03</span>
                 <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">News</span>
                 <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
             </a>
             <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors" href="../national.html">
-                <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">04</span>
+                <span class="menu-index font-headline font-bold text-lg tracking-[0.08em] text-primary w-8">04</span>
                 <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">National</span>
                 <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
             </a>
             <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors" href="../members.html">
-                <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">05</span>
+                <span class="menu-index font-headline font-bold text-lg tracking-[0.08em] text-primary w-8">05</span>
                 <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">Members</span>
                 <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
             </a>
             <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors" href="../gear.html">
-                <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">06</span>
+                <span class="menu-index font-headline font-bold text-lg tracking-[0.08em] text-primary w-8">06</span>
                 <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">Gear</span>
                 <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
             </a>
         </nav>
         <div class="menu-item px-6 pt-8 pb-10 border-t border-white/10 mt-6">
-<p class="mt-6 font-headline font-bold text-[10px] text-white/40 uppercase tracking-[0.3em] text-center">Faith · Family · Freedom</p>
+<p class="mt-6 font-headline font-bold text-lg text-white/40 uppercase tracking-[0.08em] text-center">Faith · Family · Freedom</p>
         </div>
     </div>
 
@@ -218,8 +218,8 @@
     <header class="relative pt-28 md:pt-32 pb-8 bg-[#0a0c10]">
         <div id="heroImageTrigger" role="button" tabindex="0" aria-label="Enlarge image" class="block container mx-auto px-6 md:px-12 group" title="Click to enlarge">
             <img alt="Adrian Reyna: Weak. Radical. Wrong for San Antonio." class="w-full h-auto max-w-5xl mx-auto shadow-2xl" src="../reyna_district125.webp"/>
-            <span class="flex items-center justify-center gap-1.5 text-white/50 group-hover:text-white/90 transition-colors text-[10px] uppercase tracking-[0.2em] font-headline font-bold mt-4">
-                <span class="material-symbols-outlined text-[14px]">zoom_in</span> Click to enlarge
+            <span class="flex items-center justify-center gap-1.5 text-white/50 group-hover:text-white/90 transition-colors text-lg uppercase tracking-[0.08em] font-headline font-bold mt-4">
+                <span class="material-symbols-outlined text-lg">zoom_in</span> Click to enlarge
             </span>
         </div>
     </header>
@@ -232,14 +232,14 @@
                 <!-- Article Content (2/3) -->
                 <div class="lg:w-2/3">
                     <div class="bg-white shadow-2xl p-6 sm:p-8 md:p-16">
-                        <span class="inline-block bg-primary text-on-primary font-headline font-bold text-[9px] tracking-[0.2em] uppercase px-3 py-1 mb-6">2026 Election &middot; District 125</span>
+                        <span class="inline-block bg-primary text-on-primary font-headline font-bold text-base tracking-[0.08em] uppercase px-3 py-1 mb-6">2026 Election &middot; District 125</span>
                         <h1 class="font-headline font-black text-4xl md:text-5xl lg:text-6xl text-on-surface leading-[0.9] tracking-tight uppercase mb-6">Union Money, a Transit Mess, and a War on School Choice: Why Adrian Reyna Is Wrong for District 125</h1>
                         <div class="flex items-center gap-4 mb-10 border-b border-slate-200 pb-8 flex-wrap">
-                            <span class="font-headline font-bold text-[10px] uppercase tracking-widest text-on-surface-variant">May 27, 2026</span>
+                            <span class="font-headline font-bold text-lg uppercase tracking-wider text-on-surface-variant">May 27, 2026</span>
                             <span class="text-slate-300">|</span>
-                            <span class="font-headline font-bold text-[10px] uppercase tracking-widest text-on-surface-variant">6 min read</span>
+                            <span class="font-headline font-bold text-lg uppercase tracking-wider text-on-surface-variant">6 min read</span>
                             <span class="text-slate-300">|</span>
-                            <span class="font-headline font-bold text-[10px] uppercase tracking-widest text-primary">TUP Editorial Board</span>
+                            <span class="font-headline font-bold text-lg uppercase tracking-wider text-primary">TUP Editorial Board</span>
                         </div>
                         <div class="mt-8 pb-6 border-b border-slate-200"><div class="share-bar" data-share-bar>
     <span class="share-label">Spread the Word</span>
@@ -260,53 +260,53 @@
 
                             <h2 class="font-headline font-black text-2xl uppercase tracking-tight mt-12 mb-4">Bought and Backed by the Unions</h2>
 
-                            <p class="font-body text-lg leading-relaxed text-on-surface-variant mb-6">
+                            <p class="font-body text-xl leading-relaxed text-on-surface-variant mb-6">
                                 Adrian Reyna doesn't just belong to a union — he runs one. He serves as Executive Vice President of the San Antonio Alliance (AFT Local 67), the SAISD teachers' union, and sits on the executive board of the San Antonio AFL-CIO Central Labor Council. His campaign was lifted from day one by the organized-labor machine, with the backing of Texas AFT and its allies.
                             </p>
 
-                            <p class="font-body text-lg leading-relaxed text-on-surface-variant mb-6">
+                            <p class="font-body text-xl leading-relaxed text-on-surface-variant mb-6">
                                 Now he wants a seat in the Texas House — where he would help write the very laws that set school budgets and govern the workforce his own union negotiates over. That is not representation. That is a special interest installing its own officer inside the Capitol. Every vote Reyna casts will carry the fingerprints of the union that put him there, because that union is exactly who he answers to.
                             </p>
 
                             <h2 class="font-headline font-black text-2xl uppercase tracking-tight mt-12 mb-4">A Seat on the VIA Mess</h2>
 
-                            <p class="font-body text-lg leading-relaxed text-on-surface-variant mb-6">
+                            <p class="font-body text-xl leading-relaxed text-on-surface-variant mb-6">
                                 Reyna also sits as a trustee on the board of VIA Metropolitan Transit — and that board is presiding over a fiscal mess. VIA is pouring roughly <strong>$480 million</strong> into a single rapid-bus line, the Green Line, with another <strong>$322 million</strong> lined up for a second line behind it. Bexar County officials have openly warned that the agency's transit ambitions could balloon into the <strong>billions</strong>. And the board keeps voting still more money into the project, including additional spending on outside design contracts after construction was already underway.
                             </p>
 
-                            <p class="font-body text-lg leading-relaxed text-on-surface-variant mb-6">
+                            <p class="font-body text-xl leading-relaxed text-on-surface-variant mb-6">
                                 Worst of all: when private landowners refused to hand over their property for the project, VIA moved to take it by <strong>eminent domain</strong> — seizing land from San Antonians who simply wanted to keep what was theirs. Adrian Reyna sits on the board behind those decisions. That is the judgment he is asking voters to send to Austin to oversee the entire state's tax dollars.
                             </p>
 
                             <h2 class="font-headline font-black text-2xl uppercase tracking-tight mt-12 mb-4">A War on School Choice</h2>
 
-                            <p class="font-body text-lg leading-relaxed text-on-surface-variant mb-6">
+                            <p class="font-body text-xl leading-relaxed text-on-surface-variant mb-6">
                                 When it comes to your children, Reyna has already chosen a side — and it isn't yours. In his own words: <strong>"I oppose vouchers and ESAs,"</strong> insisting that "public tax dollars should not be going to private schools." Texas families finally won the freedom to direct their own children's education through Education Savings Accounts. Reyna wants to slam that door shut.
                             </p>
 
                             <div class="bg-slate-50 border-l-4 border-primary p-8 my-10">
                                 <p class="font-headline font-black text-lg uppercase tracking-tight mb-2">In his own words:</p>
                                 <p class="font-body text-on-surface-variant text-xl italic">"I oppose vouchers and ESAs."</p>
-                                <p class="font-headline font-bold text-[10px] uppercase tracking-widest text-primary mt-3">— Adrian Reyna, campaign platform</p>
+                                <p class="font-headline font-bold text-lg uppercase tracking-wider text-primary mt-3">— Adrian Reyna, campaign platform</p>
                             </div>
 
-                            <p class="font-body text-lg leading-relaxed text-on-surface-variant mb-6">
+                            <p class="font-body text-xl leading-relaxed text-on-surface-variant mb-6">
                                 It is no coincidence that the candidate who runs a teachers' union also fights to lock every education dollar inside the system that signs that union's paychecks. To Adrian Reyna, a parent who wants out of a failing school is a threat to the institution. He will defend the institution. He will not defend your family's right to choose.
                             </p>
 
                             <h2 class="font-headline font-black text-2xl uppercase tracking-tight mt-12 mb-4">Firmly Against Texas Border Security</h2>
 
-                            <p class="font-body text-lg leading-relaxed text-on-surface-variant mb-6">
+                            <p class="font-body text-xl leading-relaxed text-on-surface-variant mb-6">
                                 On the issue that defines this moment in Texas — securing the border — Reyna lands on the wrong side, and it isn't our characterization. In its own endorsement of Reyna, the <strong>San Antonio Express-News editorial board</strong> reported that on Operation Lone Star, the state's signature border security mission, <strong>"Reyna is firmly opposed."</strong> The board noted that even the Democratic rival it compared him to "supports a scaled-down version of the border operation" — while Reyna opposed it outright.
                             </p>
 
-                            <p class="font-body text-lg leading-relaxed text-on-surface-variant mb-6">
+                            <p class="font-body text-xl leading-relaxed text-on-surface-variant mb-6">
                                 Let that sink in. At a time when Texans are demanding a secure border, the man who wants to represent District 125 in Austin stands against the state's leading effort to deliver one — to the left of even his own primary opponent. That is not where the working families of San Antonio are.
                             </p>
 
                             <h2 class="font-headline font-black text-2xl uppercase tracking-tight mt-12 mb-4">A Tax-and-Spend Wish List</h2>
 
-                            <p class="font-body text-lg leading-relaxed text-on-surface-variant mb-6">
+                            <p class="font-body text-xl leading-relaxed text-on-surface-variant mb-6">
                                 The rest of Reyna's platform reads like a progressive wish list with the bill sent to you. He declares that "healthcare is a human right" and wants to expand Medicaid to cover a million more Texans — a massive new government entitlement. He backs taxpayer-funded "free" community college and a slate of new spending programs. And to help pay for it, he wants to hike the franchise tax on Texas employers and chase what he calls "business property tax loopholes" — higher costs on the small businesses and job creators of District 125, costs that always land back on working families and consumers.
                             </p>
 
@@ -320,10 +320,10 @@
                         </div>
 
                         <div class="border-t border-slate-200 mt-12 pt-8 flex flex-wrap gap-3">
-                            <span class="bg-slate-100 font-headline font-bold text-[9px] uppercase tracking-widest px-4 py-2">District 125</span>
-                            <span class="bg-slate-100 font-headline font-bold text-[9px] uppercase tracking-widest px-4 py-2">2026 Election</span>
-                            <span class="bg-slate-100 font-headline font-bold text-[9px] uppercase tracking-widest px-4 py-2">School Choice</span>
-                            <span class="bg-slate-100 font-headline font-bold text-[9px] uppercase tracking-widest px-4 py-2">Taxes</span>
+                            <span class="bg-slate-100 font-headline font-bold text-base uppercase tracking-wider px-4 py-2">District 125</span>
+                            <span class="bg-slate-100 font-headline font-bold text-base uppercase tracking-wider px-4 py-2">2026 Election</span>
+                            <span class="bg-slate-100 font-headline font-bold text-base uppercase tracking-wider px-4 py-2">School Choice</span>
+                            <span class="bg-slate-100 font-headline font-bold text-base uppercase tracking-wider px-4 py-2">Taxes</span>
                         </div>
                     </div>
                 </div>
@@ -338,23 +338,23 @@
                             <ul class="space-y-4">
                                 <li class="flex items-start gap-3">
                                     <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">remove_circle</span>
-                                    <span class="font-body text-sm leading-relaxed text-on-surface-variant">Executive VP of the San Antonio Alliance teachers' union; AFL-CIO labor board member</span>
+                                    <span class="font-body text-xl leading-relaxed text-on-surface-variant">Executive VP of the San Antonio Alliance teachers' union; AFL-CIO labor board member</span>
                                 </li>
                                 <li class="flex items-start gap-3">
                                     <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">remove_circle</span>
-                                    <span class="font-body text-sm leading-relaxed text-on-surface-variant">Sits on the VIA Transit board behind a near-$800M rapid-transit buildout and eminent-domain land seizures</span>
+                                    <span class="font-body text-xl leading-relaxed text-on-surface-variant">Sits on the VIA Transit board behind a near-$800M rapid-transit buildout and eminent-domain land seizures</span>
                                 </li>
                                 <li class="flex items-start gap-3">
                                     <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">remove_circle</span>
-                                    <span class="font-body text-sm leading-relaxed text-on-surface-variant">"Firmly opposed" to Operation Lone Star — to the left of even his Democratic primary rival (per the Express-News)</span>
+                                    <span class="font-body text-xl leading-relaxed text-on-surface-variant">"Firmly opposed" to Operation Lone Star — to the left of even his Democratic primary rival (per the Express-News)</span>
                                 </li>
                                 <li class="flex items-start gap-3">
                                     <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">remove_circle</span>
-                                    <span class="font-body text-sm leading-relaxed text-on-surface-variant">Opposes school choice: "I oppose vouchers and ESAs"</span>
+                                    <span class="font-body text-xl leading-relaxed text-on-surface-variant">Opposes school choice: "I oppose vouchers and ESAs"</span>
                                 </li>
                                 <li class="flex items-start gap-3">
                                     <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">remove_circle</span>
-                                    <span class="font-body text-sm leading-relaxed text-on-surface-variant">Wants to expand Medicaid and raise the franchise tax on Texas employers</span>
+                                    <span class="font-body text-xl leading-relaxed text-on-surface-variant">Wants to expand Medicaid and raise the franchise tax on Texas employers</span>
                                 </li>
                             </ul>
                         </div>
@@ -368,11 +368,11 @@
             <div class="bg-primary text-on-primary p-10 md:p-14 mt-0 text-center">
                 <h3 class="font-headline font-black text-3xl uppercase tracking-tight mb-4">District 125 Deserves Better</h3>
                 <p class="font-body text-white/80 text-lg mb-8 max-w-xl mx-auto">Adrian Reyna answers to the union machine that made him. Help us tell San Antonio the truth before November.</p>
-                <a href="../contact.html" class="inline-block bg-white text-primary font-headline font-bold text-sm uppercase tracking-widest px-12 py-5 hover:bg-slate-100 transition-all">Get Involved</a>
+                <a href="../contact.html" class="inline-block bg-white text-primary font-headline font-bold text-lg uppercase tracking-wider px-12 py-5 hover:bg-slate-100 transition-all">Get Involved</a>
             </div>
 
             <div class="text-center mt-12 mb-20">
-                <a href="../index.html#news" class="font-headline font-bold text-xs uppercase tracking-widest text-primary hover:text-primary-container transition-colors">&larr; Back to All News</a>
+                <a href="../index.html#news" class="font-headline font-bold text-lg uppercase tracking-wider text-primary hover:text-primary-container transition-colors">&larr; Back to All News</a>
             </div>
         </div>
                         <div class="mt-16 pt-10 border-t border-slate-200 max-w-7xl mx-auto">
@@ -393,10 +393,10 @@
     <footer class="bg-white border-t border-slate-200 pt-12 pb-8 px-12">
         <div class="container mx-auto text-center">
             <div class="text-xl font-black text-on-surface tracking-tighter font-headline mb-4 uppercase">TEXAS UNITED PATRIOTS</div>
-            <p class="font-headline font-bold text-[9px] uppercase tracking-widest text-on-surface-variant leading-relaxed max-w-2xl mx-auto">
+            <p class="font-headline font-bold text-base uppercase tracking-wider text-on-surface-variant leading-relaxed max-w-2xl mx-auto">
                 &copy; 2026 TEXAS UNITED PATRIOTS. PAID FOR BY TEXAS UNITED PATRIOTS. NOT AUTHORIZED BY ANY CANDIDATE OR CANDIDATE'S COMMITTEE.
             </p>
-            <div class="flex justify-center gap-8 mt-10 font-headline font-bold text-[10px] uppercase tracking-widest text-slate-600">
+            <div class="flex justify-center gap-8 mt-10 font-headline font-bold text-lg uppercase tracking-wider text-slate-600">
                 <a class="hover:text-primary transition-colors" href="../privacy.html">Privacy Policy</a>
                 <a class="hover:text-primary transition-colors" href="../terms.html">Terms of Service</a>
                 <a class="hover:text-primary transition-colors" href="../contact.html">Contact</a>

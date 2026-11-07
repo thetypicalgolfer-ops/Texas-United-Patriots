@@ -19,7 +19,7 @@
     <meta name="twitter:description" content="Texas United Patriots members, A to Z. Join the movement free and get your name and website listed in the directory." />
     <meta name="twitter:image" content="https://texasunitedpatriots.org/texas_flag_hero.png" />
     <link
-        href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=UnifrakturMaguntia&family=Public+Sans:wght@400;700;800;900&family=Newsreader:ital,wght@0,400;0,700;1,400&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Playfair+Display:wght@900&family=Public+Sans:wght@400;700;800;900&family=Newsreader:ital,wght@0,400;0,700;1,400&display=swap"
         rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
         rel="stylesheet" />
@@ -42,7 +42,7 @@
                     },
                     fontFamily: {
                         headline: ["Oswald", "Public Sans", "sans-serif"],
-                        masthead: ["UnifrakturMaguntia", "serif"],
+                        masthead: ["Playfair Display", "Georgia", "serif"],
                         body: ["Newsreader"],
                         label: ["Public Sans"]
                     }
@@ -103,7 +103,7 @@
         /* Social share bar */
         .share-bar { display: flex; flex-direction: column; align-items: stretch; gap: 0.75rem; }
         @media (min-width: 640px) { .share-bar { flex-direction: row; align-items: center; } }
-        .share-bar .share-label { font-family: 'Public Sans', sans-serif; font-weight: 700; font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: #5d0011; }
+        .share-bar .share-label { font-family: 'Public Sans', sans-serif; font-weight: 700; font-size: 18px; letter-spacing: 0.3em; text-transform: uppercase; color: #5d0011; }
         .share-bar .share-icons { display: flex; flex-wrap: wrap; gap: 0.5rem; }
         .share-btn { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border: 1px solid #e5e7eb; background: #fff; color: #1a1c1c; transition: all 0.2s ease; cursor: pointer; }
         .share-btn:hover { color: #fff; border-color: transparent; transform: translateY(-2px); }
@@ -131,14 +131,14 @@
 
     <!-- Nav -->
     <nav id="mainNav" class="fixed top-0 w-full z-50 flex justify-between items-center px-6 md:px-12 py-4 md:py-5 bg-white shadow-lg transition-all duration-300">
-        <a href="./index.html" class="text-base sm:text-xl md:text-3xl font-black text-primary tracking-tight font-headline whitespace-nowrap">TEXAS UNITED PATRIOTS</a>
+        <a href="./index.html" class="text-xl sm:text-2xl md:text-4xl font-black text-primary tracking-tight font-headline whitespace-nowrap">TEXAS UNITED PATRIOTS</a>
         <div class="hidden md:flex items-center gap-x-12">
-            <a class="font-headline font-bold text-lg lg:text-xl xl:text-2xl uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="./issues.html">Issues</a>
-            <a class="font-headline font-bold text-lg lg:text-xl xl:text-2xl uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="./about.html">About</a>
-            <a class="font-headline font-bold text-lg lg:text-xl xl:text-2xl uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="./index.html#news">News</a>
-            <a class="font-headline font-bold text-lg lg:text-xl xl:text-2xl uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="./national.html">National</a>
-            <a class="font-headline font-bold text-lg lg:text-xl xl:text-2xl uppercase tracking-wider text-primary transition-colors" href="./members.html">Members</a>
-            <a class="font-headline font-bold text-lg lg:text-xl xl:text-2xl uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="./gear.html">Gear</a>
+            <a class="font-headline font-bold text-xl lg:text-2xl xl:text-[1.75rem] uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="./issues.html">Issues</a>
+            <a class="font-headline font-bold text-xl lg:text-2xl xl:text-[1.75rem] uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="./about.html">About</a>
+            <a class="font-headline font-bold text-xl lg:text-2xl xl:text-[1.75rem] uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="./index.html#news">News</a>
+            <a class="font-headline font-bold text-xl lg:text-2xl xl:text-[1.75rem] uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="./national.html">National</a>
+            <a class="font-headline font-bold text-xl lg:text-2xl xl:text-[1.75rem] uppercase tracking-wider text-primary transition-colors" href="./members.html">Members</a>
+            <a class="font-headline font-bold text-xl lg:text-2xl xl:text-[1.75rem] uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="./gear.html">Gear</a>
 </div>
     </nav>
     <button id="mobileMenuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu" class="md:hidden fixed top-3 right-4 text-primary p-2 z-[80]"><span class="hamburger"><span></span><span></span><span></span></span></button>
@@ -147,42 +147,42 @@
     <div id="mobileMenu" class="fixed inset-0 z-[65] bg-[#141821] flex flex-col overflow-y-auto">
         <div class="absolute inset-x-0 top-0 h-1 bg-primary"></div>
         <div class="flex justify-between items-center px-6 pt-5 pb-5 border-b border-white/10">
-            <a href="index.html" class="text-xl md:text-3xl font-black text-white tracking-tight font-headline">TEXAS UNITED PATRIOTS</a>
+            <a href="index.html" class="text-2xl md:text-4xl font-black text-white tracking-tight font-headline">TEXAS UNITED PATRIOTS</a>
         </div>
         <nav class="flex-1 flex flex-col px-6 pt-6">
             <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors" href="issues.html">
-                <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">01</span>
+                <span class="menu-index font-headline font-bold text-lg tracking-[0.08em] text-primary w-8">01</span>
                 <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">Issues</span>
                 <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
             </a>
             <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors" href="about.html">
-                <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">02</span>
+                <span class="menu-index font-headline font-bold text-lg tracking-[0.08em] text-primary w-8">02</span>
                 <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">About</span>
                 <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
             </a>
             <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors" href="index.html#news">
-                <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">03</span>
+                <span class="menu-index font-headline font-bold text-lg tracking-[0.08em] text-primary w-8">03</span>
                 <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">News</span>
                 <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
             </a>
             <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors" href="./national.html">
-                <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">04</span>
+                <span class="menu-index font-headline font-bold text-lg tracking-[0.08em] text-primary w-8">04</span>
                 <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">National</span>
                 <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
             </a>
             <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors" href="./members.html">
-                <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">05</span>
+                <span class="menu-index font-headline font-bold text-lg tracking-[0.08em] text-primary w-8">05</span>
                 <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">Members</span>
                 <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
             </a>
             <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors" href="./gear.html">
-                <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">06</span>
+                <span class="menu-index font-headline font-bold text-lg tracking-[0.08em] text-primary w-8">06</span>
                 <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">Gear</span>
                 <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
             </a>
         </nav>
         <div class="menu-item px-6 pt-8 pb-10 border-t border-white/10 mt-6">
-<p class="mt-6 font-headline font-bold text-[10px] text-white/40 uppercase tracking-[0.3em] text-center">Faith · Family · Freedom</p>
+<p class="mt-6 font-headline font-bold text-lg text-white/40 uppercase tracking-[0.08em] text-center">Faith · Family · Freedom</p>
         </div>
     </div>
 
@@ -192,8 +192,8 @@
         <div class="absolute inset-0 opacity-30"><img src="./texas_flag_hero.png" alt="" class="w-full h-full object-cover"/></div>
         <div class="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent"></div>
         <div class="container mx-auto px-6 md:px-12 relative z-10">
-            <span class="inline-flex items-center gap-2 bg-primary text-on-primary px-3 py-1 mb-6 font-headline font-bold text-[10px] tracking-[0.2em] uppercase">
-                <span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">groups</span>Members</span>
+            <span class="inline-flex items-center gap-2 bg-primary text-on-primary px-3 py-1 mb-6 font-headline font-bold text-lg tracking-[0.08em] uppercase">
+                <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">groups</span>Members</span>
             <h1 class="font-headline font-black text-5xl sm:text-6xl md:text-7xl leading-[0.9] tracking-tighter uppercase mb-6">Member<br/>Directory.</h1>
             <p class="font-body italic text-lg sm:text-xl md:text-2xl text-white/80 max-w-3xl leading-snug">Texans and Texas organizations standing together. Join free and get listed with a link to your website.</p>
         </div>
@@ -204,29 +204,29 @@
             <div class="min-w-0">
                 <div class="flex flex-wrap items-end justify-between gap-4 border-b border-slate-200 pb-5">
                     <h2 class="font-headline font-black text-3xl md:text-4xl uppercase tracking-tight">Member Directory</h2>
-                    <span id="memberCount" class="font-headline font-bold text-[10px] uppercase tracking-[0.2em] text-on-surface-variant"></span>
+                    <span id="memberCount" class="font-headline font-bold text-lg uppercase tracking-[0.08em] text-on-surface-variant"></span>
                 </div>
                 <label class="relative mt-6 block">
                     <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-xl">search</span>
-                    <input id="memberSearch" type="search" placeholder="Search members" class="w-full border border-slate-300 bg-white pl-11 pr-4 py-3 font-headline text-base text-on-surface focus:border-primary focus:ring-primary"/>
+                    <input id="memberSearch" type="search" placeholder="Search members" class="w-full border border-slate-300 bg-white pl-11 pr-4 py-3 font-headline text-xl text-on-surface focus:border-primary focus:ring-primary"/>
                 </label>
                 <nav id="memberLetters" class="mt-6 flex flex-wrap gap-1.5" aria-label="Jump to letter"></nav>
                 <div id="memberList" class="mt-8"><p class="font-body text-lg text-on-surface-variant">Loading members&hellip;</p></div>
             </div>
             <aside id="join" class="lg:sticky lg:top-28 self-start bg-[#0a0c10] text-white p-7 md:p-9">
-                <span class="font-headline font-bold text-[10px] uppercase tracking-[0.3em] text-primary-fixed">Join the movement</span>
+                <span class="font-headline font-bold text-lg uppercase tracking-[0.08em] text-primary-fixed">Join the movement</span>
                 <h3 class="mt-3 font-headline font-black text-3xl uppercase leading-none tracking-tight">Become a Member</h3>
                 <p class="mt-4 font-body text-lg text-white/75">Add your name, your organization and your website. You&rsquo;re listed in the directory right away.</p>
                 <form id="joinForm" class="mt-7 flex flex-col gap-4" novalidate>
-                    <div><label for="jName" class="block font-headline font-bold text-[10px] uppercase tracking-[0.2em] text-white/60 mb-2">Name or organization</label><input id="jName" required maxlength="80" autocomplete="organization" class="w-full border border-slate-300 bg-white px-4 py-3 font-headline text-base text-on-surface focus:border-primary focus:ring-primary"/></div>
-                    <div><label for="jEmail" class="block font-headline font-bold text-[10px] uppercase tracking-[0.2em] text-white/60 mb-2">Email (never shown)</label><input id="jEmail" type="email" required maxlength="160" autocomplete="email" class="w-full border border-slate-300 bg-white px-4 py-3 font-headline text-base text-on-surface focus:border-primary focus:ring-primary"/></div>
-                    <div><label for="jSite" class="block font-headline font-bold text-[10px] uppercase tracking-[0.2em] text-white/60 mb-2">Website (optional)</label><input id="jSite" type="url" inputmode="url" maxlength="300" placeholder="www.yoursite.com" class="w-full border border-slate-300 bg-white px-4 py-3 font-headline text-base text-on-surface focus:border-primary focus:ring-primary"/></div>
-                    <div><label for="jCity" class="block font-headline font-bold text-[10px] uppercase tracking-[0.2em] text-white/60 mb-2">City (optional)</label><input id="jCity" maxlength="60" autocomplete="address-level2" class="w-full border border-slate-300 bg-white px-4 py-3 font-headline text-base text-on-surface focus:border-primary focus:ring-primary"/></div>
-                    <div><label for="jDesc" class="block font-headline font-bold text-[10px] uppercase tracking-[0.2em] text-white/60 mb-2">One line about you (optional)</label><input id="jDesc" maxlength="160" class="w-full border border-slate-300 bg-white px-4 py-3 font-headline text-base text-on-surface focus:border-primary focus:ring-primary"/></div>
+                    <div><label for="jName" class="block font-headline font-bold text-lg uppercase tracking-[0.08em] text-white/60 mb-2">Name or organization</label><input id="jName" required maxlength="80" autocomplete="organization" class="w-full border border-slate-300 bg-white px-4 py-3 font-headline text-xl text-on-surface focus:border-primary focus:ring-primary"/></div>
+                    <div><label for="jEmail" class="block font-headline font-bold text-lg uppercase tracking-[0.08em] text-white/60 mb-2">Email (never shown)</label><input id="jEmail" type="email" required maxlength="160" autocomplete="email" class="w-full border border-slate-300 bg-white px-4 py-3 font-headline text-xl text-on-surface focus:border-primary focus:ring-primary"/></div>
+                    <div><label for="jSite" class="block font-headline font-bold text-lg uppercase tracking-[0.08em] text-white/60 mb-2">Website (optional)</label><input id="jSite" type="url" inputmode="url" maxlength="300" placeholder="www.yoursite.com" class="w-full border border-slate-300 bg-white px-4 py-3 font-headline text-xl text-on-surface focus:border-primary focus:ring-primary"/></div>
+                    <div><label for="jCity" class="block font-headline font-bold text-lg uppercase tracking-[0.08em] text-white/60 mb-2">City (optional)</label><input id="jCity" maxlength="60" autocomplete="address-level2" class="w-full border border-slate-300 bg-white px-4 py-3 font-headline text-xl text-on-surface focus:border-primary focus:ring-primary"/></div>
+                    <div><label for="jDesc" class="block font-headline font-bold text-lg uppercase tracking-[0.08em] text-white/60 mb-2">One line about you (optional)</label><input id="jDesc" maxlength="160" class="w-full border border-slate-300 bg-white px-4 py-3 font-headline text-xl text-on-surface focus:border-primary focus:ring-primary"/></div>
                     <input id="jCompany" name="company" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true"/>
-                    <p id="joinErr" class="font-headline text-sm text-primary-fixed min-h-[1.25rem]" role="alert"></p>
-                    <button type="submit" class="bg-primary hover:bg-primary-container text-white font-headline font-black text-sm uppercase tracking-[0.2em] py-4 transition-colors">Join Free</button>
-                    <p class="font-headline text-[10px] uppercase tracking-[0.15em] text-white/40">Membership is free for now.</p>
+                    <p id="joinErr" class="font-headline text-lg text-primary-fixed min-h-[1.25rem]" role="alert"></p>
+                    <button type="submit" class="bg-primary hover:bg-primary-container text-white font-headline font-black text-lg uppercase tracking-[0.08em] py-4 transition-colors">Join Free</button>
+                    <p class="font-headline text-lg uppercase tracking-[0.15em] text-white/40">Membership is free for now.</p>
                 </form>
                 <div id="joinDone" class="mt-7 hidden"><p class="font-headline font-black text-2xl uppercase">You&rsquo;re in.</p><p class="mt-2 font-body text-lg text-white/75">Welcome to Texas United Patriots. Your listing is live in the directory.</p></div>
             </aside>
@@ -247,13 +247,13 @@
         var by = {};
         rows.forEach(function (m) { var L = (m.name.charAt(0) || "#").toUpperCase(); L = /[A-Z]/.test(L) ? L : "#"; (by[L] = by[L] || []).push(m); });
         var letters = Object.keys(by).sort();
-        document.getElementById("memberLetters").innerHTML = letters.map(function (L) { return '<a href="#L-' + L + '" class="w-9 h-9 flex items-center justify-center border border-slate-200 font-headline font-bold text-sm hover:bg-primary hover:text-white hover:border-primary transition-colors">' + L + "</a>"; }).join("");
+        document.getElementById("memberLetters").innerHTML = letters.map(function (L) { return '<a href="#L-' + L + '" class="w-9 h-9 flex items-center justify-center border border-slate-200 font-headline font-bold text-lg hover:bg-primary hover:text-white hover:border-primary transition-colors">' + L + "</a>"; }).join("");
         list.innerHTML = letters.map(function (L) {
           return '<section id="L-' + L + '" class="scroll-mt-28 mb-8"><h3 class="font-headline font-black text-2xl text-primary border-b border-slate-200 pb-2 mb-2">' + L + "</h3><ul>" +
             by[L].map(function (m) {
-              var inner = '<span class="block font-headline font-black text-lg md:text-xl text-on-surface group-hover:text-primary transition-colors">' + esc(m.name) + (m.website ? ' <span class="material-symbols-outlined align-middle text-base">open_in_new</span>' : "") + "</span>" +
-                ((m.description || m.city) ? '<span class="block font-body text-base text-on-surface-variant">' + esc([m.description, m.city].filter(Boolean).join(" · ")) + "</span>" : "") +
-                (m.website ? '<span class="block font-headline text-xs text-primary mt-0.5">' + esc(host(m.website)) + "</span>" : "");
+              var inner = '<span class="block font-headline font-black text-lg md:text-xl text-on-surface group-hover:text-primary transition-colors">' + esc(m.name) + (m.website ? ' <span class="material-symbols-outlined align-middle text-xl">open_in_new</span>' : "") + "</span>" +
+                ((m.description || m.city) ? '<span class="block font-body text-xl text-on-surface-variant">' + esc([m.description, m.city].filter(Boolean).join(" · ")) + "</span>" : "") +
+                (m.website ? '<span class="block font-headline text-lg text-primary mt-0.5">' + esc(host(m.website)) + "</span>" : "");
               return '<li class="border-b border-slate-100">' + (m.website ? '<a class="group block py-3" href="' + esc(m.website) + '" target="_blank" rel="noopener nofollow ugc">' + inner + "</a>" : '<div class="py-3">' + inner + "</div>") + "</li>";
             }).join("") + "</ul></section>";
         }).join("");
@@ -286,13 +286,13 @@
         <div class="container mx-auto text-center">
             <div class="text-xl font-black text-on-surface tracking-tighter font-headline mb-4 uppercase">TEXAS UNITED PATRIOTS</div>
             <div class="flex justify-center gap-8 mb-10 flex-wrap">
-                <a class="font-headline font-bold text-base md:text-lg uppercase tracking-wider text-on-surface-variant hover:text-primary" href="./about.html">About</a>
-                <a class="font-headline font-bold text-base md:text-lg uppercase tracking-wider text-on-surface-variant hover:text-primary" href="./issues.html">Issues</a>
-                <a class="font-headline font-bold text-base md:text-lg uppercase tracking-wider text-on-surface-variant hover:text-primary" href="./index.html#news">News</a>
+                <a class="font-headline font-bold text-xl md:text-lg uppercase tracking-wider text-on-surface-variant hover:text-primary" href="./about.html">About</a>
+                <a class="font-headline font-bold text-xl md:text-lg uppercase tracking-wider text-on-surface-variant hover:text-primary" href="./issues.html">Issues</a>
+                <a class="font-headline font-bold text-xl md:text-lg uppercase tracking-wider text-on-surface-variant hover:text-primary" href="./index.html#news">News</a>
             </div>
-            <p class="font-headline font-bold text-[9px] uppercase tracking-widest text-on-surface-variant leading-relaxed max-w-3xl mx-auto border border-slate-200 p-6">
+            <p class="font-headline font-bold text-base uppercase tracking-wider text-on-surface-variant leading-relaxed max-w-3xl mx-auto border border-slate-200 p-6">
                 &copy; 2026 TEXAS UNITED PATRIOTS. PAID FOR BY TEXAS UNITED PATRIOTS. NOT AUTHORIZED BY ANY CANDIDATE OR CANDIDATE'S COMMITTEE.</p>
-            <div class="flex justify-center gap-8 mt-10 font-headline font-bold text-[10px] uppercase tracking-widest text-slate-600">
+            <div class="flex justify-center gap-8 mt-10 font-headline font-bold text-lg uppercase tracking-wider text-slate-600">
                 <a class="hover:text-primary transition-colors" href="./privacy.html">Privacy Policy</a>
                 <a class="hover:text-primary transition-colors" href="./terms.html">Terms of Service</a>
                 <a class="hover:text-primary transition-colors" href="./contact.html">Contact</a>

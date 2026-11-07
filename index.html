@@ -36,7 +36,7 @@
     }
     </script>
     <link
-        href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=UnifrakturMaguntia&family=Public+Sans:wght@400;700;800;900&family=Newsreader:ital,wght@0,400;0,700;1,400&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Playfair+Display:wght@900&family=Public+Sans:wght@400;700;800;900&family=Newsreader:ital,wght@0,400;0,700;1,400&display=swap"
         rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
         rel="stylesheet" />
@@ -103,7 +103,7 @@
                     },
                     fontFamily: {
                         headline: ["Oswald", "Public Sans", "sans-serif"],
-                        masthead: ["UnifrakturMaguntia", "serif"],
+                        masthead: ["Playfair Display", "Georgia", "serif"],
                         body: ["Newsreader"],
                         label: ["Public Sans"]
                     }
@@ -441,7 +441,7 @@
         .share-bar .share-label {
             font-family: 'Public Sans', sans-serif;
             font-weight: 700;
-            font-size: 10px;
+            font-size: 18px;
             letter-spacing: 0.3em;
             text-transform: uppercase;
             color: #5d0011;
@@ -545,19 +545,19 @@
     <nav id="mainNav"
         class="fixed top-0 w-full z-50 flex justify-between items-center px-6 md:px-12 py-4 md:py-5 max-w-full transition-all duration-300 bg-transparent">
         <a id="navLogo" href="./index.html"
-            class="text-xl md:text-3xl font-black text-white tracking-tight font-headline transition-colors duration-300 hover:opacity-80">
+            class="text-2xl md:text-4xl font-black text-white tracking-tight font-headline transition-colors duration-300 hover:opacity-80">
             TEXAS UNITED PATRIOTS
         </a>
         <div class="hidden md:flex items-center gap-x-8 lg:gap-x-12">
-            <a class="nav-link font-headline font-bold text-lg lg:text-xl xl:text-2xl uppercase tracking-wider text-white hover:text-primary-fixed transition-colors duration-300"
+            <a class="nav-link font-headline font-bold text-xl lg:text-2xl xl:text-[1.75rem] uppercase tracking-wider text-white hover:text-primary-fixed transition-colors duration-300"
                 href="./issues.html">Issues</a>
-            <a class="nav-link font-headline font-bold text-lg lg:text-xl xl:text-2xl uppercase tracking-wider text-white hover:text-primary-fixed transition-colors duration-300"
+            <a class="nav-link font-headline font-bold text-xl lg:text-2xl xl:text-[1.75rem] uppercase tracking-wider text-white hover:text-primary-fixed transition-colors duration-300"
                 href="./about.html">About</a>
-            <a class="nav-link font-headline font-bold text-lg lg:text-xl xl:text-2xl uppercase tracking-wider text-white hover:text-primary-fixed transition-colors duration-300"
+            <a class="nav-link font-headline font-bold text-xl lg:text-2xl xl:text-[1.75rem] uppercase tracking-wider text-white hover:text-primary-fixed transition-colors duration-300"
                 href="#news">News</a>
-            <a class="nav-link font-headline font-bold text-lg lg:text-xl xl:text-2xl uppercase tracking-wider text-white hover:text-primary-fixed transition-colors duration-300" href="./national.html">National</a>
-            <a class="nav-link font-headline font-bold text-lg lg:text-xl xl:text-2xl uppercase tracking-wider text-white hover:text-primary-fixed transition-colors duration-300" href="./members.html">Members</a>
-            <a class="nav-link font-headline font-bold text-lg lg:text-xl xl:text-2xl uppercase tracking-wider text-white hover:text-primary-fixed transition-colors duration-300" href="./gear.html">Gear</a>
+            <a class="nav-link font-headline font-bold text-xl lg:text-2xl xl:text-[1.75rem] uppercase tracking-wider text-white hover:text-primary-fixed transition-colors duration-300" href="./national.html">National</a>
+            <a class="nav-link font-headline font-bold text-xl lg:text-2xl xl:text-[1.75rem] uppercase tracking-wider text-white hover:text-primary-fixed transition-colors duration-300" href="./members.html">Members</a>
+            <a class="nav-link font-headline font-bold text-xl lg:text-2xl xl:text-[1.75rem] uppercase tracking-wider text-white hover:text-primary-fixed transition-colors duration-300" href="./gear.html">Gear</a>
 </div>
     </nav>
     <button id="mobileMenuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"
@@ -569,55 +569,55 @@
     <div id="mobileMenu" class="fixed inset-0 z-[65] bg-[#141821] flex flex-col overflow-y-auto">
         <div class="absolute inset-x-0 top-0 h-1 bg-primary"></div>
         <div class="flex justify-between items-center px-6 pt-5 pb-5 border-b border-white/10">
-            <a href="./index.html" class="text-xl md:text-3xl font-black text-white tracking-tight font-headline">TEXAS UNITED
+            <a href="./index.html" class="text-2xl md:text-4xl font-black text-white tracking-tight font-headline">TEXAS UNITED
                 PATRIOTS</a>
         </div>
         <nav class="flex-1 flex flex-col px-6 pt-6">
             <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors"
                 href="./issues.html">
-                <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">01</span>
+                <span class="menu-index font-headline font-bold text-lg tracking-[0.08em] text-primary w-8">01</span>
                 <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">Issues</span>
                 <span
                     class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
             </a>
             <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors"
                 href="./about.html">
-                <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">02</span>
+                <span class="menu-index font-headline font-bold text-lg tracking-[0.08em] text-primary w-8">02</span>
                 <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">About</span>
                 <span
                     class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
             </a>
             <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors"
                 href="./index.html#news">
-                <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">03</span>
+                <span class="menu-index font-headline font-bold text-lg tracking-[0.08em] text-primary w-8">03</span>
                 <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">News</span>
                 <span
                     class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
             </a>
             <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors"
                 href="./national.html">
-                <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">04</span>
+                <span class="menu-index font-headline font-bold text-lg tracking-[0.08em] text-primary w-8">04</span>
                 <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">National</span>
                 <span
                     class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
             </a>
             <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors"
                 href="./members.html">
-                <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">05</span>
+                <span class="menu-index font-headline font-bold text-lg tracking-[0.08em] text-primary w-8">05</span>
                 <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">Members</span>
                 <span
                     class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
             </a>
             <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors"
                 href="./gear.html">
-                <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">06</span>
+                <span class="menu-index font-headline font-bold text-lg tracking-[0.08em] text-primary w-8">06</span>
                 <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">Gear</span>
                 <span
                     class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
             </a>
         </nav>
         <div class="menu-item px-6 pt-8 pb-10 border-t border-white/10 mt-6">
-<p class="mt-6 font-headline font-bold text-[10px] text-white/40 uppercase tracking-[0.3em] text-center">
+<p class="mt-6 font-headline font-bold text-lg text-white/40 uppercase tracking-[0.08em] text-center">
                 Faith · Family · Freedom</p>
         </div>
     </div>
@@ -639,8 +639,8 @@
             <div class="container mx-auto px-6 md:px-12 relative z-10 pt-24 pb-16 md:pt-20 md:pb-0">
                 <div class="max-w-4xl">
                     <span
-                        class="inline-flex items-center gap-2 bg-primary text-on-primary px-3 py-1 mb-6 md:mb-8 font-headline font-bold text-[10px] tracking-[0.2em] uppercase">
-                        <span class="material-symbols-outlined text-[12px]"
+                        class="inline-flex items-center gap-2 bg-primary text-on-primary px-3 py-1 mb-6 md:mb-8 font-headline font-bold text-lg tracking-[0.08em] uppercase">
+                        <span class="material-symbols-outlined text-lg"
                             style="font-variation-settings: 'FILL' 1;">star</span>
                         America First Leadership
                     </span>
@@ -655,7 +655,7 @@
                     </p>
                     <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto">
                         <a href="./contact.html"
-                            class="group inline-flex items-center justify-center gap-2 w-full sm:w-auto bg-primary text-on-primary font-headline font-black px-8 sm:px-12 h-14 text-sm uppercase tracking-widest hover:bg-primary-container transition-all shadow-xl">
+                            class="group inline-flex items-center justify-center gap-2 w-full sm:w-auto bg-primary text-on-primary font-headline font-black px-8 sm:px-12 h-14 text-lg uppercase tracking-wider hover:bg-primary-container transition-all shadow-xl">
                             Join the Movement
                             <span
                                 class="material-symbols-outlined text-[18px] transition-transform group-hover:translate-x-1">arrow_forward</span>
@@ -669,11 +669,11 @@
         <div class="bg-primary py-3 border-y border-white/10 relative z-20">
             <div class="flex items-center whitespace-nowrap">
                 <span
-                    class="bg-white text-primary font-headline font-black text-[10px] px-3 py-1 uppercase tracking-widest shrink-0 ml-4 md:ml-12 mr-4 md:mr-6 relative z-10">Latest
+                    class="bg-white text-primary font-headline font-black text-lg px-3 py-1 uppercase tracking-wider shrink-0 ml-4 md:ml-12 mr-4 md:mr-6 relative z-10">Latest
                     Updates</span>
                 <div class="flex-1 overflow-hidden">
                     <div class="marquee-track animate-[marquee_102.8s_linear_infinite]">
-                        <p class="text-white font-headline font-bold text-xs uppercase tracking-widest">Defeating Woke
+                        <p class="text-white font-headline font-bold text-lg uppercase tracking-wider">Defeating Woke
                             Ideology in Texas Schools &nbsp;★&nbsp; New Report: CRT Still Being Taught Under Different
                             Names &nbsp;★&nbsp; Parents Fight Back Against Gender Ideology in Classrooms &nbsp;★&nbsp;
                             Texas AG Launches Investigation Into DEI Spending at State Universities &nbsp;★&nbsp; School
@@ -682,7 +682,7 @@
                             Radical School Boards &nbsp;★&nbsp; Join the Patriot Movement Today &nbsp;★&nbsp; Stop the
                             Indoctrination — Protect Our Children &nbsp;★&nbsp; Texas Leads the Fight Against Federal
                             Overreach &nbsp;★&nbsp;</p>
-                        <p class="text-white font-headline font-bold text-xs uppercase tracking-widest">Defeating Woke
+                        <p class="text-white font-headline font-bold text-lg uppercase tracking-wider">Defeating Woke
                             Ideology in Texas Schools &nbsp;★&nbsp; New Report: CRT Still Being Taught Under Different
                             Names &nbsp;★&nbsp; Parents Fight Back Against Gender Ideology in Classrooms &nbsp;★&nbsp;
                             Texas AG Launches Investigation Into DEI Spending at State Universities &nbsp;★&nbsp; School
@@ -705,8 +705,8 @@
                 <header class="text-center">
                     <div class="border-t-[3px] border-on-surface"></div>
                     <div class="border-t border-on-surface mt-[3px]"></div>
-                    <h2 class="py-4 md:py-6"><span class="block font-headline font-semibold text-[11px] md:text-sm uppercase tracking-[0.5em] text-primary mb-1">★ &nbsp;The Lone Star State's&nbsp; ★</span><span class="font-masthead font-normal normal-case tracking-normal text-[3.4rem] sm:text-7xl md:text-8xl lg:text-[7.5rem] leading-[0.95] text-on-surface">Texas News</span></h2>
-                    <div class="flex items-center justify-between gap-4 border-y border-slate-300 py-3 font-headline font-bold text-xs md:text-[13px] uppercase tracking-[0.16em] text-on-surface-variant">
+                    <h2 class="py-4 md:py-6"><span class="block font-headline font-bold text-2xl md:text-4xl uppercase tracking-[0.08em] text-primary mb-2">★ &nbsp;The Lone Star State's&nbsp; ★</span><span class="font-masthead font-black uppercase tracking-tight text-6xl sm:text-8xl md:text-9xl lg:text-[10rem] leading-[0.9] text-on-surface">Texas News</span></h2>
+                    <div class="flex items-center justify-between gap-4 border-y border-slate-300 py-4 font-headline font-bold text-xl md:text-3xl uppercase tracking-wide text-on-surface-variant">
                         <span id="newsDate" class="text-left"></span>
                         <span class="hidden sm:inline">Faith · Family · Freedom</span>
                         <a href="./news.html" class="text-primary hover:underline">All news &rarr;</a>
@@ -716,27 +716,27 @@
                 <div class="mt-8 md:mt-10 grid grid-cols-1 lg:grid-cols-12 gap-y-8">
                     <a href="./articles/how-tx-23-slipped-away.html" class="group block lg:col-span-8 lg:pr-10">
                         <div class="overflow-hidden"><img alt="Texas voters lined up at a polling place on election morning" loading="lazy" class="w-full aspect-[16/10] object-cover group-hover:scale-[1.02] transition-transform duration-700" src="./polling-place-hero.webp" /></div>
-                        <span class="block font-headline font-bold text-[13px] uppercase tracking-[0.2em] text-primary mt-5">2026 Election · TX-23</span>
+                        <span class="block font-headline font-bold text-xl uppercase tracking-[0.08em] text-primary mt-5">2026 Election · TX-23</span>
                         <h3 class="mt-2 font-body font-bold text-on-surface group-hover:text-primary transition-colors text-4xl sm:text-5xl lg:text-6xl leading-[1.04] tracking-tight">How TX-23 Slipped Away</h3>
                         <p class="mt-4 font-body text-xl md:text-2xl leading-relaxed text-on-surface-variant max-w-3xl">A Trump-endorsed Republican, a border district that had been ours for over a decade, and a loss that should never have happened. Here&#x27;s how it went wrong, and how we take it back.</p>
-                        <p class="mt-4 font-headline font-bold text-xs uppercase tracking-[0.16em] text-on-surface-variant">November 7, 2026 &nbsp;·&nbsp; 6 min read</p>
+                        <p class="mt-4 font-headline font-bold text-lg uppercase tracking-wide text-on-surface-variant">November 7, 2026 &nbsp;·&nbsp; 6 min read</p>
                     </a>
                     <div class="lg:col-span-4 lg:pl-10 lg:border-l border-slate-300 divide-y divide-slate-200 border-t lg:border-t-0 pt-6 lg:pt-0">
                         <a href="./articles/texas-woke-up-blue-here-is-who-stayed-home.html" class="group grid grid-cols-[1fr_128px] lg:grid-cols-1 gap-4 py-6 first:pt-0 lg:first:pt-0">
                             <div class="min-w-0 lg:order-2">
-                                <span class="block font-headline font-bold text-[13px] uppercase tracking-[0.2em] text-primary">2026 Election</span>
+                                <span class="block font-headline font-bold text-xl uppercase tracking-[0.08em] text-primary">2026 Election</span>
                                 <h3 class="mt-1.5 font-body font-bold text-on-surface group-hover:text-primary transition-colors text-2xl lg:text-3xl leading-tight">Texas Woke Up Blue. Here&#x27;s Who Stayed Home.</h3>
-                                <p class="hidden lg:block mt-2 font-body text-lg leading-relaxed text-on-surface-variant">Democrats won the governor&#x27;s mansion and a U.S. Senate seat on Tuesday. They didn&#x27;t win it with a wave. They won it while almost half of registered Texans sat it out.</p>
-                                <p class="mt-2 font-headline font-bold text-xs uppercase tracking-[0.16em] text-on-surface-variant">November 7, 2026</p>
+                                <p class="hidden lg:block mt-2 font-body text-xl leading-relaxed text-on-surface-variant">Democrats won the governor&#x27;s mansion and a U.S. Senate seat on Tuesday. They didn&#x27;t win it with a wave. They won it while almost half of registered Texans sat it out.</p>
+                                <p class="mt-2 font-headline font-bold text-lg uppercase tracking-wide text-on-surface-variant">November 7, 2026</p>
                             </div>
                             <div class="overflow-hidden lg:order-1"><img alt="Empty voting booths with American flags at a Texas polling place" loading="lazy" class="w-full aspect-square lg:aspect-[16/9] object-cover group-hover:scale-[1.03] transition-transform duration-700" src="./polling-place-vote-booths-flags.webp" /></div>
                         </a>
                         <a href="./articles/texas-found-noncitizens-on-the-voter-rolls.html" class="group grid grid-cols-[1fr_128px] lg:grid-cols-1 gap-4 py-6 first:pt-0 lg:first:pt-0">
                             <div class="min-w-0 lg:order-2">
-                                <span class="block font-headline font-bold text-[13px] uppercase tracking-[0.2em] text-primary">Election Integrity</span>
+                                <span class="block font-headline font-bold text-xl uppercase tracking-[0.08em] text-primary">Election Integrity</span>
                                 <h3 class="mt-1.5 font-body font-bold text-on-surface group-hover:text-primary transition-colors text-2xl lg:text-3xl leading-tight">Texas Found Noncitizens on the Voter Rolls. Here&#x27;s What Happens Next.</h3>
-                                <p class="hidden lg:block mt-2 font-body text-lg leading-relaxed text-on-surface-variant">The state checked every registered voter against a federal citizenship database. Thousands were flagged, and 117 cases are now with investigators. Here&#x27;s what&#x27;s real, and what you can do.</p>
-                                <p class="mt-2 font-headline font-bold text-xs uppercase tracking-[0.16em] text-on-surface-variant">November 7, 2026</p>
+                                <p class="hidden lg:block mt-2 font-body text-xl leading-relaxed text-on-surface-variant">The state checked every registered voter against a federal citizenship database. Thousands were flagged, and 117 cases are now with investigators. Here&#x27;s what&#x27;s real, and what you can do.</p>
+                                <p class="mt-2 font-headline font-bold text-lg uppercase tracking-wide text-on-surface-variant">November 7, 2026</p>
                             </div>
                             <div class="overflow-hidden lg:order-1"><img alt="A government building where election cases are investigated" loading="lazy" class="w-full aspect-square lg:aspect-[16/9] object-cover group-hover:scale-[1.03] transition-transform duration-700" src="./us-justice-department-building.webp" /></div>
                         </a>
@@ -745,78 +745,78 @@
 
                 <div class="mt-10 border-t-2 border-on-surface pt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 lg:divide-x divide-slate-200">
                     <a href="./articles/governor-hinojosa-what-changes-on-day-one.html" class="group block py-5 lg:py-0 lg:px-6 first:lg:pl-0 last:lg:pr-0">
-                        <span class="block font-headline font-bold text-[13px] uppercase tracking-[0.2em] text-primary">Analysis</span>
+                        <span class="block font-headline font-bold text-xl uppercase tracking-[0.08em] text-primary">Analysis</span>
                         <h4 class="mt-1.5 font-body font-bold text-on-surface group-hover:text-primary transition-colors text-2xl leading-snug">Governor Hinojosa: What Changes on Day One, and What Doesn&#x27;t</h4>
-                        <p class="mt-2 font-headline font-bold text-xs uppercase tracking-[0.16em] text-on-surface-variant">November 7, 2026</p>
+                        <p class="mt-2 font-headline font-bold text-lg uppercase tracking-wide text-on-surface-variant">November 7, 2026</p>
                     </a>
                     <a href="./articles/the-legislature-is-still-ours-now-it-has-to-fight.html" class="group block py-5 lg:py-0 lg:px-6 first:lg:pl-0 last:lg:pr-0">
-                        <span class="block font-headline font-bold text-[13px] uppercase tracking-[0.2em] text-primary">Opinion</span>
+                        <span class="block font-headline font-bold text-xl uppercase tracking-[0.08em] text-primary">Opinion</span>
                         <h4 class="mt-1.5 font-body font-bold text-on-surface group-hover:text-primary transition-colors text-2xl leading-snug">The Legislature Is Still Ours. Now It Has to Fight.</h4>
-                        <p class="mt-2 font-headline font-bold text-xs uppercase tracking-[0.16em] text-on-surface-variant">November 7, 2026</p>
+                        <p class="mt-2 font-headline font-bold text-lg uppercase tracking-wide text-on-surface-variant">November 7, 2026</p>
                     </a>
                     <a href="./articles/senator-talarico-what-it-means-for-texas-in-washington.html" class="group block py-5 lg:py-0 lg:px-6 first:lg:pl-0 last:lg:pr-0">
-                        <span class="block font-headline font-bold text-[13px] uppercase tracking-[0.2em] text-primary">National</span>
+                        <span class="block font-headline font-bold text-xl uppercase tracking-[0.08em] text-primary">National</span>
                         <h4 class="mt-1.5 font-body font-bold text-on-surface group-hover:text-primary transition-colors text-2xl leading-snug">Senator Talarico: What It Means for Texas in Washington</h4>
-                        <p class="mt-2 font-headline font-bold text-xs uppercase tracking-[0.16em] text-on-surface-variant">November 7, 2026</p>
+                        <p class="mt-2 font-headline font-bold text-lg uppercase tracking-wide text-on-surface-variant">November 7, 2026</p>
                     </a>
                     <a href="./articles/they-organized-we-complained.html" class="group block py-5 lg:py-0 lg:px-6 first:lg:pl-0 last:lg:pr-0">
-                        <span class="block font-headline font-bold text-[13px] uppercase tracking-[0.2em] text-primary">Opinion</span>
+                        <span class="block font-headline font-bold text-xl uppercase tracking-[0.08em] text-primary">Opinion</span>
                         <h4 class="mt-1.5 font-body font-bold text-on-surface group-hover:text-primary transition-colors text-2xl leading-snug">They Organized. We Complained.</h4>
-                        <p class="mt-2 font-headline font-bold text-xs uppercase tracking-[0.16em] text-on-surface-variant">November 7, 2026</p>
+                        <p class="mt-2 font-headline font-bold text-lg uppercase tracking-wide text-on-surface-variant">November 7, 2026</p>
                     </a>
                 </div>
 
                 <div class="mt-12">
                     <div class="flex items-baseline justify-between border-b-2 border-on-surface pb-2">
-                        <h3 class="font-headline font-black text-base uppercase tracking-[0.2em]">Latest</h3>
-                        <a href="./news.html" class="font-headline font-bold text-xs uppercase tracking-[0.16em] text-primary hover:underline">See all &rarr;</a>
+                        <h3 class="font-headline font-black text-xl uppercase tracking-[0.08em]">Latest</h3>
+                        <a href="./news.html" class="font-headline font-bold text-lg uppercase tracking-wide text-primary hover:underline">See all &rarr;</a>
                     </div>
                     <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-12 divide-y divide-slate-200 lg:divide-y-0">
                     <a href="./articles/your-precinct-chair-seat-is-empty-take-it.html" class="group grid grid-cols-[1fr_128px] gap-5 py-6">
                         <div class="min-w-0">
-                            <span class="block font-headline font-bold text-[13px] uppercase tracking-[0.2em] text-primary">Get Involved</span>
+                            <span class="block font-headline font-bold text-xl uppercase tracking-[0.08em] text-primary">Get Involved</span>
                             <h4 class="mt-1.5 font-body font-bold text-on-surface group-hover:text-primary transition-colors text-2xl leading-snug">Your Precinct Chair Seat May Be Empty. Take It.</h4>
-                            <p class="mt-2 font-headline font-bold text-xs uppercase tracking-[0.16em] text-on-surface-variant">November 7, 2026 &nbsp;·&nbsp; 4 min read</p>
+                            <p class="mt-2 font-headline font-bold text-lg uppercase tracking-wide text-on-surface-variant">November 7, 2026 &nbsp;·&nbsp; 4 min read</p>
                         </div>
                         <div class="overflow-hidden"><img alt="A Texas flag waving against a blue sky" loading="lazy" class="w-full aspect-square object-cover group-hover:scale-[1.03] transition-transform duration-700" src="./texas_flag_hero.png" /></div>
                     </a>
                     <a href="./articles/the-2028-race-starts-today.html" class="group grid grid-cols-[1fr_128px] gap-5 py-6">
                         <div class="min-w-0">
-                            <span class="block font-headline font-bold text-[13px] uppercase tracking-[0.2em] text-primary">2028 Election</span>
+                            <span class="block font-headline font-bold text-xl uppercase tracking-[0.08em] text-primary">2028 Election</span>
                             <h4 class="mt-1.5 font-body font-bold text-on-surface group-hover:text-primary transition-colors text-2xl leading-snug">The 2028 Race Starts Today</h4>
-                            <p class="mt-2 font-headline font-bold text-xs uppercase tracking-[0.16em] text-on-surface-variant">November 7, 2026 &nbsp;·&nbsp; 4 min read</p>
+                            <p class="mt-2 font-headline font-bold text-lg uppercase tracking-wide text-on-surface-variant">November 7, 2026 &nbsp;·&nbsp; 4 min read</p>
                         </div>
                         <div class="overflow-hidden"><img alt="The front of the Alamo mission chapel in San Antonio" loading="lazy" class="w-full aspect-square object-cover group-hover:scale-[1.03] transition-transform duration-700" src="./alamo-mission-texas-independence.webp" /></div>
                     </a>
                     <a href="./articles/every-vote-counts-become-a-poll-watcher.html" class="group grid grid-cols-[1fr_128px] gap-5 py-6">
                         <div class="min-w-0">
-                            <span class="block font-headline font-bold text-[13px] uppercase tracking-[0.2em] text-primary">Election Integrity</span>
+                            <span class="block font-headline font-bold text-xl uppercase tracking-[0.08em] text-primary">Election Integrity</span>
                             <h4 class="mt-1.5 font-body font-bold text-on-surface group-hover:text-primary transition-colors text-2xl leading-snug">Every Vote Counts: How to Become a Poll Watcher in Texas</h4>
-                            <p class="mt-2 font-headline font-bold text-xs uppercase tracking-[0.16em] text-on-surface-variant">November 7, 2026 &nbsp;·&nbsp; 4 min read</p>
+                            <p class="mt-2 font-headline font-bold text-lg uppercase tracking-wide text-on-surface-variant">November 7, 2026 &nbsp;·&nbsp; 4 min read</p>
                         </div>
                         <div class="overflow-hidden"><img alt="Voting booths at a Texas polling place" loading="lazy" class="w-full aspect-square object-cover group-hover:scale-[1.03] transition-transform duration-700" src="./polling-place-vote-booths-flags.webp" /></div>
                     </a>
                     <a href="./articles/why-hispanic-texans-matter-more-than-ever.html" class="group grid grid-cols-[1fr_128px] gap-5 py-6">
                         <div class="min-w-0">
-                            <span class="block font-headline font-bold text-[13px] uppercase tracking-[0.2em] text-primary">Analysis</span>
+                            <span class="block font-headline font-bold text-xl uppercase tracking-[0.08em] text-primary">Analysis</span>
                             <h4 class="mt-1.5 font-body font-bold text-on-surface group-hover:text-primary transition-colors text-2xl leading-snug">Why Hispanic Texans Matter More Than Ever</h4>
-                            <p class="mt-2 font-headline font-bold text-xs uppercase tracking-[0.16em] text-on-surface-variant">November 7, 2026 &nbsp;·&nbsp; 4 min read</p>
+                            <p class="mt-2 font-headline font-bold text-lg uppercase tracking-wide text-on-surface-variant">November 7, 2026 &nbsp;·&nbsp; 4 min read</p>
                         </div>
                         <div class="overflow-hidden"><img alt="A Texas flag flying over Corpus Christi" loading="lazy" class="w-full aspect-square object-cover group-hover:scale-[1.03] transition-transform duration-700" src="./texas-flag-over-corpus-christi.webp" /></div>
                     </a>
                     <a href="./articles/faith-family-and-the-next-fight.html" class="group grid grid-cols-[1fr_128px] gap-5 py-6">
                         <div class="min-w-0">
-                            <span class="block font-headline font-bold text-[13px] uppercase tracking-[0.2em] text-primary">Faith · Family · Freedom</span>
+                            <span class="block font-headline font-bold text-xl uppercase tracking-[0.08em] text-primary">Faith · Family · Freedom</span>
                             <h4 class="mt-1.5 font-body font-bold text-on-surface group-hover:text-primary transition-colors text-2xl leading-snug">Faith, Family and the Next Fight</h4>
-                            <p class="mt-2 font-headline font-bold text-xs uppercase tracking-[0.16em] text-on-surface-variant">November 7, 2026 &nbsp;·&nbsp; 3 min read</p>
+                            <p class="mt-2 font-headline font-bold text-lg uppercase tracking-wide text-on-surface-variant">November 7, 2026 &nbsp;·&nbsp; 3 min read</p>
                         </div>
                         <div class="overflow-hidden"><img alt="A Come and Take It flag with a lone star and a cannon" loading="lazy" class="w-full aspect-square object-cover group-hover:scale-[1.03] transition-transform duration-700" src="./come-and-take-it-flag-gonzales.webp" /></div>
                     </a>
                     <a href="./articles/come-and-take-it-gonzales-the-line-texans-still-draw.html" class="group grid grid-cols-[1fr_128px] gap-5 py-6">
                         <div class="min-w-0">
-                            <span class="block font-headline font-bold text-[13px] uppercase tracking-[0.2em] text-primary">Texas History</span>
+                            <span class="block font-headline font-bold text-xl uppercase tracking-[0.08em] text-primary">Texas History</span>
                             <h4 class="mt-1.5 font-body font-bold text-on-surface group-hover:text-primary transition-colors text-2xl leading-snug">Come and Take It: The Cannon, the Flag and the Line Texans Still Draw</h4>
-                            <p class="mt-2 font-headline font-bold text-xs uppercase tracking-[0.16em] text-on-surface-variant">October 27, 2026 &nbsp;·&nbsp; 4 min read</p>
+                            <p class="mt-2 font-headline font-bold text-lg uppercase tracking-wide text-on-surface-variant">October 27, 2026 &nbsp;·&nbsp; 4 min read</p>
                         </div>
                         <div class="overflow-hidden"><img alt="A Come and Take It flag with a lone star and a cannon on display in a frame" loading="lazy" class="w-full aspect-square object-cover group-hover:scale-[1.03] transition-transform duration-700" src="./come-and-take-it-flag-gonzales.webp" /></div>
                     </a>
@@ -824,7 +824,7 @@
                 </div>
 
                 <div class="mt-12 text-center">
-                    <a href="./news.html" class="inline-flex items-center gap-3 border-2 border-on-surface px-10 py-4 font-headline font-black text-sm uppercase tracking-[0.25em] text-on-surface hover:bg-on-surface hover:text-white transition-colors">All Texas News <span aria-hidden="true">&rarr;</span></a>
+                    <a href="./news.html" class="inline-flex items-center gap-3 border-2 border-on-surface px-10 py-4 font-headline font-black text-lg uppercase tracking-[0.08em] text-on-surface hover:bg-on-surface hover:text-white transition-colors">All Texas News <span aria-hidden="true">&rarr;</span></a>
                 </div>
             </div>
             <script>
@@ -837,7 +837,7 @@
                 <div class="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
                     <div class="lg:w-1/2 order-2 lg:order-1">
                         <span
-                            class="reveal reveal-up block font-headline font-bold text-[10px] text-primary uppercase tracking-[0.3em] mb-5">Mission
+                            class="reveal reveal-up block font-headline font-bold text-lg text-primary uppercase tracking-[0.08em] mb-5">Mission
                             &amp; Values</span>
                         <h2 class="reveal reveal-up font-headline font-black text-4xl md:text-5xl lg:text-6xl text-on-surface leading-tight md:leading-none mb-7"
                             style="transition-delay: 0.1s;">
@@ -849,10 +849,10 @@
                                 "We are drawing a line in the sand. Texas institutions must remain focused on
                                 excellence, family, and freedom—not social engineering or biased mainstream narratives."
                             </p>
-                            <p class="mt-4 font-headline font-bold text-xs uppercase tracking-widest text-primary">—
+                            <p class="mt-4 font-headline font-bold text-lg uppercase tracking-wider text-primary">—
                                 Texas United Leadership</p>
                         </div>
-                        <p class="reveal reveal-up text-on-surface-variant text-base md:text-lg leading-relaxed max-w-xl"
+                        <p class="reveal reveal-up text-on-surface-variant text-xl md:text-lg leading-relaxed max-w-xl"
                             style="transition-delay: 0.4s;">
                             Texas United Patriots is a grassroots-driven movement dedicated to protecting the bedrock
                             principles that made our state the greatest economic engine in the nation. We provide raw
@@ -877,25 +877,25 @@
                     <div class="reveal reveal-up" style="transition-delay: 0s;">
                         <div class="font-headline font-black text-4xl md:text-6xl tracking-tighter"><span
                                 class="counter" data-target="50000">0</span>+</div>
-                        <p class="font-headline font-bold text-[10px] uppercase tracking-[0.2em] text-white/70 mt-2">
+                        <p class="font-headline font-bold text-lg uppercase tracking-[0.08em] text-white/70 mt-2">
                             Patriots Strong</p>
                     </div>
                     <div class="reveal reveal-up" style="transition-delay: 0.15s;">
                         <div class="font-headline font-black text-4xl md:text-6xl tracking-tighter"><span
                                 class="counter" data-target="254">0</span></div>
-                        <p class="font-headline font-bold text-[10px] uppercase tracking-[0.2em] text-white/70 mt-2">
+                        <p class="font-headline font-bold text-lg uppercase tracking-[0.08em] text-white/70 mt-2">
                             Counties Reached</p>
                     </div>
                     <div class="reveal reveal-up" style="transition-delay: 0.3s;">
                         <div class="font-headline font-black text-4xl md:text-6xl tracking-tighter">$<span
                                 class="counter" data-target="2" data-suffix="M">0</span>M</div>
-                        <p class="font-headline font-bold text-[10px] uppercase tracking-[0.2em] text-white/70 mt-2">
+                        <p class="font-headline font-bold text-lg uppercase tracking-[0.08em] text-white/70 mt-2">
                             Raised for Candidates</p>
                     </div>
                     <div class="reveal reveal-up" style="transition-delay: 0.45s;">
                         <div class="font-headline font-black text-4xl md:text-6xl tracking-tighter"><span
                                 class="counter" data-target="12">0</span></div>
-                        <p class="font-headline font-bold text-[10px] uppercase tracking-[0.2em] text-white/70 mt-2">
+                        <p class="font-headline font-bold text-lg uppercase tracking-[0.08em] text-white/70 mt-2">
                             Races Won in 2024</p>
                     </div>
                 </div>
@@ -920,19 +920,19 @@
                             <li class="reveal reveal-left flex items-center gap-4">
                                 <span class="material-symbols-outlined text-primary flex-shrink-0"
                                     style="font-variation-settings: 'FILL' 1;">check_circle</span>
-                                <span class="font-headline font-bold text-xs uppercase tracking-widest">Receive critical
+                                <span class="font-headline font-bold text-lg uppercase tracking-wider">Receive critical
                                     campaign updates</span>
                             </li>
                             <li class="reveal reveal-left flex items-center gap-4">
                                 <span class="material-symbols-outlined text-primary flex-shrink-0"
                                     style="font-variation-settings: 'FILL' 1;">check_circle</span>
-                                <span class="font-headline font-bold text-xs uppercase tracking-widest">Volunteer
+                                <span class="font-headline font-bold text-lg uppercase tracking-wider">Volunteer
                                     opportunities in your area</span>
                             </li>
                             <li class="reveal reveal-left flex items-center gap-4">
                                 <span class="material-symbols-outlined text-primary flex-shrink-0"
                                     style="font-variation-settings: 'FILL' 1;">check_circle</span>
-                                <span class="font-headline font-bold text-xs uppercase tracking-widest">Direct access to
+                                <span class="font-headline font-bold text-lg uppercase tracking-wider">Direct access to
                                     candidate town halls</span>
                             </li>
                         </ul>
@@ -944,49 +944,49 @@
                             <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div class="space-y-2">
                                     <label
-                                        class="text-[10px] uppercase font-bold tracking-widest text-on-surface-variant">First
+                                        class="text-lg uppercase font-bold tracking-wider text-on-surface-variant">First
                                         Name</label>
                                     <input
-                                        class="w-full bg-slate-50 border-slate-200 focus:ring-primary focus:border-primary px-4 py-3 text-sm"
+                                        class="w-full bg-slate-50 border-slate-200 focus:ring-primary focus:border-primary px-4 py-3 text-lg"
                                         type="text" />
                                 </div>
                                 <div class="space-y-2">
                                     <label
-                                        class="text-[10px] uppercase font-bold tracking-widest text-on-surface-variant">Last
+                                        class="text-lg uppercase font-bold tracking-wider text-on-surface-variant">Last
                                         Name</label>
                                     <input
-                                        class="w-full bg-slate-50 border-slate-200 focus:ring-primary focus:border-primary px-4 py-3 text-sm"
+                                        class="w-full bg-slate-50 border-slate-200 focus:ring-primary focus:border-primary px-4 py-3 text-lg"
                                         type="text" />
                                 </div>
                                 <div class="md:col-span-2 space-y-2">
                                     <label
-                                        class="text-[10px] uppercase font-bold tracking-widest text-on-surface-variant">Email
+                                        class="text-lg uppercase font-bold tracking-wider text-on-surface-variant">Email
                                         Address</label>
                                     <input
-                                        class="w-full bg-slate-50 border-slate-200 focus:ring-primary focus:border-primary px-4 py-3 text-sm"
+                                        class="w-full bg-slate-50 border-slate-200 focus:ring-primary focus:border-primary px-4 py-3 text-lg"
                                         type="email" />
                                 </div>
                                 <div class="space-y-2">
                                     <label
-                                        class="text-[10px] uppercase font-bold tracking-widest text-on-surface-variant">City</label>
+                                        class="text-lg uppercase font-bold tracking-wider text-on-surface-variant">City</label>
                                     <input
-                                        class="w-full bg-slate-50 border-slate-200 focus:ring-primary focus:border-primary px-4 py-3 text-sm"
+                                        class="w-full bg-slate-50 border-slate-200 focus:ring-primary focus:border-primary px-4 py-3 text-lg"
                                         type="text" />
                                 </div>
                                 <div class="space-y-2">
                                     <label
-                                        class="text-[10px] uppercase font-bold tracking-widest text-on-surface-variant">Zip
+                                        class="text-lg uppercase font-bold tracking-wider text-on-surface-variant">Zip
                                         Code</label>
                                     <input
-                                        class="w-full bg-slate-50 border-slate-200 focus:ring-primary focus:border-primary px-4 py-3 text-sm"
+                                        class="w-full bg-slate-50 border-slate-200 focus:ring-primary focus:border-primary px-4 py-3 text-lg"
                                         type="text" />
                                 </div>
                                 <button
-                                    class="md:col-span-2 bg-primary text-on-primary font-headline font-black py-5 text-sm uppercase tracking-[0.2em] hover:bg-primary-container transition-all mt-4">
+                                    class="md:col-span-2 bg-primary text-on-primary font-headline font-black py-5 text-lg uppercase tracking-[0.08em] hover:bg-primary-container transition-all mt-4">
                                     Send Message
                                 </button>
                                 <p
-                                    class="md:col-span-2 text-[9px] text-on-surface-variant leading-tight uppercase opacity-60">
+                                    class="md:col-span-2 text-base text-on-surface-variant leading-tight uppercase opacity-60">
                                     By providing your information, you are consenting to receive communications from
                                     Texas United Patriots. Message &amp; data rates may apply.
                                 </p>
@@ -1023,24 +1023,24 @@
                 <div class="max-w-4xl mx-auto text-center">
                     <h4 class="reveal font-headline font-black text-3xl md:text-5xl uppercase tracking-tighter">Stand
                         With Us</h4>
-                    <p class="reveal font-body italic text-base md:text-lg text-on-surface-variant mt-4 max-w-2xl mx-auto">
+                    <p class="reveal font-body italic text-xl md:text-lg text-on-surface-variant mt-4 max-w-2xl mx-auto">
                         This work is funded by Texans who believe faith, family and freedom are worth
                         defending. Every dollar goes to reaching more of them.</p>
 
                     <div class="reveal flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 mt-10"
                         data-donate-amounts>
                         <a data-amount="25" href="#"
-                            class="bg-white border-2 border-primary text-primary font-headline font-bold px-8 py-4 text-sm uppercase tracking-widest hover:bg-primary hover:text-white transition-colors">$25</a>
+                            class="bg-white border-2 border-primary text-primary font-headline font-bold px-8 py-4 text-lg uppercase tracking-wider hover:bg-primary hover:text-white transition-colors">$25</a>
                         <a data-amount="50" href="#"
-                            class="bg-white border-2 border-primary text-primary font-headline font-bold px-8 py-4 text-sm uppercase tracking-widest hover:bg-primary hover:text-white transition-colors">$50</a>
+                            class="bg-white border-2 border-primary text-primary font-headline font-bold px-8 py-4 text-lg uppercase tracking-wider hover:bg-primary hover:text-white transition-colors">$50</a>
                         <a data-amount="100" href="#"
-                            class="bg-white border-2 border-primary text-primary font-headline font-bold px-8 py-4 text-sm uppercase tracking-widest hover:bg-primary hover:text-white transition-colors">$100</a>
+                            class="bg-white border-2 border-primary text-primary font-headline font-bold px-8 py-4 text-lg uppercase tracking-wider hover:bg-primary hover:text-white transition-colors">$100</a>
                         <a data-amount="other" href="#"
-                            class="bg-primary text-white font-headline font-bold px-8 py-4 text-sm uppercase tracking-widest hover:bg-primary-container transition-colors">Other
+                            class="bg-primary text-white font-headline font-bold px-8 py-4 text-lg uppercase tracking-wider hover:bg-primary-container transition-colors">Other
                             Amount</a>
                     </div>
 
-                    <p class="reveal font-body text-xs text-on-surface-variant mt-8" data-donate-disclosure></p>
+                    <p class="reveal font-body text-lg text-on-surface-variant mt-8" data-donate-disclosure></p>
                 </div>
             </div>
         </section>
@@ -1093,7 +1093,7 @@
         <section class="py-20 md:py-28 bg-primary text-white" id="muster" data-muster hidden>
             <div class="container mx-auto px-6 md:px-12">
                 <div class="max-w-4xl mx-auto text-center">
-                    <p class="reveal font-headline font-bold text-[11px] uppercase tracking-[0.3em] text-white/70">Since
+                    <p class="reveal font-headline font-bold text-lg uppercase tracking-[0.08em] text-white/70">Since
                         Gonzales, 1835</p>
                     <h4 class="reveal font-headline font-black text-4xl md:text-6xl uppercase tracking-tighter mt-4">Sign
                         The Muster Roll</h4>
@@ -1104,17 +1104,17 @@
                     <div class="reveal grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-10 mt-12 text-left">
                         <div>
                             <div class="font-headline font-black text-2xl uppercase tracking-tight">Find</div>
-                            <p class="font-body text-sm text-white/70 mt-2">The Texans who still believe it — in every
+                            <p class="font-body text-lg text-white/70 mt-2">The Texans who still believe it — in every
                                 one of the 254 counties.</p>
                         </div>
                         <div>
                             <div class="font-headline font-black text-2xl uppercase tracking-tight">Train</div>
-                            <p class="font-body text-sm text-white/70 mt-2">To speak, to organize, and to win the rooms
+                            <p class="font-body text-lg text-white/70 mt-2">To speak, to organize, and to win the rooms
                                 that decide things.</p>
                         </div>
                         <div>
                             <div class="font-headline font-black text-2xl uppercase tracking-tight">Muster</div>
-                            <p class="font-body text-sm text-white/70 mt-2">Where it counts — school boards, county
+                            <p class="font-body text-lg text-white/70 mt-2">Where it counts — school boards, county
                                 seats, and the Capitol.</p>
                         </div>
                     </div>
@@ -1122,27 +1122,27 @@
                     <form class="reveal mt-12 text-left" data-muster-form method="post" novalidate>
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <label class="block">
-                                <span class="font-headline font-bold text-[10px] uppercase tracking-widest text-white/70">First
+                                <span class="font-headline font-bold text-lg uppercase tracking-wider text-white/70">First
                                     Name</span>
                                 <input name="fields[first_name]" type="text" required autocomplete="given-name"
                                     class="mt-2 w-full bg-white/10 border border-white/25 px-5 py-4 font-body text-white placeholder-white/40 focus:outline-none focus:border-white"
                                     placeholder="First" />
                             </label>
                             <label class="block">
-                                <span class="font-headline font-bold text-[10px] uppercase tracking-widest text-white/70">Last
+                                <span class="font-headline font-bold text-lg uppercase tracking-wider text-white/70">Last
                                     Name</span>
                                 <input name="fields[last_name]" type="text" required autocomplete="family-name"
                                     class="mt-2 w-full bg-white/10 border border-white/25 px-5 py-4 font-body text-white placeholder-white/40 focus:outline-none focus:border-white"
                                     placeholder="Last" />
                             </label>
                             <label class="block">
-                                <span class="font-headline font-bold text-[10px] uppercase tracking-widest text-white/70">Email</span>
+                                <span class="font-headline font-bold text-lg uppercase tracking-wider text-white/70">Email</span>
                                 <input name="email_address" type="email" required autocomplete="email"
                                     class="mt-2 w-full bg-white/10 border border-white/25 px-5 py-4 font-body text-white placeholder-white/40 focus:outline-none focus:border-white"
                                     placeholder="you@example.com" />
                             </label>
                             <label class="block">
-                                <span class="font-headline font-bold text-[10px] uppercase tracking-widest text-white/70">County</span>
+                                <span class="font-headline font-bold text-lg uppercase tracking-wider text-white/70">County</span>
                                 <input name="fields[county]" type="text" required list="txCounties"
                                     class="mt-2 w-full bg-white/10 border border-white/25 px-5 py-4 font-body text-white placeholder-white/40 focus:outline-none focus:border-white"
                                     placeholder="Bexar" />
@@ -1166,9 +1166,9 @@
                         </div>
 
                         <button type="submit"
-                            class="mt-6 w-full sm:w-auto bg-white text-primary font-headline font-black px-12 py-5 text-sm uppercase tracking-widest hover:bg-white/90 transition-colors">Sign
+                            class="mt-6 w-full sm:w-auto bg-white text-primary font-headline font-black px-12 py-5 text-lg uppercase tracking-wider hover:bg-white/90 transition-colors">Sign
                             The Roll</button>
-                        <p class="font-body text-xs text-white/60 mt-4" data-muster-note>Your real name, because a roll
+                        <p class="font-body text-lg text-white/60 mt-4" data-muster-note>Your real name, because a roll
                             is a record. We never sell your information, and one click unsubscribes you.</p>
                     </form>
 
@@ -1267,35 +1267,35 @@
                     <div class="text-xl font-black text-on-surface tracking-tighter font-headline mb-4 uppercase">TEXAS
                         UNITED PATRIOTS</div>
                     <div class="flex flex-wrap gap-5 md:gap-8">
-                        <a class="font-headline font-bold text-base md:text-lg uppercase tracking-wider text-on-surface-variant hover:text-primary"
+                        <a class="font-headline font-bold text-xl md:text-lg uppercase tracking-wider text-on-surface-variant hover:text-primary"
                             href="./about.html">About</a>
-                        <a class="font-headline font-bold text-base md:text-lg uppercase tracking-wider text-on-surface-variant hover:text-primary"
+                        <a class="font-headline font-bold text-xl md:text-lg uppercase tracking-wider text-on-surface-variant hover:text-primary"
                             href="./issues.html">Issues</a>
-                        <a class="font-headline font-bold text-base md:text-lg uppercase tracking-wider text-on-surface-variant hover:text-primary"
+                        <a class="font-headline font-bold text-xl md:text-lg uppercase tracking-wider text-on-surface-variant hover:text-primary"
                             href="#news">News</a>
                     </div>
                 </div>
                 <div class="flex gap-4 w-full md:w-auto">
                     <div
                         class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center hover:bg-slate-200 cursor-pointer transition-colors">
-                        <span class="material-symbols-outlined text-sm">share</span>
+                        <span class="material-symbols-outlined text-lg">share</span>
                     </div>
                     <div
                         class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center hover:bg-slate-200 cursor-pointer transition-colors">
-                        <span class="material-symbols-outlined text-sm">public</span>
+                        <span class="material-symbols-outlined text-lg">public</span>
                     </div>
 </div>
             </div>
             <div class="border-t border-slate-100 pt-10 text-center">
                 <div class="max-w-3xl mx-auto border border-slate-200 p-8 mb-8">
                     <p
-                        class="font-headline font-bold text-[9px] uppercase tracking-widest text-on-surface-variant leading-relaxed">
+                        class="font-headline font-bold text-base uppercase tracking-wider text-on-surface-variant leading-relaxed">
                         &copy; 2026 TEXAS UNITED PATRIOTS. PAID FOR BY TEXAS UNITED PATRIOTS. NOT AUTHORIZED BY
                         ANY CANDIDATE OR CANDIDATE'S COMMITTEE.<br />
 </p>
                 </div>
                 <div
-                    class="flex justify-center gap-8 font-headline font-bold text-[10px] uppercase tracking-widest text-slate-600">
+                    class="flex justify-center gap-8 font-headline font-bold text-lg uppercase tracking-wider text-slate-600">
                     <a class="hover:text-primary transition-colors" href="./privacy.html">Privacy Policy</a>
                     <a class="hover:text-primary transition-colors" href="./terms.html">Terms of Service</a>
                     <a class="hover:text-primary transition-colors" href="./contact.html">Contact</a>

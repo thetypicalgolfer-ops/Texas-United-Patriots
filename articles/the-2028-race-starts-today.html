@@ -17,7 +17,7 @@
     <meta name="twitter:title" content="The 2028 Race Starts Today — Texas United Patriots" />
     <meta name="twitter:description" content="The next statewide fight is closer than it looks. Here is the calendar, and where to start." />
     <meta name="twitter:image" content="https://texasunitedpatriots.org/alamo-mission-texas-independence_og.jpg" />
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=UnifrakturMaguntia&family=Public+Sans:wght@400;700;800;900&family=Newsreader:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Playfair+Display:wght@900&family=Public+Sans:wght@400;700;800;900&family=Newsreader:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script>
@@ -31,7 +31,7 @@
               "on-surface-variant": "#47464f", "background": "#f9f9f9"
             },
             fontFamily: { headline: ["Oswald", "Public Sans", "sans-serif"],
-                        masthead: ["UnifrakturMaguntia", "serif"], body: ["Newsreader"], label: ["Public Sans"] }
+                        masthead: ["Playfair Display", "Georgia", "serif"], body: ["Newsreader"], label: ["Public Sans"] }
           },
         },
       }
@@ -99,7 +99,7 @@
         /* Social share bar */
         .share-bar { display: flex; flex-direction: column; align-items: stretch; gap: 0.75rem; }
         @media (min-width: 640px) { .share-bar { flex-direction: row; align-items: center; } }
-        .share-bar .share-label { font-family: 'Public Sans', sans-serif; font-weight: 700; font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: #5d0011; }
+        .share-bar .share-label { font-family: 'Public Sans', sans-serif; font-weight: 700; font-size: 18px; letter-spacing: 0.3em; text-transform: uppercase; color: #5d0011; }
         .share-bar .share-icons { display: flex; flex-wrap: wrap; gap: 0.5rem; }
         .share-btn { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border: 1px solid #e5e7eb; background: #fff; color: #1a1c1c; transition: all 0.2s ease; cursor: pointer; }
         .share-btn:hover { color: #fff; border-color: transparent; transform: translateY(-2px); }
@@ -124,13 +124,13 @@
 <body class="bg-surface text-on-surface font-body">
 
     <nav class="fixed top-0 w-full z-50 flex justify-between items-center px-6 md:px-12 py-4 md:py-5 bg-white shadow-lg">
-        <a href="../index.html" class="text-xl md:text-3xl font-black text-primary tracking-tight font-headline">TEXAS UNITED PATRIOTS</a>
+        <a href="../index.html" class="text-2xl md:text-4xl font-black text-primary tracking-tight font-headline">TEXAS UNITED PATRIOTS</a>
         <div class="hidden md:flex items-center gap-x-8 lg:gap-x-12">
-            <a class="font-headline font-bold text-lg lg:text-xl xl:text-2xl uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="../index.html#news">News</a>
-            <a class="font-headline font-bold text-lg lg:text-xl xl:text-2xl uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="../national.html">National</a>
-            <a class="font-headline font-bold text-lg lg:text-xl xl:text-2xl uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="../members.html">Members</a>
-            <a class="font-headline font-bold text-lg lg:text-xl xl:text-2xl uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="../gear.html">Gear</a>
-            <a class="font-headline font-bold text-lg lg:text-xl xl:text-2xl uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="../index.html">About</a>
+            <a class="font-headline font-bold text-xl lg:text-2xl xl:text-[1.75rem] uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="../index.html#news">News</a>
+            <a class="font-headline font-bold text-xl lg:text-2xl xl:text-[1.75rem] uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="../national.html">National</a>
+            <a class="font-headline font-bold text-xl lg:text-2xl xl:text-[1.75rem] uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="../members.html">Members</a>
+            <a class="font-headline font-bold text-xl lg:text-2xl xl:text-[1.75rem] uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="../gear.html">Gear</a>
+            <a class="font-headline font-bold text-xl lg:text-2xl xl:text-[1.75rem] uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="../index.html">About</a>
 </div>
     </nav>
     <button id="mobileMenuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu" class="md:hidden fixed top-3 right-4 text-primary p-2 z-[80]"><span class="hamburger"><span></span><span></span><span></span></span></button>
@@ -139,42 +139,42 @@
     <div id="mobileMenu" class="fixed inset-0 z-[65] bg-[#141821] flex flex-col overflow-y-auto">
         <div class="absolute inset-x-0 top-0 h-1 bg-primary"></div>
         <div class="flex justify-between items-center px-6 pt-5 pb-5 border-b border-white/10">
-            <a href="../index.html" class="text-xl md:text-3xl font-black text-white tracking-tight font-headline">TEXAS UNITED PATRIOTS</a>
+            <a href="../index.html" class="text-2xl md:text-4xl font-black text-white tracking-tight font-headline">TEXAS UNITED PATRIOTS</a>
         </div>
         <nav class="flex-1 flex flex-col px-6 pt-6">
             <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors" href="../issues.html">
-                <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">01</span>
+                <span class="menu-index font-headline font-bold text-lg tracking-[0.08em] text-primary w-8">01</span>
                 <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">Issues</span>
                 <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
             </a>
             <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors" href="../about.html">
-                <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">02</span>
+                <span class="menu-index font-headline font-bold text-lg tracking-[0.08em] text-primary w-8">02</span>
                 <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">About</span>
                 <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
             </a>
             <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors" href="../index.html#news">
-                <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">03</span>
+                <span class="menu-index font-headline font-bold text-lg tracking-[0.08em] text-primary w-8">03</span>
                 <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">News</span>
                 <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
             </a>
             <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors" href="../national.html">
-                <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">04</span>
+                <span class="menu-index font-headline font-bold text-lg tracking-[0.08em] text-primary w-8">04</span>
                 <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">National</span>
                 <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
             </a>
             <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors" href="../members.html">
-                <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">05</span>
+                <span class="menu-index font-headline font-bold text-lg tracking-[0.08em] text-primary w-8">05</span>
                 <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">Members</span>
                 <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
             </a>
             <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors" href="../gear.html">
-                <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">06</span>
+                <span class="menu-index font-headline font-bold text-lg tracking-[0.08em] text-primary w-8">06</span>
                 <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">Gear</span>
                 <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
             </a>
         </nav>
         <div class="menu-item px-6 pt-8 pb-10 border-t border-white/10 mt-6">
-<p class="mt-6 font-headline font-bold text-[10px] text-white/40 uppercase tracking-[0.3em] text-center">Faith · Family · Freedom</p>
+<p class="mt-6 font-headline font-bold text-lg text-white/40 uppercase tracking-[0.08em] text-center">Faith · Family · Freedom</p>
         </div>
     </div>
 
@@ -191,14 +191,14 @@
                 <!-- Article (Left Column) -->
                 <div class="lg:w-2/3">
                     <div class="bg-white shadow-2xl p-6 sm:p-8 md:p-16">
-                        <span class="inline-block bg-primary text-on-primary font-headline font-bold text-[9px] tracking-[0.2em] uppercase px-3 py-1 mb-6">2028 Election</span>
+                        <span class="inline-block bg-primary text-on-primary font-headline font-bold text-base tracking-[0.08em] uppercase px-3 py-1 mb-6">2028 Election</span>
                         <h1 class="font-headline font-black text-4xl md:text-5xl lg:text-6xl text-on-surface leading-[0.9] tracking-tight uppercase mb-6">The 2028 Race Starts Today</h1>
                         <div class="flex items-center gap-4 mb-10 border-b border-slate-200 pb-8">
-                            <span class="font-headline font-bold text-[10px] uppercase tracking-widest text-on-surface-variant">November 7, 2026</span>
+                            <span class="font-headline font-bold text-lg uppercase tracking-wider text-on-surface-variant">November 7, 2026</span>
                             <span class="text-slate-300">|</span>
-                            <span class="font-headline font-bold text-[10px] uppercase tracking-widest text-on-surface-variant">4 min read</span>
+                            <span class="font-headline font-bold text-lg uppercase tracking-wider text-on-surface-variant">4 min read</span>
                             <span class="text-slate-300">|</span>
-                            <span class="font-headline font-bold text-[10px] uppercase tracking-widest text-primary">Texas United Patriots Staff</span>
+                            <span class="font-headline font-bold text-lg uppercase tracking-wider text-primary">Texas United Patriots Staff</span>
                         </div>
                         <div class="mt-8 pb-6 border-b border-slate-200"><div class="share-bar" data-share-bar>
     <span class="share-label">Spread the Word</span>
@@ -215,13 +215,13 @@
                         <div class="prose prose-lg max-w-none">
                             <p class="font-body text-xl leading-relaxed text-on-surface mb-6 italic">Losing an election is the starting gun for the next one.</p>
                             <h2 class="font-headline font-black text-2xl uppercase tracking-tight mt-12 mb-4">What&#x27;s on the Ballot Next</h2>
-                            <p class="font-body text-lg leading-relaxed text-on-surface-variant mb-6">In 2028, every seat in the Texas House is up, along with about half the Texas Senate, plus the presidential race that drives turnout. The next governor&#x27;s race comes in 2030. The groundwork for both starts now.</p>
+                            <p class="font-body text-xl leading-relaxed text-on-surface-variant mb-6">In 2028, every seat in the Texas House is up, along with about half the Texas Senate, plus the presidential race that drives turnout. The next governor&#x27;s race comes in 2030. The groundwork for both starts now.</p>
                             <h2 class="font-headline font-black text-2xl uppercase tracking-tight mt-12 mb-4">The First Twelve Months</h2>
-                            <p class="font-body text-lg leading-relaxed text-on-surface-variant mb-6">Recruit strong local candidates early. Register new voters while there&#x27;s no election noise. Build volunteer lists by precinct. Fix whatever made people stay home this year, and ask them directly why they did.</p>
+                            <p class="font-body text-xl leading-relaxed text-on-surface-variant mb-6">Recruit strong local candidates early. Register new voters while there&#x27;s no election noise. Build volunteer lists by precinct. Fix whatever made people stay home this year, and ask them directly why they did.</p>
                             <h2 class="font-headline font-black text-2xl uppercase tracking-tight mt-12 mb-4">The Primary Comes First</h2>
-                            <p class="font-body text-lg leading-relaxed text-on-surface-variant mb-6">Texas primaries are in March of election years. Candidates for 2028 file in late 2027, which means the people who&#x27;ll be on your ballot are deciding whether to run in the next twelve months. If you know someone who should run, tell them now.</p>
-                            <p class="font-body text-lg leading-relaxed text-on-surface-variant mb-6">Mark your calendar, join the movement, and let&#x27;s start counting days.</p>
-                            <p class="font-headline font-bold text-[11px] uppercase tracking-widest text-on-surface-variant/70 mt-10">Sources: <a class="text-primary underline" href="https://www.ksat.com/news/local/2026/11/04/what-happened-in-the-nov-3-2026-historic-midterm-election-in-texas/">KSAT</a>, <a class="text-primary underline" href="https://www.kut.org/texas/2026-11-03/texas-nov-midterm-statewide-election-results">KUT</a>, <a class="text-primary underline" href="https://turnout.transparencyusa.org/2026-general/">Transparency USA</a>, <a class="text-primary underline" href="https://www.tpr.org/news/2026-11-04/bexar-county-sees-50-voter-turnout-during-this-years-midterm-election">TPR</a>.</p>
+                            <p class="font-body text-xl leading-relaxed text-on-surface-variant mb-6">Texas primaries are in March of election years. Candidates for 2028 file in late 2027, which means the people who&#x27;ll be on your ballot are deciding whether to run in the next twelve months. If you know someone who should run, tell them now.</p>
+                            <p class="font-body text-xl leading-relaxed text-on-surface-variant mb-6">Mark your calendar, join the movement, and let&#x27;s start counting days.</p>
+                            <p class="font-headline font-bold text-lg uppercase tracking-wider text-on-surface-variant/70 mt-10">Sources: <a class="text-primary underline" href="https://www.ksat.com/news/local/2026/11/04/what-happened-in-the-nov-3-2026-historic-midterm-election-in-texas/">KSAT</a>, <a class="text-primary underline" href="https://www.kut.org/texas/2026-11-03/texas-nov-midterm-statewide-election-results">KUT</a>, <a class="text-primary underline" href="https://turnout.transparencyusa.org/2026-general/">Transparency USA</a>, <a class="text-primary underline" href="https://www.tpr.org/news/2026-11-04/bexar-county-sees-50-voter-turnout-during-this-years-midterm-election">TPR</a>.</p>
 </div>
 
                     </div>
@@ -236,7 +236,7 @@
 </div>
 
             <div class="text-center mt-12 mb-20">
-                <a href="../index.html#news" class="font-headline font-bold text-xs uppercase tracking-widest text-primary hover:text-primary-container transition-colors">&larr; Back to All News</a>
+                <a href="../index.html#news" class="font-headline font-bold text-lg uppercase tracking-wider text-primary hover:text-primary-container transition-colors">&larr; Back to All News</a>
             </div>
         </div>
                         <div class="mt-16 pt-10 border-t border-slate-200">
@@ -257,10 +257,10 @@
     <footer class="bg-white border-t border-slate-200 pt-12 pb-8 px-12">
         <div class="container mx-auto text-center">
             <div class="text-xl font-black text-on-surface tracking-tighter font-headline mb-4 uppercase">TEXAS UNITED PATRIOTS</div>
-            <p class="font-headline font-bold text-[9px] uppercase tracking-widest text-on-surface-variant leading-relaxed max-w-2xl mx-auto">
+            <p class="font-headline font-bold text-base uppercase tracking-wider text-on-surface-variant leading-relaxed max-w-2xl mx-auto">
                 &copy; 2024 TEXAS UNITED PATRIOTS. PAID FOR BY TEXAS UNITED PATRIOTS. NOT AUTHORIZED BY ANY CANDIDATE OR CANDIDATE'S COMMITTEE.
             </p>
-            <div class="flex justify-center gap-8 mt-10 font-headline font-bold text-[10px] uppercase tracking-widest text-slate-600">
+            <div class="flex justify-center gap-8 mt-10 font-headline font-bold text-lg uppercase tracking-wider text-slate-600">
                 <a class="hover:text-primary transition-colors" href="../privacy.html">Privacy Policy</a>
                 <a class="hover:text-primary transition-colors" href="../terms.html">Terms of Service</a>
                 <a class="hover:text-primary transition-colors" href="../contact.html">Contact</a>

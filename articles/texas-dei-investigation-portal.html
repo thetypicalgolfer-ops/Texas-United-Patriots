@@ -17,7 +17,7 @@
     <meta name="twitter:title" content="Texas Launches DEI Investigation Portal — Texas United Patriots" />
     <meta name="twitter:description" content="For years, Texas taxpayers watched helplessly as their public universities poured millions into Diversity, Equity, and Inclusion bureaucracies that had nothing…" />
     <meta name="twitter:image" content="https://texasunitedpatriots.org/texas_flag_hero.png" />
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=UnifrakturMaguntia&family=Public+Sans:wght@400;700;800;900&family=Newsreader:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Playfair+Display:wght@900&family=Public+Sans:wght@400;700;800;900&family=Newsreader:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script>
@@ -31,7 +31,7 @@
               "on-surface-variant": "#47464f", "background": "#f9f9f9"
             },
             fontFamily: { headline: ["Oswald", "Public Sans", "sans-serif"],
-                        masthead: ["UnifrakturMaguntia", "serif"], body: ["Newsreader"], label: ["Public Sans"] }
+                        masthead: ["Playfair Display", "Georgia", "serif"], body: ["Newsreader"], label: ["Public Sans"] }
           },
         },
       }
@@ -99,7 +99,7 @@
         /* Social share bar */
         .share-bar { display: flex; flex-direction: column; align-items: stretch; gap: 0.75rem; }
         @media (min-width: 640px) { .share-bar { flex-direction: row; align-items: center; } }
-        .share-bar .share-label { font-family: 'Public Sans', sans-serif; font-weight: 700; font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: #5d0011; }
+        .share-bar .share-label { font-family: 'Public Sans', sans-serif; font-weight: 700; font-size: 18px; letter-spacing: 0.3em; text-transform: uppercase; color: #5d0011; }
         .share-bar .share-icons { display: flex; flex-wrap: wrap; gap: 0.5rem; }
         .share-btn { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border: 1px solid #e5e7eb; background: #fff; color: #1a1c1c; transition: all 0.2s ease; cursor: pointer; }
         .share-btn:hover { color: #fff; border-color: transparent; transform: translateY(-2px); }
@@ -124,13 +124,13 @@
 <body class="bg-surface text-on-surface font-body">
 
     <nav class="fixed top-0 w-full z-50 flex justify-between items-center px-6 md:px-12 py-4 md:py-5 bg-white shadow-lg">
-        <a href="../index.html" class="text-xl md:text-3xl font-black text-primary tracking-tight font-headline">TEXAS UNITED PATRIOTS</a>
+        <a href="../index.html" class="text-2xl md:text-4xl font-black text-primary tracking-tight font-headline">TEXAS UNITED PATRIOTS</a>
         <div class="hidden md:flex items-center gap-x-8 lg:gap-x-12">
-            <a class="font-headline font-bold text-lg lg:text-xl xl:text-2xl uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="../index.html#news">News</a>
-            <a class="font-headline font-bold text-lg lg:text-xl xl:text-2xl uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="../national.html">National</a>
-            <a class="font-headline font-bold text-lg lg:text-xl xl:text-2xl uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="../members.html">Members</a>
-            <a class="font-headline font-bold text-lg lg:text-xl xl:text-2xl uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="../gear.html">Gear</a>
-            <a class="font-headline font-bold text-lg lg:text-xl xl:text-2xl uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="../index.html">About</a>
+            <a class="font-headline font-bold text-xl lg:text-2xl xl:text-[1.75rem] uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="../index.html#news">News</a>
+            <a class="font-headline font-bold text-xl lg:text-2xl xl:text-[1.75rem] uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="../national.html">National</a>
+            <a class="font-headline font-bold text-xl lg:text-2xl xl:text-[1.75rem] uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="../members.html">Members</a>
+            <a class="font-headline font-bold text-xl lg:text-2xl xl:text-[1.75rem] uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="../gear.html">Gear</a>
+            <a class="font-headline font-bold text-xl lg:text-2xl xl:text-[1.75rem] uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="../index.html">About</a>
 </div>
     </nav>
     <button id="mobileMenuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu" class="md:hidden fixed top-3 right-4 text-primary p-2 z-[80]"><span class="hamburger"><span></span><span></span><span></span></span></button>
@@ -139,42 +139,42 @@
     <div id="mobileMenu" class="fixed inset-0 z-[65] bg-[#141821] flex flex-col overflow-y-auto">
         <div class="absolute inset-x-0 top-0 h-1 bg-primary"></div>
         <div class="flex justify-between items-center px-6 pt-5 pb-5 border-b border-white/10">
-            <a href="../index.html" class="text-xl md:text-3xl font-black text-white tracking-tight font-headline">TEXAS UNITED PATRIOTS</a>
+            <a href="../index.html" class="text-2xl md:text-4xl font-black text-white tracking-tight font-headline">TEXAS UNITED PATRIOTS</a>
         </div>
         <nav class="flex-1 flex flex-col px-6 pt-6">
             <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors" href="../issues.html">
-                <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">01</span>
+                <span class="menu-index font-headline font-bold text-lg tracking-[0.08em] text-primary w-8">01</span>
                 <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">Issues</span>
                 <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
             </a>
             <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors" href="../about.html">
-                <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">02</span>
+                <span class="menu-index font-headline font-bold text-lg tracking-[0.08em] text-primary w-8">02</span>
                 <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">About</span>
                 <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
             </a>
             <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors" href="../index.html#news">
-                <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">03</span>
+                <span class="menu-index font-headline font-bold text-lg tracking-[0.08em] text-primary w-8">03</span>
                 <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">News</span>
                 <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
             </a>
             <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors" href="../national.html">
-                <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">04</span>
+                <span class="menu-index font-headline font-bold text-lg tracking-[0.08em] text-primary w-8">04</span>
                 <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">National</span>
                 <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
             </a>
             <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors" href="../members.html">
-                <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">05</span>
+                <span class="menu-index font-headline font-bold text-lg tracking-[0.08em] text-primary w-8">05</span>
                 <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">Members</span>
                 <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
             </a>
             <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors" href="../gear.html">
-                <span class="menu-index font-headline font-bold text-[10px] tracking-[0.3em] text-primary w-8">06</span>
+                <span class="menu-index font-headline font-bold text-lg tracking-[0.08em] text-primary w-8">06</span>
                 <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">Gear</span>
                 <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
             </a>
         </nav>
         <div class="menu-item px-6 pt-8 pb-10 border-t border-white/10 mt-6">
-<p class="mt-6 font-headline font-bold text-[10px] text-white/40 uppercase tracking-[0.3em] text-center">Faith · Family · Freedom</p>
+<p class="mt-6 font-headline font-bold text-lg text-white/40 uppercase tracking-[0.08em] text-center">Faith · Family · Freedom</p>
         </div>
     </div>
 
@@ -192,14 +192,14 @@
                 <!-- Article Content (2/3) -->
                 <div class="lg:w-2/3">
                     <div class="bg-white shadow-2xl p-6 sm:p-8 md:p-16">
-                        <span class="inline-block bg-primary text-on-primary font-headline font-bold text-[9px] tracking-[0.2em] uppercase px-3 py-1 mb-6">Higher Education</span>
+                        <span class="inline-block bg-primary text-on-primary font-headline font-bold text-base tracking-[0.08em] uppercase px-3 py-1 mb-6">Higher Education</span>
                         <h1 class="font-headline font-black text-4xl md:text-5xl lg:text-6xl text-on-surface leading-[0.9] tracking-tight uppercase mb-6">Texas Launches DEI Investigation Portal — Anyone Can Now File University Complaints</h1>
                         <div class="flex items-center gap-4 mb-10 border-b border-slate-200 pb-8">
-                            <span class="font-headline font-bold text-[10px] uppercase tracking-widest text-on-surface-variant">January 12, 2026</span>
+                            <span class="font-headline font-bold text-lg uppercase tracking-wider text-on-surface-variant">January 12, 2026</span>
                             <span class="text-slate-300">|</span>
-                            <span class="font-headline font-bold text-[10px] uppercase tracking-widest text-on-surface-variant">7 min read</span>
+                            <span class="font-headline font-bold text-lg uppercase tracking-wider text-on-surface-variant">7 min read</span>
                             <span class="text-slate-300">|</span>
-                            <span class="font-headline font-bold text-[10px] uppercase tracking-widest text-primary">Catherine Mercer</span>
+                            <span class="font-headline font-bold text-lg uppercase tracking-wider text-primary">Catherine Mercer</span>
                         </div>
                         <div class="mt-8 pb-6 border-b border-slate-200"><div class="share-bar" data-share-bar>
     <span class="share-label">Spread the Word</span>
@@ -218,43 +218,43 @@
                                 For years, Texas taxpayers watched helplessly as their public universities poured millions into Diversity, Equity, and Inclusion bureaucracies that had nothing to do with education and everything to do with ideology. That era is over. Now, every Texan has the power to hold these institutions accountable.
                             </p>
 
-                            <p class="font-body text-lg leading-relaxed text-on-surface-variant mb-6">
+                            <p class="font-body text-xl leading-relaxed text-on-surface-variant mb-6">
                                 On January 9, 2026, the Texas Office of the Ombudsman — housed within the Texas Higher Education Coordinating Board and led by a gubernatorial appointee — launched a public complaint portal that allows any person in Texas to file a formal complaint against a public university for non-compliance with the state's anti-DEI laws.
                             </p>
 
-                            <p class="font-body text-lg leading-relaxed text-on-surface-variant mb-6">
+                            <p class="font-body text-xl leading-relaxed text-on-surface-variant mb-6">
                                 The portal accepts complaints alleging violations of two state laws: Senate Bill 17, the 2023 ban on diversity, equity, and inclusion offices, programs, and training at public colleges and universities; and a 2025 law limiting faculty's role in certain curriculum decisions. Students, employees, and faculty members can submit complaints directly — effectively turning those inside the classrooms into watchdogs for Texas families and taxpayers.
                             </p>
 
                             <h2 class="font-headline font-black text-2xl uppercase tracking-tight mt-12 mb-4">Real Teeth, Real Consequences</h2>
 
-                            <p class="font-body text-lg leading-relaxed text-on-surface-variant mb-6">
+                            <p class="font-body text-xl leading-relaxed text-on-surface-variant mb-6">
                                 This isn't a suggestion box. The Office of the Ombudsman was created specifically to address Republican lawmakers' well-founded concerns that Texas universities had become more focused on promoting liberal viewpoints than preparing students for the workforce. And the enforcement mechanism has teeth.
                             </p>
 
-                            <p class="font-body text-lg leading-relaxed text-on-surface-variant mb-6">
+                            <p class="font-body text-xl leading-relaxed text-on-surface-variant mb-6">
                                 If a university fails to resolve a violation within 180 days of a complaint, the Ombudsman can refer the matter to the state auditor and — critically — recommend that lawmakers block the institution from spending state funds until it achieves compliance. For universities that depend on billions in state appropriations, this is an existential threat. And it's exactly the kind of leverage that was needed.
                             </p>
 
                             <div class="bg-slate-50 border-l-4 border-primary p-8 my-10">
                                 <p class="font-headline font-black text-lg uppercase tracking-tight mb-2">This tool only works if Texans use it.</p>
                                 <p class="font-body text-on-surface-variant mb-4">If you're a student, parent, or faculty member who has witnessed DEI violations at a Texas public university, your complaint matters. And if you want to make sure this portal keeps operating with strong oversight, support the organizations pushing for accountability.</p>
-                                <button class="bg-primary text-on-primary font-headline font-bold text-xs uppercase tracking-widest px-8 py-3 hover:bg-primary-container transition-all">Support Accountability</button>
+                                <button class="bg-primary text-on-primary font-headline font-bold text-lg uppercase tracking-wider px-8 py-3 hover:bg-primary-container transition-all">Support Accountability</button>
                             </div>
 
                             <h2 class="font-headline font-black text-2xl uppercase tracking-tight mt-12 mb-4">Universities Already Scrambling</h2>
 
-                            <p class="font-body text-lg leading-relaxed text-on-surface-variant mb-6">
+                            <p class="font-body text-xl leading-relaxed text-on-surface-variant mb-6">
                                 The early signs suggest that universities are taking the portal seriously — and some are already trying to evade scrutiny. As of early April 2026, six university systems told media outlets they had not been notified of any complaints. One system did not respond at all. But most telling was the response from the University of Texas System, which indicated it possessed responsive records but asked the state attorney general for permission to withhold them.
                             </p>
 
-                            <p class="font-body text-lg leading-relaxed text-on-surface-variant mb-6">
+                            <p class="font-body text-xl leading-relaxed text-on-surface-variant mb-6">
                                 Let that sink in: a public university system, funded by Texas taxpayers, is asking the government for permission to hide information about potential DEI violations from the public. This is precisely the kind of institutional resistance that makes the Ombudsman's office so necessary.
                             </p>
 
                             <h2 class="font-headline font-black text-2xl uppercase tracking-tight mt-12 mb-4">The Broader Picture</h2>
 
-                            <p class="font-body text-lg leading-relaxed text-on-surface-variant mb-6">
+                            <p class="font-body text-xl leading-relaxed text-on-surface-variant mb-6">
                                 The complaint portal is part of a comprehensive strategy by Texas lawmakers to dismantle the DEI infrastructure that had metastasized across the state's public university system. SB 17 banned DEI offices outright. The Texas A&M system forced out a president over classroom ideology. Texas Tech is eliminating gender identity programs entirely. And now, everyday citizens have a direct line to report universities that aren't complying.
                             </p>
 
@@ -264,9 +264,9 @@
                         </div>
 
                         <div class="border-t border-slate-200 mt-12 pt-8 flex flex-wrap gap-3">
-                            <span class="bg-slate-100 font-headline font-bold text-[9px] uppercase tracking-widest px-4 py-2">DEI</span>
-                            <span class="bg-slate-100 font-headline font-bold text-[9px] uppercase tracking-widest px-4 py-2">Higher Education</span>
-                            <span class="bg-slate-100 font-headline font-bold text-[9px] uppercase tracking-widest px-4 py-2">Accountability</span>
+                            <span class="bg-slate-100 font-headline font-bold text-base uppercase tracking-wider px-4 py-2">DEI</span>
+                            <span class="bg-slate-100 font-headline font-bold text-base uppercase tracking-wider px-4 py-2">Higher Education</span>
+                            <span class="bg-slate-100 font-headline font-bold text-base uppercase tracking-wider px-4 py-2">Accountability</span>
                         </div>
                     </div>
                 </div>
@@ -280,12 +280,12 @@
                             <div class="flex items-center gap-4 mb-4">
                                 <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&h=150&q=80" alt="Catherine Mercer" class="rounded-full w-16 h-16 object-cover"/>
                                 <div>
-                                    <p class="font-headline font-bold text-[9px] uppercase tracking-[0.2em] text-on-surface-variant mb-1">Written by</p>
-                                    <p class="font-headline font-black text-sm uppercase tracking-tight text-on-surface">Catherine Mercer</p>
-                                    <p class="font-headline font-bold text-[10px] uppercase tracking-widest text-primary">Political Correspondent</p>
+                                    <p class="font-headline font-bold text-base uppercase tracking-[0.08em] text-on-surface-variant mb-1">Written by</p>
+                                    <p class="font-headline font-black text-lg uppercase tracking-tight text-on-surface">Catherine Mercer</p>
+                                    <p class="font-headline font-bold text-lg uppercase tracking-wider text-primary">Political Correspondent</p>
                                 </div>
                             </div>
-                            <p class="font-body text-sm leading-relaxed text-on-surface-variant">
+                            <p class="font-body text-xl leading-relaxed text-on-surface-variant">
                                 Catherine Mercer is the political correspondent for Texas United Patriots covering state government and higher education policy. A Rice University political science graduate, she spent five years as a legislative aide on Capitol Hill before transitioning to journalism. She has broken multiple stories on DEI spending at Texas public universities.
                             </p>
                         </div>
@@ -296,23 +296,23 @@
                             <ul class="space-y-4">
                                 <li class="flex items-start gap-3">
                                     <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">check_circle</span>
-                                    <span class="font-body text-sm leading-relaxed text-on-surface-variant">Public complaint portal launched January 9, 2026 by the Office of the Ombudsman</span>
+                                    <span class="font-body text-xl leading-relaxed text-on-surface-variant">Public complaint portal launched January 9, 2026 by the Office of the Ombudsman</span>
                                 </li>
                                 <li class="flex items-start gap-3">
                                     <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">check_circle</span>
-                                    <span class="font-body text-sm leading-relaxed text-on-surface-variant">Any Texan can file complaints about SB 17 (DEI ban) violations at public universities</span>
+                                    <span class="font-body text-xl leading-relaxed text-on-surface-variant">Any Texan can file complaints about SB 17 (DEI ban) violations at public universities</span>
                                 </li>
                                 <li class="flex items-start gap-3">
                                     <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">check_circle</span>
-                                    <span class="font-body text-sm leading-relaxed text-on-surface-variant">Universities face funding cuts if violations aren't resolved within 180 days</span>
+                                    <span class="font-body text-xl leading-relaxed text-on-surface-variant">Universities face funding cuts if violations aren't resolved within 180 days</span>
                                 </li>
                                 <li class="flex items-start gap-3">
                                     <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">check_circle</span>
-                                    <span class="font-body text-sm leading-relaxed text-on-surface-variant">UT System attempted to withhold complaint records from the public</span>
+                                    <span class="font-body text-xl leading-relaxed text-on-surface-variant">UT System attempted to withhold complaint records from the public</span>
                                 </li>
                                 <li class="flex items-start gap-3">
                                     <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">check_circle</span>
-                                    <span class="font-body text-sm leading-relaxed text-on-surface-variant">Portal also accepts complaints under 2025 curriculum oversight law</span>
+                                    <span class="font-body text-xl leading-relaxed text-on-surface-variant">Portal also accepts complaints under 2025 curriculum oversight law</span>
                                 </li>
                             </ul>
                         </div>
@@ -329,7 +329,7 @@
 </div>
 
             <div class="text-center mt-12 mb-20">
-                <a href="../index.html#news" class="font-headline font-bold text-xs uppercase tracking-widest text-primary hover:text-primary-container transition-colors">&larr; Back to All News</a>
+                <a href="../index.html#news" class="font-headline font-bold text-lg uppercase tracking-wider text-primary hover:text-primary-container transition-colors">&larr; Back to All News</a>
             </div>
         </div>
                         <div class="mt-16 pt-10 border-t border-slate-200">
@@ -350,10 +350,10 @@
     <footer class="bg-white border-t border-slate-200 pt-12 pb-8 px-12">
         <div class="container mx-auto text-center">
             <div class="text-xl font-black text-on-surface tracking-tighter font-headline mb-4 uppercase">TEXAS UNITED PATRIOTS</div>
-            <p class="font-headline font-bold text-[9px] uppercase tracking-widest text-on-surface-variant leading-relaxed max-w-2xl mx-auto">
+            <p class="font-headline font-bold text-base uppercase tracking-wider text-on-surface-variant leading-relaxed max-w-2xl mx-auto">
                 &copy; 2024 TEXAS UNITED PATRIOTS. PAID FOR BY TEXAS UNITED PATRIOTS. NOT AUTHORIZED BY ANY CANDIDATE OR CANDIDATE'S COMMITTEE.
             </p>
-            <div class="flex justify-center gap-8 mt-10 font-headline font-bold text-[10px] uppercase tracking-widest text-slate-600">
+            <div class="flex justify-center gap-8 mt-10 font-headline font-bold text-lg uppercase tracking-wider text-slate-600">
                 <a class="hover:text-primary transition-colors" href="../privacy.html">Privacy Policy</a>
                 <a class="hover:text-primary transition-colors" href="../terms.html">Terms of Service</a>
                 <a class="hover:text-primary transition-colors" href="../contact.html">Contact</a>
