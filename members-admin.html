@@ -215,7 +215,7 @@
             <span class="inline-flex items-center gap-2 bg-primary text-on-primary px-3 py-1 mb-6 font-headline font-bold text-lg tracking-[0.08em] uppercase">
                 <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">admin_panel_settings</span>Back End</span>
             <h1 class="font-headline font-black text-5xl sm:text-6xl md:text-7xl leading-[0.9] tracking-tighter uppercase mb-6">Members<br/>Admin.</h1>
-            <p class="font-body italic text-lg sm:text-xl md:text-2xl text-white/80 max-w-3xl leading-snug">Remove a listing from the member directory.</p>
+            <p class="font-body italic text-lg sm:text-xl md:text-2xl text-white/80 max-w-3xl leading-snug">Reader sign-ups from the article wall, and the member directory.</p>
         </div>
     </header>
 
@@ -226,7 +226,15 @@
                 <button class="bg-primary text-white font-headline font-black text-lg uppercase tracking-[0.08em] px-8 py-3">Open</button>
             </form>
             <p id="adminMsg" class="mt-4 font-headline text-lg text-primary" role="status"></p>
-            <ul id="adminList" class="mt-6 divide-y divide-slate-200 border-y border-slate-200"></ul>
+            <div id="readersBox" class="hidden mt-10">
+                <div class="flex flex-wrap items-end justify-between gap-3">
+                    <h2 class="font-headline font-black text-3xl uppercase tracking-tight">Reader Sign-Ups <span id="readerCount" class="text-primary"></span></h2>
+                    <button id="readersCsv" type="button" class="border border-primary text-primary hover:bg-primary hover:text-white font-headline font-bold text-lg uppercase tracking-[0.15em] px-4 py-2">Download CSV</button>
+                </div>
+                <ul id="readerList" class="mt-4 divide-y divide-slate-200 border-y border-slate-200"></ul>
+                <h2 class="font-headline font-black text-3xl uppercase tracking-tight mt-14">Members <span id="memberCount" class="text-primary"></span></h2>
+            </div>
+            <ul id="adminList" class="mt-4 divide-y divide-slate-200 border-y border-slate-200"></ul>
         </div>
     </section>
     <script>
@@ -234,11 +242,32 @@
       var esc = function (s) { return String(s || "").replace(/[&<>"']/g, function (c) { return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]; }); };
       var key = ""; try { key = localStorage.getItem("tup_admin_key") || ""; } catch (e) {}
       var msg = document.getElementById("adminMsg"), list = document.getElementById("adminList");
+      var readers = [];
+      function loadReaders() {
+        fetch("/api/readers?admin=1", { headers: { "x-admin-key": key }, cache: "no-store" }).then(function (r) { return r.json(); }).then(function (d) {
+          if (!d.ok) return;
+          readers = d.readers;
+          document.getElementById("readersBox").classList.remove("hidden");
+          document.getElementById("readerCount").textContent = "(" + readers.length + ")";
+          document.getElementById("readerList").innerHTML = readers.length ? readers.map(function (x) {
+            return '<li class="py-3"><p class="font-headline font-black text-lg">' + esc(x.name) + ' <span class="font-body font-normal text-xl text-on-surface-variant break-all">· ' + esc(x.email) + '</span></p><p class="font-headline text-base uppercase tracking-[0.12em] text-on-surface-variant">' + new Date(x.at).toLocaleString() + (x.article ? " · " + esc(x.article) : "") + '</p></li>';
+          }).join("") : '<li class="py-3 font-body text-xl text-on-surface-variant">No sign-ups yet.</li>';
+        }).catch(function () {});
+      }
+      document.getElementById("readersCsv").addEventListener("click", function () {
+        var q = function (v) { return '"' + String(v == null ? "" : v).replace(/"/g, '""') + '"'; };
+        var rows = [["Signed up", "First name", "Email", "Article", "Source", "Referrer"]].concat(readers.map(function (x) { return [x.at, x.name, x.email, x.article, x.source, x.referrer]; }));
+        var a = document.createElement("a");
+        a.href = URL.createObjectURL(new Blob([rows.map(function (r) { return r.map(q).join(","); }).join("\r\n")], { type: "text/csv" }));
+        a.download = "tup-reader-signups-" + new Date().toISOString().slice(0, 10) + ".csv";
+        a.click();
+      });
       function load() {
         if (!key) return;
+        loadReaders();
         fetch("/api/members?admin=1", { headers: { "x-admin-key": key }, cache: "no-store" }).then(function (r) { return r.json(); }).then(function (d) {
           if (!d.ok) { msg.textContent = d.error || "Wrong admin key."; list.innerHTML = ""; return; }
-          msg.textContent = d.members.length + " members";
+          msg.textContent = ""; document.getElementById("memberCount").textContent = "(" + d.members.length + ")";
           list.innerHTML = d.members.map(function (m) {
             return '<li class="py-4 flex items-start gap-4"><div class="min-w-0 flex-1"><p class="font-headline font-black text-lg">' + esc(m.name) + '</p><p class="font-body text-xl text-on-surface-variant break-all">' + esc(m.email) + (m.website ? " · " + esc(m.website) : "") + '</p><p class="font-headline text-lg uppercase tracking-[0.15em] text-on-surface-variant mt-1">Joined ' + new Date(m.joinedAt).toLocaleDateString() + (m.city ? " · " + esc(m.city) : "") + '</p></div><button data-id="' + m.id + '" data-name="' + esc(m.name) + '" class="shrink-0 border border-primary text-primary hover:bg-primary hover:text-white font-headline font-bold text-lg uppercase tracking-[0.15em] px-4 py-2.5">Remove</button></li>';
           }).join("");
@@ -264,7 +293,7 @@
                 <a class="font-headline font-bold text-xl md:text-lg uppercase tracking-wider text-on-surface-variant hover:text-primary" href="./index.html#news">News</a>
             </div>
             <p class="font-headline font-bold text-base uppercase tracking-wider text-on-surface-variant leading-relaxed max-w-3xl mx-auto border border-slate-200 p-6">
-                &copy; 2026 TEXAS UNITED PATRIOTS. PAID FOR BY TEXAS UNITED PATRIOTS. NOT AUTHORIZED BY ANY CANDIDATE OR CANDIDATE'S COMMITTEE.</p>
+                <a href="/members-admin.html" aria-label="Copyright" style="color:inherit;text-decoration:none">&copy;</a> 2026 TEXAS UNITED PATRIOTS. PAID FOR BY TEXAS UNITED PATRIOTS. NOT AUTHORIZED BY ANY CANDIDATE OR CANDIDATE'S COMMITTEE.</p>
             <div class="flex justify-center gap-8 mt-10 font-headline font-bold text-lg uppercase tracking-wider text-slate-600">
                 <a class="hover:text-primary transition-colors" href="./privacy.html">Privacy Policy</a>
                 <a class="hover:text-primary transition-colors" href="./terms.html">Terms of Service</a>

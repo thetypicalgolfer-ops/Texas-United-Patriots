@@ -171,6 +171,18 @@
        right edge instead of a full-bleed sheet. */
     "html.tup-locked,body.tup-locked{overflow:hidden}",
     "@media (max-width:420px){.tup-inner{padding:1.5rem 1rem 1.75rem}.tup-h{font-size:1.3rem}}",
+    /* THE SITE FOOTER, QUARTER SIZE (Bart, 2026-11-07): "even though I cannot read this story
+       I want to be able to access the footer." A blocked reader can't scroll the page down to
+       the real footer, so a compact copy rides at the bottom of the sheet — same links, same ©
+       into the back end. The sheet scrolls internally on a short screen, so it is always reachable. */
+    ".tup-foot{background:#002868;color:#fff;padding:.9rem 1.25rem;display:flex;flex-wrap:wrap;",
+    "align-items:center;justify-content:center;gap:.5rem 1.5rem;font:600 .72rem 'Public Sans',Helvetica,Arial,sans-serif;",
+    "letter-spacing:.08em;text-transform:uppercase;border-top:4px solid #bf0a30}",
+    ".tup-foot b{font-family:'Playfair Display',Georgia,serif;font-weight:900;font-size:.9rem;letter-spacing:.02em}",
+    ".tup-foot nav{display:flex;flex-wrap:wrap;justify-content:center;gap:.4rem 1.1rem}",
+    ".tup-foot a{color:#fff;text-decoration:none;opacity:.85}.tup-foot a:hover{opacity:1;text-decoration:underline}",
+    ".tup-foot small{font-size:.66rem;opacity:.7;letter-spacing:.06em}",
+    ".tup-foot small a{opacity:1}.tup-foot small a:hover{text-decoration:none}",
   ].join("");
   document.head.appendChild(style);
 
@@ -210,6 +222,11 @@
     '  <p class="tup-fine">By continuing, you agree to our <a href="/terms.html">Terms of Service</a> and <a href="/privacy.html">Privacy Policy</a>. We use your name and email to send you our updates. We do not sell your personal information.</p>',
     '  <div id="tup-providers"></div>',
     '</div>',
+    '<footer class="tup-foot">',
+    '  <b>&#9733; Texas United Patriots</b>',
+    '  <nav aria-label="Site"><a href="/news.html">News</a><a href="/national.html">National</a><a href="/members.html">Members</a><a href="/gear.html">Gear</a><a href="/about.html">About</a><a href="/contact.html">Contact</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></nav>',
+    '  <small><a href="/members-admin.html" aria-label="Copyright">&copy;</a> ' + new Date().getFullYear() + ' Texas United Patriots</small>',
+    '</footer>',
   ].join("");
 
   var lift = document.createElement("div");
@@ -257,13 +274,8 @@
     if (lift.parentNode) lift.parentNode.removeChild(lift);
   }
 
-  /* Append one row to Bart's Google Sheet via the Apps Script Web app.
-     `text/plain` is deliberate: it keeps this a CORS "simple request" with no preflight,
-     and Apps Script cannot answer an OPTIONS preflight — any other content type dies in
-     the browser before it is sent. Verified live from texasunitedpatriots.org: the reply
-     comes back readable (response type "cors"), so a save is CONFIRMED, not assumed. */
   function register(name, email, source) {
-    if (!SHEET_ENDPOINT) return Promise.resolve(true);
+    if (PREVIEW) return Promise.resolve(true);
     var payload = JSON.stringify({
       name: name,
       email: email,
@@ -271,6 +283,24 @@
       article: (document.querySelector("h1") || {}).textContent ? document.querySelector("h1").textContent.trim().slice(0, 200) : location.pathname,
       referrer: document.referrer || "",
     });
+    /* Two copies, sent together: the Sheet (his export) and /api/readers (the list behind
+       the footer ©). One save is enough to unlock — a reader is lost only when BOTH fail. */
+    var sheet = toSheet(payload).then(function () { return true; }, function () { return false; });
+    var api = fetch("/api/readers", { method: "POST", headers: { "Content-Type": "application/json" }, body: payload })
+      .then(function (r) { return r.ok; }, function () { return false; });
+    return Promise.all([sheet, api]).then(function (r) {
+      if (!r[0] && !r[1]) throw new Error("not saved");
+      return true;
+    });
+  }
+
+  /* Append one row to Bart's Google Sheet via the Apps Script Web app.
+     `text/plain` is deliberate: it keeps this a CORS "simple request" with no preflight,
+     and Apps Script cannot answer an OPTIONS preflight — any other content type dies in
+     the browser before it is sent. Verified live from texasunitedpatriots.org: the reply
+     comes back readable (response type "cors"), so a save is CONFIRMED, not assumed. */
+  function toSheet(payload) {
+    if (!SHEET_ENDPOINT) return Promise.resolve(true);
     return fetch(SHEET_ENDPOINT, {
       method: "POST",
       headers: { "Content-Type": "text/plain;charset=utf-8" },
