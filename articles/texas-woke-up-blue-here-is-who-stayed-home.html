@@ -17,7 +17,7 @@
     <meta name="twitter:title" content="Texas Woke Up Blue. Here's Who Stayed Home. — Texas United Patriots" />
     <meta name="twitter:description" content="Democrats won the governor&#x27;s mansion and a U.S. Senate seat on Tuesday. They didn&#x27;t win it with a wave. They won it while almost half of registered Texans sat it out." />
     <meta name="twitter:image" content="https://texasunitedpatriots.org/polling-place-vote-booths-flags_og.jpg" />
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@600;700&family=Oswald:wght@400;500;600;700&family=Playfair+Display:wght@900&family=Public+Sans:wght@400;700;800;900&family=Newsreader:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,800&family=Libre+Franklin:wght@600;700&family=Oswald:wght@400;500;600;700&family=Playfair+Display:wght@900&family=Public+Sans:wght@400;700;800;900&family=Newsreader:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script>
@@ -121,31 +121,37 @@
         ::view-transition-old(root), ::view-transition-new(root) { animation-duration: 0.4s; animation-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1); }
     </style>
 <style id="tup-bar">
-.tup-bar{background:linear-gradient(180deg,#0e2a52 0%,#0a1f3d 100%)!important;box-shadow:0 6px 20px rgba(5,14,30,.35)!important;padding-top:12px!important;padding-bottom:12px!important}
+.tup-bar{display:flex!important;align-items:stretch!important;justify-content:flex-start!important;padding:0!important;background:#002868!important;box-shadow:0 6px 22px rgba(0,16,48,.28)!important}
+.tup-logo{display:flex!important;align-items:center;gap:18px;color:#fff!important;text-decoration:none;background:#002868;padding:12px 40px 12px 32px;flex:none;width:min(39%,720px)}
+.tup-logo svg{width:clamp(52px,4.6vw,88px);height:auto;flex:none}
+.tup-word{display:block;font-family:"Playfair Display",Georgia,serif;font-weight:900;font-size:clamp(22px,2.1vw,40px);line-height:1.02;text-transform:uppercase;letter-spacing:.01em;white-space:nowrap}
+.tup-right{flex:1;display:none;flex-direction:column;min-width:0}
+.tup-menu{flex:1;background:#fff;display:flex;align-items:center;justify-content:space-around;padding:0 12px}
+.tup-menu a{font-family:"Bodoni Moda",Didot,"Bodoni 72",Georgia,serif!important;font-weight:800!important;font-variation-settings:"opsz" 11;font-size:clamp(20px,1.56vw,30px)!important;text-transform:uppercase;letter-spacing:.06em!important;color:#0b1b33!important;position:relative;padding-block:6px;line-height:1.2}
+.tup-menu a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:#bf0a30;transform:scaleX(0);transform-origin:left;transition:transform .2s}
+.tup-menu a:hover::after,.tup-menu a.text-primary::after{transform:scaleX(1)}
+.tup-red{flex:1;background:#bf0a30;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:0 clamp(20px,2vw,40px);font:700 clamp(17px,1.15vw,22px) "Libre Franklin","Public Sans",sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#fff}
+.tup-join{background:#fff;color:#bf0a30!important;padding:7px 22px;font-weight:800;text-decoration:none;white-space:nowrap}
+.tup-join:hover{background:#002868;color:#fff!important}
 .tup-bar::after{content:"";position:absolute;left:0;right:0;bottom:-8px;height:8px;background:linear-gradient(#fff 0 3px,#bf0a30 3px 8px);pointer-events:none}
-.tup-logo{display:flex!important;align-items:center;gap:14px;color:#fff!important;text-decoration:none;min-width:0}
-.tup-logo svg{width:54px;height:54px;flex:none}
-.tup-word{display:block;font-family:"Playfair Display",Georgia,serif;font-weight:900;font-size:clamp(21px,2.3vw,34px);line-height:1.05;text-transform:uppercase;letter-spacing:.01em;white-space:nowrap}
-.tup-tag{display:block;font-family:"Libre Franklin","Public Sans",sans-serif;font-weight:600;font-size:16px;letter-spacing:.16em;text-transform:uppercase;color:#c8d4e6;margin-top:6px;white-space:nowrap}
-.tup-bar>div>a{font-family:"Libre Franklin","Public Sans",sans-serif!important;font-weight:700!important;letter-spacing:.05em!important;color:#fff!important;position:relative;padding-block:6px}
-.tup-bar>div>a::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:3px;background:#e0243f;transform:scaleX(0);transform-origin:left;transition:transform .2s}
-.tup-bar>div>a:hover::after,.tup-bar>div>a.text-primary::after{transform:scaleX(1)}
-#mobileMenuBtn{color:#fff!important;top:22px!important}
-@media (max-width:1279px){.tup-bar{padding-right:76px!important}}
-@media (max-width:520px){.tup-logo{gap:10px}.tup-logo svg{width:42px;height:42px}.tup-word{font-size:18px;white-space:normal}.tup-tag{display:none}}
+#mobileMenuBtn{color:#fff!important;top:16px!important}
+@media (min-width:1280px){.tup-right{display:flex}.tup-bar::after{display:none}.tup-bar{height:136px}body:not(.tup-home){padding-top:40px}}
+@media (max-width:1279px){.tup-logo{width:auto;padding:10px 80px 10px 20px}}
+@media (max-width:520px){.tup-logo{gap:12px;padding-left:16px}.tup-word{font-size:19px}}
 </style>
 </head>
 <body class="bg-surface text-on-surface font-body">
 
-    <nav class="tup-bar fixed top-0 w-full z-50 flex justify-between items-center px-6 md:px-12 py-4 md:py-5 bg-white shadow-lg">
-        <a href="../index.html" class="tup-logo" aria-label="Texas United Patriots home"><svg viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="24.5" fill="#bf0a30" stroke="#fff" stroke-width="3"/><circle cx="26" cy="26" r="19" fill="none" stroke="#fff" stroke-opacity=".45" stroke-width="1"/><polygon points="26.00,12.00 29.64,21.98 40.27,22.36 31.90,28.92 34.82,39.14 26.00,33.20 17.18,39.14 20.10,28.92 11.73,22.36 22.36,21.98" fill="#fff"/></svg><span><span class="tup-word">Texas United Patriots</span><span class="tup-tag">Faith &middot; Family &middot; Freedom</span></span></a>
-        <div class="hidden xl:flex items-center gap-x-7 2xl:gap-x-10">
-            <a class="font-headline font-bold text-xl 2xl:text-[1.75rem] uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="../index.html#news">News</a>
+    <nav class="tup-bar fixed top-0 w-full z-50">
+        <a href="../index.html" class="tup-logo" aria-label="Texas United Patriots home"><svg viewBox="0 0 100 100" aria-hidden="true"><polygon points="50,4 62,38 98,38 69,59 80,94 50,73 20,94 31,59 2,38 38,38" fill="#fff"/></svg><span class="tup-word">Texas United<br>Patriots</span></a>
+        <div class="tup-right">
+            <div class="tup-menu"><a class="font-headline font-bold text-xl 2xl:text-[1.75rem] uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="../index.html#news">News</a>
             <a class="font-headline font-bold text-xl 2xl:text-[1.75rem] uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="../national.html">National</a>
             <a class="font-headline font-bold text-xl 2xl:text-[1.75rem] uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="../members.html">Members</a>
             <a class="font-headline font-bold text-xl 2xl:text-[1.75rem] uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="../gear.html">Gear</a>
-            <a class="font-headline font-bold text-xl 2xl:text-[1.75rem] uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="../index.html">About</a>
-</div>
+            <a class="font-headline font-bold text-xl 2xl:text-[1.75rem] uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="../index.html">About</a></div>
+            <div class="tup-red"><span>Faith &middot; Family &middot; Freedom</span><a class="tup-join" href="../members.html">Join the Movement</a></div>
+        </div>
     </nav>
     <button id="mobileMenuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu" class="xl:hidden fixed top-3 right-4 text-primary p-2 z-[80]"><span class="hamburger"><span></span><span></span><span></span></span></button>
 
