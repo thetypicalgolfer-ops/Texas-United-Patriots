@@ -19,7 +19,7 @@
     <meta name="twitter:description" content="Texas United Patriots gear: Come and Take It, Don't Tread on Me, Remember the Alamo and more. The shop opens soon." />
     <meta name="twitter:image" content="https://texasunitedpatriots.org/texas_flag_hero.png" />
     <link
-        href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Playfair+Display:wght@900&family=Public+Sans:wght@400;700;800;900&family=Newsreader:ital,wght@0,400;0,700;1,400&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@600;700&family=Oswald:wght@400;500;600;700&family=Playfair+Display:wght@900&family=Public+Sans:wght@400;700;800;900&family=Newsreader:ital,wght@0,400;0,700;1,400&display=swap"
         rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
         rel="stylesheet" />
@@ -125,23 +125,37 @@
         @view-transition { navigation: auto; }
         ::view-transition-old(root), ::view-transition-new(root) { animation-duration: 0.4s; animation-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1); }
     </style>
+<style id="tup-bar">
+.tup-bar{background:linear-gradient(180deg,#0e2a52 0%,#0a1f3d 100%)!important;box-shadow:0 6px 20px rgba(5,14,30,.35)!important;padding-top:12px!important;padding-bottom:12px!important}
+.tup-bar::after{content:"";position:absolute;left:0;right:0;bottom:-8px;height:8px;background:linear-gradient(#fff 0 3px,#bf0a30 3px 8px);pointer-events:none}
+.tup-logo{display:flex!important;align-items:center;gap:14px;color:#fff!important;text-decoration:none;min-width:0}
+.tup-logo svg{width:54px;height:54px;flex:none}
+.tup-word{display:block;font-family:"Playfair Display",Georgia,serif;font-weight:900;font-size:clamp(21px,2.3vw,34px);line-height:1.05;text-transform:uppercase;letter-spacing:.01em;white-space:nowrap}
+.tup-tag{display:block;font-family:"Libre Franklin","Public Sans",sans-serif;font-weight:600;font-size:16px;letter-spacing:.16em;text-transform:uppercase;color:#c8d4e6;margin-top:6px;white-space:nowrap}
+.tup-bar>div>a{font-family:"Libre Franklin","Public Sans",sans-serif!important;font-weight:700!important;letter-spacing:.05em!important;color:#fff!important;position:relative;padding-block:6px}
+.tup-bar>div>a::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:3px;background:#e0243f;transform:scaleX(0);transform-origin:left;transition:transform .2s}
+.tup-bar>div>a:hover::after,.tup-bar>div>a.text-primary::after{transform:scaleX(1)}
+#mobileMenuBtn{color:#fff!important;top:22px!important}
+@media (max-width:1279px){.tup-bar{padding-right:76px!important}}
+@media (max-width:520px){.tup-logo{gap:10px}.tup-logo svg{width:42px;height:42px}.tup-word{font-size:18px;white-space:normal}.tup-tag{display:none}}
+</style>
 </head>
 
 <body class="bg-surface text-on-surface font-body">
 
     <!-- Nav -->
-    <nav id="mainNav" class="fixed top-0 w-full z-50 flex justify-between items-center px-6 md:px-12 py-4 md:py-5 bg-white shadow-lg transition-all duration-300">
-        <a href="./index.html" class="text-xl sm:text-2xl md:text-4xl font-black text-primary tracking-tight font-headline whitespace-nowrap">TEXAS UNITED PATRIOTS</a>
-        <div class="hidden md:flex items-center gap-x-12">
-            <a class="font-headline font-bold text-xl lg:text-2xl xl:text-[1.75rem] uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="./issues.html">Issues</a>
-            <a class="font-headline font-bold text-xl lg:text-2xl xl:text-[1.75rem] uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="./about.html">About</a>
-            <a class="font-headline font-bold text-xl lg:text-2xl xl:text-[1.75rem] uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="./index.html#news">News</a>
-            <a class="font-headline font-bold text-xl lg:text-2xl xl:text-[1.75rem] uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="./national.html">National</a>
-            <a class="font-headline font-bold text-xl lg:text-2xl xl:text-[1.75rem] uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="./members.html">Members</a>
-            <a class="font-headline font-bold text-xl lg:text-2xl xl:text-[1.75rem] uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="./gear.html">Gear</a>
+    <nav id="mainNav" class="tup-bar fixed top-0 w-full z-50 flex justify-between items-center px-6 md:px-12 py-4 md:py-5 bg-white shadow-lg transition-all duration-300">
+        <a href="./index.html" class="tup-logo" aria-label="Texas United Patriots home"><svg viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="24.5" fill="#bf0a30" stroke="#fff" stroke-width="3"/><circle cx="26" cy="26" r="19" fill="none" stroke="#fff" stroke-opacity=".45" stroke-width="1"/><polygon points="26.00,12.00 29.64,21.98 40.27,22.36 31.90,28.92 34.82,39.14 26.00,33.20 17.18,39.14 20.10,28.92 11.73,22.36 22.36,21.98" fill="#fff"/></svg><span><span class="tup-word">Texas United Patriots</span><span class="tup-tag">Faith &middot; Family &middot; Freedom</span></span></a>
+        <div class="hidden xl:flex items-center gap-x-7 2xl:gap-x-10">
+            <a class="font-headline font-bold text-xl 2xl:text-[1.75rem] uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="./issues.html">Issues</a>
+            <a class="font-headline font-bold text-xl 2xl:text-[1.75rem] uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="./about.html">About</a>
+            <a class="font-headline font-bold text-xl 2xl:text-[1.75rem] uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="./index.html#news">News</a>
+            <a class="font-headline font-bold text-xl 2xl:text-[1.75rem] uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="./national.html">National</a>
+            <a class="font-headline font-bold text-xl 2xl:text-[1.75rem] uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="./members.html">Members</a>
+            <a class="font-headline font-bold text-xl 2xl:text-[1.75rem] uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="./gear.html">Gear</a>
 </div>
     </nav>
-    <button id="mobileMenuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu" class="md:hidden fixed top-3 right-4 text-primary p-2 z-[80]"><span class="hamburger"><span></span><span></span><span></span></span></button>
+    <button id="mobileMenuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu" class="xl:hidden fixed top-3 right-4 text-primary p-2 z-[80]"><span class="hamburger"><span></span><span></span><span></span></span></button>
 
     <!-- Mobile Menu -->
     <div id="mobileMenu" class="fixed inset-0 z-[65] bg-[#141821] flex flex-col overflow-y-auto">
