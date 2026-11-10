@@ -232,6 +232,11 @@
                     <button id="readersCsv" type="button" class="border border-primary text-primary hover:bg-primary hover:text-white font-headline font-bold text-lg uppercase tracking-[0.15em] px-4 py-2">Download CSV</button>
                 </div>
                 <ul id="readerList" class="mt-4 divide-y divide-slate-200 border-y border-slate-200"></ul>
+                <div class="flex flex-wrap items-end justify-between gap-3 mt-14">
+                    <h2 class="font-headline font-black text-3xl uppercase tracking-tight">2026 Member Cards <span id="cardCount" class="text-primary"></span></h2>
+                    <button id="cardsCsv" type="button" class="border border-primary text-primary hover:bg-primary hover:text-white font-headline font-bold text-lg uppercase tracking-[0.15em] px-4 py-2">Download CSV</button>
+                </div>
+                <ul id="cardList" class="mt-4 divide-y divide-slate-200 border-y border-slate-200"></ul>
                 <h2 class="font-headline font-black text-3xl uppercase tracking-tight mt-14">Members <span id="memberCount" class="text-primary"></span></h2>
             </div>
             <ul id="adminList" class="mt-4 divide-y divide-slate-200 border-y border-slate-200"></ul>
@@ -262,9 +267,29 @@
         a.download = "tup-reader-signups-" + new Date().toISOString().slice(0, 10) + ".csv";
         a.click();
       });
+      var cards = [];
+      function loadCards() {
+        fetch("/api/cards?admin=1", { headers: { "x-admin-key": key }, cache: "no-store" }).then(function (r) { return r.json(); }).then(function (d) {
+          if (!d.ok) return;
+          cards = d.cards;
+          document.getElementById("cardCount").textContent = "(" + cards.length + ")";
+          document.getElementById("cardList").innerHTML = cards.length ? cards.map(function (x) {
+            return '<li class="py-3"><p class="font-headline font-black text-lg">' + esc(x.firstName + " " + x.lastName) + ' <span class="text-primary">' + esc(x.memberNo) + '</span> <span class="font-body font-normal text-xl text-on-surface-variant break-all">· ' + esc(x.email) + '</span></p><p class="font-headline text-base uppercase tracking-[0.12em] text-on-surface-variant">' + new Date(x.at).toLocaleString() + ' · ZIP ' + esc(x.zip) + '</p></li>';
+          }).join("") : '<li class="py-3 font-body text-xl text-on-surface-variant">No cards claimed yet.</li>';
+        }).catch(function () {});
+      }
+      document.getElementById("cardsCsv").addEventListener("click", function () {
+        var q = function (v) { return '"' + String(v == null ? "" : v).replace(/"/g, '""') + '"'; };
+        var rows = [["Claimed", "Member #", "First name", "Last name", "Email", "ZIP"]].concat(cards.map(function (x) { return [x.at, x.memberNo, x.firstName, x.lastName, x.email, x.zip]; }));
+        var a = document.createElement("a");
+        a.href = URL.createObjectURL(new Blob([rows.map(function (r) { return r.map(q).join(","); }).join("\r\n")], { type: "text/csv" }));
+        a.download = "tup-member-cards-" + new Date().toISOString().slice(0, 10) + ".csv";
+        a.click();
+      });
       function load() {
         if (!key) return;
         loadReaders();
+        loadCards();
         fetch("/api/members?admin=1", { headers: { "x-admin-key": key }, cache: "no-store" }).then(function (r) { return r.json(); }).then(function (d) {
           if (!d.ok) { msg.textContent = d.error || "Wrong admin key."; list.innerHTML = ""; return; }
           msg.textContent = ""; document.getElementById("memberCount").textContent = "(" + d.members.length + ")";

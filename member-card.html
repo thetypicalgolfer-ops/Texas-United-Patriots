@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Claim Your 2026 Member Card — Texas United Patriots</title>
+    <meta name="description" content="Claim your free 2026 Texas United Patriots member card, honoring 250 years of American independence and 190 years of a free Texas. Free for every Texan." />
+    <link rel="canonical" href="https://texasunitedpatriots.org/member-card.html" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Texas United Patriots" />
+    <meta property="og:title" content="Claim Your 2026 Member Card — Texas United Patriots" />
+    <meta property="og:description" content="Claim your free 2026 Texas United Patriots member card, honoring 250 years of American independence and 190 years of a free Texas. Free for every Texan." />
+    <meta property="og:url" content="https://texasunitedpatriots.org/member-card.html" />
+    <meta property="og:image" content="https://texasunitedpatriots.org/texas_flag_hero.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Claim Your 2026 Member Card — Texas United Patriots" />
+    <meta name="twitter:description" content="Claim your free 2026 Texas United Patriots member card, honoring 250 years of American independence and 190 years of a free Texas. Free for every Texan." />
+    <meta name="twitter:image" content="https://texasunitedpatriots.org/texas_flag_hero.png" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,800&family=Libre+Franklin:wght@600;700&family=Oswald:wght@400;500;600;700&family=Playfair+Display:wght@900&family=Public+Sans:wght@400;700;800;900&family=Newsreader:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#5d0011",
+                        "on-primary": "#ffffff",
+                        "primary-container": "#87001d",
+                        "primary-fixed": "#ffdad9",
+                        "surface": "#f9f9f9",
+                        "on-surface": "#1a1c1c",
+                        "on-surface-variant": "#47464f",
+                        "surface-variant": "#e2e2e2",
+                        "background": "#f9f9f9"
+                    },
+                    fontFamily: {
+                        headline: ["Oswald", "Public Sans", "sans-serif"],
+                        masthead: ["Playfair Display", "Georgia", "serif"],
+                        body: ["Newsreader"],
+                        label: ["Public Sans"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        
+        /* Kill horizontal scroll */
+        html, body { overflow-x: hidden; }
+
+        /* Mobile menu button — fixed above everything else */
+        @media (max-width: 767px) {
+            #mobileMenuBtn {
+                position: fixed !important;
+                top: 14px !important;
+                right: 16px !important;
+                z-index: 9999 !important;
+                display: inline-flex !important;
+                align-items: center;
+                justify-content: center;
+                padding: 8px;
+            }
+        }
+
+        /* Hamburger button */
+        .hamburger { width: 28px; height: 22px; position: relative; display: inline-block; }
+        .hamburger span { position: absolute; left: 0; height: 2px; width: 100%; background-color: currentColor; border-radius: 2px; transition: transform 0.35s ease, top 0.35s ease, opacity 0.2s ease, background-color 0.3s ease; }
+        .hamburger span:nth-child(1) { top: 2px; }
+        .hamburger span:nth-child(2) { top: 10px; width: 75%; }
+        .hamburger span:nth-child(3) { top: 18px; }
+        #mobileMenuBtn[aria-expanded="true"] .hamburger span:nth-child(1) { top: 10px; transform: rotate(45deg); }
+        #mobileMenuBtn[aria-expanded="true"] .hamburger span:nth-child(2) { opacity: 0; transform: translateX(-10px); }
+        #mobileMenuBtn[aria-expanded="true"] .hamburger span:nth-child(3) { top: 10px; transform: rotate(-45deg); }
+        #mobileMenuBtn { transition: color 0.25s ease, background-color 0.25s ease; border-radius: 999px; }
+        #mobileMenuBtn[aria-expanded="true"] { color: #fff; background-color: rgba(255, 255, 255, 0.12); }
+
+        /* Mobile menu — editorial fade-in */
+        #mobileMenu { transform: translateX(100%); visibility: hidden; transition: transform 0.58s cubic-bezier(0.22, 0.61, 0.36, 1), visibility 0s linear 0.58s; padding-top: env(safe-area-inset-top); padding-bottom: env(safe-area-inset-bottom); overscroll-behavior: contain; -webkit-overflow-scrolling: touch; will-change: transform; }
+        #mobileMenu.open { transform: translateX(0); visibility: visible; transition: transform 0.62s cubic-bezier(0.22, 0.61, 0.36, 1), visibility 0s linear 0s; }
+        #mobileMenu .menu-item { opacity: 0; transform: translateY(18px); transition: opacity 0.6s cubic-bezier(0.22, 0.61, 0.36, 1), transform 0.6s cubic-bezier(0.22, 0.61, 0.36, 1); }
+        #mobileMenu.open .menu-item { opacity: 1; transform: translateY(0); }
+        #mobileMenu.open .menu-item:nth-child(1) { transition-delay: 0.22s; }
+        #mobileMenu.open .menu-item:nth-child(2) { transition-delay: 0.30s; }
+        #mobileMenu.open .menu-item:nth-child(3) { transition-delay: 0.38s; }
+        #mobileMenu.open .menu-item:nth-child(4) { transition-delay: 0.46s; }
+        #mobileMenu.open .menu-item:nth-child(5) { transition-delay: 0.56s; }
+        #mobileMenu .menu-index { font-variant-numeric: tabular-nums; }
+
+.material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .reveal { opacity: 0; transition: opacity 0.8s ease, transform 0.8s ease; }
+        .reveal.visible { opacity: 1; transform: translate(0, 0) !important; }
+        .reveal-up { transform: translateY(40px); }
+        .reveal-left { transform: translateX(-40px); }
+        .reveal-right { transform: translateX(40px); }
+    
+        /* Social share bar */
+        .share-bar { display: flex; flex-direction: column; align-items: stretch; gap: 0.75rem; }
+        @media (min-width: 640px) { .share-bar { flex-direction: row; align-items: center; } }
+        .share-bar .share-label { font-family: 'Public Sans', sans-serif; font-weight: 700; font-size: 18px; letter-spacing: 0.3em; text-transform: uppercase; color: #5d0011; }
+        .share-bar .share-icons { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .share-btn { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border: 1px solid #e5e7eb; background: #fff; color: #1a1c1c; transition: all 0.2s ease; cursor: pointer; }
+        .share-btn:hover { color: #fff; border-color: transparent; transform: translateY(-2px); }
+        .share-btn svg { width: 18px; height: 18px; fill: currentColor; }
+        .share-btn[data-share="facebook"]:hover { background: #1877f2; }
+        .share-btn[data-share="x"]:hover { background: #000; }
+        .share-btn[data-share="truth"]:hover { background: #5d0011; }
+        .share-btn[data-share="telegram"]:hover { background: #229ED9; }
+        .share-btn[data-share="whatsapp"]:hover { background: #25D366; }
+        .share-btn[data-share="email"]:hover { background: #5d0011; }
+        .share-btn[data-share="copy"]:hover { background: #1a1c1c; }
+        .share-btn .copied-msg { display: none; }
+        .share-btn.copied { background: #16a34a; color: #fff; border-color: transparent; }
+        .share-bar.on-dark .share-label { color: rgba(255,255,255,0.6); }
+        .share-bar.on-dark .share-btn { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.15); color: #fff; }
+        .share-bar.on-dark .share-btn:hover { border-color: transparent; }
+
+        /* Smooth cross-page transitions (modern browsers: Chrome 126+, Safari 18+) */
+        @view-transition { navigation: auto; }
+        ::view-transition-old(root), ::view-transition-new(root) { animation-duration: 0.4s; animation-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1); }
+    </style>
+<style id="tup-bar">
+.tup-bar{display:flex!important;align-items:stretch!important;justify-content:flex-start!important;padding:0!important;background:#002868!important;box-shadow:0 6px 22px rgba(0,16,48,.28)!important}
+.tup-logo{display:flex!important;align-items:center;gap:18px;color:#fff!important;text-decoration:none;background:#002868;padding:12px 40px 12px 32px;flex:none;width:min(39%,720px)}
+.tup-logo svg{width:clamp(52px,4.6vw,88px);height:auto;flex:none}
+.tup-word{display:block;font-family:"Playfair Display",Georgia,serif;font-weight:900;font-size:clamp(22px,2.1vw,40px);line-height:1.02;text-transform:uppercase;letter-spacing:.01em;white-space:nowrap}
+.tup-right{flex:1;display:none;flex-direction:column;min-width:0}
+.tup-menu{flex:1;background:#fff;display:flex;align-items:center;justify-content:flex-start;gap:clamp(28px,2.4vw,52px);padding:0 clamp(20px,2vw,40px)}
+.tup-menu a{font-family:"Bodoni Moda",Didot,"Bodoni 72",Georgia,serif!important;font-weight:800!important;font-variation-settings:"opsz" 11;font-size:clamp(20px,1.56vw,30px)!important;text-transform:uppercase;letter-spacing:.06em!important;color:#0b1b33!important;position:relative;padding-block:6px;line-height:1.2}
+.tup-menu a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:#bf0a30;transform:scaleX(0);transform-origin:left;transition:transform .2s}
+.tup-menu a:hover::after,.tup-menu a.text-primary::after{transform:scaleX(1)}
+.tup-red{flex:1;background:#bf0a30;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:0 clamp(20px,2vw,40px);font:700 clamp(17px,1.15vw,22px) "Libre Franklin","Public Sans",sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#fff}
+.tup-join{background:#fff;color:#bf0a30!important;padding:7px 22px;font-weight:800;text-decoration:none;white-space:nowrap}
+.tup-join:hover{background:#002868;color:#fff!important}
+.tup-bar::after{content:"";position:absolute;left:0;right:0;bottom:-8px;height:8px;background:linear-gradient(#fff 0 3px,#bf0a30 3px 8px);pointer-events:none}
+#mobileMenuBtn{color:#fff!important;top:16px!important}
+@media (min-width:1280px){.tup-right{display:flex}.tup-bar::after{display:none}.tup-bar{height:136px}body:not(.tup-home){padding-top:40px}}
+@media (max-width:1279px){.tup-logo{width:auto;padding:10px 80px 10px 20px}}
+@media (max-width:520px){.tup-logo{gap:12px;padding-left:16px}.tup-word{font-size:19px}}
+</style>
+</head>
+
+<body class="bg-surface text-on-surface font-body">
+
+    <!-- Nav -->
+    <nav id="mainNav" class="tup-bar fixed top-0 w-full z-50">
+        <a href="./index.html" class="tup-logo" aria-label="Texas United Patriots home"><svg viewBox="0 0 100 100" aria-hidden="true"><polygon points="50,4 62,38 98,38 69,59 80,94 50,73 20,94 31,59 2,38 38,38" fill="#fff"/></svg><span class="tup-word">Texas United<br>Patriots</span></a>
+        <div class="tup-right">
+            <div class="tup-menu"><a class="font-headline font-bold text-xl 2xl:text-[1.75rem] uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="./issues.html">Issues</a>
+            <a class="font-headline font-bold text-xl 2xl:text-[1.75rem] uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="./about.html">About</a>
+            <a class="font-headline font-bold text-xl 2xl:text-[1.75rem] uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="./index.html#news">News</a>
+            <a class="font-headline font-bold text-xl 2xl:text-[1.75rem] uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="./national.html">National</a>
+            <a class="font-headline font-bold text-xl 2xl:text-[1.75rem] uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="./members.html">Members</a>
+            <a class="font-headline font-bold text-xl 2xl:text-[1.75rem] uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="./gear.html">Gear</a></div>
+            <div class="tup-red"><span>Faith &middot; Family &middot; Freedom</span><a class="tup-join" href="./members.html">Join the Movement</a></div>
+        </div>
+    </nav>
+    <button id="mobileMenuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu" class="xl:hidden fixed top-3 right-4 text-primary p-2 z-[80]"><span class="hamburger"><span></span><span></span><span></span></span></button>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="fixed inset-0 z-[65] bg-[#141821] flex flex-col overflow-y-auto">
+        <div class="absolute inset-x-0 top-0 h-1 bg-primary"></div>
+        <div class="flex justify-between items-center px-6 pt-5 pb-5 border-b border-white/10">
+            <a href="index.html" class="text-2xl md:text-4xl font-black text-white tracking-tight font-headline">TEXAS UNITED PATRIOTS</a>
+        </div>
+        <nav class="flex-1 flex flex-col px-6 pt-6">
+            <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors" href="issues.html">
+                <span class="menu-index font-headline font-bold text-lg tracking-[0.08em] text-primary w-8">01</span>
+                <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">Issues</span>
+                <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
+            </a>
+            <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors" href="about.html">
+                <span class="menu-index font-headline font-bold text-lg tracking-[0.08em] text-primary w-8">02</span>
+                <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">About</span>
+                <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
+            </a>
+            <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors" href="index.html#news">
+                <span class="menu-index font-headline font-bold text-lg tracking-[0.08em] text-primary w-8">03</span>
+                <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">News</span>
+                <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
+            </a>
+            <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors" href="./national.html">
+                <span class="menu-index font-headline font-bold text-lg tracking-[0.08em] text-primary w-8">04</span>
+                <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">National</span>
+                <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
+            </a>
+            <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors" href="./members.html">
+                <span class="menu-index font-headline font-bold text-lg tracking-[0.08em] text-primary w-8">05</span>
+                <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">Members</span>
+                <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
+            </a>
+            <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors" href="./gear.html">
+                <span class="menu-index font-headline font-bold text-lg tracking-[0.08em] text-primary w-8">06</span>
+                <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">Gear</span>
+                <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
+            </a>
+        </nav>
+        <div class="menu-item px-6 pt-8 pb-10 border-t border-white/10 mt-6">
+<p class="mt-6 font-headline font-bold text-lg text-white/40 uppercase tracking-[0.08em] text-center">Faith · Family · Freedom</p>
+        </div>
+    </div>
+
+
+    <style>
+      /* 2026 member card (Bart, 2026-11-09). Drawn in CSS: navy lone-star panel + the white and red bars
+         of the Texas flag, a light paper grain, gold foil type. When Bart's card art is ready it drops in
+         as --card-art and the name/number stay live on top. */
+      .mc{--navy:#002868;--red:#bf0a30;--gold:#c9a24a;position:relative;width:100%;aspect-ratio:1.586;border-radius:18px;overflow:hidden;
+        box-shadow:0 30px 60px -20px rgba(0,0,0,.55),0 8px 18px rgba(0,0,0,.25);background:#fff;isolation:isolate;color:#fff;
+        font-family:"Public Sans",Helvetica,Arial,sans-serif;transform:perspective(1200px) rotateY(-8deg) rotateX(4deg);transition:transform .6s cubic-bezier(.25,1,.5,1)}
+      .mc:hover{transform:perspective(1200px) rotateY(0) rotateX(0)}
+      .mc-art{position:absolute;inset:0;background:var(--card-art,none) center/cover no-repeat;z-index:3}
+      .mc-blue{position:absolute;left:0;top:0;bottom:0;width:36%;background:linear-gradient(160deg,#00307c,#001a47)}
+      .mc-white{position:absolute;left:36%;right:0;top:0;height:50%;background:linear-gradient(180deg,#ffffff,#eef0f4)}
+      .mc-red{position:absolute;left:36%;right:0;bottom:0;height:50%;background:linear-gradient(180deg,#c40c33,#9a0826)}
+      .mc-star{position:absolute;left:18%;top:50%;width:24%;transform:translate(-50%,-50%);filter:drop-shadow(0 2px 3px rgba(0,0,0,.35))}
+      .mc-grain{position:absolute;inset:0;mix-blend-mode:multiply;opacity:.18;z-index:2;
+        background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E")}
+      .mc-shine{position:absolute;inset:0;z-index:4;background:linear-gradient(115deg,transparent 30%,rgba(255,255,255,.28) 45%,transparent 60%);pointer-events:none}
+      .mc-org{position:absolute;left:40%;right:5%;top:9%;z-index:5;font:900 clamp(13px,3.4vw,26px)/1 "Playfair Display",Georgia,serif;color:var(--navy);text-transform:uppercase;letter-spacing:.01em}
+      .mc-sub{position:absolute;left:40%;right:5%;top:30%;z-index:5;font:700 clamp(7px,1.35vw,11px)/1.2 "Libre Franklin",sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#6b5a2a}
+      .mc-year{position:absolute;left:40%;bottom:30%;z-index:5;font:600 clamp(8px,1.5vw,12px)/1 "Libre Franklin",sans-serif;letter-spacing:.3em;color:#f3d48a;text-transform:uppercase}
+      .mc-name{position:absolute;left:40%;right:5%;bottom:14%;z-index:5;font:700 clamp(14px,3.2vw,24px)/1.05 "Oswald",sans-serif;letter-spacing:.04em;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+      .mc-no{position:absolute;right:5%;bottom:5.5%;z-index:5;font:600 clamp(8px,1.4vw,11px)/1 "Libre Franklin",sans-serif;letter-spacing:.2em;color:#f3d48a}
+      .mc-since{position:absolute;left:40%;bottom:5.5%;z-index:5;font:600 clamp(7px,1.2vw,10px)/1 "Libre Franklin",sans-serif;letter-spacing:.2em;color:rgba(255,255,255,.75);text-transform:uppercase}
+      .mc-motto{position:absolute;left:0;width:36%;bottom:7%;z-index:5;text-align:center;font:700 clamp(6px,1.1vw,9px)/1.3 "Libre Franklin",sans-serif;letter-spacing:.2em;color:rgba(255,255,255,.8);text-transform:uppercase}
+      .claim-in{border:1px solid #cbd5e1;background:#fff;padding:.85rem 1rem;font:400 1.15rem "Public Sans",sans-serif;width:100%}
+      .claim-in:focus{outline:2px solid #5d0011;outline-offset:-1px;border-color:#5d0011}
+      @media (prefers-reduced-motion:reduce){.mc{transform:none;transition:none}}
+    </style>
+
+    <!-- Hero -->
+    <header class="relative pt-32 pb-16 md:pt-40 md:pb-24 bg-[#0a0c10] text-white overflow-hidden">
+        <div class="absolute inset-0 opacity-25"><img src="./texas_flag_hero.png" alt="" class="w-full h-full object-cover"/></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-black via-black/85 to-black/40"></div>
+        <div class="container mx-auto px-6 md:px-12 relative z-10 grid gap-12 lg:grid-cols-[1.05fr_0.95fr] items-center">
+            <div>
+                <span class="inline-flex items-center gap-2 bg-primary text-on-primary px-3 py-1 mb-6 font-headline font-bold text-lg tracking-[0.08em] uppercase">
+                    <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">badge</span>2026 Membership</span>
+                <h1 class="font-headline font-black text-5xl sm:text-6xl md:text-7xl leading-[0.9] tracking-tighter uppercase mb-6">Claim your 2026<br/>member card.</h1>
+                <p class="font-body italic text-xl sm:text-2xl text-white/85 max-w-2xl leading-snug">Honoring 250 years of American independence, and 190 years of a free Texas. Free for every Texan who stands with us.</p>
+                <a href="#claim" class="mt-10 inline-flex items-center gap-3 bg-[#bf0a30] hover:bg-white hover:text-[#bf0a30] transition-colors px-8 py-4 font-headline font-bold text-xl uppercase tracking-[0.08em]">Claim my free card <span class="material-symbols-outlined">arrow_downward</span></a>
+            </div>
+            <div class="max-w-[520px] w-full mx-auto lg:mx-0">
+                <div class="mc" id="heroCard" role="img" aria-label="The Texas United Patriots 2026 member card">
+                    <div class="mc-blue"></div><div class="mc-white"></div><div class="mc-red"></div>
+                    <svg class="mc-star" viewBox="0 0 100 100" aria-hidden="true"><polygon points="50,4 62,38 98,38 69,59 80,94 50,73 20,94 31,59 2,38 38,38" fill="#fff"/></svg>
+                    <div class="mc-grain"></div><div class="mc-art"></div>
+                    <div class="mc-org">Texas United<br/>Patriots</div>
+                    <div class="mc-sub">Faith · Family · Freedom</div>
+                    <div class="mc-year">★ 2026 Member ★</div>
+                    <div class="mc-name" data-card-name>Your Name Here</div>
+                    <div class="mc-since">America 250 · 1776–2026</div>
+                    <div class="mc-no" data-card-no>TX-0000</div>
+                    <div class="mc-motto">Come and<br/>Take It</div>
+                    <div class="mc-shine"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-6 md:px-12 max-w-3xl font-body text-xl md:text-2xl leading-relaxed text-on-surface">
+            <p>Your Texas United Patriots member card says who you are: a Texan who loves this state, keeps the faith, protects the family, and isn't afraid to stand up and be counted.</p>
+            <p class="mt-6 font-headline font-bold text-2xl md:text-3xl uppercase tracking-tight text-primary">Texas doesn't stay free by accident. It stays free because Texans show up.</p>
+            <p class="mt-6">On November 3, barely half of registered Texans voted. Elections in this state are now won and lost by the people who stay home. The next fight starts today, in every county, in every precinct.</p>
+            <p class="mt-6">That's why we're asking you to claim your card and stand with Texas United Patriots in 2026.</p>
+
+            <h2 class="mt-12 font-headline font-black text-3xl md:text-4xl uppercase tracking-tight">You stand for what matters most</h2>
+            <ul class="mt-6 space-y-3 list-none">
+                <li class="flex gap-3"><span class="text-[#bf0a30]">★</span>Elections every Texan can trust, so your vote always counts</li>
+                <li class="flex gap-3"><span class="text-[#bf0a30]">★</span>A secure border and police who are backed, not blamed</li>
+                <li class="flex gap-3"><span class="text-[#bf0a30]">★</span>Parents, not bureaucrats, in charge of their children's education</li>
+                <li class="flex gap-3"><span class="text-[#bf0a30]">★</span>Relief from the property tax squeeze on Texas families</li>
+                <li class="flex gap-3"><span class="text-[#bf0a30]">★</span>Texas sovereignty, Texas energy and Texas jobs</li>
+                <li class="flex gap-3"><span class="text-[#bf0a30]">★</span>Faith, family and life</li>
+            </ul>
+
+            <h2 class="mt-12 font-headline font-black text-3xl md:text-4xl uppercase tracking-tight">Being a member means</h2>
+            <ul class="mt-6 space-y-3 list-none">
+                <li class="flex gap-3"><span class="text-[#bf0a30]">★</span>Your personal 2026 member card, with your own member number</li>
+                <li class="flex gap-3"><span class="text-[#bf0a30]">★</span>Member updates by email: the Texas news that matters, without the spin</li>
+                <li class="flex gap-3"><span class="text-[#bf0a30]">★</span>First word on poll watcher, precinct chair and volunteer openings near you</li>
+                <li class="flex gap-3"><span class="text-[#bf0a30]">★</span>A voice: tell us what's happening in your county, and we'll listen</li>
+                <li class="flex gap-3"><span class="text-[#bf0a30]">★</span>Your name in our <a class="underline decoration-[#bf0a30] underline-offset-4 hover:text-primary" href="./members.html">member directory</a>, if you want it</li>
+            </ul>
+            <p class="mt-10">When we stand together, Texas stays Texas. Claim your card below. It's free, it takes thirty seconds, and it's yours the moment you're done.</p>
+        </div>
+    </section>
+
+    <section id="claim" class="py-16 md:py-24 bg-[#f4f1ea] border-y border-slate-200">
+        <div class="container mx-auto px-6 md:px-12 grid gap-12 lg:grid-cols-[1fr_1fr] items-start max-w-6xl">
+            <div>
+                <h2 class="font-headline font-black text-4xl md:text-5xl uppercase tracking-tight leading-[0.95]">Activate your<br/>2026 membership.</h2>
+                <p class="mt-5 font-body text-xl text-on-surface-variant">Your card appears the second you're done, ready to save to your phone.</p>
+                <form id="claimForm" class="mt-8 grid gap-4" novalidate>
+                    <div class="grid gap-4 sm:grid-cols-2">
+                        <label class="grid gap-1.5"><span class="font-headline font-bold uppercase tracking-[0.08em] text-base">First name</span><input class="claim-in" name="firstName" autocomplete="given-name" required/></label>
+                        <label class="grid gap-1.5"><span class="font-headline font-bold uppercase tracking-[0.08em] text-base">Last name</span><input class="claim-in" name="lastName" autocomplete="family-name" required/></label>
+                    </div>
+                    <label class="grid gap-1.5"><span class="font-headline font-bold uppercase tracking-[0.08em] text-base">Email</span><input class="claim-in" name="email" type="email" inputmode="email" autocomplete="email" required/></label>
+                    <label class="grid gap-1.5 sm:max-w-[12rem]"><span class="font-headline font-bold uppercase tracking-[0.08em] text-base">ZIP code</span><input class="claim-in" name="zip" inputmode="numeric" autocomplete="postal-code" maxlength="5" required/></label>
+                    <input type="text" name="company" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true"/>
+                    <button id="claimBtn" class="mt-2 bg-[#bf0a30] hover:bg-[#002868] transition-colors text-white font-headline font-bold text-xl uppercase tracking-[0.08em] px-8 py-4">Claim my free card</button>
+                    <p id="claimErr" class="font-headline text-lg text-[#bf0a30]" role="alert"></p>
+                    <p class="font-body text-base text-on-surface-variant">By claiming your card you agree to receive email updates from Texas United Patriots. Unsubscribe any time. We never sell your information. <a class="underline" href="./privacy.html">Privacy Policy</a>.</p>
+                </form>
+            </div>
+            <div>
+                <div class="mc" id="myCard" role="img" aria-label="Your 2026 member card">
+                    <div class="mc-blue"></div><div class="mc-white"></div><div class="mc-red"></div>
+                    <svg class="mc-star" viewBox="0 0 100 100" aria-hidden="true"><polygon points="50,4 62,38 98,38 69,59 80,94 50,73 20,94 31,59 2,38 38,38" fill="#fff"/></svg>
+                    <div class="mc-grain"></div><div class="mc-art"></div>
+                    <div class="mc-org">Texas United<br/>Patriots</div>
+                    <div class="mc-sub">Faith · Family · Freedom</div>
+                    <div class="mc-year">★ 2026 Member ★</div>
+                    <div class="mc-name" data-card-name>Your Name Here</div>
+                    <div class="mc-since">America 250 · 1776–2026</div>
+                    <div class="mc-no" data-card-no>TX-0000</div>
+                    <div class="mc-motto">Come and<br/>Take It</div>
+                    <div class="mc-shine"></div>
+                </div>
+                <div id="cardDone" class="hidden mt-8 bg-white border border-slate-200 p-6">
+                    <p class="font-headline font-black text-2xl uppercase tracking-tight">Welcome, patriot. <span id="doneName"></span></p>
+                    <p class="mt-2 font-body text-lg text-on-surface-variant">Your 2026 membership is active. Save your card to your phone and show it with pride.</p>
+                    <div class="mt-5 flex flex-wrap gap-3">
+                        <button id="saveCard" type="button" class="bg-[#002868] hover:bg-[#bf0a30] transition-colors text-white font-headline font-bold text-lg uppercase tracking-[0.08em] px-6 py-3">Save my card</button>
+                        <button id="shareCard" type="button" class="border border-[#002868] text-[#002868] hover:bg-[#002868] hover:text-white transition-colors font-headline font-bold text-lg uppercase tracking-[0.08em] px-6 py-3">Invite a Texan</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+    (function () {
+      var form = document.getElementById("claimForm"), err = document.getElementById("claimErr"), btn = document.getElementById("claimBtn");
+      var my = document.getElementById("myCard");
+      // Live preview: her name goes on the card as she types.
+      function preview() {
+        var n = (form.firstName.value + " " + form.lastName.value).trim();
+        my.querySelector("[data-card-name]").textContent = n || "Your Name Here";
+      }
+      form.firstName.addEventListener("input", preview); form.lastName.addEventListener("input", preview);
+      form.addEventListener("submit", function (e) {
+        e.preventDefault(); err.textContent = "";
+        var d = { firstName: form.firstName.value, lastName: form.lastName.value, email: form.email.value, zip: form.zip.value, company: form.company.value, referrer: document.referrer || "" };
+        if (!d.firstName.trim() || !d.lastName.trim()) { err.textContent = "Please enter your first and last name."; return; }
+        if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(d.email.trim())) { err.textContent = "Please enter a valid email address."; return; }
+        if (!/^\d{5}$/.test(d.zip.trim())) { err.textContent = "Please enter your 5-digit ZIP code."; return; }
+        btn.disabled = true; btn.textContent = "Activating…";
+        fetch("/api/cards", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(d) })
+          .then(function (r) { return r.json(); })
+          .then(function (j) {
+            if (!j.ok) throw new Error(j.error || "That didn't go through.");
+            my.querySelector("[data-card-name]").textContent = (j.firstName + " " + j.lastName).trim();
+            my.querySelector("[data-card-no]").textContent = j.memberNo;
+            document.getElementById("doneName").textContent = "";
+            document.getElementById("cardDone").classList.remove("hidden");
+            form.classList.add("hidden");
+            my.scrollIntoView({ behavior: "smooth", block: "center" });
+          })
+          .catch(function (x) { err.textContent = x.message || "That didn't go through. Please try again."; btn.disabled = false; btn.textContent = "Claim my free card"; });
+      });
+
+      // "Save my card": draws the same card into a PNG she can keep.
+      document.getElementById("saveCard").addEventListener("click", function () {
+        var W = 1012, H = 638, c = document.createElement("canvas"); c.width = W; c.height = H;
+        var g = c.getContext("2d"), name = my.querySelector("[data-card-name]").textContent, no = my.querySelector("[data-card-no]").textContent;
+        function rr(x, y, w, h, r) { g.beginPath(); g.moveTo(x + r, y); g.arcTo(x + w, y, x + w, y + h, r); g.arcTo(x + w, y + h, x, y + h, r); g.arcTo(x, y + h, x, y, r); g.arcTo(x, y, x + w, y, r); g.closePath(); }
+        rr(0, 0, W, H, 36); g.clip();
+        var bw = W * 0.36;
+        var gb = g.createLinearGradient(0, 0, bw, H); gb.addColorStop(0, "#00307c"); gb.addColorStop(1, "#001a47"); g.fillStyle = gb; g.fillRect(0, 0, bw, H);
+        g.fillStyle = "#ffffff"; g.fillRect(bw, 0, W - bw, H / 2);
+        var gr = g.createLinearGradient(0, H / 2, 0, H); gr.addColorStop(0, "#c40c33"); gr.addColorStop(1, "#9a0826"); g.fillStyle = gr; g.fillRect(bw, H / 2, W - bw, H / 2);
+        var cx = bw / 2, cy = H / 2, R = bw * 0.33, r2 = R * 0.38; g.beginPath();
+        for (var i = 0; i < 10; i++) { var a = -Math.PI / 2 + i * Math.PI / 5, rad = i % 2 ? r2 : R; g.lineTo(cx + rad * Math.cos(a), cy + rad * Math.sin(a)); }
+        g.closePath(); g.fillStyle = "#fff"; g.fill();
+        var L = W * 0.40;
+        g.fillStyle = "#002868"; g.font = "900 54px 'Playfair Display', Georgia, serif"; g.fillText("TEXAS UNITED", L, 100); g.fillText("PATRIOTS", L, 160);
+        g.fillStyle = "#6b5a2a"; g.font = "700 20px 'Libre Franklin', sans-serif"; g.fillText("FAITH · FAMILY · FREEDOM", L, 210);
+        g.fillStyle = "#f3d48a"; g.font = "600 22px 'Libre Franklin', sans-serif"; g.fillText("★  2026 MEMBER  ★", L, H - 200);
+        g.fillStyle = "#fff"; g.font = "700 46px 'Oswald', sans-serif"; g.fillText(name.toUpperCase().slice(0, 26), L, H - 110);
+        g.fillStyle = "rgba(255,255,255,.75)"; g.font = "600 17px 'Libre Franklin', sans-serif"; g.fillText("AMERICA 250 · 1776–2026", L, H - 40);
+        g.fillStyle = "#f3d48a"; g.font = "600 20px 'Libre Franklin', sans-serif"; g.textAlign = "right"; g.fillText(no, W - 50, H - 40);
+        g.textAlign = "center"; g.fillStyle = "rgba(255,255,255,.8)"; g.font = "700 17px 'Libre Franklin', sans-serif"; g.fillText("COME AND", bw / 2, H - 70); g.fillText("TAKE IT", bw / 2, H - 46);
+        var a2 = document.createElement("a"); a2.href = c.toDataURL("image/png"); a2.download = "texas-united-patriots-2026-member-card.png"; a2.click();
+      });
+      document.getElementById("shareCard").addEventListener("click", function () {
+        var data = { title: "Texas United Patriots 2026 member card", text: "I just claimed my free 2026 Texas United Patriots member card. Claim yours:", url: "https://texasunitedpatriots.org/member-card.html" };
+        if (navigator.share) navigator.share(data).catch(function () {});
+        else if (navigator.clipboard) navigator.clipboard.writeText(data.text + " " + data.url).then(function () { document.getElementById("shareCard").textContent = "Link copied"; });
+      });
+    })();
+    </script>
+
+    <footer class="bg-white border-t border-slate-200 pt-20 pb-10 px-6 md:px-12">
+        <div class="container mx-auto text-center">
+            <div class="text-xl font-black text-on-surface tracking-tighter font-headline mb-4 uppercase">TEXAS UNITED PATRIOTS</div>
+            <div class="flex justify-center gap-8 mb-10 flex-wrap">
+                <a class="font-headline font-bold text-xl md:text-lg uppercase tracking-wider text-on-surface-variant hover:text-primary" href="./about.html">About</a>
+                <a class="font-headline font-bold text-xl md:text-lg uppercase tracking-wider text-on-surface-variant hover:text-primary" href="./issues.html">Issues</a>
+                <a class="font-headline font-bold text-xl md:text-lg uppercase tracking-wider text-on-surface-variant hover:text-primary" href="./index.html#news">News</a>
+            </div>
+            <p class="font-headline font-bold text-base uppercase tracking-wider text-on-surface-variant leading-relaxed max-w-3xl mx-auto border border-slate-200 p-6">
+                <a href="/members-admin.html" aria-label="Copyright" style="color:inherit;text-decoration:none">&copy;</a> 2026 TEXAS UNITED PATRIOTS. PAID FOR BY TEXAS UNITED PATRIOTS. NOT AUTHORIZED BY ANY CANDIDATE OR CANDIDATE'S COMMITTEE.</p>
+            <div class="flex justify-center gap-8 mt-10 font-headline font-bold text-lg uppercase tracking-wider text-slate-600">
+                <a class="hover:text-primary transition-colors" href="./privacy.html">Privacy Policy</a>
+                <a class="hover:text-primary transition-colors" href="./terms.html">Terms of Service</a>
+                <a class="hover:text-primary transition-colors" href="./contact.html">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        (function () {
+            const reveals = document.querySelectorAll('.reveal');
+            const observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
+            reveals.forEach(function (el) { observer.observe(el); });
+        })();
+    </script>
+
+    <script>
+        (function () {
+            const btn = document.getElementById('mobileMenuBtn');
+            const menu = document.getElementById('mobileMenu');
+            if (!btn || !menu) return;
+            function open() {
+                menu.classList.add('open');
+                btn.setAttribute('aria-expanded', 'true');
+                btn.setAttribute('aria-label', 'Close menu');
+                document.body.style.overflow = 'hidden';
+            }
+            function close() {
+                menu.classList.remove('open');
+                btn.setAttribute('aria-expanded', 'false');
+                btn.setAttribute('aria-label', 'Open menu');
+                document.body.style.overflow = '';
+            }
+            let lastToggle = 0;
+            btn.addEventListener('click', function () {
+                const now = Date.now();
+                if (now - lastToggle < 400) return;
+                lastToggle = now;
+                if (btn.getAttribute('aria-expanded') === 'true') close(); else open();
+            });
+            menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { menu.style.transition = 'none'; close(); }); });
+            document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && btn.getAttribute('aria-expanded') === 'true') close(); });
+        })();
+    </script>
+
+<script>
+        // Social share bar
+        (function () {
+            const bars = document.querySelectorAll('[data-share-bar]');
+            if (!bars.length) return;
+            const pageUrl = window.location.href;
+            const pageTitle = document.title;
+            bars.forEach(function (bar) {
+                bar.querySelectorAll('.share-btn').forEach(function (btn) {
+                    const type = btn.getAttribute('data-share');
+                    const u = encodeURIComponent(pageUrl);
+                    const t = encodeURIComponent(pageTitle);
+                    btn.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        let url = '';
+                        if (type === 'facebook') url = 'https://www.facebook.com/sharer/sharer.php?u=' + u;
+                        else if (type === 'x') url = 'https://twitter.com/intent/tweet?url=' + u + '&text=' + t;
+                        else if (type === 'truth') url = 'https://truthsocial.com/share?url=' + u + '&text=' + t;
+                        else if (type === 'telegram') url = 'https://t.me/share/url?url=' + u + '&text=' + t;
+                        else if (type === 'whatsapp') url = 'https://api.whatsapp.com/send?text=' + t + '%20' + u;
+                        else if (type === 'email') url = 'mailto:?subject=' + t + '&body=' + t + '%0A%0A' + u;
+                        else if (type === 'copy') {
+                            navigator.clipboard.writeText(pageUrl).then(function () {
+                                btn.classList.add('copied');
+                                const original = btn.getAttribute('title');
+                                btn.setAttribute('title', 'Link copied!');
+                                setTimeout(function () {
+                                    btn.classList.remove('copied');
+                                    btn.setAttribute('title', original);
+                                }, 1800);
+                            });
+                            return;
+                        }
+                        if (url) window.open(url, '_blank', 'noopener,width=600,height=540');
+                    });
+                });
+            });
+        })();
+
+</script>
+</body>
+</html>
