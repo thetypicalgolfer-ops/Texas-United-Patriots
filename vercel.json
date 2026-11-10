@@ -1,0 +1,14 @@
+{
+  "redirects": [
+    {
+      "source": "/articles/the-legislature-is-still-ours-now-it-has-to-fight.html",
+      "destination": "/news.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/texas-rewrote-history-class-nothing-changes-until-2030.html",
+      "destination": "/news.html",
+      "permanent": true
+    }
+  ]
+}
