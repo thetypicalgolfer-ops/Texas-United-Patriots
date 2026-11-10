@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>HB 613 Would Put a Background Check Between You and Your Own Family — Texas United Patriots</title>
+    <meta name="description" content="HB 613 would require a dealer background check for every private gun transfer in Texas, with no exception for family gifts or loans. A Class A misdemeanor." />
+    <link rel="canonical" href="https://texasunitedpatriots.org/articles/hb-613-universal-background-checks-texas.html" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Texas United Patriots" />
+    <meta property="og:title" content="HB 613 Would Put a Background Check Between You and Your Own Family — Texas United Patriots" />
+    <meta property="og:description" content="HB 613 would require a dealer background check for every private gun transfer in Texas, with no exception for family gifts or loans. A Class A misdemeanor." />
+    <meta property="og:url" content="https://texasunitedpatriots.org/articles/hb-613-universal-background-checks-texas.html" />
+    <meta property="og:image" content="https://texasunitedpatriots.org/texas-flag-over-corpus-christi_og.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="HB 613 Would Put a Background Check Between You and Your Own Family — Texas United Patriots" />
+    <meta name="twitter:description" content="HB 613 would require a dealer background check for every private gun transfer in Texas, with no exception for family gifts or loans. A Class A misdemeanor." />
+    <meta name="twitter:image" content="https://texasunitedpatriots.org/texas-flag-over-corpus-christi_og.jpg" />
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,800&family=Libre+Franklin:wght@600;700&family=Oswald:wght@400;500;600;700&family=Playfair+Display:wght@900&family=Public+Sans:wght@400;700;800;900&family=Newsreader:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#5d0011", "on-primary": "#ffffff", "primary-container": "#87001d",
+              "primary-fixed": "#ffdad9", "surface": "#f9f9f9", "on-surface": "#1a1c1c",
+              "on-surface-variant": "#47464f", "background": "#f9f9f9"
+            },
+            fontFamily: { headline: ["Oswald", "Public Sans", "sans-serif"],
+                        masthead: ["Playfair Display", "Georgia", "serif"], body: ["Newsreader"], label: ["Public Sans"] }
+          },
+        },
+      }
+    </script>
+    <style>
+        /* ── Readability for older eyes (Bart, 2026-09-12) ─────────────────────────────
+           His instruction: "There has to be old people reading this... I need all the
+           little text that is the article to be way bigger."
+           Done here rather than by editing 187 individual Tailwind classes, so the whole
+           site's body type can be retuned from one block per article.
+           Specificity (.prose p.font-body = 0,2,1) beats Tailwind's .text-lg (0,1,0),
+           so these win regardless of stylesheet order. */
+        .prose p.font-body { font-size: 1.5rem; line-height: 1.8; margin-bottom: 1.8rem; }
+        .prose p.font-body.text-xl { font-size: 1.75rem; line-height: 1.65; }
+        .prose h2 { font-size: 2.25rem; line-height: 1.2; }
+        .prose li, .prose ul, .prose ol { font-size: 1.5rem; line-height: 1.8; }
+        @media (max-width: 640px) {
+            .prose p.font-body { font-size: 1.3125rem; line-height: 1.75; }
+            .prose p.font-body.text-xl { font-size: 1.5rem; }
+            .prose h2 { font-size: 1.875rem; }
+        }
+
+        html, body { overflow-x: hidden; }
+
+        /* Mobile menu button — fixed above everything else */
+        @media (max-width: 767px) {
+            #mobileMenuBtn {
+                position: fixed !important;
+                top: 14px !important;
+                right: 16px !important;
+                z-index: 9999 !important;
+                display: inline-flex !important;
+                align-items: center;
+                justify-content: center;
+                padding: 8px;
+            }
+        }
+
+        /* Hamburger button */
+        .hamburger { width: 28px; height: 22px; position: relative; display: inline-block; }
+        .hamburger span { position: absolute; left: 0; height: 2px; width: 100%; background-color: currentColor; border-radius: 2px; transition: transform 0.35s ease, top 0.35s ease, opacity 0.2s ease, background-color 0.3s ease; }
+        .hamburger span:nth-child(1) { top: 2px; }
+        .hamburger span:nth-child(2) { top: 10px; width: 75%; }
+        .hamburger span:nth-child(3) { top: 18px; }
+        #mobileMenuBtn[aria-expanded="true"] .hamburger span:nth-child(1) { top: 10px; transform: rotate(45deg); }
+        #mobileMenuBtn[aria-expanded="true"] .hamburger span:nth-child(2) { opacity: 0; transform: translateX(-10px); }
+        #mobileMenuBtn[aria-expanded="true"] .hamburger span:nth-child(3) { top: 10px; transform: rotate(-45deg); }
+        #mobileMenuBtn { transition: color 0.25s ease, background-color 0.25s ease; border-radius: 999px; }
+        #mobileMenuBtn[aria-expanded="true"] { color: #fff; background-color: rgba(255, 255, 255, 0.12); }
+
+        /* Mobile menu — editorial fade-in */
+        #mobileMenu { transform: translateX(100%); visibility: hidden; transition: transform 0.58s cubic-bezier(0.22, 0.61, 0.36, 1), visibility 0s linear 0.58s; padding-top: env(safe-area-inset-top); padding-bottom: env(safe-area-inset-bottom); overscroll-behavior: contain; -webkit-overflow-scrolling: touch; will-change: transform; }
+        #mobileMenu.open { transform: translateX(0); visibility: visible; transition: transform 0.62s cubic-bezier(0.22, 0.61, 0.36, 1), visibility 0s linear 0s; }
+        #mobileMenu .menu-item { opacity: 0; transform: translateY(18px); transition: opacity 0.6s cubic-bezier(0.22, 0.61, 0.36, 1), transform 0.6s cubic-bezier(0.22, 0.61, 0.36, 1); }
+        #mobileMenu.open .menu-item { opacity: 1; transform: translateY(0); }
+        #mobileMenu.open .menu-item:nth-child(1) { transition-delay: 0.22s; }
+        #mobileMenu.open .menu-item:nth-child(2) { transition-delay: 0.30s; }
+        #mobileMenu.open .menu-item:nth-child(3) { transition-delay: 0.38s; }
+        #mobileMenu.open .menu-item:nth-child(4) { transition-delay: 0.46s; }
+        #mobileMenu.open .menu-item:nth-child(5) { transition-delay: 0.56s; }
+        #mobileMenu .menu-index { font-variant-numeric: tabular-nums; }
+
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+
+        /* Social share bar */
+        .share-bar { display: flex; flex-direction: column; align-items: stretch; gap: 0.75rem; }
+        @media (min-width: 640px) { .share-bar { flex-direction: row; align-items: center; } }
+        .share-bar .share-label { font-family: 'Public Sans', sans-serif; font-weight: 700; font-size: 18px; letter-spacing: 0.3em; text-transform: uppercase; color: #5d0011; }
+        .share-bar .share-icons { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .share-btn { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border: 1px solid #e5e7eb; background: #fff; color: #1a1c1c; transition: all 0.2s ease; cursor: pointer; }
+        .share-btn:hover { color: #fff; border-color: transparent; transform: translateY(-2px); }
+        .share-btn svg { width: 18px; height: 18px; fill: currentColor; }
+        .share-btn[data-share="facebook"]:hover { background: #1877f2; }
+        .share-btn[data-share="x"]:hover { background: #000; }
+        .share-btn[data-share="truth"]:hover { background: #5d0011; }
+        .share-btn[data-share="telegram"]:hover { background: #229ED9; }
+        .share-btn[data-share="whatsapp"]:hover { background: #25D366; }
+        .share-btn[data-share="email"]:hover { background: #5d0011; }
+        .share-btn[data-share="copy"]:hover { background: #1a1c1c; }
+        .share-btn .copied-msg { display: none; }
+        .share-btn.copied { background: #16a34a; color: #fff; border-color: transparent; }
+        .share-bar.on-dark .share-label { color: rgba(255,255,255,0.6); }
+        .share-bar.on-dark .share-btn { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.15); color: #fff; }
+        .share-bar.on-dark .share-btn:hover { border-color: transparent; }
+        /* Smooth cross-page transitions (modern browsers: Chrome 126+, Safari 18+) */
+        @view-transition { navigation: auto; }
+        ::view-transition-old(root), ::view-transition-new(root) { animation-duration: 0.4s; animation-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1); }
+    </style>
+<style id="tup-bar">
+.tup-bar{display:flex!important;align-items:stretch!important;justify-content:flex-start!important;padding:0!important;background:#002868!important;box-shadow:0 6px 22px rgba(0,16,48,.28)!important}
+.tup-logo{display:flex!important;align-items:center;gap:18px;color:#fff!important;text-decoration:none;background:#002868;padding:12px 40px 12px 32px;flex:none;width:min(39%,720px)}
+.tup-logo svg{width:clamp(52px,4.6vw,88px);height:auto;flex:none}
+.tup-word{display:block;font-family:"Playfair Display",Georgia,serif;font-weight:900;font-size:clamp(22px,2.1vw,40px);line-height:1.02;text-transform:uppercase;letter-spacing:.01em;white-space:nowrap}
+.tup-right{flex:1;display:none;flex-direction:column;min-width:0}
+.tup-menu{flex:1;background:#fff;display:flex;align-items:center;justify-content:flex-start;gap:clamp(28px,2.4vw,52px);padding:0 clamp(20px,2vw,40px)}
+.tup-menu a{font-family:"Bodoni Moda",Didot,"Bodoni 72",Georgia,serif!important;font-weight:800!important;font-variation-settings:"opsz" 11;font-size:clamp(20px,1.56vw,30px)!important;text-transform:uppercase;letter-spacing:.06em!important;color:#0b1b33!important;position:relative;padding-block:6px;line-height:1.2}
+.tup-menu a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:#bf0a30;transform:scaleX(0);transform-origin:left;transition:transform .2s}
+.tup-menu a:hover::after,.tup-menu a.text-primary::after{transform:scaleX(1)}
+.tup-red{flex:1;background:#bf0a30;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:0 clamp(20px,2vw,40px);font:700 clamp(17px,1.15vw,22px) "Libre Franklin","Public Sans",sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#fff}
+.tup-join{background:#fff;color:#bf0a30!important;padding:7px 22px;font-weight:800;text-decoration:none;white-space:nowrap}
+.tup-join:hover{background:#002868;color:#fff!important}
+.tup-bar::after{content:"";position:absolute;left:0;right:0;bottom:-8px;height:8px;background:linear-gradient(#fff 0 3px,#bf0a30 3px 8px);pointer-events:none}
+#mobileMenuBtn{color:#fff!important;top:16px!important}
+@media (min-width:1280px){.tup-right{display:flex}.tup-bar::after{display:none}.tup-bar{height:136px}body:not(.tup-home){padding-top:40px}}
+@media (max-width:1279px){.tup-logo{width:auto;padding:10px 80px 10px 20px}}
+@media (max-width:520px){.tup-logo{gap:12px;padding-left:16px}.tup-word{font-size:19px}}
+</style>
+</head>
+<body class="bg-surface text-on-surface font-body">
+
+    <nav class="tup-bar fixed top-0 w-full z-50">
+        <a href="../index.html" class="tup-logo" aria-label="Texas United Patriots home"><svg viewBox="0 0 100 100" aria-hidden="true"><polygon points="50,4 62,38 98,38 69,59 80,94 50,73 20,94 31,59 2,38 38,38" fill="#fff"/></svg><span class="tup-word">Texas United<br>Patriots</span></a>
+        <div class="tup-right">
+            <div class="tup-menu"><a class="font-headline font-bold text-xl 2xl:text-[1.75rem] uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="../index.html#news">News</a>
+            <a class="font-headline font-bold text-xl 2xl:text-[1.75rem] uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="../national.html">National</a>
+            <a class="font-headline font-bold text-xl 2xl:text-[1.75rem] uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="../members.html">Members</a>
+            <a class="font-headline font-bold text-xl 2xl:text-[1.75rem] uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="../gear.html">Gear</a>
+            <a class="font-headline font-bold text-xl 2xl:text-[1.75rem] uppercase tracking-wider text-on-surface hover:text-primary transition-colors" href="../index.html">About</a></div>
+            <div class="tup-red"><span>Faith &middot; Family &middot; Freedom</span><a class="tup-join" href="../members.html">Join the Movement</a></div>
+        </div>
+    </nav>
+    <button id="mobileMenuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu" class="xl:hidden fixed top-3 right-4 text-primary p-2 z-[80]"><span class="hamburger"><span></span><span></span><span></span></span></button>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="fixed inset-0 z-[65] bg-[#141821] flex flex-col overflow-y-auto">
+        <div class="absolute inset-x-0 top-0 h-1 bg-primary"></div>
+        <div class="flex justify-between items-center px-6 pt-5 pb-5 border-b border-white/10">
+            <a href="../index.html" class="text-2xl md:text-4xl font-black text-white tracking-tight font-headline">TEXAS UNITED PATRIOTS</a>
+        </div>
+        <nav class="flex-1 flex flex-col px-6 pt-6">
+            <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors" href="../issues.html">
+                <span class="menu-index font-headline font-bold text-lg tracking-[0.08em] text-primary w-8">01</span>
+                <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">Issues</span>
+                <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
+            </a>
+            <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors" href="../about.html">
+                <span class="menu-index font-headline font-bold text-lg tracking-[0.08em] text-primary w-8">02</span>
+                <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">About</span>
+                <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
+            </a>
+            <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors" href="../index.html#news">
+                <span class="menu-index font-headline font-bold text-lg tracking-[0.08em] text-primary w-8">03</span>
+                <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">News</span>
+                <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
+            </a>
+            <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors" href="../national.html">
+                <span class="menu-index font-headline font-bold text-lg tracking-[0.08em] text-primary w-8">04</span>
+                <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">National</span>
+                <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
+            </a>
+            <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors" href="../members.html">
+                <span class="menu-index font-headline font-bold text-lg tracking-[0.08em] text-primary w-8">05</span>
+                <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">Members</span>
+                <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
+            </a>
+            <a class="menu-item group flex items-center gap-5 py-4 border-b border-white/[0.06] text-white/90 hover:text-white transition-colors" href="../gear.html">
+                <span class="menu-index font-headline font-bold text-lg tracking-[0.08em] text-primary w-8">06</span>
+                <span class="font-headline font-semibold text-2xl uppercase tracking-wide flex-1">Gear</span>
+                <span class="material-symbols-outlined text-xl opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
+            </a>
+        </nav>
+        <div class="menu-item px-6 pt-8 pb-10 border-t border-white/10 mt-6">
+<p class="mt-6 font-headline font-bold text-lg text-white/40 uppercase tracking-[0.08em] text-center">Faith · Family · Freedom</p>
+        </div>
+    </div>
+
+
+    <header class="relative pt-24">
+        <img alt="The Texas flag flying over Corpus Christi" class="w-full h-[50vh] object-cover" src="../texas-flag-over-corpus-christi.webp"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+    </header>
+
+    <article class="container mx-auto px-6 md:px-12 -mt-24 md:-mt-32 relative z-10">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col lg:flex-row gap-8">
+
+                <!-- Article (Left Column) -->
+                <div class="lg:w-2/3">
+                    <div class="bg-white shadow-2xl p-6 sm:p-8 md:p-16">
+                        <span class="inline-block bg-primary text-on-primary font-headline font-bold text-base tracking-[0.08em] uppercase px-3 py-1 mb-6">Second Amendment</span>
+                        <h1 class="font-headline font-black text-4xl md:text-5xl lg:text-6xl text-on-surface leading-[0.9] tracking-tight uppercase mb-6">HB 613 Would Put a Background Check Between You and Your Own Family</h1>
+                        <div class="flex items-center gap-4 mb-10 border-b border-slate-200 pb-8">
+                            <span class="font-headline font-bold text-lg uppercase tracking-wider text-on-surface-variant">November 10, 2026</span>
+                            <span class="text-slate-300">|</span>
+                            <span class="font-headline font-bold text-lg uppercase tracking-wider text-on-surface-variant">2 min read</span>
+                            <span class="text-slate-300">|</span>
+                            <span class="font-headline font-bold text-lg uppercase tracking-wider text-primary">Texas United Patriots Staff</span>
+                        </div>
+                        <div class="mt-8 pb-6 border-b border-slate-200"><div class="share-bar" data-share-bar>
+    <span class="share-label">Spread the Word</span>
+    <div class="share-icons">
+        <button class="share-btn" data-share="facebook" aria-label="Share on Facebook" title="Share on Facebook"><svg viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg></button>
+        <button class="share-btn" data-share="x" aria-label="Share on X" title="Share on X"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></button>
+        <button class="share-btn" data-share="truth" aria-label="Share on Truth Social" title="Share on Truth Social"><svg viewBox="0 0 24 24"><path d="M3 3h18v4h-7v14h-4V7H3V3z"/></svg></button>
+        <button class="share-btn" data-share="email" aria-label="Share via Email" title="Share via Email"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></button>
+        <button class="share-btn" data-share="copy" aria-label="Copy link" title="Copy link"><svg viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg></button>
+    </div>
+</div></div>
+
+
+                        <div class="prose prose-lg max-w-none">
+                            <p class="font-body text-xl leading-relaxed text-on-surface mb-6 italic">In Texas, a deer rifle passing from a grandfather to a grandson has always been a family matter. Under House Bill 613, it would be a federal background check.</p>
+                            <h2 class="font-headline font-black text-2xl uppercase tracking-tight mt-12 mb-4">What HB 613 Requires</h2>
+                            <p class="font-body text-xl leading-relaxed text-on-surface-variant mb-6">HB 613, filed November 9 by Rep. Suleman Lalani, would require that before any private firearm transfer, the seller ask a licensed dealer to run a federal background check and confirm the buyer can legally own a gun.</p>
+                            <h2 class="font-headline font-black text-2xl uppercase tracking-tight mt-12 mb-4">No Family Exception</h2>
+                            <p class="font-body text-xl leading-relaxed text-on-surface-variant mb-6">Read the bill text and look for the exceptions. There are none for family members, none for gifts, none for short-term loans. As written, it covers every private transfer.</p>
+                            <h2 class="font-headline font-black text-2xl uppercase tracking-tight mt-12 mb-4">A Criminal Offense</h2>
+                            <p class="font-body text-xl leading-relaxed text-on-surface-variant mb-6">Violating it would be a Class A misdemeanor, punishable in Texas by up to a year in jail. The people most likely to be caught are not criminals buying guns in alleys. They are honest Texans who did not know a family tradition had become a crime.</p>
+                            <h2 class="font-headline font-black text-2xl uppercase tracking-tight mt-12 mb-4">It Will Not Stop Criminals</h2>
+                            <p class="font-body text-xl leading-relaxed text-on-surface-variant mb-6">Criminals do not visit a dealer before they steal or trade a gun. A universal background check law only reaches the people already willing to follow the law, and it builds a paper trail on every one of them.</p>
+                            <h2 class="font-headline font-black text-2xl uppercase tracking-tight mt-12 mb-4">Stop It in the Senate</h2>
+                            <p class="font-body text-xl leading-relaxed text-on-surface-variant mb-6">HB 613 takes effect September 1, 2027, if it passes. It has to get through the Texas Senate first. Tell your senator: no universal background checks in Texas.</p>
+                            <p class="font-headline font-bold text-lg uppercase tracking-wider text-on-surface-variant/70 mt-10">Sources: <a class="text-primary underline" href="https://capitol.texas.gov/BillLookup/History.aspx?LegSess=90R&Bill=HB613" rel="noopener" target="_blank">HB 613</a></p>
+</div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Full-Width Bottom CTA -->
+            <div class="bg-primary text-on-primary p-10 md:p-14 mt-0 text-center">
+                <h3 class="font-headline font-black text-3xl uppercase tracking-tight mb-4">Stand With Texas</h3>
+                <p class="font-body text-white/80 text-lg mb-8 max-w-xl mx-auto">Join Texas United Patriots and get the stories that matter to Texas, every week. It takes one minute.</p>
+</div>
+
+            <div class="text-center mt-12 mb-20">
+                <a href="../index.html#news" class="font-headline font-bold text-lg uppercase tracking-wider text-primary hover:text-primary-container transition-colors">&larr; Back to All News</a>
+            </div>
+        </div>
+                        <div class="mt-16 pt-10 border-t border-slate-200">
+                            <div class="share-bar" data-share-bar>
+    <span class="share-label">Share This Story</span>
+    <div class="share-icons">
+        <button class="share-btn" data-share="facebook" aria-label="Share on Facebook" title="Share on Facebook"><svg viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg></button>
+        <button class="share-btn" data-share="x" aria-label="Share on X" title="Share on X"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></button>
+        <button class="share-btn" data-share="truth" aria-label="Share on Truth Social" title="Share on Truth Social"><svg viewBox="0 0 24 24"><path d="M3 3h18v4h-7v14h-4V7H3V3z"/></svg></button>
+        <button class="share-btn" data-share="email" aria-label="Share via Email" title="Share via Email"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></button>
+        <button class="share-btn" data-share="copy" aria-label="Copy link" title="Copy link"><svg viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg></button>
+    </div>
+</div>
+                        </div>
+
+    </article>
+
+    <footer class="bg-white border-t border-slate-200 pt-12 pb-8 px-12">
+        <div class="container mx-auto text-center">
+            <div class="text-xl font-black text-on-surface tracking-tighter font-headline mb-4 uppercase">TEXAS UNITED PATRIOTS</div>
+            <p class="font-headline font-bold text-base uppercase tracking-wider text-on-surface-variant leading-relaxed max-w-2xl mx-auto">
+                <a href="/members-admin.html" aria-label="Copyright" style="color:inherit;text-decoration:none">&copy;</a> 2026 TEXAS UNITED PATRIOTS. PAID FOR BY TEXAS UNITED PATRIOTS. NOT AUTHORIZED BY ANY CANDIDATE OR CANDIDATE'S COMMITTEE.
+            </p>
+            <div class="flex justify-center gap-8 mt-10 font-headline font-bold text-lg uppercase tracking-wider text-slate-600">
+                <a class="hover:text-primary transition-colors" href="../privacy.html">Privacy Policy</a>
+                <a class="hover:text-primary transition-colors" href="../terms.html">Terms of Service</a>
+                <a class="hover:text-primary transition-colors" href="../contact.html">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        (function () {
+            const btn = document.getElementById('mobileMenuBtn');
+            const menu = document.getElementById('mobileMenu');
+            if (!btn || !menu) return;
+            function open() {
+                menu.classList.add('open');
+                btn.setAttribute('aria-expanded', 'true');
+                btn.setAttribute('aria-label', 'Close menu');
+                document.body.style.overflow = 'hidden';
+            }
+            function close() {
+                menu.classList.remove('open');
+                btn.setAttribute('aria-expanded', 'false');
+                btn.setAttribute('aria-label', 'Open menu');
+                document.body.style.overflow = '';
+            }
+            let lastToggle = 0;
+            btn.addEventListener('click', function () {
+                const now = Date.now();
+                if (now - lastToggle < 400) return;
+                lastToggle = now;
+                if (btn.getAttribute('aria-expanded') === 'true') close(); else open();
+            });
+            menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { menu.style.transition = 'none'; close(); }); });
+            document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && btn.getAttribute('aria-expanded') === 'true') close(); });
+        })();
+    </script>
+
+<script>
+        // Social share bar
+        (function () {
+            const bars = document.querySelectorAll('[data-share-bar]');
+            if (!bars.length) return;
+            const pageUrl = window.location.href;
+            const pageTitle = document.title;
+            bars.forEach(function (bar) {
+                bar.querySelectorAll('.share-btn').forEach(function (btn) {
+                    const type = btn.getAttribute('data-share');
+                    const u = encodeURIComponent(pageUrl);
+                    const t = encodeURIComponent(pageTitle);
+                    btn.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        let url = '';
+                        if (type === 'facebook') url = 'https://www.facebook.com/sharer/sharer.php?u=' + u;
+                        else if (type === 'x') url = 'https://twitter.com/intent/tweet?url=' + u + '&text=' + t;
+                        else if (type === 'truth') url = 'https://truthsocial.com/share?url=' + u + '&text=' + t;
+                        else if (type === 'telegram') url = 'https://t.me/share/url?url=' + u + '&text=' + t;
+                        else if (type === 'whatsapp') url = 'https://api.whatsapp.com/send?text=' + t + '%20' + u;
+                        else if (type === 'email') url = 'mailto:?subject=' + t + '&body=' + t + '%0A%0A' + u;
+                        else if (type === 'copy') {
+                            navigator.clipboard.writeText(pageUrl).then(function () {
+                                btn.classList.add('copied');
+                                const original = btn.getAttribute('title');
+                                btn.setAttribute('title', 'Link copied!');
+                                setTimeout(function () {
+                                    btn.classList.remove('copied');
+                                    btn.setAttribute('title', original);
+                                }, 1800);
+                            });
+                            return;
+                        }
+                        if (url) window.open(url, '_blank', 'noopener,width=600,height=540');
+                    });
+                });
+            });
+        })();
+
+</script>
+<script src="/wall.js" defer></script>
+</body>
+</html>
