@@ -1,7 +1,7 @@
 // Texas United Patriots member directory (Bart + Rick, 2026-10-27): "anybody can be a member if they sign up…
 // it should be alphabetically ordered… click on their link and automatically get into their webpage", with no
 // approval, and a remove button for Bart on the back end. One private blob per member in the tup-members store.
-//   GET    /api/members                → public list, A–Z, no emails
+//   GET    /api/members                → public member count only (names are admin-only)
 //   GET    /api/members?admin=1        → full list with emails (x-admin-key)
 //   POST   /api/members                → join (name, email, website, description); listed right away
 //   DELETE /api/members?id=<id>        → remove a listing (x-admin-key)
@@ -61,7 +61,8 @@ export default async function handler(req, res) {
         if (!isAdmin(req)) return res.status(401).json({ ok: false, error: "Wrong admin key." });
         return res.json({ ok: true, members: rows });
       }
-      return res.json({ ok: true, members: rows.map(({ id, name, website, description, city, joinedAt }) => ({ id, name, website, description, city, joinedAt })) });
+      // Bart, 2026-11-12: no member names in public. The list stays here and in members-admin.html.
+      return res.json({ ok: true, count: rows.length });
     }
     if (req.method === "POST") {
       const b = typeof req.body === "string" ? JSON.parse(req.body || "{}") : req.body || {};
