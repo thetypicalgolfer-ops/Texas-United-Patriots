@@ -235,6 +235,18 @@
                     <li class="border-l-4 border-primary pl-5"><h3 class="font-headline font-black text-2xl uppercase tracking-tight">Show Up Locally</h3><p class="mt-2 font-body text-xl text-on-surface-variant">Invitations to meetups and town halls in your part of Texas.</p></li>
                     <li class="border-l-4 border-primary pl-5"><h3 class="font-headline font-black text-2xl uppercase tracking-tight">Your Privacy Is Protected</h3><p class="mt-2 font-body text-xl text-on-surface-variant">Member names and emails are never published or shared.</p></li>
                 </ul>
+                <div class="relative mt-12 overflow-hidden bg-[#002868] text-white">
+                    <img src="./tup-share-card.jpg" alt="" class="absolute inset-0 w-full h-full object-cover opacity-25"/>
+                    <div class="relative p-8 md:p-10">
+                        <span class="font-headline font-bold text-lg uppercase tracking-[0.12em] text-[#ffb3b3]">A Movement of the People</span>
+                        <p class="mt-3 font-body italic text-2xl md:text-3xl leading-snug max-w-2xl">One county at a time, Texans standing together for faith, family and freedom.</p>
+                        <div class="mt-8 grid grid-cols-3 gap-4 border-t border-white/20 pt-6 text-center">
+                            <div><div class="font-headline font-black text-3xl md:text-5xl tracking-tighter">50,000+</div><p class="mt-1 font-headline font-bold text-sm md:text-lg uppercase tracking-[0.08em] text-white/70">Texans</p></div>
+                            <div><div class="font-headline font-black text-3xl md:text-5xl tracking-tighter">254</div><p class="mt-1 font-headline font-bold text-sm md:text-lg uppercase tracking-[0.08em] text-white/70">Counties</p></div>
+                            <div><div class="font-headline font-black text-3xl md:text-5xl tracking-tighter">$0</div><p class="mt-1 font-headline font-bold text-sm md:text-lg uppercase tracking-[0.08em] text-white/70">To Politicians</p></div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <aside id="join" class="lg:sticky lg:top-28 self-start bg-[#0a0c10] text-white p-7 md:p-9">
                 <span class="font-headline font-bold text-lg uppercase tracking-[0.08em] text-primary-fixed">Join the movement</span>
@@ -243,9 +255,7 @@
                 <form id="joinForm" class="mt-7 flex flex-col gap-4" novalidate>
                     <div><label for="jName" class="block font-headline font-bold text-lg uppercase tracking-[0.08em] text-white/60 mb-2">Name or organization</label><input id="jName" required maxlength="80" autocomplete="organization" class="w-full border border-slate-300 bg-white px-4 py-3 font-headline text-xl text-on-surface focus:border-primary focus:ring-primary"/></div>
                     <div><label for="jEmail" class="block font-headline font-bold text-lg uppercase tracking-[0.08em] text-white/60 mb-2">Email (never shown)</label><input id="jEmail" type="email" required maxlength="160" autocomplete="email" class="w-full border border-slate-300 bg-white px-4 py-3 font-headline text-xl text-on-surface focus:border-primary focus:ring-primary"/></div>
-                    <div><label for="jSite" class="block font-headline font-bold text-lg uppercase tracking-[0.08em] text-white/60 mb-2">Website (optional)</label><input id="jSite" type="url" inputmode="url" maxlength="300" placeholder="www.yoursite.com" class="w-full border border-slate-300 bg-white px-4 py-3 font-headline text-xl text-on-surface focus:border-primary focus:ring-primary"/></div>
                     <div><label for="jCity" class="block font-headline font-bold text-lg uppercase tracking-[0.08em] text-white/60 mb-2">City (optional)</label><input id="jCity" maxlength="60" autocomplete="address-level2" class="w-full border border-slate-300 bg-white px-4 py-3 font-headline text-xl text-on-surface focus:border-primary focus:ring-primary"/></div>
-                    <div><label for="jDesc" class="block font-headline font-bold text-lg uppercase tracking-[0.08em] text-white/60 mb-2">One line about you (optional)</label><input id="jDesc" maxlength="160" class="w-full border border-slate-300 bg-white px-4 py-3 font-headline text-xl text-on-surface focus:border-primary focus:ring-primary"/></div>
                     <input id="jCompany" name="company" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true"/>
                     <p id="joinErr" class="font-headline text-lg text-primary-fixed min-h-[1.25rem]" role="alert"></p>
                     <button type="submit" class="bg-primary hover:bg-primary-container text-white font-headline font-black text-lg uppercase tracking-[0.08em] py-4 transition-colors">Join Free</button>
@@ -269,14 +279,14 @@
       document.getElementById("joinForm").addEventListener("submit", function (e) {
         e.preventDefault();
         var err = document.getElementById("joinErr"); err.textContent = "";
-        var body = { name: document.getElementById("jName").value, email: document.getElementById("jEmail").value, website: document.getElementById("jSite").value, city: document.getElementById("jCity").value, description: document.getElementById("jDesc").value, company: document.getElementById("jCompany").value };
+        var body = { name: document.getElementById("jName").value, email: document.getElementById("jEmail").value, city: document.getElementById("jCity").value, company: document.getElementById("jCompany").value };
         if (!body.name.trim()) { err.textContent = "Please enter your name or organization."; return; }
         if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(body.email.trim())) { err.textContent = "Please enter a valid email address."; return; }
         var btn = e.target.querySelector("button"); btn.disabled = true; btn.textContent = "Joining…";
         fetch("/api/members", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) }).then(function (r) { return r.json(); }).then(function (d) {
           if (!d.ok) throw new Error(d.error || "Please try again.");
           // Also add them to the reader list in Bart's Google Sheet.
-          fetch(SHEET, { method: "POST", headers: { "Content-Type": "text/plain;charset=utf-8" }, body: JSON.stringify({ name: body.name, email: body.email, source: "member-signup", article: "Become a member", referrer: body.website || "" }), redirect: "follow" }).catch(function () {});
+          fetch(SHEET, { method: "POST", headers: { "Content-Type": "text/plain;charset=utf-8" }, body: JSON.stringify({ name: body.name, email: body.email, source: "member-signup", article: "Become a member", referrer: "" }), redirect: "follow" }).catch(function () {});
           try { localStorage.setItem("tup_reader_v1", JSON.stringify({ name: body.name, email: body.email })); document.cookie = "tup_reader=1; path=/; max-age=34560000; samesite=lax"; } catch (x) {}
           e.target.classList.add("hidden"); document.getElementById("joinDone").classList.remove("hidden"); load();
         }).catch(function (x) { err.textContent = x.message; btn.disabled = false; btn.textContent = "Join Free"; });
