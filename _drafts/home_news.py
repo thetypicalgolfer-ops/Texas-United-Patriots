@@ -1,4 +1,4 @@
-# Rebuilds the home page news block from news.html, newest first (Bart, 2026-11-12: "When new articles come in run
+# Rebuilds the home page news block from _drafts/articles.json, newest first (Bart, 2026-11-12: "When new articles come in run
 # them in the main spot and then continue in order… don't just shove them to the bottom"). Run after adding an
 # article to news.html. Slots: 1 lead (with the Join box) · 2 right column · 4 in the row · 6 in Latest.
 import os, re
@@ -8,15 +8,9 @@ SKIP = {"the-2028-race-starts-today", "every-vote-counts-become-a-poll-watcher",
         "how-tx-23-slipped-away", "texas-woke-up-blue-here-is-who-stayed-home", "governor-hinojosa-what-changes-on-day-one",
         "senator-talarico-what-it-means-for-texas-in-washington", "they-organized-we-complained",
         "district-125-is-open-and-the-landslide-was-not-one", "adrian-reyna-wrong-for-district-125"}
-news = open("news.html").read()
-A = []
-for m in re.finditer(r'<a href="\./articles/([^"]+)\.html" class="group grid grid-cols-\[1fr_104px\](.*?)</a>', news, re.S):
-    slug, b = m.group(1), m.group(2)
-    if slug in SKIP: continue
-    g = lambda p: (re.search(p, b, re.S) or [None, ""])[1].strip()
-    A.append(dict(slug=slug, img=g(r'src="\./([^"]+)"'), alt=g(r'<img alt="([^"]*)"'), label=g(r'text-primary">([^<]*)</span>'),
-                  title=g(r'<h2[^>]*>(.*?)</h2>'), dek=g(r'<p class="hidden md:block[^"]*">(.*?)</p>'),
-                  date=g(r'wide text-on-surface-variant">([^&<]*)'), read=g(r'·&nbsp; (\d+) min read')))
+import json, html as _h
+_E = lambda t: _h.escape(t or "", quote=True)
+A = [{k: (_E(v) if isinstance(v, str) else v) for k, v in a.items()} for a in json.load(open("_drafts/articles.json")) if a["slug"] not in SKIP]
 lead, right, row, latest = A[0], A[1:3], A[3:7], A[7:13]
 when = lambda a: a["date"] + (f' &nbsp;·&nbsp; {a["read"]} min read' if a["read"] else "")
 s = open("index.html").read()

@@ -147,4 +147,36 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://texasunitedpatriots.org/news/all.html</loc>
+    <lastmod>2026-11-12</lastmod>
+  </url>
+  <url>
+    <loc>https://texasunitedpatriots.org/news/all-2.html</loc>
+    <lastmod>2026-11-12</lastmod>
+  </url>
+  <url>
+    <loc>https://texasunitedpatriots.org/news/second-amendment.html</loc>
+    <lastmod>2026-11-12</lastmod>
+  </url>
+  <url>
+    <loc>https://texasunitedpatriots.org/news/election-integrity.html</loc>
+    <lastmod>2026-11-12</lastmod>
+  </url>
+  <url>
+    <loc>https://texasunitedpatriots.org/news/faith-and-values.html</loc>
+    <lastmod>2026-11-12</lastmod>
+  </url>
+  <url>
+    <loc>https://texasunitedpatriots.org/news/education.html</loc>
+    <lastmod>2026-11-12</lastmod>
+  </url>
+  <url>
+    <loc>https://texasunitedpatriots.org/news/texas-history.html</loc>
+    <lastmod>2026-11-12</lastmod>
+  </url>
+  <url>
+    <loc>https://texasunitedpatriots.org/news/policy-and-analysis.html</loc>
+    <lastmod>2026-11-12</lastmod>
+  </url>
 </urlset>
