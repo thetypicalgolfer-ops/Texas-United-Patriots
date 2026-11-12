@@ -85,7 +85,7 @@ def listing(items, base, name, kicker, desc, cur):
     pages = max(1, math.ceil(len(items) / PER)); files = []
     for n in range(1, pages + 1):
         chunk = items[(n - 1) * PER: n * PER]; path = f"news/{base}.html" if n == 1 else f"news/{base}-{n}.html"
-        body = mast(1, kicker, name, cur) + f'''            <p class="mt-6 font-headline font-bold text-lg uppercase tracking-[0.12em] text-on-surface-variant">{len(items)} stories{f" · Page {n} of {pages}" if pages > 1 else ""}</p>
+        body = mast(1, kicker, name, cur) + f'''            <p class="mt-6 font-headline font-bold text-lg uppercase tracking-[0.12em] text-on-surface-variant">{f"Page {n} of {pages}" if pages > 1 else "Newest first"}</p>
             <div class="divide-y divide-slate-200 border-t border-slate-200 mt-3">
 {chr(10).join(row(a, 1) for a in chunk)}
             </div>
@@ -129,7 +129,7 @@ front = mast(0, "★ &nbsp;The Lone Star State's&nbsp; ★", "Texas News") + f''
             </section>
 '''
 def filler(s, name, n):
-    return f'<a href="./news/{s}.html" class="group block mt-4 bg-surface-container-low border border-slate-200 px-6 py-6 hover:border-primary"><span class="block font-headline font-bold text-base uppercase tracking-[0.12em] text-primary">{E(name)}</span><span class="mt-1 block font-body font-bold text-2xl leading-snug text-on-surface group-hover:text-primary">Every {E(name)} story in one place</span><span class="mt-2 block font-headline font-bold text-base uppercase tracking-wide text-on-surface-variant">{n} {"story" if n == 1 else "stories"} &nbsp;·&nbsp; Read them all &rarr;</span></a>'
+    return f'<a href="./news/{s}.html" class="group block mt-4 bg-surface-container-low border border-slate-200 px-6 py-6 hover:border-primary"><span class="block font-headline font-bold text-base uppercase tracking-[0.12em] text-primary">{E(name)}</span><span class="mt-1 block font-body font-bold text-2xl leading-snug text-on-surface group-hover:text-primary">Every {E(name)} story in one place</span><span class="mt-2 block font-headline font-bold text-base uppercase tracking-wide text-on-surface-variant">Read them all &rarr;</span></a>'
 for s, name, _ in SECTIONS:
     fs = [a for a in by[s] if a["slug"] not in SKIP]
     items = [a for a in fs if a["slug"] not in used][:4] or fs[:4]
@@ -144,8 +144,7 @@ for s, name, _ in SECTIONS:
             </section>
 '''
 front += f'''            <section class="mt-16 text-center border-t-[3px] border-on-surface pt-10">
-                <p class="font-headline font-bold text-lg uppercase tracking-[0.15em] text-on-surface-variant">{len(A)} stories and counting</p>
-                <a href="./news/all.html" class="mt-4 inline-flex items-center gap-3 border-2 border-on-surface px-10 py-4 font-headline font-black text-lg uppercase tracking-[0.08em] text-on-surface hover:bg-on-surface hover:text-white transition-colors">Browse the Full Archive <span aria-hidden="true">&rarr;</span></a>
+                <a href="./news/all.html" class="inline-flex items-center gap-3 border-2 border-on-surface px-10 py-4 font-headline font-black text-lg uppercase tracking-[0.08em] text-on-surface hover:bg-on-surface hover:text-white transition-colors">Browse the Full Archive <span aria-hidden="true">&rarr;</span></a>
             </section>
         </div>'''
 open("news.html", "w").write(shell(front, "news.html", "Texas Conservative News: Second Amendment, Faith &amp; Freedom — Texas United Patriots".replace("&amp;", "&"), "Texas news from Texas United Patriots: the Second Amendment, election integrity, faith and values, education and Texas history.", 0))
