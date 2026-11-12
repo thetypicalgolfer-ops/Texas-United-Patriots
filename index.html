@@ -722,7 +722,7 @@
         <style>
             #liveWire .wire-label{display:flex;align-items:center;gap:10px;background:#fff;color:#bf0a30;padding:0 20px 0 clamp(16px,3vw,48px);font:900 22px/1 "Libre Franklin","Public Sans",sans-serif;text-transform:uppercase;letter-spacing:.06em;box-shadow:12px 0 18px -6px rgba(0,0,0,.35)}
             #liveWire .wire-dot{width:14px;height:14px;border-radius:50%;background:#e0243f;box-shadow:0 0 0 0 rgba(224,36,63,.7);animation:wirePulse 1.4s infinite}
-            #liveWire .wire-age{font-weight:700;font-size:16px;color:#5b6472;letter-spacing:.02em;text-transform:none;min-width:5.5em}
+            #liveWire .wire-age{font-weight:700;font-size:16px;color:#5b6472;letter-spacing:.02em;text-transform:none;width:8.5em;white-space:nowrap;overflow:hidden;font-variant-numeric:tabular-nums}
             @keyframes wirePulse{0%{box-shadow:0 0 0 0 rgba(224,36,63,.7)}70%{box-shadow:0 0 0 12px rgba(224,36,63,0)}100%{box-shadow:0 0 0 0 rgba(224,36,63,0)}}
             #liveWire .wire-window{padding:16px 0;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 40px,#000 calc(100% - 40px),transparent);mask-image:linear-gradient(90deg,transparent 0,#000 40px,#000 calc(100% - 40px),transparent)}
             #liveWire .wire-track{display:flex;width:max-content;will-change:transform}
@@ -795,10 +795,7 @@
             setInterval(function () {
                 if (!lastOk) return;
                 var s = Math.round((Date.now() - lastOk) / 1000);
-                ageEl.textContent = 'checked ' + (s < 2 ? 'now' : s + 's ago');
-                Array.prototype.forEach.call(track.querySelectorAll('.wire-ago'), function (el) {
-                    el.textContent = ago(+el.parentNode.dataset.ts);
-                });
+                ageEl.textContent = 'updated ' + (s < 60 ? 'just now' : Math.floor(s / 60) + ' min ago');
             }, 1000);
             poll(); setInterval(poll, 10000);
             requestAnimationFrame(frame);
